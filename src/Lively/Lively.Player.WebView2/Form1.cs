@@ -7,6 +7,7 @@ using Lively.Common.JsonConverters;
 using Lively.Common.Services;
 using Lively.Models.Message;
 using Lively.Player.WebView2.Extensions.WebView2;
+using Lively.Player.WebView2.Properties;
 using Microsoft.Web.WebView2.Core;
 using Newtonsoft.Json;
 using System;
@@ -116,21 +117,38 @@ namespace Lively.Player.WebView2
             webView.NavigationCompleted += WebView_NavigationCompleted;
             webView.CoreWebView2InitializationCompleted += WebView_CoreWebView2InitializationCompleted;
 
-            // Ref: https://docs.microsoft.com/en-us/microsoft-edge/webview2/concepts/user-data-folder
-            CoreWebView2EnvironmentOptions options = new CoreWebView2EnvironmentOptions("--disk-cache-size=1"); //workaround: avoid cache
+            var webViewStartArgs =
+                // Allow media autoplay even if not muted.
+                "--autoplay-policy=no-user-gesture-required ";
+            CoreWebView2EnvironmentOptions options = new CoreWebView2EnvironmentOptions(webViewStartArgs);
+            // WebView2 does not have in-memory mode, ref: https://github.com/MicrosoftEdge/WebView2Feedback/issues/3637
+            // Custom user-data folder, ref: https://docs.microsoft.com/en-us/microsoft-edge/webview2/concepts/user-data-folder
             var userDataPath = Path.Combine(Constants.CommonPaths.TempWebView2Dir, Assembly.GetExecutingAssembly().GetName().Name);
             var env = await CoreWebView2Environment.CreateAsync(null, userDataPath, options);
             await webView.EnsureCoreWebView2Async(env);
 
-            if (!IsDebugging)
+            // Defaults
+            webView.CoreWebView2.IsMuted = startArgs.Volume == 0;
+
+            if (IsDebugging)
             {
                 // Don't allow contextmenu and devtools.
                 webView.CoreWebView2.Settings.AreBrowserAcceleratorKeysEnabled = false;
                 webView.CoreWebView2.Settings.AreDefaultContextMenusEnabled = false;
             }
 
+            if (!string.IsNullOrWhiteSpace(startArgs.DebugPort) && int.TryParse(startArgs.DebugPort, out int _))
+            {
+                // In WebView2 --remote-debugging-port=XXXX is not opening up a direct connection, we will just ignore port and open DevTools instead.
+                webView.CoreWebView2.OpenDevToolsWindow();
+                webView.CoreWebView2.Settings.AreBrowserAcceleratorKeysEnabled = true;
+                webView.CoreWebView2.Settings.AreDefaultContextMenusEnabled = true;
+            }
+
             webView.CoreWebView2.ProcessFailed += CoreWebView2_ProcessFailed;
             webView.CoreWebView2.NewWindowRequested += CoreWebView2_NewWindowRequested;
+            webView.CoreWebView2.DownloadStarting += CoreWebView2_DownloadStarting;
+            webView.CoreWebView2.DocumentTitleChanged += CoreWebView2_DocumentTitleChanged;
 
             switch (startArgs.Type)
             {
@@ -157,6 +175,11 @@ namespace Lively.Player.WebView2
             webView.Dock = DockStyle.Fill;
         }
 
+        private void CoreWebView2_DocumentTitleChanged(object sender, object e)
+        {
+            this.Invoke((MethodInvoker)(() => this.Text = webView.CoreWebView2.DocumentTitle));
+        }
+
         private void CoreWebView2_ProcessFailed(object sender, CoreWebView2ProcessFailedEventArgs e)
         {
             WriteToParent(new LivelyMessageConsole()
@@ -168,10 +191,11 @@ namespace Lively.Player.WebView2
 
         private void CoreWebView2_NewWindowRequested(object sender, CoreWebView2NewWindowRequestedEventArgs e)
         {
-            // Avoid popups
+            // Avoid popups.
             if (e.IsUserInitiated)
             {
                 e.Handled = true;
+                // Open new tab/window  hyperlink (target="_blank") in default browser.
                 LinkUtil.OpenBrowser(e.Uri);
             }
         }
@@ -182,6 +206,12 @@ namespace Lively.Player.WebView2
             {
                 Hwnd = webView.Handle.ToInt32()
             });
+        }
+
+        private void CoreWebView2_DownloadStarting(object sender, CoreWebView2DownloadStartingEventArgs e)
+        {
+            // Cancel user requested downloads.
+            e.Cancel = true;
         }
 
         private async void WebView_NavigationCompleted(object sender, CoreWebView2NavigationCompletedEventArgs e)
