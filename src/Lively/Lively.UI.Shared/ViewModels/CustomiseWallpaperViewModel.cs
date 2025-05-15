@@ -51,6 +51,7 @@ namespace Lively.UI.Shared.ViewModels
                 (this.currentFilePath, this.currentScreen) = CreatePropertyCopy(model, userSettings.Settings.WallpaperArrangement, userSettings.Settings.SelectedDisplay);
 
                 var livelyControls = LivelyPropertyUtil.GetControls(this.currentFilePath);
+                LivelyPropertyUtil.LocalizeControls(model.LivelyPropertyLocalizationPath, livelyControls, userSettings.Settings.Language);
                 this.Controls = new ObservableCollection<ControlModel>(livelyControls.Values);
 
                 // For checking value change and updating storage file.
@@ -246,7 +247,7 @@ namespace Lively.UI.Shared.ViewModels
         /// </summary>
         /// <param name="obj">LibraryModel object</param>
         /// <returns></returns>
-        public (string filePath, DisplayMonitor screen) CreatePropertyCopy(LibraryModel obj, WallpaperArrangement arrangement, DisplayMonitor selectedScreen)
+        private (string filePath, DisplayMonitor screen) CreatePropertyCopy(LibraryModel obj, WallpaperArrangement arrangement, DisplayMonitor selectedScreen)
         {
             if (obj.LivelyPropertyPath == null)
                 throw new ArgumentException("Customisation not supported.");

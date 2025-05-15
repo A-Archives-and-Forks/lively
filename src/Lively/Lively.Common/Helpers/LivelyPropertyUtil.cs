@@ -3,6 +3,7 @@ using Lively.Models.LivelyControls;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Threading.Tasks;
 
@@ -59,6 +60,58 @@ namespace Lively.Common.Helpers
         {
             var jsonSerializerSettings = new JsonSerializerSettings { Converters = new List<JsonConverter> { new LivelyControlModelConverter() } };
             return JsonConvert.DeserializeObject<Dictionary<string, ControlModel>>(File.ReadAllText(propertyPath), jsonSerializerSettings);
+        }
+
+        public static void LocalizeControls(string locPath, IDictionary<string, ControlModel> controls, string languageCode = "")
+        {
+            if (!File.Exists(locPath))
+                return;
+
+            Dictionary<string, Dictionary<string, LocalizedStrings>> loc;
+            try
+            {
+                loc = JsonConvert.DeserializeObject<Dictionary<string, Dictionary<string, LocalizedStrings>>>(File.ReadAllText(locPath));
+            }
+            catch {
+                return;
+            }
+
+            // ApplicationLanguages.PrimaryLanguageOverride is empty when not set / use system default.
+            languageCode = string.IsNullOrEmpty(languageCode) ? CultureInfo.CurrentUICulture.Name : languageCode;
+            // Try exact match first, eg: zh-CN
+            if (!loc.TryGetValue(languageCode, out var lang))
+            {
+                // Try base language fallback, eg: zh
+                var baseLang = languageCode.Split('-')[0];
+                if (!loc.TryGetValue(baseLang, out lang))
+                    return;
+            }
+
+            // This is faster than iterating over all controls when some controls are not localized.
+            foreach (var localized in lang)
+            {
+                if (!controls.TryGetValue(localized.Key, out var control))
+                    continue;
+
+                var value = localized.Value;
+                switch (control.Type)
+                {
+                    case "label":
+                        {
+                            if (!string.IsNullOrWhiteSpace(value.Value))
+                                ((LabelModel)control).Value = value.Value;
+                        }
+                        break;
+                    case "button":
+                        {
+                            if (!string.IsNullOrWhiteSpace(value.Value))
+                                ((ButtonModel)control).Value = value.Value;
+                        }
+                        break;
+                }
+                control.Text = string.IsNullOrWhiteSpace(value.Text) ? control.Text : value.Text;
+                control.Help = string.IsNullOrWhiteSpace(value.Help) ? control.Help : value.Help;
+            }
         }
 
         private static string GetFolderDropdownValue(FolderDropdownModel fd, string rootPath)
