@@ -67,10 +67,10 @@ namespace Lively.Common.Helpers
             if (!File.Exists(locPath))
                 return;
 
-            Dictionary<string, Dictionary<string, LocalizedStrings>> loc;
+            LocalizationFile loc;
             try
             {
-                loc = JsonConvert.DeserializeObject<Dictionary<string, Dictionary<string, LocalizedStrings>>>(File.ReadAllText(locPath));
+                loc = JsonConvert.DeserializeObject<LocalizationFile>(File.ReadAllText(locPath));
             }
             catch {
                 return;
@@ -79,11 +79,11 @@ namespace Lively.Common.Helpers
             // ApplicationLanguages.PrimaryLanguageOverride is empty when not set / use system default.
             languageCode = string.IsNullOrEmpty(languageCode) ? CultureInfo.CurrentUICulture.Name : languageCode;
             // Try exact match first, eg: zh-CN
-            if (!loc.TryGetValue(languageCode, out var lang))
+            if (!loc.Languages.TryGetValue(languageCode, out var lang))
             {
                 // Try base language fallback, eg: zh
                 var baseLang = languageCode.Split('-')[0];
-                if (!loc.TryGetValue(baseLang, out lang))
+                if (!loc.Languages.TryGetValue(baseLang, out lang))
                     return;
             }
 
