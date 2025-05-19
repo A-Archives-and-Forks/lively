@@ -1,4 +1,5 @@
 ﻿using Lively.Common;
+using Lively.Common.Exceptions;
 using Lively.Common.Extensions;
 using Lively.Common.Helpers.Pinvoke;
 using Lively.Common.Helpers.Shell;
@@ -177,10 +178,15 @@ namespace Lively.Core.Wallpapers
 
         private void Proc_Exited(object sender, EventArgs e)
         {
+            Logger.Info($"Wv2{uniqueId}: Process exited with exit code: {Proc?.ExitCode}");
             if (!isInitialized)
             {
-                //Exited with no error and without even firing OutputDataReceived; probably some external factor.
-                tcsProcessWait.TrySetResult(new InvalidOperationException(Properties.Resources.LivelyExceptionGeneral));
+                // ERROR_FILE_NOT_FOUND
+                // Ref: <https://learn.microsoft.com/en-us/windows/win32/debug/system-error-codes--0-499->
+                if (Proc is not null && Proc.ExitCode == 2)
+                    tcsProcessWait.TrySetResult(new WallpaperWebView2NotFoundException());
+                else
+                    tcsProcessWait.TrySetResult(new InvalidOperationException(Properties.Resources.LivelyExceptionGeneral));
             }
             Proc.OutputDataReceived -= Proc_OutputDataReceived;
             Proc?.Dispose();

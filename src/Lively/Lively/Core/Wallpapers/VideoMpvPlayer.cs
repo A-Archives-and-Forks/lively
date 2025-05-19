@@ -356,6 +356,7 @@ namespace Lively.Core.Wallpapers
 
         private void Proc_Exited(object sender, EventArgs e)
         {
+            Logger.Info($"Mpv{uniqueId}: Process exited with exit code: {Proc?.ExitCode}");
             Proc.OutputDataReceived -= Proc_OutputDataReceived;
             Proc?.Dispose();
             DesktopUtil.RefreshDesktop();

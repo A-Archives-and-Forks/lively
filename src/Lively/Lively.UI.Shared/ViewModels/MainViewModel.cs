@@ -10,6 +10,7 @@ using Lively.Models;
 using Lively.Models.Enums;
 using Lively.Models.Services;
 using Lively.Models.UserControls;
+using Lively.UI.Shared.Helpers;
 using Lively.UI.WinUI.Factories;
 using System;
 using System.Collections.Generic;
@@ -37,6 +38,8 @@ namespace Lively.UI.Shared.ViewModels
         private readonly IFileService fileService;
         private readonly IResourceService i18n;
         private readonly INavigator navigator;
+        private readonly IDownloadService downloader;
+        private readonly ICommandsClient commandsClient;
 
         private CancellationTokenSource wallpaperImportCts;
 
@@ -44,8 +47,10 @@ namespace Lively.UI.Shared.ViewModels
                              IDesktopCoreClient desktopCore,
                              IDispatcherService dispatcher,
                              IDisplayManagerClient displayManager,
+                             ICommandsClient commandsClient,
                              IAppThemeFactory themeFactory,
                              GalleryClient galleryClient,
+                             IDownloadService downloader,
                              IDialogService dialogService,
                              IAppUpdaterClient appUpdater,
                              IFileService fileService,
@@ -53,6 +58,7 @@ namespace Lively.UI.Shared.ViewModels
                              IResourceService i18n,
                              INavigator navigator)
         {
+            this.commandsClient = commandsClient;
             this.userSettings = userSettings;
             this.desktopCore = desktopCore;
             this.displayManager = displayManager;
@@ -62,6 +68,7 @@ namespace Lively.UI.Shared.ViewModels
             this.dispatcher = dispatcher;
             this.fileService = fileService;
             this.appUpdater = appUpdater;
+            this.downloader = downloader;
             this.libraryVm = libraryVm;
             this.navigator = navigator;
             this.i18n = i18n;
@@ -104,6 +111,12 @@ namespace Lively.UI.Shared.ViewModels
         }
 
         [ObservableProperty]
+        public bool isWebView2InstallNotify;
+
+        [ObservableProperty]
+        private bool isWebView2Installing;
+
+        [ObservableProperty]
         private bool isSettingsPage;
 
         [ObservableProperty]
@@ -143,6 +156,24 @@ namespace Lively.UI.Shared.ViewModels
         private InAppNotificationModel importNotification = new();
 
         [RelayCommand]
+        private async Task InstallWebView2()
+        {
+            try
+            {
+                IsWebView2Installing = true;
+
+                if (await WebViewUtil.InstallWebView2(downloader))
+                    _ = commandsClient.RestartUI("--appUpdate true");
+                else
+                    LinkUtil.OpenBrowser(WebViewUtil.DownloadUrl);
+            }
+            finally
+            {
+                IsWebView2Installing = false;
+            }
+        }
+
+        [RelayCommand]
         private void OpenSettings()
         {
             navigator.NavigateTo(ContentPageType.settingsGeneral);
@@ -178,7 +209,10 @@ namespace Lively.UI.Shared.ViewModels
         {
             _ = dispatcher.TryEnqueue(() =>
             {
-                ShowError(ex);
+                if (ex is WallpaperWebView2NotFoundException)
+                    IsWebView2InstallNotify = true;
+                else
+                    ShowError(ex);
             });
         }
 

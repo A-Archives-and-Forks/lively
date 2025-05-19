@@ -346,6 +346,22 @@
                 </HyperlinkButton>
             </StackPanel>
         </InfoBar>
+        <!--  WebView2 Installation  -->
+        <InfoBar
+            x:Uid="WebViewRequired"
+            Grid.Row="1"
+            Closed="WebViewRequired_InfoBar_Closed"
+            IsClosable="{Binding IsWebView2Installing, Mode=OneWay, Converter={StaticResource BoolNegationConverter}}"
+            IsOpen="{Binding IsWebView2InstallNotify, Mode=TwoWay}"
+            Severity="Warning">
+            <InfoBar.ActionButton>
+                <Button x:Uid="TitleDownload" Command="{Binding InstallWebView2Command}" />
+            </InfoBar.ActionButton>
+            <ProgressBar
+                Margin="-50,0,0,0"
+                IsIndeterminate="True"
+                Visibility="{Binding IsWebView2Installing, Mode=OneWay}" />
+        </InfoBar>
         <!--  Show Wallpaper Import Progress  -->
         <!--  Setting background because default Information infobar style color is transparent now.  -->
         <InfoBar

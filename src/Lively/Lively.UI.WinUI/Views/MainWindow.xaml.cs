@@ -287,5 +287,7 @@ namespace Lively.UI.WinUI
             }
             libraryVm.UpdateSelectedWallpaper();
         }
+
+        private void WebViewRequired_InfoBar_Closed(InfoBar sender, InfoBarClosedEventArgs args) => sender.IsOpen = false;
     }
 }
