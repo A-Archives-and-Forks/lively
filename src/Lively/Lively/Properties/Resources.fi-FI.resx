@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AudioFocused.Content" xml:space="preserve">
-    <value>Toista ääntä vain, kun työpöytä on kohdistettuna</value>
+    <value>Toista ääntä vain, kun työpöytä on näkyvissä</value>
   </data>
   <data name="Audio.Description" xml:space="preserve">
     <value>Kaikkien taustakuvien äänenvoimakkuus</value>
@@ -207,7 +207,7 @@ Jatka vain, jos luotat tähän sovellukseen.</value>
     <value>Tämä avustaja auttaa sinua asentamaan Livelyn</value>
   </data>
   <data name="DescriptionWindowsNCodecInstall" xml:space="preserve">
-    <value>Windows N / KN versiosi vaatii ladata ylimääräisiä koodekkeja tukemaan videon toistoa taustakuvilla</value>
+    <value>Windows N / KN versiosi vaatii ylimääräisten koodekkien lataamisen tukemaan taustakuvien videon toistoa</value>
   </data>
   <data name="DescSupperDev" xml:space="preserve">
     <value>Näytä tukesi lahjoittamalla kehittäjälle kupillinen kahvia</value>
@@ -220,7 +220,7 @@ Päivityksiä tulee usein ja ne saattavat sisältää vikoja!</value>
     <value>Järjestelmäkuvakkeen näkyvyys, Lively jatkaa suorittamissa piilotetussa kuvakkeessa</value>
   </data>
   <data name="HideSysTray.Header" xml:space="preserve">
-    <value>Järjestelmäkuvake</value>
+    <value>Ilmaisinalueen kuvake</value>
   </data>
   <data name="Language.Description" xml:space="preserve">
     <value>Lively käynnistyy uudelleen vaihtaakseen kielen</value>
@@ -323,10 +323,10 @@ Jos ikkuna ei vieläkään toimi, sulje ja käynnistä Windows ja Lively uudesta
     <value>Luo Esikatselu</value>
   </data>
   <data name="Customise.Text" xml:space="preserve">
-    <value>Kustomoi</value>
+    <value>Mukauta</value>
   </data>
   <data name="CustomiseWallpaper.Label" xml:space="preserve">
-    <value>Kustomoi</value>
+    <value>Mukauta</value>
   </data>
   <data name="DeleteWallpaper.Text" xml:space="preserve">
     <value>Poista</value>
@@ -494,10 +494,10 @@ Jos ikkuna ei vieläkään toimi, sulje ja käynnistä Windows ja Lively uudesta
     <value>Tuki</value>
   </data>
   <data name="TextSwitchBranchDev" xml:space="preserve">
-    <value>Vaihda beta-tilaan (kehittäjätila)</value>
+    <value>Vaihda betaan (kehittäjä kanava)</value>
   </data>
   <data name="TextSwitchBranchOfficial" xml:space="preserve">
-    <value>Vaihda pois beta-tilasta (oletus)</value>
+    <value>Vaihda vakaaseen (oletus kanava)</value>
   </data>
   <data name="TextTags" xml:space="preserve">
     <value>Tunnisteet</value>
@@ -506,7 +506,7 @@ Jos ikkuna ei vieläkään toimi, sulje ja käynnistä Windows ja Lively uudesta
     <value>Sumennus</value>
   </data>
   <data name="TaskbarThemeClear.Content" xml:space="preserve">
-    <value>Kirkas</value>
+    <value>Läpinäkyvä</value>
   </data>
   <data name="TaskbarThemeColor.Content" xml:space="preserve">
     <value>Väri</value>
@@ -623,7 +623,7 @@ Jos ikkuna ei vieläkään toimi, sulje ja käynnistä Windows ja Lively uudesta
     <value>Lively mukautuu järjestelmän teeman asetuksiin, muuttaaksesi ulkoasua, mene</value>
   </data>
   <data name="BatteryPower.Description" xml:space="preserve">
-    <value>Kun ei ole latauksessa</value>
+    <value>Muuta toistoa, kun ei ole latauksessa</value>
   </data>
   <data name="BrowserDebuggingPort.Description" xml:space="preserve">
     <value>Syötä portti vianetsintää varten; kun valmista, navigoi osoitteeseen http://localhost:portnumber päästäksesi käsiksi kehittäjän konsoliin</value>
@@ -731,7 +731,7 @@ Jos ikkuna ei vieläkään toimi, sulje ja käynnistä Windows ja Lively uudesta
     <value>Toista ääntä näytöllä</value>
   </data>
   <data name="BatteryPower.Header" xml:space="preserve">
-    <value>Akkuvirralla</value>
+    <value>Akkuvirralla ollessa</value>
   </data>
   <data name="TitleBrowseFile" xml:space="preserve">
     <value>Selaa video, gif, verkkosivu... tiedoston asettamiseksi taustakuvaksi</value>
@@ -826,9 +826,6 @@ Jos ikkuna ei vieläkään toimi, sulje ja käynnistä Windows ja Lively uudesta
   <data name="TitleScreensaver.Content" xml:space="preserve">
     <value>Näytönsäästäjä</value>
   </data>
-  <data name="ScreensaverLockOnResume.Content" xml:space="preserve">
-    <value>Jatkaessa, näytä kirjautumisruutu</value>
-  </data>
   <data name="TitleSelectFile" xml:space="preserve">
     <value>Valitse tiedosto</value>
   </data>
@@ -879,7 +876,7 @@ Jos ikkuna ei vieläkään toimi, sulje ja käynnistä Windows ja Lively uudesta
     <value>Taustakuva</value>
   </data>
   <data name="TitleCustomise.Content" xml:space="preserve">
-    <value>Kustomoi</value>
+    <value>Mukauta</value>
   </data>
   <data name="WallpaperDir.Header" xml:space="preserve">
     <value>Taustakuvan Hakemisto</value>
@@ -936,7 +933,7 @@ Jos ikkuna ei vieläkään toimi, sulje ja käynnistä Windows ja Lively uudesta
     <value>Windowsin väriasetukset</value>
   </data>
   <data name="LaptopWallpaperPlaybackGroup.Text" xml:space="preserve">
-    <value>Kannettavat tietokoneet</value>
+    <value>Läppärit</value>
   </data>
   <data name="DeveloperGroup.Text" xml:space="preserve">
     <value>Kehittäjä</value>
@@ -945,7 +942,7 @@ Jos ikkuna ei vieläkään toimi, sulje ja käynnistä Windows ja Lively uudesta
     <value>Ulkoasu &amp; käyttäytyminen</value>
   </data>
   <data name="ActiveWallpapers.Label" xml:space="preserve">
-    <value>Aktiivista taustakuvaa</value>
+    <value>Aktiiviset taustakuvat</value>
   </data>
   <data name="TitleGallery" xml:space="preserve">
     <value>Galleria</value>
@@ -1236,24 +1233,36 @@ Jos ikkuna ei vieläkään toimi, sulje ja käynnistä Windows ja Lively uudesta
     <value>Valitse näytönsäästäjä</value>
   </data>
   <data name="WebViewRequired.Message" xml:space="preserve">
-    <value>Microsoft WebView2 is required to view this content</value>
+    <value>Tämän sisällön katsomiseen tarvitaan Microsoft WebView2</value>
   </data>
   <data name="WebViewRequired.Title" xml:space="preserve">
     <value>Lisäosa vaaditaan</value>
   </data>
   <data name="AppMusicExclusion.Description" xml:space="preserve">
-    <value>Select apps to exclude from showing music details</value>
+    <value>Valitse sovellukset, jotka suljetaan pois musiikin tietojen näyttämisestä</value>
   </data>
   <data name="AppMusicExclusion.Header" xml:space="preserve">
-    <value>App exclusion</value>
+    <value>Sovelluksen poissulkeminen</value>
   </data>
   <data name="RestartCommand.Content" xml:space="preserve">
-    <value>Restart</value>
+    <value>Uudellen käynnistä</value>
   </data>
   <data name="WallpaperMusicGroup.Text" xml:space="preserve">
-    <value>Music</value>
+    <value>Musiikki</value>
   </data>
   <data name="WallpaperRestartRequiredNotify.Message" xml:space="preserve">
-    <value>Wallpaper restart is required for the settings to take effect</value>
+    <value>Taustakuva on käynnistettävä uudelleen, jotta asetukset tulevat voimaan</value>
+  </data>
+  <data name="LanguageSettingsItemSystemDefault.Content" xml:space="preserve">
+    <value>Same as System</value>
+  </data>
+  <data name="InfoSettingsRestartRequest.Message" xml:space="preserve">
+    <value>Please restart application for settings to take effect.</value>
+  </data>
+  <data name="ScreensaverLockOnResume.Header" xml:space="preserve">
+    <value>Jatkaessa, näytä kirjautumisruutu</value>
+  </data>
+  <data name="ScreensaverFadeIn.Header" xml:space="preserve">
+    <value>Fade to black before start</value>
   </data>
 </root>

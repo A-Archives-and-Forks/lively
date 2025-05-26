@@ -826,9 +826,6 @@ Jei vis tiek neveikia, uždarykite ir iš naujo įjunkite Lively/perkraukite Win
   <data name="TitleScreensaver.Content" xml:space="preserve">
     <value>Ekrano užsklanda</value>
   </data>
-  <data name="ScreensaverLockOnResume.Content" xml:space="preserve">
-    <value>Tęsiant rodyti prisijungimo ekraną</value>
-  </data>
   <data name="TitleSelectFile" xml:space="preserve">
     <value>Pasirinkti failą</value>
   </data>
@@ -1236,24 +1233,36 @@ Jei vis tiek neveikia, uždarykite ir iš naujo įjunkite Lively/perkraukite Win
     <value>Pasirinkti užsklandą</value>
   </data>
   <data name="WebViewRequired.Message" xml:space="preserve">
-    <value>Microsoft WebView2 is required to view this content</value>
+    <value>Norint peržiūrėti šį turinį, reikia "Microsoft WebView2</value>
   </data>
   <data name="WebViewRequired.Title" xml:space="preserve">
     <value>Reikalingas papildinys</value>
   </data>
   <data name="AppMusicExclusion.Description" xml:space="preserve">
-    <value>Select apps to exclude from showing music details</value>
+    <value>Pasirinkite programas, kurios nerodys išsamios informacijos apie muziką</value>
   </data>
   <data name="AppMusicExclusion.Header" xml:space="preserve">
-    <value>App exclusion</value>
+    <value>Programų išmetimas</value>
   </data>
   <data name="RestartCommand.Content" xml:space="preserve">
-    <value>Restart</value>
+    <value>Paleisti iš naujo</value>
   </data>
   <data name="WallpaperMusicGroup.Text" xml:space="preserve">
-    <value>Music</value>
+    <value>Muzika</value>
   </data>
   <data name="WallpaperRestartRequiredNotify.Message" xml:space="preserve">
-    <value>Wallpaper restart is required for the settings to take effect</value>
+    <value>Kad nustatymai įsigaliotų, reikia iš naujo paleisti ekrano užsklandą</value>
+  </data>
+  <data name="LanguageSettingsItemSystemDefault.Content" xml:space="preserve">
+    <value>Same as System</value>
+  </data>
+  <data name="InfoSettingsRestartRequest.Message" xml:space="preserve">
+    <value>Please restart application for settings to take effect.</value>
+  </data>
+  <data name="ScreensaverLockOnResume.Header" xml:space="preserve">
+    <value>Tęsiant rodyti prisijungimo ekraną</value>
+  </data>
+  <data name="ScreensaverFadeIn.Header" xml:space="preserve">
+    <value>Fade to black before start</value>
   </data>
 </root>

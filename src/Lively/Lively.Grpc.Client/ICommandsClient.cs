@@ -6,7 +6,8 @@ namespace Lively.Grpc.Client
     {
         Task ScreensaverConfigure();
         Task ScreensaverPreview(int previewHandle);
-        Task ScreensaverShow(bool show);
+        Task ShowScreensaver(bool isFadeIn);
+        Task StopScreensaver();
         Task ShowUI();
         Task CloseUI();
         Task RestartUI();

@@ -127,7 +127,7 @@
     <value>עוצמת קול</value>
   </data>
   <data name="AudioGroup.Text" xml:space="preserve">
-    <value>שמע</value>
+    <value>Audio</value>
   </data>
   <data name="Community.Description" xml:space="preserve">
     <value>פורום דיונים מקוון</value>
@@ -141,7 +141,7 @@
 סייר Windows הופעל מחדש פעמיים ב-30 השניות האחרונות! זה עשוי להיות התנגשות בין Lively לבין תוכנות אחרות להתאמה אישית של שולחן העבודה או Windows. כדי למנוע בעיות נוספות, כל הטפטים מופסקים</value>
   </data>
   <data name="DescIncompatibleTaskbarTheme" xml:space="preserve">
-    <value>נמצאה תוכנית לא תואמת, נושא שורת המשימות מושבת.</value>
+    <value>נמצאה תוכנית לא תואמת, נושא שורת המשימות מושבת</value>
   </data>
   <data name="Website.Description" xml:space="preserve">
     <value>דף האינטרנט הרשמי של Lively Wallpaper</value>
@@ -172,7 +172,7 @@
     <value>האם אתה בטוח שברצונך למחוק טפט זה מהספרייה?</value>
   </data>
   <data name="DragDropFile.Text" xml:space="preserve">
-    <value>פשוט גרור ושחרר קבצים לספרייה.</value>
+    <value>גרור ושחרר קבצים לספרייה</value>
   </data>
   <data name="DescriptionExternalAppWarning" xml:space="preserve">
     <value>אתה פותח יישום חיצוני כטפט.
@@ -831,9 +831,6 @@ Edge הוא תצוגת האינטרנט המובנית של Windows 10.</value>
   <data name="TitleScreensaver.Content" xml:space="preserve">
     <value>שומר מסך</value>
   </data>
-  <data name="ScreensaverLockOnResume.Content" xml:space="preserve">
-    <value>בהמשכה, הצגת מסך כניסה</value>
-  </data>
   <data name="TitleSelectFile" xml:space="preserve">
     <value>בחר קובץ</value>
   </data>
@@ -1260,5 +1257,17 @@ Edge הוא תצוגת האינטרנט המובנית של Windows 10.</value>
   </data>
   <data name="WallpaperRestartRequiredNotify.Message" xml:space="preserve">
     <value>נדרשת הפעלה מחדש של הטפטים כדי שההגדרות ייכנסו לתוקף</value>
+  </data>
+  <data name="LanguageSettingsItemSystemDefault.Content" xml:space="preserve">
+    <value>זהה לשפת המערכת</value>
+  </data>
+  <data name="InfoSettingsRestartRequest.Message" xml:space="preserve">
+    <value>אנא הפעל מחדש את האפליקציה כדי שההגדרות ייכנסו לתוקף.</value>
+  </data>
+  <data name="ScreensaverLockOnResume.Header" xml:space="preserve">
+    <value>בהמשכה, הצגת מסך כניסה</value>
+  </data>
+  <data name="ScreensaverFadeIn.Header" xml:space="preserve">
+    <value>Fade to black before start</value>
   </data>
 </root>

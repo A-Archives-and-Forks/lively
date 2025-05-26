@@ -59,7 +59,6 @@ namespace Lively.Core.Wallpapers
             cmdArgs.Append(" --wallpaper-url " + "\"" + path + "\"");
             cmdArgs.Append(" --wallpaper-display " + "\"" + display.DeviceId + "\"");
             cmdArgs.Append(" --wallpaper-property " + "\"" + LivelyPropertyCopyPath + "\"");
-            //volume == 0, Cef is permanently muted and cannot be adjusted runtime
             cmdArgs.Append(" --wallpaper-volume " + volume);
             cmdArgs.Append(" --wallpaper-geometry " + display.Bounds.Width + "x" + display.Bounds.Height);
             //--audio false Issue: https://github.com/commandlineparser/commandline/issues/702

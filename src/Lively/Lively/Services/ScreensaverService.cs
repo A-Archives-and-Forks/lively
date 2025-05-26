@@ -270,13 +270,14 @@ namespace Lively.Services
                             try
                             {
                                 var model = wallpaperLibraryFactory.CreateFromDirectory(layout.LivelyInfoPath);
-                                var screen = displayManager.DisplayMonitors.FirstOrDefault(x => x.Equals(layout.Display));
-                                if (screen is null)
+                                var display = displayManager.DisplayMonitors.FirstOrDefault(x => x.Equals(layout.Display));
+                                var volume = display?.IsPrimary == true ? userSettings.Settings.ScreensaverGlobalVolume : 0;
+                                if (display is null)
                                     Logger.Info($"Screen missing, skipping screensaver {layout.LivelyInfoPath} | {layout.Display.DeviceName}");
                                 else
                                 {
                                     Logger.Info($"Starting screensaver {model.Title} | {model.LivelyInfoFolderPath} | {layout.Display.Bounds}");
-                                    await ShowPreviewWindowAsScreensaver(model, layout.Display);
+                                    await ShowPreviewWindowAsScreensaver(model, display, volume);
                                 }
                             }
                             catch (Exception ex)
@@ -296,7 +297,7 @@ namespace Lively.Services
                         try
                         {
                             var model = wallpaperLibraryFactory.CreateFromDirectory(wallpaperLayout.FirstOrDefault()?.LivelyInfoPath);
-                            await ShowPreviewWindowAsScreensaver(model, displayManager.VirtualScreenBounds);
+                            await ShowPreviewWindowAsScreensaver(model, displayManager.VirtualScreenBounds, userSettings.Settings.ScreensaverGlobalVolume);
                         }
                         catch (Exception ex)
                         {
@@ -313,7 +314,7 @@ namespace Lively.Services
                             var model = wallpaperLibraryFactory.CreateFromDirectory(wallpaperLayout.FirstOrDefault()?.LivelyInfoPath);
                             foreach (var display in displayManager.DisplayMonitors)
                             {
-                                await ShowPreviewWindowAsScreensaver(model, display);
+                                await ShowPreviewWindowAsScreensaver(model, display, display.IsPrimary ? userSettings.Settings.ScreensaverGlobalVolume : 0);
                             }
                         }
                         catch (Exception ex)
@@ -329,7 +330,7 @@ namespace Lively.Services
             }
         }
 
-        private async Task ShowPreviewWindowAsScreensaver(LibraryModel model, DisplayMonitor display)
+        private async Task ShowPreviewWindowAsScreensaver(LibraryModel model, DisplayMonitor display, int volume)
         {
             var window = new WallpaperPreview(model, display, userSettings.Settings.ScreensaverArragement, false, false)
             {
@@ -343,11 +344,12 @@ namespace Lively.Services
             window.NativeMove(display.Bounds);
             window.WindowState = WindowState.Maximized;
             await window.LoadWallpaperAsync();
+            window.SetWallpaperVolume(volume);
 
             screensaverWindows.Add(window);
         }
 
-        private async Task ShowPreviewWindowAsScreensaver(LibraryModel model, Rectangle rect)
+        private async Task ShowPreviewWindowAsScreensaver(LibraryModel model, Rectangle rect, int volume)
         {
             var window = new WallpaperPreview(model, displayManager.PrimaryDisplayMonitor, userSettings.Settings.ScreensaverArragement, false, false)
             {
@@ -360,6 +362,7 @@ namespace Lively.Services
             window.WindowStyle = WindowStyle.None;
             window.ResizeMode = ResizeMode.NoResize;
             await window.LoadWallpaperAsync();
+            window.SetWallpaperVolume(volume);
 
             screensaverWindows.Add(window);
         }
@@ -503,7 +506,7 @@ namespace Lively.Services
             {
                 if (GetLastInputTime() >= idleWaitTime && !IsExclusiveFullScreenAppRunning())
                 {
-                    await StartAsync(true);
+                    await StartAsync(userSettings.Settings.ScreensaverFadeIn);
                 }
             }
             catch (Exception ex)

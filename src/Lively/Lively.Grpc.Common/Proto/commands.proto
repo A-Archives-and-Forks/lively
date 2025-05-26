@@ -17,6 +17,7 @@ service CommandsService {
 message ScreensaverRequest {
 	ScreensaverState state = 1;
 	int32 preview_hwnd = 2;
+	bool fade_in = 3;
 }
 
 message AutomationCommandRequest {

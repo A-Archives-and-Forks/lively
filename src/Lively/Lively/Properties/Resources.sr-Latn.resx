@@ -147,7 +147,7 @@ Istraživač datoteka se restartovao dva puta u poslednjih 30 sekundi! Ovo može
     <value>Zvaničan veb-sajt Lively Pozadina</value>
   </data>
   <data name="DescOledScreensaverNotice" xml:space="preserve">
-    <value>Većina modernih LCD i LED displeja ne pati od problema pregorevanja (burn-in efekat) stoga se može koristiti bilo koja pozadina kao čuvar ekrana.
+    <value>Većina modernih LCD i LED displeja ne pati od problema pregorevanja ( burn-in efekat) stoga se može koristiti bilo koja pozadina kao čuvar ekrana.
 
 Za OLED, Plazma i CRT displeje koji su podložni burn-in efektu preporučeno je da koriste pozadinu sa redovnim kretanjem i opštom tamnom temom koja bi trebala da ublaži pregorevanje, ovo nije testirano tako da efektivnost se ne može garantovati.
 
@@ -172,10 +172,10 @@ Glavni cilj Lively-a je dodavanje još jednog sloja prilagođavanja vašem raču
     <value>Da li si siguran da zeliš da izbrišeš ovu pozadinu iz biblioteke?</value>
   </data>
   <data name="DragDropFile.Text" xml:space="preserve">
-    <value>Jednostavno prevuci i pusti fajl u biblioteku.</value>
+    <value>Jednostavno prevuci i pusti fajl u biblioteku</value>
   </data>
   <data name="DescriptionExternalAppWarning" xml:space="preserve">
-    <value>Otvaraš spoljašnu aplikaciju kao pozadinu. Zlonamerne aplikacije mogu da ubace viruse... i oštete vaš računar. Jedino prihvatajte ako aplikacija dolazi od proverenog izvora.</value>
+    <value>Otvaraš spoljašnju aplikaciju kao pozadinu. Zlonamerne aplikacije mogu da ubace viruse... i oštete vaš računar. Jedino prihvatajte ako aplikacija dolazi od proverenog izvora.</value>
   </data>
   <data name="MinimizedTray.Text" xml:space="preserve">
     <value>Lively je minimiziran u računaru, desnim klikom na lively ikonicu kako bi nastavio.</value>
@@ -235,7 +235,7 @@ https://github.com/rocksdanister/lively/releases</value>
   </data>
   <data name="LivelyExceptionGeneral" xml:space="preserve">
     <value>Ups... Izgleda da je nešto pošlo naopako :(
-Da bi bolje razumeo ovu grešku i da rešiš problem, podeli evidenciju aplikacije(log) sa razvijačem aplikacije. 
+Da bi bolje razumeo ovu grešku i da rešiš problem, podeli evidenciju aplikacije (log) sa razvijačem aplikacije. 
 Uputstva za podelu evidencije:
 https://github.com/rocksdanister/lively/wiki</value>
   </data>
@@ -254,7 +254,7 @@ Isključi Visok Kontrast režim i pokušaj ponovo</value>
 Da li želiš da povratiš prethodnu pozadinu?</value>
   </data>
   <data name="LivelyExceptionWorkerWSetupFail" xml:space="preserve">
-    <value>Izgleda da neka podešavanja moraju da se promene da bi Lively radio:
+    <value>Izgleda da neka podešavanja moraju da se promene da bi  Lively radio:
 1. Pritisni Windows dugme + R da bi otvorio Run,
 2. Ukucaj SystemPropertiesPerfomance.exe u Run, stisni "OK" da otvoris Podešavanja Performansa.
 3. Dozvoli/Proveri "Animate controls and elements inside windows" (Ako je već štiklirano, pritisni opet da onemogućiš i opet štikliraj) i pristisni "Apply".
@@ -556,7 +556,7 @@ Ako još ne radi, ugasi i upali Lively opet/restartuj windows.
     <value>Video</value>
   </data>
   <data name="TextWallpaperCommandlineArgs" xml:space="preserve">
-    <value>Launch Options</value>
+    <value>Opcije Pokretanja</value>
   </data>
   <data name="WallpaperFitFill.Content" xml:space="preserve">
     <value>Popuni</value>
@@ -571,13 +571,13 @@ Ako još ne radi, ugasi i upali Lively opet/restartuj windows.
     <value>Uniformna raspodela</value>
   </data>
   <data name="WallpaperLayoutDuplicate.Text" xml:space="preserve">
-    <value>Duplicate</value>
+    <value>Kloniraj</value>
   </data>
   <data name="WallpaperLayoutPerScreen.Text" xml:space="preserve">
     <value>Ekran</value>
   </data>
   <data name="WallpaperLayoutSpan.Text" xml:space="preserve">
-    <value>Span</value>
+    <value>Pokrij</value>
   </data>
   <data name="WallpaperType.Text" xml:space="preserve">
     <value>Tip</value>
@@ -819,9 +819,6 @@ Ako još ne radi, ugasi i upali Lively opet/restartuj windows.
   <data name="TitleScreensaver.Content" xml:space="preserve">
     <value>Čuvar ekrana</value>
   </data>
-  <data name="ScreensaverLockOnResume.Content" xml:space="preserve">
-    <value>Po nastavku, prikaži ekran za prijavljivanje</value>
-  </data>
   <data name="TitleSelectFile" xml:space="preserve">
     <value>Izaberi Fajl</value>
   </data>
@@ -929,7 +926,7 @@ Ako još ne radi, ugasi i upali Lively opet/restartuj windows.
     <value>Opcije za prikaz boje</value>
   </data>
   <data name="LaptopWallpaperPlaybackGroup.Text" xml:space="preserve">
-    <value>Laptopovi</value>
+    <value>Laptopi</value>
   </data>
   <data name="DeveloperGroup.Text" xml:space="preserve">
     <value>Developer</value>
@@ -992,10 +989,10 @@ Ako još ne radi, ugasi i upali Lively opet/restartuj windows.
     <value>Tip čuvara ekrana</value>
   </data>
   <data name="ScreensaverModeDifferentWallpaper.Text" xml:space="preserve">
-    <value>Custom</value>
+    <value>Prilagođeno</value>
   </data>
   <data name="ScreensaverModeSameWallpaper.Text" xml:space="preserve">
-    <value>Mirror Wallpaper</value>
+    <value>Duplikat pozadine</value>
   </data>
   <data name="ScreensaverPlugin.Title" xml:space="preserve">
     <value>Potrebna je dodatna komponenta</value>
@@ -1166,7 +1163,7 @@ Ako još ne radi, ugasi i upali Lively opet/restartuj windows.
     <value>Ikone radne površine</value>
   </data>
   <data name="TextEndOfItems.Text" xml:space="preserve">
-    <value>To je sve za sada...</value>
+    <value>To je sve za sada..</value>
   </data>
   <data name="DevelopmentOnHold.Message" xml:space="preserve">
     <value>Razvijanje ove funkcije je pauzirano</value>
@@ -1218,36 +1215,48 @@ Ako još ne radi, ugasi i upali Lively opet/restartuj windows.
     <value>Preuzmi</value>
   </data>
   <data name="TextBecomePatreonMember.Content" xml:space="preserve">
-    <value>Become a Patreon supporter</value>
+    <value>Postanite Patreon pretplatnik</value>
   </data>
   <data name="TextPatreonMembersThankYou.Text" xml:space="preserve">
-    <value>Thanks to all the members who support this project.</value>
+    <value>Hvala svim članovima koji podržavaju ovaj projekat.</value>
   </data>
   <data name="TitlePatreon.Text" xml:space="preserve">
-    <value>Patreon Supporters</value>
+    <value>Patreon pretplatnici</value>
   </data>
   <data name="SelectScreensaverCustomMode.Text" xml:space="preserve">
-    <value>Select screensaver</value>
+    <value>Odabir čuvara ekrana</value>
   </data>
   <data name="WebViewRequired.Message" xml:space="preserve">
-    <value>Microsoft WebView2 is required to view this content</value>
+    <value>Microsoft WebView2 je potreban za prikaz sadržaja</value>
   </data>
   <data name="WebViewRequired.Title" xml:space="preserve">
     <value>Potrebna je dodatna komponenta</value>
   </data>
   <data name="AppMusicExclusion.Description" xml:space="preserve">
-    <value>Select apps to exclude from showing music details</value>
+    <value>Odaberi koje aplikacije će biti izuzete iz prikaza detalja numera</value>
   </data>
   <data name="AppMusicExclusion.Header" xml:space="preserve">
-    <value>App exclusion</value>
+    <value>Izuzimanje aplikacija</value>
   </data>
   <data name="RestartCommand.Content" xml:space="preserve">
-    <value>Restart</value>
+    <value>Pokreni iz početka</value>
   </data>
   <data name="WallpaperMusicGroup.Text" xml:space="preserve">
-    <value>Music</value>
+    <value>Muzika</value>
   </data>
   <data name="WallpaperRestartRequiredNotify.Message" xml:space="preserve">
-    <value>Wallpaper restart is required for the settings to take effect</value>
+    <value>Potrebno je ponobno pokretanje kako bi podešavanja bila primenjena</value>
+  </data>
+  <data name="LanguageSettingsItemSystemDefault.Content" xml:space="preserve">
+    <value>Same as System</value>
+  </data>
+  <data name="InfoSettingsRestartRequest.Message" xml:space="preserve">
+    <value>Please restart application for settings to take effect.</value>
+  </data>
+  <data name="ScreensaverLockOnResume.Header" xml:space="preserve">
+    <value>Po nastavku, prikaži ekran za prijavljivanje</value>
+  </data>
+  <data name="ScreensaverFadeIn.Header" xml:space="preserve">
+    <value>Fade to black before start</value>
   </data>
 </root>

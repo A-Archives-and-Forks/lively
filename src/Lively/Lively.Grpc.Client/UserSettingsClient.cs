@@ -258,6 +258,8 @@ namespace Lively.Grpc.Client
                 ApplicationThemeBackgroundPath = settings.ApplicationThemeBackgroundPath,
                 ThemeBundleVersion = settings.ThemeBundleVersion,
                 ScreensaverPluginNotify = settings.IsScreensaverPluginNotify,
+                ScreensaverVolumeGlobal = settings.ScreensaverGlobalVolume,
+                ScreensaverFadeIn = settings.ScreensaverFadeIn,
             };
         }
 
@@ -349,6 +351,8 @@ namespace Lively.Grpc.Client
                 ApplicationThemeBackgroundPath = settings.ApplicationThemeBackgroundPath,
                 ThemeBundleVersion = settings.ThemeBundleVersion,
                 IsScreensaverPluginNotify = settings.ScreensaverPluginNotify,
+                ScreensaverGlobalVolume = settings.ScreensaverVolumeGlobal,
+                ScreensaverFadeIn = settings.ScreensaverFadeIn,
             };
         }
 

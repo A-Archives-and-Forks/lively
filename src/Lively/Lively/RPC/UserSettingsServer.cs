@@ -192,6 +192,8 @@ namespace Lively.RPC
             userSettings.Settings.ApplicationThemeBackgroundPath = req.ApplicationThemeBackgroundPath;
             userSettings.Settings.ThemeBundleVersion = req.ThemeBundleVersion;
             userSettings.Settings.IsScreensaverPluginNotify = req.ScreensaverPluginNotify;
+            userSettings.Settings.ScreensaverGlobalVolume = req.ScreensaverVolumeGlobal;
+            userSettings.Settings.ScreensaverFadeIn = req.ScreensaverFadeIn;
 
             try
             {
@@ -303,6 +305,8 @@ namespace Lively.RPC
                 ApplicationThemeBackgroundPath = settings.ApplicationThemeBackgroundPath ?? string.Empty,
                 ThemeBundleVersion = settings.ThemeBundleVersion,
                 ScreensaverPluginNotify = settings.IsScreensaverPluginNotify,
+                ScreensaverVolumeGlobal = settings.ScreensaverGlobalVolume,
+                ScreensaverFadeIn = settings.ScreensaverFadeIn,
             };
             return Task.FromResult(resp);
         }

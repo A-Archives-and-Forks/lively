@@ -213,7 +213,7 @@ Continuați doar dacă această aplicație provine dintr-o sursă de încredere.
     <value>Arătați-vă suportul cumpărând o cafea dezvoltatorului</value>
   </data>
   <data name="DescSwitchBranchBetaWarning" xml:space="preserve">
-    <value>Sunteți pe punctul de a trece la versiunea beta (dezvoltator) a Lively.
+    <value>Sunteți pe punctul de a trece la versiunea beta (dezvoltator) a Live.
 Actualizările vor fi frecvente și pot apărea probleme!</value>
   </data>
   <data name="HideSysTray.Description" xml:space="preserve">
@@ -826,9 +826,6 @@ Edge este vizualizarea web integrată a Windows 10.</value>
   <data name="TitleScreensaver.Content" xml:space="preserve">
     <value>Screensaver</value>
   </data>
-  <data name="ScreensaverLockOnResume.Content" xml:space="preserve">
-    <value>La reluare, arată ecranul de autentificare</value>
-  </data>
   <data name="TitleSelectFile" xml:space="preserve">
     <value>Selectează fișier</value>
   </data>
@@ -1255,5 +1252,17 @@ Edge este vizualizarea web integrată a Windows 10.</value>
   </data>
   <data name="WallpaperRestartRequiredNotify.Message" xml:space="preserve">
     <value>Este necesară repornirea imaginii de fundal pentru ca setările să aibă efect</value>
+  </data>
+  <data name="LanguageSettingsItemSystemDefault.Content" xml:space="preserve">
+    <value>La fel ca Sistemul</value>
+  </data>
+  <data name="InfoSettingsRestartRequest.Message" xml:space="preserve">
+    <value>Vă rugăm să reporniți Lively pentru ca setările să aibă efect.</value>
+  </data>
+  <data name="ScreensaverLockOnResume.Header" xml:space="preserve">
+    <value>La reluare, arată ecranul de autentificare</value>
+  </data>
+  <data name="ScreensaverFadeIn.Header" xml:space="preserve">
+    <value>Fade to black before start</value>
   </data>
 </root>

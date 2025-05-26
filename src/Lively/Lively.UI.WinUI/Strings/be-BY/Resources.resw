@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AudioFocused.Content" xml:space="preserve">
-    <value>Прайграваць гук толькі на працоўным стале</value>
+    <value>Прайграваць гук толькі, калі працоўны стол у фокусе</value>
   </data>
   <data name="Audio.Description" xml:space="preserve">
     <value>Узровень гучнасці ўсіх шпалер</value>
@@ -130,34 +130,34 @@
     <value>Аўдыя</value>
   </data>
   <data name="Community.Description" xml:space="preserve">
-    <value>Форум па абмеркаванні ў інтэрнэце</value>
+    <value>Форум абмеркавання</value>
   </data>
   <data name="Documentation.Description" xml:space="preserve">
-    <value>Дакументацыя і дапамога па API</value>
+    <value>Дакументацыя па API і дапамога</value>
   </data>
   <data name="DescExplorerCrash" xml:space="preserve">
-    <value>У Lively паўстала фатальная памылка.
+    <value>У праграме адбылася фатальная памылка.
 
-Праваднік Windows перазапусціўся двойчы за апошнія 30 секунд! Гэта можа быць ад канфлікту Lively з іншай праграмаю для персаналізацыі або з Windows. Каб пазбегнуць далейшых праблем, усе шпалеры будуць выключаны.</value>
+Праваднік Windows быў перазапушчаны двойчы за апошнія 30 секунд! Прычынай можа быць канфлікт з іншай праграмай такога тыпу або непасрэдна з аперацыйнай сістэмай. Усе шпалеры будуць выключаны, каб пазбегнуць далейшых праблем.</value>
   </data>
   <data name="DescIncompatibleTaskbarTheme" xml:space="preserve">
-    <value>Выяўлена несумяшчальная праграма, персаналізацыя панэлі задач адключана</value>
+    <value>Выяўлена несумяшчальная праграма, тэматызацыя панэлі задач адключана</value>
   </data>
   <data name="Website.Description" xml:space="preserve">
     <value>Афіцыйная вэб-старонка Lively Wallpaper</value>
   </data>
   <data name="DescOledScreensaverNotice" xml:space="preserve">
-    <value>Большая колькасць LCD і LED дысплэяў не падвержаны выгаранню, таму любыя шпалеры можна выкарыстоўваць як застаўку.
+    <value>Пераважная колькасць сучасных дысплэяў з тэхналогіяй LCD і LED не падвержаны выгаранню, і таму вы можаце выкарыстоўваць любыя шпалеры ў якасці застаўкі.
 
-Для манітораў з OLED, CRT або плазменным дысплэямі, якія могуць выгараць, рэкамендуецца выкарыстоўваць шпалеры са звычайным рухам да цёмнай тэмаю, якія павінны паменшыць выгаранне, аднак гэта функцыя яшчэ не тэстыравалася і яе эфектыўнасць ня можа быць гарантыравана.
+Для дысплэяў OLED, CRT або з плазменнай тэхналогіяй, якія падвержаны выгаранню, рэкамендуецца выкарыстоўваць тэму цёмных шпалер са звычайным рухам. Такі падыход змяншае выгаранне, аднак гэта функцыя пакуль не пратэсціравана і яе эфектыўнасць не гарантуецца.
 
-Галоўная задача заставак Lively — дадаць яшчэ адын узровень персаналізацыі да вашага ПК, выкарыстоўвыйце застаўкі як ахову ад выгарання на ваш жах і рызыку!</value>
+Галоўная задача заставак Lively — гэта дадаць яшчэ адзін узровень персаналізацыі да вашага камп'ютара. Уся адказнасць за выкарыстанне заставак з абаронай ад выгарання ляжыць на вас!</value>
   </data>
   <data name="ReportBug.Description" xml:space="preserve">
-    <value>Паведаміць пра праблему з праграмным забеспячэннем</value>
+    <value>Паведаміць аб праблеме з праграмным забеспячэннем</value>
   </data>
   <data name="AddWallpaperFileBrowse.Header" xml:space="preserve">
-    <value>Абраць файл</value>
+    <value>Выберыце файл</value>
   </data>
   <data name="DescriptionAppRules" xml:space="preserve">
     <value>Wallpaper playback behaviour based on running application</value>
@@ -169,21 +169,21 @@
     <value>Вы сапраўды хочаце незваротна выдаліць гэтыя шпалеры з дыска?</value>
   </data>
   <data name="DescriptionDeleteConfirmationLibrary" xml:space="preserve">
-    <value>Вы ўпэўнены ў тым, што хочаце выдаліць гэтыя шпалеры з галерэі?</value>
+    <value>Вы сапраўды хочаце выдаліць гэтыя шпалеры з бібліятэкі?</value>
   </data>
   <data name="DragDropFile.Text" xml:space="preserve">
     <value>Проста перацягніце файлы сюды</value>
   </data>
   <data name="DescriptionExternalAppWarning" xml:space="preserve">
-    <value>Вы адкрывайце іншае прыкладанне як шпалеры.
-Небяспечныя прыкладанні могуць уключаць вірусы і нашкодзіць вашай сістэме.
-Працягвайце толькі калі вы ўпэўнены, што прыкладанне з праверанага рэсурсу.</value>
+    <value>Вы адкрываеце знешнюю праграму як шпалеры.
+Шкодныя праграмы могуць уключаць вірусы і парушыць вашу сістэму.
+Працягвайце толькі ў выпадку, калі праграма атрымана з надзейнай крыніцы.</value>
   </data>
   <data name="MinimizedTray.Text" xml:space="preserve">
-    <value>Lively быў згорнуты ў сістэмны латок. Націсніце на правую кнопку праграмы, каб працягнуць.</value>
+    <value>Lively згорнута ў сістэмны латок. Націсніце на правую кнопку, каб працягнуць.</value>
   </data>
   <data name="DescriptionPleaseRestartLively" xml:space="preserve">
-    <value>Перазапусціце праграму, каб змены набылі моц</value>
+    <value>Перазапусціце Lively, каб адбыліся змены</value>
   </data>
   <data name="DescriptionPleaseStop" xml:space="preserve">
     <value>Спыніцеся перад тым, як працягнуць</value>
@@ -195,7 +195,7 @@
     <value>Адбываецца аднаўленне папярэдніх шпалер. Пачакайце...</value>
   </data>
   <data name="DescriptionScreenLayout" xml:space="preserve">
-    <value>Абярыце дысплэй</value>
+    <value>Выберыце дысплэй</value>
   </data>
   <data name="DescriptionUpdateAvailable" xml:space="preserve">
     <value>Даступна новая версія праграмы!</value>
@@ -204,46 +204,46 @@
     <value>Enter website link to load, shadertoy.com shader links are supported</value>
   </data>
   <data name="DescriptionWelcomeWizard" xml:space="preserve">
-    <value>Майстар устаноўкі дапаможа вам наладзіць Lively</value>
+    <value>Майстар усталявання дапаможа вам наладзіць Lively</value>
   </data>
   <data name="DescriptionWindowsNCodecInstall" xml:space="preserve">
-    <value>Для Вашай Windows версіі N/KN патрэбна спампаваць дапоўненыя кодэкі для падтрымкі прайгравання відэа на шпалерах</value>
+    <value>Вашай версіі Windows N/KN спатрэбіцца спампаваць дадатковыя кодэкі для падтрымкі прайгравання відэа ў шпалерах</value>
   </data>
   <data name="DescSupperDev" xml:space="preserve">
     <value>Падтрымайце распрацоўшчыка, купіўшы яму каву</value>
   </data>
   <data name="DescSwitchBranchBetaWarning" xml:space="preserve">
-    <value>Вы збірайцеся перайсці на бэта версію Lively(для распрацоўшчыкаў).
-Абнаўленні будуць больш частыя і могуць змяшчаць багі!</value>
+    <value>Вы збірайцеся перайсці на бэта-версію Lively (для распрацоўшчыкаў).
+Абнаўленні будуць больш частымі і могуць змяшчаць памылкі!</value>
   </data>
   <data name="HideSysTray.Description" xml:space="preserve">
-    <value>Бачнасць іконкі ў сістэмным трэю, lively працягне працаваць, калі іконка схавана</value>
+    <value>Бачнасць значка ў сістэмным латку. Lively працягне працаваць са схаваным значком</value>
   </data>
   <data name="HideSysTray.Header" xml:space="preserve">
-    <value>Іконка ў панэлі задач</value>
+    <value>Значок у сістэмным латку</value>
   </data>
   <data name="Language.Description" xml:space="preserve">
-    <value>Lively перазапусціцца, каб аднавіць язык прыкладання</value>
+    <value>Праграма будзе перазапушчана, каб ужыць новую мову</value>
   </data>
   <data name="Language.Header" xml:space="preserve">
     <value>Мова</value>
   </data>
   <data name="LivelyExceptionAppUpdateFail" xml:space="preserve">
-    <value>Не атрымалася абнавіць; паспрабуйце запампаваць файл устаноўкі з:
+    <value>Не ўдалося абнавіць; паспрабуйце ўручную спампаваць файл усталявання:
 https://github.com/rocksdanister/lively/releases</value>
   </data>
   <data name="LivelyExceptionDamagedZipFile" xml:space="preserve">
-    <value>Файл з шпалерамі пашкоджаны, паспрабуйце запампаваць яго яшчэ раз</value>
+    <value>Файл са шпалерамі пашкоджаны. Паспрабуйце спампаваць яго паўторна</value>
   </data>
   <data name="LivelyExceptionGeneral" xml:space="preserve">
-    <value>Ой... Штосьці пайшло не так :(
-Каб лепей паняць, у чым праблема і выпраміць памылку, абагуліце файл атладкі з распрацоўшчыкам.
-Інструкцыі па абагульненню файла атладкі:
+    <value>Вой... Здаецца, што нешта пайшло не так :(
+Для таго, каб нам хутчэй выправіць праблему, абагуліце з намі файл журнала.
+Па спасылцы вы знойдзеце інструкцыі як гэта зрабіць:
 https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="LivelyExceptionHighContrastMode" xml:space="preserve">
-    <value>Lively не можа нармальна працаваць, калі ўключаны рэжым павышанага кантрасту ў Windows!
-Адключыце рэжым павышанага кантрасту і паспрабуйце яшчэ раз</value>
+    <value>Lively не можа працаваць з уключаным рэжымам павышанага кантрасту ў Windows!
+Адключыце вышэйадзначаны рэжым і паспрабуйце яшчэ раз</value>
   </data>
   <data name="LivelyExceptionMediaPlayback" xml:space="preserve">
     <value>Media playback failed :(
@@ -254,25 +254,25 @@ Instructions for sharing log file:
 https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="LivelyExceptionNotLivelyZip" xml:space="preserve">
-    <value>Не файл Lively wallpaper</value>
+    <value>Не файл шпалер Lively</value>
   </data>
   <data name="LivelyExceptionSafeModeStart" xml:space="preserve">
-    <value>Lively не было закрыта нармальна, таму зараз выканаецца ў бяспечным рэжыме.
-Хочаце аднавіць мінулыя шпалеры?</value>
+    <value>Lively запушчана ў бяспечным рэжыме, бо папярэдні запуск завяршыўся неналежным чынам.
+Вы сапраўды хочаце аднавіць раней запушчаныя шпалеры?</value>
   </data>
   <data name="LivelyExceptionWorkerWSetupFail" xml:space="preserve">
-    <value>Падобна на тое, што трэба зрабіць некалькі правак, каб Lively пачала працаваць:  
+    <value>Падобна на тое, што трэба зрабіць некалькі налад, каб Lively пачала працаваць:  
 1. Націсніце Win + R, каб адкрыць акно "Выканаць", 
-2. Увядзіце SystemPropertiesPerformance.exe у акно, націсніце "ОК", каб адкрыць налады прадуктыўнасці.
-3. Уключыце/Пастаўце птушку на "Animate controls and elements inside windows"(калі птушка ўжо стаіць, убярыце і пастаўце яшчэ раз) і прымяніце.
-4. Націсніце "Прымяніць", потым "ОК", каб закрыць акно.
+2. Увядзіце SystemPropertiesPerformance.exe у радок акна "Выканаць" і націсніце "ОК", каб адкрыць параметры прадуктыўнасці.
+3. Уключыце/Пазначце птушкай на "Animate controls and elements inside windows" (калі птушка прысутнічае, здыміце яе і пазначце яшчэ раз).
+4. Націсніце кнопкі "Ужыць" і "ОК", каб закрыць акно.
 
-Калі вы выкарыстоўвайце Windows 7 - Наладзіць для найлепшага выгляду &amp; Прымяніць.
-Калі ніякі з метадаў вышэй не робіць, перазапусціце Lively/перазагрузіце Windows.
-(Не робіць у некаторых версіях Windows 10 insider)</value>
+Калі вы карыстаецеся Windows 7, то неабходна выбраць "Adjust for best appearance" і націснуць кнопку "Ужыць".
+Калі гэтыя дзеянні не дапамаглі, то паспрабуйце перазапусціць праграму і/або аперацыйную сістэму.
+(Не працуе ў некаторых інсайдарскіх зборках Windows 10)</value>
   </data>
   <data name="Startup.Description" xml:space="preserve">
-    <value>Lively павінна выконвацца ў фонавым рэжыме каб адлюстроўваць шпалеры</value>
+    <value>Lively неабходна працаваць у фонавым рэжыме для адлюстравання шпалер</value>
   </data>
   <data name="Startup.Header" xml:space="preserve">
     <value>Запускаць разам з Windows</value>
@@ -287,7 +287,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Праграма</value>
   </data>
   <data name="Attribution.Header" xml:space="preserve">
-    <value>Аўтарства</value>
+    <value>Атрыбуты</value>
   </data>
   <data name="Author.Text" xml:space="preserve">
     <value>Аўтар</value>
@@ -317,7 +317,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Націсніце тут, каб кіраваць шпалерамі</value>
   </data>
   <data name="TextConvertVideo" xml:space="preserve">
-    <value>Ператварыць у відэа</value>
+    <value>Пераўтварыць у відэа</value>
   </data>
   <data name="TextCreatePreview" xml:space="preserve">
     <value>Стварыць перадпрагляд</value>
@@ -335,7 +335,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Апісанне</value>
   </data>
   <data name="DisplayPauseRuleAllScreen.Content" xml:space="preserve">
-    <value>Увесь экран/Усе экраны</value>
+    <value>Усе экраны</value>
   </data>
   <data name="DisplayPauseRulePerScreen.Content" xml:space="preserve">
     <value>Для кожнага экрана</value>
@@ -365,16 +365,16 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Аніміраваны GIF</value>
   </data>
   <data name="SourceCode.Description" xml:space="preserve">
-    <value>Паказаць крыху любві, пакінуў зорачцы</value>
+    <value>Падтрымаць праект, даўшы зорку</value>
   </data>
   <data name="TextGo" xml:space="preserve">
     <value>GO</value>
   </data>
   <data name="TextHelpTranslate.Title" xml:space="preserve">
-    <value>Дапамагчы з перакладам</value>
+    <value>Дапамагчы з перакладам Lively</value>
   </data>
   <data name="TextHours" xml:space="preserve">
-    <value>час(оў)</value>
+    <value>гадзін(а)</value>
   </data>
   <data name="TextInstall.Content" xml:space="preserve">
     <value>Усталяваць</value>
@@ -395,7 +395,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>хвілін(а)</value>
   </data>
   <data name="TextmoreInfo" xml:space="preserve">
-    <value>Інфармацыя</value>
+    <value>Звесткі</value>
   </data>
   <data name="TextMoreWallpapers" xml:space="preserve">
     <value>Больш шпалер</value>
@@ -404,7 +404,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Мыш</value>
   </data>
   <data name="MouseInteractOnDesktop.Content" xml:space="preserve">
-    <value>Мыш дзейнічае на шпалеры, калі ёсць фокус на прыкладанне</value>
+    <value>Мыш узаемадзейнічае са шпалерамі, калі праграма знаходзіцца ў фокусе</value>
   </data>
   <data name="TextNext" xml:space="preserve">
     <value>Далей</value>
@@ -413,13 +413,13 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Не</value>
   </data>
   <data name="TextOff.Content" xml:space="preserve">
-    <value>Выкл</value>
+    <value>Выключана</value>
   </data>
   <data name="TextOK" xml:space="preserve">
-    <value>Добра</value>
+    <value>ОК</value>
   </data>
   <data name="TextOn.Content" xml:space="preserve">
-    <value>Укл</value>
+    <value>Уключана</value>
   </data>
   <data name="TextOnline" xml:space="preserve">
     <value>У сетцы</value>
@@ -449,7 +449,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Прыпыніць</value>
   </data>
   <data name="TextPicture" xml:space="preserve">
-    <value>Выява</value>
+    <value>Відарыс</value>
   </data>
   <data name="PreviewWallpaper.Text" xml:space="preserve">
     <value>Перадпрагляд</value>
@@ -458,10 +458,10 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Палітыка прыватнасці</value>
   </data>
   <data name="TextProcessingWallpaper" xml:space="preserve">
-    <value>Апрацоўваецца</value>
+    <value>Апрацавана</value>
   </data>
   <data name="TextRemove" xml:space="preserve">
-    <value>Прыбраць</value>
+    <value>Выдаліць</value>
   </data>
   <data name="TextRule" xml:space="preserve">
     <value>Правіла</value>
@@ -470,13 +470,13 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Экран</value>
   </data>
   <data name="SearchBox.PlaceholderText" xml:space="preserve">
-    <value>Шукаць</value>
+    <value>Пошук</value>
   </data>
   <data name="SetWallpaper.Text" xml:space="preserve">
-    <value>Зрабіць шпалерамі</value>
+    <value>Задаць як шпалеры</value>
   </data>
   <data name="ShowOnDisk.Text" xml:space="preserve">
-    <value>Адкрыць размяшчэнне файлу</value>
+    <value>Адкрыць размяшчэнне файла</value>
   </data>
   <data name="WallpaperSource.Text" xml:space="preserve">
     <value>Крыніца</value>
@@ -488,7 +488,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Спыніць</value>
   </data>
   <data name="StoreReview.Content" xml:space="preserve">
-    <value>Падабаецца наша праграма? Пакіньце водгук на яе :)</value>
+    <value>Вам падабаецца выкарыстоўваць Lively? Пакіньце водгук :)</value>
   </data>
   <data name="TextSupport.Content" xml:space="preserve">
     <value>Падтрымка</value>
@@ -497,13 +497,13 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Пераключыцца на бэта-версію (канал Dev)</value>
   </data>
   <data name="TextSwitchBranchOfficial" xml:space="preserve">
-    <value>Пераключыцца на стабільную версію (звычайны канал)</value>
+    <value>Пераключыцца на стабільную версію (прадвызначаны канал)</value>
   </data>
   <data name="TextTags" xml:space="preserve">
     <value>Тэгі</value>
   </data>
   <data name="TaskbarThemeBlur.Content" xml:space="preserve">
-    <value>Размытасць</value>
+    <value>Размыццё</value>
   </data>
   <data name="TaskbarThemeClear.Content" xml:space="preserve">
     <value>Ачысціць</value>
@@ -512,13 +512,13 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Колер</value>
   </data>
   <data name="TaskbarThemeFluent.Content" xml:space="preserve">
-    <value>Акрыл</value>
+    <value>Fluent</value>
   </data>
   <data name="TaskbarThemeWallpaper.Content" xml:space="preserve">
     <value>Шпалеры</value>
   </data>
   <data name="TaskbarThemeWallpaperFluent.Content" xml:space="preserve">
-    <value>Акрылавыя шпалеры</value>
+    <value>Плаўныя шпалеры</value>
   </data>
   <data name="TextTileSizeLarge" xml:space="preserve">
     <value>Large</value>
@@ -551,13 +551,13 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Праверыць абнаўленні</value>
   </data>
   <data name="TextupdateCheckFail" xml:space="preserve">
-    <value>Не атрымалася праверыць на абнаўлення</value>
+    <value>Не ўдалося праверыць наяўнасць абнаўленняў</value>
   </data>
   <data name="TextUpdateChecking" xml:space="preserve">
-    <value>Правяраем абнаўленні</value>
+    <value>Праверыць абнаўленні</value>
   </data>
   <data name="TextUpdateUptodate" xml:space="preserve">
-    <value>Гэта апошняя версія праграмы!</value>
+    <value>У вас апошняя версія праграмы!</value>
   </data>
   <data name="TextVideo" xml:space="preserve">
     <value>Відэа</value>
@@ -566,10 +566,10 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Параметры запуску</value>
   </data>
   <data name="WallpaperFitFill.Content" xml:space="preserve">
-    <value>Запоўніць</value>
+    <value>Запаўненне</value>
   </data>
   <data name="WallpaperFitNone.Content" xml:space="preserve">
-    <value>Не</value>
+    <value>Адсутнічае</value>
   </data>
   <data name="WallpaperFitUniform.Content" xml:space="preserve">
     <value>Раўнамерна</value>
@@ -584,7 +584,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Экран</value>
   </data>
   <data name="WallpaperLayoutSpan.Text" xml:space="preserve">
-    <value>Ад краю да краю</value>
+    <value>Расцягнуць</value>
   </data>
   <data name="WallpaperType.Text" xml:space="preserve">
     <value>Тып</value>
@@ -593,7 +593,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Вэб-сайт</value>
   </data>
   <data name="TextWebStream" xml:space="preserve">
-    <value>Вэб-трансляцыя</value>
+    <value>Трансляцыя</value>
   </data>
   <data name="TextWelcome" xml:space="preserve">
     <value>Вітаем</value>
@@ -608,16 +608,16 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Задаць у якасці шпалер усе тыпы файлаў, якія падтрымліваюцца</value>
   </data>
   <data name="EnterUrl.Description" xml:space="preserve">
-    <value>Задаць вэб-старонку URL-адраса, якую вы ўвялі ў якасці шпалер</value>
+    <value>Задаць вэб-старонку ў якасці шпалер, выкарыстоўваючы яе URL-адрас</value>
   </data>
   <data name="AppFocus.Description" xml:space="preserve">
     <value>Задайце дзеянне, калі нейкая праграма трапляе ў фокус</value>
   </data>
   <data name="AppFullScreen.Description" xml:space="preserve">
-    <value>Задайце дзеянне, калі нейкая праграма запушчана ў поўнаэкранным рэжыме</value>
+    <value>Задайце дзеянне, калі нейкая праграма выконваецца ў поўнаэкранным рэжыме</value>
   </data>
   <data name="AppRules.Description" xml:space="preserve">
-    <value>Спыніць шпалеры, калі запушчаны гэтыя праграмы</value>
+    <value>Прыпыніць шпалеры, калі запушчаны гэтыя праграмы</value>
   </data>
   <data name="TipAppTheme" xml:space="preserve">
     <value>Lively адаптуецца пад сістэмныя налады тэмы, каб змяніць знешні выгляд</value>
@@ -626,52 +626,52 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Змяніць прайграванне пры сілкаванні ад акумулятара</value>
   </data>
   <data name="BrowserDebuggingPort.Description" xml:space="preserve">
-    <value>Увядзіце порт наладкі шпалер з вэб-старонкі; калі будзеце гатовы перайдзіце на http://localhost:portnumber, каб перайсці ў кансоль распрацоўшчыку</value>
+    <value>Увядзіце порт адладкі шпалер з вэб-старонкі шпалер; калі будзеце гатовы, перайдзіце па спасылцы http://localhost:portnumber, каб трапіць у кансоль распрацоўшчыка</value>
   </data>
   <data name="Debug.Description" xml:space="preserve">
     <value>Паказаць меню распрацоўшчыка</value>
   </data>
   <data name="DesktopPicture.Description" xml:space="preserve">
-    <value>Зрабіць выяву з аніміраванымі шпалерамі шпалерамі працоўнага стала</value>
+    <value>Задаць відарыс з аніміраванымі шпалерамі ў якасці шпалер працоўнага стала</value>
   </data>
   <data name="DisplayPauseRule.Description" xml:space="preserve">
-    <value>Спыніць шпалеры на ўсіх экранах, або толькі на экране, на якім сфакусіравана прыкладанне</value>
+    <value>Прыпыніць шпалеры на ўсіх экранах або толькі на экране, дзе сфакусіравана праграма</value>
   </data>
   <data name="ExportLogs.Description" xml:space="preserve">
-    <value>Стварыць файл справаздачы журналу</value>
+    <value>Стварыць файл справаздачы журнала</value>
   </data>
   <data name="GifPlayer.Description" xml:space="preserve">
-    <value>Абярыце тып прайгравальніка gif шпалер</value>
+    <value>Выберыце тып прайгравальніка для шпалер GIF</value>
   </data>
   <data name="TipLivelySetupOnClose" xml:space="preserve">
-    <value>Завяршыце ўстаноўку, каб працягнуць</value>
+    <value>Завяршыце наладжванне, каб працягнуць</value>
   </data>
   <data name="LockscreenPicture.Description" xml:space="preserve">
-    <value>Зрабіць выяву з аніміраванымі шпалерамі шпалерамі экрана блакіроўкі</value>
+    <value>Задаць відарыс з аніміраванымі шпалерамі ў якасці шпалер экрана блакіроўкі</value>
   </data>
   <data name="PauseAlgorithm.Description" xml:space="preserve">
-    <value>Алгарытм паўзы шпалер</value>
+    <value>Алгарытм прыпынення шпалер</value>
   </data>
   <data name="PowerSavingModePower.Description" xml:space="preserve">
-    <value>Змяніць прайграванне, калі ўключаны рэжым захавання энергіі ў Windows</value>
+    <value>Змяніць прайграванне, калі ўключаны рэжым эканоміі энергіі ў Windows</value>
   </data>
   <data name="RemoteDesktopPower.Description" xml:space="preserve">
-    <value>Змяніць прайграванне, калі падключаны да аддаленага працоўнага стала</value>
+    <value>Змяніць прайграванне, калі запушчана падключэнне да аддаленага працоўнага стала</value>
   </data>
   <data name="TipScreensaver" xml:space="preserve">
-    <value>Пасля перыяду неактыўнасці, выкарыстоўваць шпалеры як застаўку</value>
+    <value>Пасля перыяду бяздзейнасці, выкарыстоўваць бягучыя шпалеры ў якасці застаўкі</value>
   </data>
   <data name="StreamWallpaperDetect.Description" xml:space="preserve">
-    <value>Калі выяўлена спасылка на падтрымліваемы сэрвіс струменнага прайгравання, выкарыстоўваць прайгравальнік відэа замест загрузкі вэб-старонкі</value>
+    <value>Пры выяўленні спасылкі, якая змяшчае трансляцыю з відэа, выкарыстоўваць прайгравальнік відэа замест загрузкі вэб-старонкі</value>
   </data>
   <data name="StreamWallpaperVideoQuality.Description" xml:space="preserve">
-    <value>Абярыце пераважную якасць відэа для струменнага прайгравання</value>
+    <value>Выберыце пажаданую якасць відэа для патокавага прайгравання</value>
   </data>
   <data name="TipSwitchSoftwareBranch" xml:space="preserve">
-    <value>Змяніць выпуск праграмы з бэта на стабільны ды наадварот</value>
+    <value>Змяніць выпуск праграмнага забеспячэння з бэты на стабільную версію або наадварот</value>
   </data>
   <data name="TaskbarTheme.Description" xml:space="preserve">
-    <value>Змяніць выгляд сістэмнай панэлі задач</value>
+    <value>Змяніць афармленне сістэмнай панэлі задач</value>
   </data>
   <data name="TipTileSize" xml:space="preserve">
     <value>Size of the wallpaper tiles in Library</value>
@@ -683,28 +683,28 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Выкарыстоўваць апаратнае паскарэнне, калі магчыма</value>
   </data>
   <data name="VideoPlayer.Description" xml:space="preserve">
-    <value>Абярыце тып прайгравальніка відэа шпалер</value>
+    <value>Выберыце тып прайгравальніка для шпалер з відэа</value>
   </data>
   <data name="WallpaperDir.Description" xml:space="preserve">
-    <value>Пуць да захаваных шпалер</value>
+    <value>Шлях, дзе захоўваюцца файлы са шпалерамі</value>
   </data>
   <data name="WallpaperFit.Description" xml:space="preserve">
-    <value>Алгарытм павелічэння шпалер</value>
+    <value>Алгарытм маштабавання шпалер</value>
   </data>
   <data name="WallpaperInput.Description" xml:space="preserve">
-    <value>Абярыце спосабы ўзаемадзеяння са шпалерамі</value>
+    <value>Выберыце спосабы ўзаемадзеяння са шпалерамі</value>
   </data>
   <data name="WallpaperLayout.Description" xml:space="preserve">
-    <value>Тое, як шпалеры размяшчаюцца на падключаных прыладах з дысплэямі</value>
+    <value>Спосаб ужывання шпалер да падключаных прылад адлюстравання</value>
   </data>
   <data name="TipWallpaperPlayback" xml:space="preserve">
-    <value>Прыпыніць прайграванне шпалер, калі фокус не на працоўным стале</value>
+    <value>Прыпыніць прайграванне шпалер, калі працоўны стол не ў фокусе</value>
   </data>
   <data name="WebBrowserDiskCache.Description" xml:space="preserve">
     <value>Захоўваць часовыя файлы на дыску, а не ў аператыўнай памяці</value>
   </data>
   <data name="WebBrowser.Description" xml:space="preserve">
-    <value>Абярыце прайгравальнік для html шпалер</value>
+    <value>Выберыце тып прайгравальніка для шпалер HTML</value>
   </data>
   <data name="About.Label" xml:space="preserve">
     <value>Аб праграме</value>
@@ -713,31 +713,31 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Дадаць шпалеры</value>
   </data>
   <data name="AppFocus.Header" xml:space="preserve">
-    <value>Калі прыкладанне сфакусіравана</value>
+    <value>Праграмы ў фокусе</value>
   </data>
   <data name="AppFullScreen.Header" xml:space="preserve">
-    <value>Калі прыкладанне ў поўнаэкранным рэжыме</value>
+    <value>Праграмы на ўвесь экран</value>
   </data>
   <data name="TitleAppName" xml:space="preserve">
     <value>Lively Wallpaper</value>
   </data>
   <data name="AppRules.Header" xml:space="preserve">
-    <value>Выключэнні</value>
+    <value>Правілы для праграм</value>
   </data>
   <data name="AppTheme.Header" xml:space="preserve">
     <value>Тэма</value>
   </data>
   <data name="TitleAudioPlayOnScreen" xml:space="preserve">
-    <value>Граць аўдыа на экране</value>
+    <value>Прайграваць аўдыя на экране</value>
   </data>
   <data name="BatteryPower.Header" xml:space="preserve">
-    <value>Калі сілкуецца ад акумулятару</value>
+    <value>У рэжыме сілкавання ад акумулятара</value>
   </data>
   <data name="TitleBrowseFile" xml:space="preserve">
-    <value>Праглядзець файлы відэа, gif, вэб-старонкі... каб паставіць як шпалеры</value>
+    <value>Агляд файлаў з відэа, gif або вэб-старонак... каб задаць іх у якасці шпалер</value>
   </data>
   <data name="BrowserDebuggingPort.Header" xml:space="preserve">
-    <value>Порт наладкі</value>
+    <value>Порт адладкі</value>
   </data>
   <data name="TitleChangelog" xml:space="preserve">
     <value>Журнал змен</value>
@@ -746,49 +746,49 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Супольнасць</value>
   </data>
   <data name="Debug.Header" xml:space="preserve">
-    <value>Наладка</value>
+    <value>Адладка</value>
   </data>
   <data name="TitleDeleteConfirmation" xml:space="preserve">
     <value>Пацвердзіць выдаленне</value>
   </data>
   <data name="DesktopPicture.Header" xml:space="preserve">
-    <value>Выява працоўнага стала</value>
+    <value>Відарыс на працоўным стале</value>
   </data>
   <data name="DisplayPauseRule.Header" xml:space="preserve">
-    <value>Правіла прыпынення</value>
+    <value>Правіла прыпынення дысплэя</value>
   </data>
   <data name="Documentation.Header" xml:space="preserve">
     <value>Дакументацыя</value>
   </data>
   <data name="EnterUrl.Header" xml:space="preserve">
-    <value>Увядзіце URL адрас</value>
+    <value>Увядзіце URL-адрас</value>
   </data>
   <data name="ExportLogs.Header" xml:space="preserve">
-    <value>Файл часопіса</value>
+    <value>Файл журнала</value>
   </data>
   <data name="TitleGeneral" xml:space="preserve">
     <value>Агульныя</value>
   </data>
   <data name="GifPlayer.Header" xml:space="preserve">
-    <value>Прайгравальнік gif</value>
+    <value>Прайгравальнік GIF</value>
   </data>
   <data name="Help.Label" xml:space="preserve">
     <value>Дапамога</value>
   </data>
   <data name="TitleInteraction" xml:space="preserve">
-    <value>Інтэрактыўны</value>
+    <value>Узаемадзеянне</value>
   </data>
   <data name="TitleLibrary" xml:space="preserve">
-    <value>Бiблiятэка</value>
+    <value>Бібліятэка</value>
   </data>
   <data name="TitleLivelySetup" xml:space="preserve">
-    <value>Наладка Lively</value>
+    <value>Налады Lively</value>
   </data>
   <data name="TitleLocation" xml:space="preserve">
     <value>Месцазнаходжанне</value>
   </data>
   <data name="LockscreenPicture.Header" xml:space="preserve">
-    <value>Выява на экране блакіроўкі</value>
+    <value>Відарыс на экране блакіроўкі</value>
   </data>
   <data name="TitleMisc" xml:space="preserve">
     <value>Рознае</value>
@@ -797,28 +797,28 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Выключыць гук</value>
   </data>
   <data name="PauseAlgorithm.Header" xml:space="preserve">
-    <value>Алгарытм паўзы</value>
+    <value>Алгарытм прыпынення</value>
   </data>
   <data name="TitlePerformance" xml:space="preserve">
-    <value>Эфектыўнасць</value>
+    <value>Прадукцыйнасць</value>
   </data>
   <data name="TitlePlaylist" xml:space="preserve">
-    <value>Плэйліст</value>
+    <value>Спіс прайграванняў</value>
   </data>
   <data name="PleaseWait.Text" xml:space="preserve">
     <value>Калі ласка, пачакайце</value>
   </data>
   <data name="PowerSavingModePower.Header" xml:space="preserve">
-    <value>Калі ў рэжыме захавання энергіі</value>
+    <value>У рэжыме эканоміі зараду акумулятара</value>
   </data>
   <data name="RemoteDesktopPower.Header" xml:space="preserve">
-    <value>Калі ідзе сесія аддаленага працоўнага стала</value>
+    <value>У рэжыме аддаленага працоўнага стала</value>
   </data>
   <data name="ReportBug.Header" xml:space="preserve">
-    <value>Паведаміць пра баг</value>
+    <value>Паведаміць аб памылцы</value>
   </data>
   <data name="TitleScalingFit" xml:space="preserve">
-    <value>Расшырыць</value>
+    <value>Маштабаванне/Размяшчэнне</value>
   </data>
   <data name="ControlPanel.Title" xml:space="preserve">
     <value>Панэль кіравання</value>
@@ -826,11 +826,8 @@ https://github.com/rocksdanister/lively/wiki</value>
   <data name="TitleScreensaver.Content" xml:space="preserve">
     <value>Застаўка</value>
   </data>
-  <data name="ScreensaverLockOnResume.Content" xml:space="preserve">
-    <value>Паказваць экран уваходу пасле прабуджэння</value>
-  </data>
   <data name="TitleSelectFile" xml:space="preserve">
-    <value>Абярыце файл</value>
+    <value>Выберыце файл</value>
   </data>
   <data name="TitleSettings" xml:space="preserve">
     <value>Налады</value>
@@ -839,17 +836,17 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Прапусціць пацвярджэнне</value>
   </data>
   <data name="SourceCode.Header" xml:space="preserve">
-    <value>Выходны код</value>
+    <value>Зыходны код:</value>
   </data>
   <data name="Store.Header" xml:space="preserve">
     <value>Крама</value>
     <comment>For different version of Lively, example: Microsoft Store</comment>
   </data>
   <data name="StreamWallpaperVideoQuality.Header" xml:space="preserve">
-    <value>Струменнае прайграванне</value>
+    <value>Патокавае відэа</value>
   </data>
   <data name="StreamWallpaperDetect.Header" xml:space="preserve">
-    <value>Выяўляць струменнае прайграванне</value>
+    <value>Выяўляць трансляцыю відэа</value>
   </data>
   <data name="TitleStreamWallpaperVideoQuality" xml:space="preserve">
     <value>Якасць відэа</value>
@@ -873,7 +870,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Відэа</value>
   </data>
   <data name="VideoHardwareDecode.Header" xml:space="preserve">
-    <value>Дэкадыраванне GPU</value>
+    <value>Дэкадзіраванне GPU</value>
   </data>
   <data name="TitleWallpaper.Content" xml:space="preserve">
     <value>Шпалеры</value>
@@ -882,25 +879,25 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Дапасаваць</value>
   </data>
   <data name="WallpaperDir.Header" xml:space="preserve">
-    <value>Дырэкторыя са шпалерамі</value>
+    <value>Каталог са шпалерамі</value>
   </data>
   <data name="WallpaperDirMoveExisting.Content" xml:space="preserve">
     <value>Перамясціць існуючыя шпалеры ў новую папку</value>
   </data>
   <data name="WallpaperFit.Header" xml:space="preserve">
-    <value>Абярыце тып упісвання</value>
+    <value>Выберыце ўпісванне</value>
   </data>
   <data name="WallpaperInput.Header" xml:space="preserve">
-    <value>Тып кіравання шпалерамі</value>
+    <value>Узаемадзеянне са шпалерамі</value>
   </data>
   <data name="WallpaperLayout.Header" xml:space="preserve">
-    <value>Метад устаноўкі</value>
+    <value>Спосаб размяшчэння</value>
   </data>
   <data name="WallpaperPlaybackGroup.Text" xml:space="preserve">
     <value>Прайграванне шпалер</value>
   </data>
   <data name="TitleWarning" xml:space="preserve">
-    <value>Увага</value>
+    <value>Папярэджанне</value>
   </data>
   <data name="WebBrowser.Header" xml:space="preserve">
     <value>Вэб-браўзер</value>
@@ -915,7 +912,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Загрузіць вэб-старонку</value>
   </data>
   <data name="FastUI.Description" xml:space="preserve">
-    <value>Карыстальніцкі інтэрфейс будзе працягваць працаваць, каб запускацца хутчэй</value>
+    <value>Пакідаць інтэрфейс карыстальніка запушчаным, каб запускаць праграму хутчэй</value>
   </data>
   <data name="FastUI.Header" xml:space="preserve">
     <value>Хуткі запуск</value>
@@ -930,19 +927,19 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Светлая</value>
   </data>
   <data name="AppThemeSystem.Content" xml:space="preserve">
-    <value>Сістэма</value>
+    <value>Сістэмная</value>
   </data>
   <data name="WindowsSettingsColor.Content" xml:space="preserve">
-    <value>Налады колеру акна</value>
+    <value>Налады колеру Windows</value>
   </data>
   <data name="LaptopWallpaperPlaybackGroup.Text" xml:space="preserve">
     <value>Ноўтбукі</value>
   </data>
   <data name="DeveloperGroup.Text" xml:space="preserve">
-    <value>Распрацоўшчык</value>
+    <value>Распрацоўка</value>
   </data>
   <data name="AppearanceBehaviour.Text" xml:space="preserve">
-    <value>Знешні выгляд ды паводзіны</value>
+    <value>Вонкавы выгляд і паводзіны</value>
   </data>
   <data name="ActiveWallpapers.Label" xml:space="preserve">
     <value>Актыўныя шпалеры</value>
@@ -951,22 +948,22 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Галерэя</value>
   </data>
   <data name="AboutMe.Text" xml:space="preserve">
-    <value>Прывітанне, я Дэні Джон, таксама вядомы як rocksdanister. Я стварыў Lively -- бясплатнае прыкладанне для працы са шпалерамі з адкрытым выходным кодам. Дзякуй за тое, што знайшлі час паглядзець на маю работу.</value>
+    <value>Прывітанне! Мяне зваць Дэні Джон (таксама вядомы пад псеўданімам rocksdanister). Я распрацаваў праграму Lively, якая з'яўляецца бясплатнай праграмай з адкрытым зыходным кодам і прызначана для кіравання шпалерамі працоўнага стала. Дзякуй, што знайшлі час ацаніць маю працу.</value>
   </data>
   <data name="LicenseLink.Content" xml:space="preserve">
-    <value>Ліцэнзія</value>
+    <value>Ліцэнзія ПЗ</value>
   </data>
   <data name="AttributionLink.Content" xml:space="preserve">
-    <value>Заўвага аб пабочным праграмным забеспячэнні</value>
+    <value>Заўвагі аб ПЗ трэціх бакоў</value>
   </data>
   <data name="PrivacyPolicyLink.Content" xml:space="preserve">
-    <value>Умовы збору дадзеных</value>
+    <value>Палітыка збору даных</value>
   </data>
   <data name="AddWallpaperDrop.Text" xml:space="preserve">
     <value>Дадаць шпалеры</value>
   </data>
   <data name="ComingSoon.Text" xml:space="preserve">
-    <value>Скора</value>
+    <value>Неўзабаве чакаецца</value>
   </data>
   <data name="AboutMenu.Text" xml:space="preserve">
     <value>Аб праграме</value>
@@ -987,40 +984,40 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Карыстальніцкі інтэрфейс</value>
   </data>
   <data name="UIModeLite.Content" xml:space="preserve">
-    <value>Кампактны</value>
+    <value>Спрошчаная</value>
   </data>
   <data name="UIModeNormal.Content" xml:space="preserve">
-    <value>Звычайны</value>
+    <value>Нармальныя</value>
   </data>
   <data name="Screensaver.Description" xml:space="preserve">
-    <value>Тое, як застаўка размяшчаецца на падключаных прыладах з дысплэямі</value>
+    <value>Спосаб ужывання застаўкі да падключаных прылад адлюстравання</value>
   </data>
   <data name="Screensaver.Header" xml:space="preserve">
     <value>Тып застаўкі</value>
   </data>
   <data name="ScreensaverModeDifferentWallpaper.Text" xml:space="preserve">
-    <value>Карыстальніцкі</value>
+    <value>Карыстальніцкія</value>
   </data>
   <data name="ScreensaverModeSameWallpaper.Text" xml:space="preserve">
-    <value>Адлюстроўваць шпалеры</value>
+    <value>Люстраныя шпалеры</value>
   </data>
   <data name="ScreensaverPlugin.Title" xml:space="preserve">
-    <value>Патрэбны плагін</value>
+    <value>Патрабуецца ўбудова</value>
   </data>
   <data name="ScreensaverPluginMessage.Text" xml:space="preserve">
-    <value>Для таго, каб застаўка працавала, неабходна адначасовая наладка</value>
+    <value>Для запуску застаўкі патрабуецца аднаразовае наладжванне</value>
   </data>
   <data name="WallpaperLayoutScreenPicker.Content" xml:space="preserve">
-    <value>Заўсёды абіраць экран пры выбары шпалер</value>
+    <value>Заўсёды выбіраць экран пры выбары шпалер</value>
   </data>
   <data name="GalleryAccount.Text" xml:space="preserve">
-    <value>Акаўнт</value>
+    <value>Уліковы запіс</value>
   </data>
   <data name="GalleryAccountDelete.Content" xml:space="preserve">
-    <value>Выдаліць акаўнт</value>
+    <value>Выдаліць уліковы запіс</value>
   </data>
   <data name="GalleryAccountExport.Content" xml:space="preserve">
-    <value>Экспартаваць дадзеныя</value>
+    <value>Экспартаваць даныя</value>
   </data>
   <data name="GalleryAccountLogin.Content" xml:space="preserve">
     <value>Увайсці</value>
@@ -1032,7 +1029,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Калекцыя</value>
   </data>
   <data name="GalleryPageHome.Content" xml:space="preserve">
-    <value>Хатняя</value>
+    <value>Галоўная</value>
   </data>
   <data name="GalleryPageManage.Content" xml:space="preserve">
     <value>Кіраванне</value>
@@ -1041,37 +1038,37 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Профіль</value>
   </data>
   <data name="GalleryPleaseLogin.Text" xml:space="preserve">
-    <value>Калі ласка, увайдзіце, каб працягнуць</value>
+    <value>Увайдзіце, каб працягнуць</value>
   </data>
   <data name="GalleryWelcomeMessage.Text" xml:space="preserve">
     <value>Прывітанне,</value>
   </data>
   <data name="RestoreWallpaper.Text" xml:space="preserve">
-    <value>Мы знайшлі гэтыя шпалеры на вашым акаўнту</value>
+    <value>Вось гэтыя шпалеры знойдзены ў вашым уліковым запісе</value>
   </data>
   <data name="TextDownloadNow.Content" xml:space="preserve">
-    <value>Запампаваць</value>
+    <value>Спампаваць</value>
   </data>
   <data name="TextMaybeLater.Content" xml:space="preserve">
-    <value>Можа, пазней</value>
+    <value>Магчыма пазней</value>
   </data>
   <data name="TextSelectAll.Content" xml:space="preserve">
-    <value>Абраць усё</value>
+    <value>Выбраць усё</value>
   </data>
   <data name="TextSelectNone.Content" xml:space="preserve">
-    <value>Нічога не абіраць</value>
+    <value>Скасаваць выбар усіх</value>
   </data>
   <data name="TitleWelcomeback.Text" xml:space="preserve">
-    <value>Вітаем зноў!</value>
+    <value>З вяртаннем!</value>
   </data>
   <data name="ReportWallpaper.Header" xml:space="preserve">
-    <value>Прычыны</value>
+    <value>Прычына</value>
   </data>
   <data name="ReportWallpaperCopyright.Content" xml:space="preserve">
     <value>Парушэнне аўтарскіх праў</value>
   </data>
   <data name="ReportWallpaperMisleading.Content" xml:space="preserve">
-    <value>Увод у памылковы погляд</value>
+    <value>Ілжывая звесткі</value>
   </data>
   <data name="ReportWallpaperOther.Content" xml:space="preserve">
     <value>Іншая</value>
@@ -1080,10 +1077,10 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Спам</value>
   </data>
   <data name="ReportWallpaperViolence.Content" xml:space="preserve">
-    <value>Галізна ці гвалт</value>
+    <value>Аголеная натура або гвалт</value>
   </data>
   <data name="TextAdditionalNotes.Text" xml:space="preserve">
-    <value>Дадатковыя каментарыі</value>
+    <value>Дадатковыя нататкі</value>
   </data>
   <data name="TextReportWallpaper.Text" xml:space="preserve">
     <value>Паскардзіцца</value>
@@ -1092,168 +1089,180 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Паскардзіцца на шпалеры</value>
   </data>
   <data name="Send.Content" xml:space="preserve">
-    <value>Адаслаць</value>
+    <value>Адправіць</value>
   </data>
   <data name="GalleryAccountDeleteConfirm.Text" xml:space="preserve">
-    <value>Калі ласка, пацвердзіце гэта дзеянне, таму што яно НЯ МОЖА быць адроблена</value>
+    <value>Пацвердзіце гэта дзеянне, бо яго НЕЛЬГА адрабіць</value>
   </data>
   <data name="GalleryAccountDeleteFail.Text" xml:space="preserve">
-    <value>Ня ўдалося выдаліць акаўнт, калі ласка, паспрабуйце пазней</value>
+    <value>Не ўдалося выдаліць уліковы запіс. Паспрабуйце яшчэ раз пазней</value>
   </data>
   <data name="TextConfirmCancel.Text" xml:space="preserve">
-    <value>Хочаце яго адмяніць?</value>
+    <value>Скасаваць спампоўванне?</value>
   </data>
   <data name="TextWait.Text" xml:space="preserve">
     <value>Пачакаць</value>
   </data>
   <data name="TitleDownloadProgress.Text" xml:space="preserve">
-    <value>Спампоўка ў прагрэсе</value>
+    <value>Адбываецца спампоўванне</value>
   </data>
   <data name="TextContributors.Text" xml:space="preserve">
     <value>Удзельнікі</value>
   </data>
   <data name="TextShare.Text" xml:space="preserve">
-    <value>Падзяліцца</value>
+    <value>Абагуліць</value>
   </data>
   <data name="TitleShareWallpaper.Text" xml:space="preserve">
-    <value>Падзяліцца шпалерамі</value>
+    <value>Абагуліць шпалеры</value>
   </data>
   <data name="ExportWallpaperGallery.Text" xml:space="preserve">
-    <value>Загрузіць у галерэю</value>
+    <value>Запампаваць у галерэю</value>
   </data>
   <data name="ExportWallpaperLink.Text" xml:space="preserve">
     <value>Скапіяваць спасылку</value>
   </data>
   <data name="TextCustomiseWallpaper" xml:space="preserve">
-    <value>Кастамізаваць шпалеры</value>
+    <value>Дапасаваць шпалеры</value>
   </data>
   <data name="TextCloseWallpapers" xml:space="preserve">
     <value>Закрыць шпалеры</value>
   </data>
   <data name="TitleChooseApplication.Text" xml:space="preserve">
-    <value>Абярыце прыкладанне</value>
+    <value>Выберыце праграму</value>
   </data>
   <data name="WallpaperInstallSize.Text" xml:space="preserve">
     <value>Памер</value>
   </data>
   <data name="PluginNotFound.Message" xml:space="preserve">
-    <value>Калі ласка, устанавіце абавязковы плагін</value>
+    <value>Усталюйце патрэбную ўбудову</value>
   </data>
   <data name="PluginNotFound.Title" xml:space="preserve">
-    <value>Плагін ня знойдзены</value>
+    <value>Убудова не знойдзена</value>
   </data>
   <data name="UpdateCompleted.Text" xml:space="preserve">
     <value>Абнаўленне завершана</value>
   </data>
   <data name="UpdateWhatsNew.Text" xml:space="preserve">
-    <value>Паглядзіце, што ёсць новага</value>
+    <value>Даведайцеся, што новага</value>
   </data>
   <data name="AppThemeColor.Header" xml:space="preserve">
     <value>Колер</value>
   </data>
   <data name="DescriptionDefault.Text" xml:space="preserve">
-    <value>Выкарыстоўваць сістэмныя налады</value>
+    <value>Выкарыстоўваць прадвызначаныя налады сістэмы</value>
   </data>
   <data name="DescriptionDynamicTheme.Text" xml:space="preserve">
     <value>Адаптаваць пад шпалеры</value>
   </data>
   <data name="TextDefault.Text" xml:space="preserve">
-    <value>Стандартны</value>
+    <value>Прадвызначаныя</value>
   </data>
   <data name="TextDynamicTheme.Text" xml:space="preserve">
-    <value>Дынамічны</value>
+    <value>Дынамічныя</value>
   </data>
   <data name="Theme.Label" xml:space="preserve">
     <value>Тэма</value>
   </data>
   <data name="IconsHidden.Message" xml:space="preserve">
-    <value>Каб папярэдзіць выпадковы выбар абразкоў працоўнага стала, яны былі захаваны</value>
+    <value>У цяперашні момант значкі схаваны, каб пазбегнуць іх выпадковага выбару</value>
   </data>
   <data name="IconsHidden.Title" xml:space="preserve">
-    <value>Абразкі працоўнага стала</value>
+    <value>Значкі працоўнага стала</value>
   </data>
   <data name="TextEndOfItems.Text" xml:space="preserve">
-    <value>Пакуль што гэта ўсё..</value>
+    <value>Гэта ўсё, што ёсць на дадзены момант...</value>
   </data>
   <data name="DevelopmentOnHold.Message" xml:space="preserve">
     <value>Распрацоўка гэтай функцыі прыпынена</value>
   </data>
   <data name="WallpaperPluginGroup.Text" xml:space="preserve">
-    <value>Плагіны</value>
+    <value>Убудовы</value>
   </data>
   <data name="AddWallpaperAdvanced.Description" xml:space="preserve">
     <value>Стварыць дынамічныя шпалеры</value>
   </data>
   <data name="AddWallpaperAdvanced.Header" xml:space="preserve">
-    <value>Пашыраныя</value>
+    <value>Пашыраныя функцыі</value>
   </data>
   <data name="DescriptionDepthApprox.Content" xml:space="preserve">
-    <value>Вылічванне глыбіні..</value>
+    <value>Вызначэнне глыбіні...</value>
   </data>
   <data name="DescriptionDepthWallpaperItem.Content" xml:space="preserve">
-    <value>Выкарыстоўванне ШІ можа ператварыць фатаграфіі ў 3D</value>
+    <value>Выкарыстоўваючы пераўтварэнне фатаграфій у 3D з дапамогай ШІ</value>
   </data>
   <data name="TextContinue.Content" xml:space="preserve">
     <value>Працягнуць</value>
   </data>
   <data name="TitleCreateWallpaperOpenItem.Description" xml:space="preserve">
-    <value>Стварыць звычайныя шпалеры</value>
+    <value>Стварыць простыя шпалеры</value>
   </data>
   <data name="TitleDepthWallpaper.Content" xml:space="preserve">
-    <value>Глыбінныя шпалеры са ШІ</value>
+    <value>Глыбінныя шпалеры ШІ</value>
   </data>
   <data name="TitleDepthWallpaperItem.Content" xml:space="preserve">
     <value>Глыбінныя шпалеры</value>
   </data>
   <data name="DescriptionDepthWallpaperTemplate.Content" xml:space="preserve">
-    <value>Глыбінныя шпалеры, згенерыраваныя ШІ</value>
+    <value>Глыбінныя шпалеры, якія згенерыраваны ШІ</value>
   </data>
   <data name="TitleCreateWallpaper.Content" xml:space="preserve">
     <value>Стварыць шпалеры</value>
   </data>
   <data name="RunningAsAdminWarning.Message" xml:space="preserve">
-    <value>Некаторыя функцыі могуць быць недаступны, калі прыкладанне працуе ад імя адміністратара</value>
+    <value>Некаторыя функцыі могуць быць недаступны, калі праграма выконваецца ад імя адміністратара</value>
   </data>
   <data name="DescriptionDownloadRequired.Text" xml:space="preserve">
-    <value>Для гэтай функцыі неабходна спампаваць дадатковыя файлы</value>
+    <value>Для гэтай функцыі патрабуецца спампаваць дадатковыя файлы</value>
   </data>
   <data name="TitleDownloadRequired.Text" xml:space="preserve">
-    <value>Неабходна загрузка</value>
+    <value>Патрабуецца спампоўванне</value>
   </data>
   <data name="TitleDownload.Content" xml:space="preserve">
     <value>Спампаваць</value>
   </data>
   <data name="TextBecomePatreonMember.Content" xml:space="preserve">
-    <value>Стаць падтрымліваючым на Patreon</value>
+    <value>Стаць мецэнатам на Patreon</value>
   </data>
   <data name="TextPatreonMembersThankYou.Text" xml:space="preserve">
     <value>Дзякуй усім удзельнікам, якія падтрымалі гэты праект.</value>
   </data>
   <data name="TitlePatreon.Text" xml:space="preserve">
-    <value>Падтрымльваючыя на Patreon</value>
+    <value>Мецэнаты на Patreon</value>
   </data>
   <data name="SelectScreensaverCustomMode.Text" xml:space="preserve">
-    <value>Абярыце застаўку</value>
+    <value>Выберыце застаўку</value>
   </data>
   <data name="WebViewRequired.Message" xml:space="preserve">
-    <value>Для прагляду гэтага кантэнту патрэбны Microsoft WebView2</value>
+    <value>Для прагляду гэтага змесціва патрабуецца ўсталяваць Microsoft WebView2</value>
   </data>
   <data name="WebViewRequired.Title" xml:space="preserve">
-    <value>Патрэбны плагін</value>
+    <value>Патрабуецца ўбудова</value>
   </data>
   <data name="AppMusicExclusion.Description" xml:space="preserve">
-    <value>Абярыце праграмы, пры якіх не будуць адлюстроўвацца дэталі прайгравання музыкі</value>
+    <value>Выберыце праграмы, якія неабходна выключыць з паказу дэталяў музыкі</value>
   </data>
   <data name="AppMusicExclusion.Header" xml:space="preserve">
-    <value>Выключэнні праграм</value>
+    <value>Выключэнне праграмы</value>
   </data>
   <data name="RestartCommand.Content" xml:space="preserve">
-    <value>Перазагрузіць</value>
+    <value>Перазапусціць</value>
   </data>
   <data name="WallpaperMusicGroup.Text" xml:space="preserve">
     <value>Музыка</value>
   </data>
   <data name="WallpaperRestartRequiredNotify.Message" xml:space="preserve">
-    <value>Каб прыменіць налады, патрэбна перазагрузка шпалер</value>
+    <value>Патрабуецца перазапуск шпалер, каб налады пачалі дзейнічаць</value>
+  </data>
+  <data name="LanguageSettingsItemSystemDefault.Content" xml:space="preserve">
+    <value>Same as System</value>
+  </data>
+  <data name="InfoSettingsRestartRequest.Message" xml:space="preserve">
+    <value>Please restart application for settings to take effect.</value>
+  </data>
+  <data name="ScreensaverLockOnResume.Header" xml:space="preserve">
+    <value>Паказваць экран уваходу пасля абуджэння</value>
+  </data>
+  <data name="ScreensaverFadeIn.Header" xml:space="preserve">
+    <value>Fade to black before start</value>
   </data>
 </root>

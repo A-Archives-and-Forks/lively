@@ -545,7 +545,7 @@ Windows 7의 경우 - '최적 모양으로 조정' 체크 &amp; 적용.
     <value>지원되지 않는 파일 형식</value>
   </data>
   <data name="TextUpdateAvailable" xml:space="preserve">
-    <value>업데이트 사용 가능!</value>
+    <value>업데이트 가능!</value>
   </data>
   <data name="TextUpdateCheck.Content" xml:space="preserve">
     <value>업데이트 확인</value>
@@ -829,9 +829,6 @@ Edge는 Windows 10의 내장 웹뷰입니다.</value>
   <data name="TitleScreensaver.Content" xml:space="preserve">
     <value>화면 보호기</value>
   </data>
-  <data name="ScreensaverLockOnResume.Content" xml:space="preserve">
-    <value>재개 시 로그온 화면 표시</value>
-  </data>
   <data name="TitleSelectFile" xml:space="preserve">
     <value>파일 선택</value>
   </data>
@@ -845,7 +842,7 @@ Edge는 Windows 10의 내장 웹뷰입니다.</value>
     <value>소스 코드</value>
   </data>
   <data name="Store.Header" xml:space="preserve">
-    <value>MS 스토어</value>
+    <value>상점</value>
     <comment>For different version of Lively, example: Microsoft Store</comment>
   </data>
   <data name="StreamWallpaperVideoQuality.Header" xml:space="preserve">
@@ -939,7 +936,7 @@ Edge는 Windows 10의 내장 웹뷰입니다.</value>
     <value>창 색상 설정</value>
   </data>
   <data name="LaptopWallpaperPlaybackGroup.Text" xml:space="preserve">
-    <value>랩탑</value>
+    <value>노트북</value>
   </data>
   <data name="DeveloperGroup.Text" xml:space="preserve">
     <value>개발자</value>
@@ -1258,5 +1255,17 @@ Edge는 Windows 10의 내장 웹뷰입니다.</value>
   </data>
   <data name="WallpaperRestartRequiredNotify.Message" xml:space="preserve">
     <value>설정을 적용하려면 배경화면을 다시 시작해야 합니다</value>
+  </data>
+  <data name="LanguageSettingsItemSystemDefault.Content" xml:space="preserve">
+    <value>시스템과 동일</value>
+  </data>
+  <data name="InfoSettingsRestartRequest.Message" xml:space="preserve">
+    <value>설정을 적용하려면 프로그램을 다시 시작하세요.</value>
+  </data>
+  <data name="ScreensaverLockOnResume.Header" xml:space="preserve">
+    <value>재개 시 로그온 화면 표시</value>
+  </data>
+  <data name="ScreensaverFadeIn.Header" xml:space="preserve">
+    <value>시작하기 전에 검은색으로 페이드인</value>
   </data>
 </root>

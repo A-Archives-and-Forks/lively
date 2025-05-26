@@ -144,7 +144,7 @@
     <value>Несовместимая программа найдена, оформление панели задач отключено</value>
   </data>
   <data name="Website.Description" xml:space="preserve">
-    <value>Официальная страница Lively Wallpaper</value>
+    <value>Официальная веб-страница Lively Wallpaper</value>
   </data>
   <data name="DescOledScreensaverNotice" xml:space="preserve">
     <value>Большинство современных ЖК и светодиодных дисплеев не подвержены выгоранию, поэтому в качестве заставки можно использовать любые обои.
@@ -172,7 +172,7 @@
     <value>Вы уверены, что хотите удалить эти обои из Библиотеки?</value>
   </data>
   <data name="DragDropFile.Text" xml:space="preserve">
-    <value>Просто перетащите файлы сюда</value>
+    <value>Перетащите файлы в эту область</value>
   </data>
   <data name="DescriptionExternalAppWarning" xml:space="preserve">
     <value>Вы открываете внешнее приложение как обои.
@@ -272,10 +272,10 @@ https://github.com/rocksdanister/lively/wiki</value>
 Не работает в некоторых инсайдерских сборках windows 10</value>
   </data>
   <data name="Startup.Description" xml:space="preserve">
-    <value>Lively необходимо запустить на заднем плане для работы обоев</value>
+    <value>Lively необходимо работать в фоновом режиме для воспроизведения обоев.</value>
   </data>
   <data name="Startup.Header" xml:space="preserve">
-    <value>Запуск с Windows</value>
+    <value>Запускать с Windows</value>
   </data>
   <data name="TextAdd" xml:space="preserve">
     <value>Добавить</value>
@@ -667,7 +667,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Если обнаружена поддерживаемая ссылка, использовать видеоплеер вместо подгрузки веб-страницы.</value>
   </data>
   <data name="StreamWallpaperVideoQuality.Description" xml:space="preserve">
-    <value>Выберите желаемое качество потокового видео.</value>
+    <value>Выберите желаемое качество потокового видео</value>
   </data>
   <data name="TipSwitchSoftwareBranch" xml:space="preserve">
     <value>Измените версию программного обеспечения с бета-версии на стабильную или наоборот.</value>
@@ -694,7 +694,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Алгоритм масштабирования обоев.</value>
   </data>
   <data name="WallpaperInput.Description" xml:space="preserve">
-    <value>Выберите способ взаимодействия с обоями.</value>
+    <value>Выбрать способы взаимодействия с обоями</value>
   </data>
   <data name="WallpaperLayout.Description" xml:space="preserve">
     <value>Способ применения обоев к подключённым устройствам отображения.</value>
@@ -828,9 +828,6 @@ Edge - встроенный в Windows 10 WebView.</value>
   </data>
   <data name="TitleScreensaver.Content" xml:space="preserve">
     <value>Заставка</value>
-  </data>
-  <data name="ScreensaverLockOnResume.Content" xml:space="preserve">
-    <value>На резюме, экран входа в систему</value>
   </data>
   <data name="TitleSelectFile" xml:space="preserve">
     <value>Выберите файл</value>
@@ -1251,12 +1248,24 @@ Edge - встроенный в Windows 10 WebView.</value>
     <value>Исключение приложения</value>
   </data>
   <data name="RestartCommand.Content" xml:space="preserve">
-    <value>Перезапустить</value>
+    <value>Restart</value>
   </data>
   <data name="WallpaperMusicGroup.Text" xml:space="preserve">
-    <value>Music</value>
+    <value>Музыка</value>
   </data>
   <data name="WallpaperRestartRequiredNotify.Message" xml:space="preserve">
-    <value>Wallpaper restart is required for the settings to take effect</value>
+    <value>Чтобы настройки вступили в силу требуется перезагрузка обоев</value>
+  </data>
+  <data name="LanguageSettingsItemSystemDefault.Content" xml:space="preserve">
+    <value>Системная</value>
+  </data>
+  <data name="InfoSettingsRestartRequest.Message" xml:space="preserve">
+    <value>Пожалуйста, перезапустите приложение, чтобы изменения вступили в силу.</value>
+  </data>
+  <data name="ScreensaverLockOnResume.Header" xml:space="preserve">
+    <value>На резюме, экран входа в систему</value>
+  </data>
+  <data name="ScreensaverFadeIn.Header" xml:space="preserve">
+    <value>Fade to black before start</value>
   </data>
 </root>

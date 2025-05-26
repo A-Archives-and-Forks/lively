@@ -102,6 +102,7 @@
     <None Remove="Views\Pages\SettingsSystemView.xaml" />
     <None Remove="Views\Pages\SettingsWallpaperView.xaml" />
     <None Remove="Views\Pages\Settings\FindMoreAppsView.xaml" />
+    <None Remove="Views\Pages\Settings\SettingsScreensaverView.xaml" />
     <None Remove="Views\Pages\TrayMenuHelp.xaml" />
     <None Remove="Views\Pages\WallpaperLayoutCustomiseView.xaml" />
     <None Remove="Views\Pages\WallpaperLayoutView.xaml" />
@@ -218,6 +219,9 @@
     <None Update="appicon.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <Page Update="Views\Pages\Settings\SettingsScreensaverView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Content Update="Assets\patreon-page-preview.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

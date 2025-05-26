@@ -563,7 +563,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Видео</value>
   </data>
   <data name="TextWallpaperCommandlineArgs" xml:space="preserve">
-    <value>Launch Options</value>
+    <value>Қосу параметрлері</value>
   </data>
   <data name="WallpaperFitFill.Content" xml:space="preserve">
     <value>Толтыру</value>
@@ -578,13 +578,13 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Біркелкі толтыру</value>
   </data>
   <data name="WallpaperLayoutDuplicate.Text" xml:space="preserve">
-    <value>Duplicate</value>
+    <value>Қайталау</value>
   </data>
   <data name="WallpaperLayoutPerScreen.Text" xml:space="preserve">
     <value>Экран</value>
   </data>
   <data name="WallpaperLayoutSpan.Text" xml:space="preserve">
-    <value>Span</value>
+    <value>Қабаттасу</value>
   </data>
   <data name="WallpaperType.Text" xml:space="preserve">
     <value>Түрі</value>
@@ -827,9 +827,6 @@ https://github.com/rocksdanister/lively/wiki</value>
   <data name="TitleScreensaver.Content" xml:space="preserve">
     <value>Экран сақтағыш</value>
   </data>
-  <data name="ScreensaverLockOnResume.Content" xml:space="preserve">
-    <value>Түйіндемеде, кіру экраны</value>
-  </data>
   <data name="TitleSelectFile" xml:space="preserve">
     <value>Файлды таңдаңыз</value>
   </data>
@@ -1001,10 +998,10 @@ Lively таңдағаныңызға рахмет.</value>
     <value>Экран сақтағыш түрі</value>
   </data>
   <data name="ScreensaverModeDifferentWallpaper.Text" xml:space="preserve">
-    <value>Custom</value>
+    <value>Әдет-ғұрып</value>
   </data>
   <data name="ScreensaverModeSameWallpaper.Text" xml:space="preserve">
-    <value>Mirror Wallpaper</value>
+    <value>Айна тұсқағазы</value>
   </data>
   <data name="ScreensaverPlugin.Title" xml:space="preserve">
     <value>Плагин қажет</value>
@@ -1226,36 +1223,48 @@ Lively таңдағаныңызға рахмет.</value>
     <value>Жүктеу</value>
   </data>
   <data name="TextBecomePatreonMember.Content" xml:space="preserve">
-    <value>Become a Patreon supporter</value>
+    <value>Patreon жазылушысы болыңыз</value>
   </data>
   <data name="TextPatreonMembersThankYou.Text" xml:space="preserve">
-    <value>Thanks to all the members who support this project.</value>
+    <value>Осы жобаны қолдаған барлық қатысушыларға рахмет.</value>
   </data>
   <data name="TitlePatreon.Text" xml:space="preserve">
-    <value>Patreon Supporters</value>
+    <value>Patreon жазылушылары</value>
   </data>
   <data name="SelectScreensaverCustomMode.Text" xml:space="preserve">
-    <value>Select screensaver</value>
+    <value>Экран сақтағышын таңдау</value>
   </data>
   <data name="WebViewRequired.Message" xml:space="preserve">
-    <value>Microsoft WebView2 is required to view this content</value>
+    <value>Бұл мазмұнды көру үшін Microsoft WebView2 қажет</value>
   </data>
   <data name="WebViewRequired.Title" xml:space="preserve">
     <value>Плагин қажет</value>
   </data>
   <data name="AppMusicExclusion.Description" xml:space="preserve">
-    <value>Select apps to exclude from showing music details</value>
+    <value>Музыка мәліметтерінің көрсетілуіне жол бермеу үшін қолданбаларды таңдаңыз</value>
   </data>
   <data name="AppMusicExclusion.Header" xml:space="preserve">
-    <value>App exclusion</value>
+    <value>тыйым қолданбалар</value>
   </data>
   <data name="RestartCommand.Content" xml:space="preserve">
-    <value>Restart</value>
+    <value>Қайтадан іске қосу</value>
   </data>
   <data name="WallpaperMusicGroup.Text" xml:space="preserve">
-    <value>Music</value>
+    <value>Ән</value>
   </data>
   <data name="WallpaperRestartRequiredNotify.Message" xml:space="preserve">
-    <value>Wallpaper restart is required for the settings to take effect</value>
+    <value>Параметрлер күшіне енуі үшін тұсқағазды қайта жүктеу керек.</value>
+  </data>
+  <data name="LanguageSettingsItemSystemDefault.Content" xml:space="preserve">
+    <value>Same as System</value>
+  </data>
+  <data name="InfoSettingsRestartRequest.Message" xml:space="preserve">
+    <value>Please restart application for settings to take effect.</value>
+  </data>
+  <data name="ScreensaverLockOnResume.Header" xml:space="preserve">
+    <value>Түйіндемеде, кіру экраны</value>
+  </data>
+  <data name="ScreensaverFadeIn.Header" xml:space="preserve">
+    <value>Fade to black before start</value>
   </data>
 </root>

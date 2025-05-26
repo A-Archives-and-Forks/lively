@@ -826,9 +826,6 @@ Mura bhfuil sé ag feidhmiú go fóill, déan Lively a dhúnadh agus a atosnú a
   <data name="TitleScreensaver.Content" xml:space="preserve">
     <value>Spárálaí scáileáin</value>
   </data>
-  <data name="ScreensaverLockOnResume.Content" xml:space="preserve">
-    <value>Taispeáin an scáileán logála isteach tar éis athdhúiseachta</value>
-  </data>
   <data name="TitleSelectFile" xml:space="preserve">
     <value>Roghnaigh comhad</value>
   </data>
@@ -1255,5 +1252,17 @@ Mura bhfuil sé ag feidhmiú go fóill, déan Lively a dhúnadh agus a atosnú a
   </data>
   <data name="WallpaperRestartRequiredNotify.Message" xml:space="preserve">
     <value>Tá atosnú cúlbhrait de dhíth le socruithe a chur i bhfeidhm</value>
+  </data>
+  <data name="LanguageSettingsItemSystemDefault.Content" xml:space="preserve">
+    <value>Same as System</value>
+  </data>
+  <data name="InfoSettingsRestartRequest.Message" xml:space="preserve">
+    <value>Please restart application for settings to take effect.</value>
+  </data>
+  <data name="ScreensaverLockOnResume.Header" xml:space="preserve">
+    <value>Taispeáin an scáileán logála isteach tar éis athdhúiseachta</value>
+  </data>
+  <data name="ScreensaverFadeIn.Header" xml:space="preserve">
+    <value>Fade to black before start</value>
   </data>
 </root>

@@ -348,7 +348,7 @@ Als dat niet werkt herstart Lively en Windows. (Werkt niet met sommige insider W
     <value>Exporteer Lively .zip</value>
   </data>
   <data name="TextFeatureMissing" xml:space="preserve">
-    <value>Some features are not available in this version of Lively.</value>
+    <value>Some features are not available in this version of Lively.Sommige functies zijn niet beschikbaar in deze versie van Lively.</value>
   </data>
   <data name="TextFileNotFound" xml:space="preserve">
     <value>Bestand niet gevonden</value>
@@ -628,7 +628,7 @@ Geanimeerde GIF</value>
     <value>Stel een afbeelding uit de geanimeerde achtergrond in als bureaublad achtergrond.</value>
   </data>
   <data name="DisplayPauseRule.Description" xml:space="preserve">
-    <value>Per: Achtergrond alleen pauzeren op het scherm waar de toepassing de focus heeft/volledig scherm weergeeft. Alle: Achtergrond pauzeren op alle schermen waar de toepassing de focus heeft/volledig scherm weergeeft.</value>
+    <value>Per: Achtergrond alleen pauzeren op het scherm waar de toepassing de focus heeft/volledig scherm weergeeft. Alle: Achtergrond pauzeren op alle schermen waar de toepassing de focus heeft/volledig scherm weergeeft</value>
   </data>
   <data name="ExportLogs.Description" xml:space="preserve">
     <value>Creëer een lograpportbestand.</value>
@@ -819,9 +819,6 @@ Alle processen: Heavier, Scant alle processen om afspeelmogelijkheden te bepalen
   </data>
   <data name="TitleScreensaver.Content" xml:space="preserve">
     <value>Schermbeveiliging</value>
-  </data>
-  <data name="ScreensaverLockOnResume.Content" xml:space="preserve">
-    <value>Bij hervatten, weergeef aanmeldscherm</value>
   </data>
   <data name="TitleSelectFile" xml:space="preserve">
     <value>Selecteer Bestand</value>
@@ -1236,18 +1233,30 @@ Alle processen: Heavier, Scant alle processen om afspeelmogelijkheden te bepalen
     <value>Plugin vereist</value>
   </data>
   <data name="AppMusicExclusion.Description" xml:space="preserve">
-    <value>Select apps to exclude from showing music details</value>
+    <value>Selecteer apps om uit te sluiten van het weergeven van muziekgegevens</value>
   </data>
   <data name="AppMusicExclusion.Header" xml:space="preserve">
-    <value>App exclusion</value>
+    <value>App uitsluiting</value>
   </data>
   <data name="RestartCommand.Content" xml:space="preserve">
-    <value>Restart</value>
+    <value>Herstart</value>
   </data>
   <data name="WallpaperMusicGroup.Text" xml:space="preserve">
-    <value>Music</value>
+    <value>Muziek</value>
   </data>
   <data name="WallpaperRestartRequiredNotify.Message" xml:space="preserve">
-    <value>Wallpaper restart is required for the settings to take effect</value>
+    <value>Herstarten van de achtergrond is vereist om de instellingen toe te passen</value>
+  </data>
+  <data name="LanguageSettingsItemSystemDefault.Content" xml:space="preserve">
+    <value>Same as System</value>
+  </data>
+  <data name="InfoSettingsRestartRequest.Message" xml:space="preserve">
+    <value>Please restart application for settings to take effect.</value>
+  </data>
+  <data name="ScreensaverLockOnResume.Header" xml:space="preserve">
+    <value>Bij hervatten, weergeef aanmeldscherm</value>
+  </data>
+  <data name="ScreensaverFadeIn.Header" xml:space="preserve">
+    <value>Fade to black before start</value>
   </data>
 </root>

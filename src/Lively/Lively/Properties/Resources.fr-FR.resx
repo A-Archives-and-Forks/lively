@@ -183,7 +183,7 @@ Continuez seulement si cette application provient d'une source fiable.</value>
     <value>Lively est réduit dans la barre d'état, clic droit sur l'icône Lively pour plus d'options.</value>
   </data>
   <data name="DescriptionPleaseRestartLively" xml:space="preserve">
-    <value>Veuillez redémarrer Lively pour prendre en compte les modifications.</value>
+    <value>Veuillez redémarrer Lively pour prendre en compte les modifications</value>
   </data>
   <data name="DescriptionPleaseStop" xml:space="preserve">
     <value>Veuillez arrêter avant de continuer</value>
@@ -413,7 +413,7 @@ Si cela ne fonctionne toujours pas, fermez et relancez Lively / redémarrez Wind
     <value>Non</value>
   </data>
   <data name="TextOff.Content" xml:space="preserve">
-    <value>Aucun</value>
+    <value>Désactivé</value>
   </data>
   <data name="TextOK" xml:space="preserve">
     <value>OK</value>
@@ -476,7 +476,7 @@ Si cela ne fonctionne toujours pas, fermez et relancez Lively / redémarrez Wind
     <value>Définir comme fond d'écran</value>
   </data>
   <data name="ShowOnDisk.Text" xml:space="preserve">
-    <value>Voir sur le disque</value>
+    <value>Ouvrir l'emplacement du fichier</value>
   </data>
   <data name="WallpaperSource.Text" xml:space="preserve">
     <value>Source</value>
@@ -776,7 +776,7 @@ Edge est la vue Web intégrée de Windows 10.</value>
     <value>Général</value>
   </data>
   <data name="GifPlayer.Header" xml:space="preserve">
-    <value>Lecteur GIF</value>
+    <value>Lecteur de GIF</value>
   </data>
   <data name="Help.Label" xml:space="preserve">
     <value>Aide</value>
@@ -832,9 +832,6 @@ Edge est la vue Web intégrée de Windows 10.</value>
   <data name="TitleScreensaver.Content" xml:space="preserve">
     <value>Écran de veille</value>
   </data>
-  <data name="ScreensaverLockOnResume.Content" xml:space="preserve">
-    <value>Lors de la reprise, afficher l'écran de connexion</value>
-  </data>
   <data name="TitleSelectFile" xml:space="preserve">
     <value>Sélectionner un fichier</value>
   </data>
@@ -845,7 +842,7 @@ Edge est la vue Web intégrée de Windows 10.</value>
     <value>Passer la confirmation</value>
   </data>
   <data name="SourceCode.Header" xml:space="preserve">
-    <value>Code source</value>
+    <value>Code Source</value>
   </data>
   <data name="Store.Header" xml:space="preserve">
     <value>Magasin</value>
@@ -963,7 +960,7 @@ Edge est la vue Web intégrée de Windows 10.</value>
     <value>Licence</value>
   </data>
   <data name="AttributionLink.Content" xml:space="preserve">
-    <value>Notice logiciel tierce</value>
+    <value>Notice logiciel tiers</value>
   </data>
   <data name="PrivacyPolicyLink.Content" xml:space="preserve">
     <value>Politique de récupération des données</value>
@@ -993,7 +990,7 @@ Edge est la vue Web intégrée de Windows 10.</value>
     <value>Interface utilisateur</value>
   </data>
   <data name="UIModeLite.Content" xml:space="preserve">
-    <value>Faible</value>
+    <value>Simple</value>
   </data>
   <data name="UIModeNormal.Content" xml:space="preserve">
     <value>Par défaut</value>
@@ -1005,13 +1002,13 @@ Edge est la vue Web intégrée de Windows 10.</value>
     <value>Type d'économiseur d'écran</value>
   </data>
   <data name="ScreensaverModeDifferentWallpaper.Text" xml:space="preserve">
-    <value>Personnalisée</value>
+    <value>Personnaliser</value>
   </data>
   <data name="ScreensaverModeSameWallpaper.Text" xml:space="preserve">
     <value>Dupliquer le fond d'écran</value>
   </data>
   <data name="ScreensaverPlugin.Title" xml:space="preserve">
-    <value>Extension requise</value>
+    <value>Plugin requis</value>
   </data>
   <data name="ScreensaverPluginMessage.Text" xml:space="preserve">
     <value>Une configuration unique est nécessaire pour exécuter l'économiseur d'écran</value>
@@ -1119,7 +1116,7 @@ Edge est la vue Web intégrée de Windows 10.</value>
     <value>Contributeurs</value>
   </data>
   <data name="TextShare.Text" xml:space="preserve">
-    <value>Partage</value>
+    <value>Partager</value>
   </data>
   <data name="TitleShareWallpaper.Text" xml:space="preserve">
     <value>Partager le fond d'écran</value>
@@ -1185,7 +1182,7 @@ Edge est la vue Web intégrée de Windows 10.</value>
     <value>Le développement de cette fonctionnalité est en attente</value>
   </data>
   <data name="WallpaperPluginGroup.Text" xml:space="preserve">
-    <value>Extensions</value>
+    <value>Plugins</value>
   </data>
   <data name="AddWallpaperAdvanced.Description" xml:space="preserve">
     <value>Créer un fond d'écran dynamique</value>
@@ -1230,13 +1227,13 @@ Edge est la vue Web intégrée de Windows 10.</value>
     <value>Télécharger</value>
   </data>
   <data name="TextBecomePatreonMember.Content" xml:space="preserve">
-    <value>Devenez un supporter Patreon</value>
+    <value>Devenez un supporteur Patreon</value>
   </data>
   <data name="TextPatreonMembersThankYou.Text" xml:space="preserve">
     <value>Merci à tous-ceux qui supportent le projet sur Patreon.</value>
   </data>
   <data name="TitlePatreon.Text" xml:space="preserve">
-    <value>Supporter Patreon</value>
+    <value>Supporteur Patreon</value>
   </data>
   <data name="SelectScreensaverCustomMode.Text" xml:space="preserve">
     <value>Sélectionner un économiseur d'écran</value>
@@ -1245,7 +1242,7 @@ Edge est la vue Web intégrée de Windows 10.</value>
     <value>Microsoft WebView2 est nécessaire pour visualiser ce contenu</value>
   </data>
   <data name="WebViewRequired.Title" xml:space="preserve">
-    <value>Extension requise</value>
+    <value>Plugin requis</value>
   </data>
   <data name="AppMusicExclusion.Description" xml:space="preserve">
     <value>Sélectionnez les applications à exclure de l'affichage des détails de la musique</value>
@@ -1261,5 +1258,17 @@ Edge est la vue Web intégrée de Windows 10.</value>
   </data>
   <data name="WallpaperRestartRequiredNotify.Message" xml:space="preserve">
     <value>Un redémarrage du fond d'écran est nécessaire pour que les paramètres prennent effet</value>
+  </data>
+  <data name="LanguageSettingsItemSystemDefault.Content" xml:space="preserve">
+    <value>Identique au système</value>
+  </data>
+  <data name="InfoSettingsRestartRequest.Message" xml:space="preserve">
+    <value>Lively doit être redémarrée pour que les nouveaux paramètres prennent effet.</value>
+  </data>
+  <data name="ScreensaverLockOnResume.Header" xml:space="preserve">
+    <value>Lors de la reprise, afficher l'écran de connexion</value>
+  </data>
+  <data name="ScreensaverFadeIn.Header" xml:space="preserve">
+    <value>Fade to black before start</value>
   </data>
 </root>

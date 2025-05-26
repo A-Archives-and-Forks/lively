@@ -77,6 +77,8 @@ message SettingsDataModel {
     ScreensaverTypeRule screensaver_type = 65;
     bool updatedNotify = 66;
     bool screensaver_plugin_notify = 67;
+    int32 screensaver_volume_global = 68;
+    bool screensaver_fade_in = 69;
 }
 
 message AppRulesSettings {

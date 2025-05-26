@@ -826,9 +826,6 @@ If still not working, close &amp; start Lively again/restart windows.
   <data name="TitleScreensaver.Content" xml:space="preserve">
     <value>Screensaver</value>
   </data>
-  <data name="ScreensaverLockOnResume.Content" xml:space="preserve">
-    <value>On resume, display logon screen</value>
-  </data>
   <data name="TitleSelectFile" xml:space="preserve">
     <value>Select File</value>
   </data>
@@ -1261,5 +1258,11 @@ If still not working, close &amp; start Lively again/restart windows.
   </data>
   <data name="InfoSettingsRestartRequest.Message" xml:space="preserve">
     <value>Please restart application for settings to take effect.</value>
+  </data>
+  <data name="ScreensaverLockOnResume.Header" xml:space="preserve">
+    <value>On resume, display logon screen</value>
+  </data>
+  <data name="ScreensaverFadeIn.Header" xml:space="preserve">
+    <value>Fade to black before start</value>
   </data>
 </root>

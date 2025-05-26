@@ -562,7 +562,7 @@ Se non funziona ancora, chiudi &amp; riavvia Lively / riavvia Windows.
     <value>Video</value>
   </data>
   <data name="TextWallpaperCommandlineArgs" xml:space="preserve">
-    <value>Launch Options</value>
+    <value>Opzioni Di Avvio</value>
   </data>
   <data name="WallpaperFitFill.Content" xml:space="preserve">
     <value>Riempi</value>
@@ -577,13 +577,13 @@ Se non funziona ancora, chiudi &amp; riavvia Lively / riavvia Windows.
     <value>Riempimento Uniforme</value>
   </data>
   <data name="WallpaperLayoutDuplicate.Text" xml:space="preserve">
-    <value>Duplicate</value>
+    <value>Duplica</value>
   </data>
   <data name="WallpaperLayoutPerScreen.Text" xml:space="preserve">
     <value>Schermo</value>
   </data>
   <data name="WallpaperLayoutSpan.Text" xml:space="preserve">
-    <value>Span</value>
+    <value>Estendi</value>
   </data>
   <data name="WallpaperType.Text" xml:space="preserve">
     <value>Tipologia</value>
@@ -826,9 +826,6 @@ Quando sei pronto, vai a: http://localhost:portnumber per accedere al portale de
   <data name="TitleScreensaver.Content" xml:space="preserve">
     <value>Salvaschermo</value>
   </data>
-  <data name="ScreensaverLockOnResume.Content" xml:space="preserve">
-    <value>Alla ripresa, visualizza la schermata di accesso</value>
-  </data>
   <data name="TitleSelectFile" xml:space="preserve">
     <value>Seleziona File</value>
   </data>
@@ -936,7 +933,7 @@ Quando sei pronto, vai a: http://localhost:portnumber per accedere al portale de
     <value>Impostazioni colore di Windows</value>
   </data>
   <data name="LaptopWallpaperPlaybackGroup.Text" xml:space="preserve">
-    <value>Laptop</value>
+    <value>Portatili</value>
   </data>
   <data name="DeveloperGroup.Text" xml:space="preserve">
     <value>Sviluppatore</value>
@@ -1002,7 +999,7 @@ Quando sei pronto, vai a: http://localhost:portnumber per accedere al portale de
     <value>Personalizzato</value>
   </data>
   <data name="ScreensaverModeSameWallpaper.Text" xml:space="preserve">
-    <value>Mirror Wallpaper</value>
+    <value>Sfondo Specchio</value>
   </data>
   <data name="ScreensaverPlugin.Title" xml:space="preserve">
     <value>Plugin obbligatorio</value>
@@ -1226,36 +1223,48 @@ Quando sei pronto, vai a: http://localhost:portnumber per accedere al portale de
     <value>Scarica</value>
   </data>
   <data name="TextBecomePatreonMember.Content" xml:space="preserve">
-    <value>Become a Patreon supporter</value>
+    <value>Diventa un sostenitore di Patreon</value>
   </data>
   <data name="TextPatreonMembersThankYou.Text" xml:space="preserve">
-    <value>Thanks to all the members who support this project.</value>
+    <value>Grazie a tutti coloro che supportano questo progetto.</value>
   </data>
   <data name="TitlePatreon.Text" xml:space="preserve">
-    <value>Patreon Supporters</value>
+    <value>Sostenitori Patreon</value>
   </data>
   <data name="SelectScreensaverCustomMode.Text" xml:space="preserve">
-    <value>Select screensaver</value>
+    <value>Seleziona salvaschermo</value>
   </data>
   <data name="WebViewRequired.Message" xml:space="preserve">
-    <value>Microsoft WebView2 is required to view this content</value>
+    <value>Per visualizzare questo contenuto è necessario Microsoft WebView2</value>
   </data>
   <data name="WebViewRequired.Title" xml:space="preserve">
     <value>Plugin obbligatorio</value>
   </data>
   <data name="AppMusicExclusion.Description" xml:space="preserve">
-    <value>Select apps to exclude from showing music details</value>
+    <value>Seleziona le app da escludere dalla visualizzazione dei dettagli musicali</value>
   </data>
   <data name="AppMusicExclusion.Header" xml:space="preserve">
-    <value>App exclusion</value>
+    <value>Esclusione app</value>
   </data>
   <data name="RestartCommand.Content" xml:space="preserve">
-    <value>Restart</value>
+    <value>Riavvia</value>
   </data>
   <data name="WallpaperMusicGroup.Text" xml:space="preserve">
-    <value>Music</value>
+    <value>Musica</value>
   </data>
   <data name="WallpaperRestartRequiredNotify.Message" xml:space="preserve">
-    <value>Wallpaper restart is required for the settings to take effect</value>
+    <value>È necessario riavviare lo sfondo per rendere effettive le impostazioni</value>
+  </data>
+  <data name="LanguageSettingsItemSystemDefault.Content" xml:space="preserve">
+    <value>Uguale al sistema</value>
+  </data>
+  <data name="InfoSettingsRestartRequest.Message" xml:space="preserve">
+    <value>Riavvia l'applicazione per rendere effettive le impostazioni.</value>
+  </data>
+  <data name="ScreensaverLockOnResume.Header" xml:space="preserve">
+    <value>Alla ripresa, visualizza la schermata di accesso</value>
+  </data>
+  <data name="ScreensaverFadeIn.Header" xml:space="preserve">
+    <value>Fade to black before start</value>
   </data>
 </root>

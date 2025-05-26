@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AudioFocused.Content" xml:space="preserve">
-    <value>Speel oudio slegs wanneer lessenaar gefokus is</value>
+    <value>Speel oudio slegs wanneer lessenaar gefokus ii</value>
   </data>
   <data name="Audio.Description" xml:space="preserve">
     <value>Volumevlak van alle agtergronde</value>
@@ -578,13 +578,13 @@ As dit steeds nie werk nie, maak toe en begin Lively weer / herbegin vensters.
     <value>Eenvormige vul</value>
   </data>
   <data name="WallpaperLayoutDuplicate.Text" xml:space="preserve">
-    <value>Duplicate</value>
+    <value/>
   </data>
   <data name="WallpaperLayoutPerScreen.Text" xml:space="preserve">
     <value>Skerm</value>
   </data>
   <data name="WallpaperLayoutSpan.Text" xml:space="preserve">
-    <value>Span</value>
+    <value/>
   </data>
   <data name="WallpaperType.Text" xml:space="preserve">
     <value>Tik</value>
@@ -825,9 +825,6 @@ As dit steeds nie werk nie, maak toe en begin Lively weer / herbegin vensters.
   </data>
   <data name="TitleScreensaver.Content" xml:space="preserve">
     <value>Skermbeveiliging</value>
-  </data>
-  <data name="ScreensaverLockOnResume.Content" xml:space="preserve">
-    <value>Op hervat, vertoon aanmeldskerm</value>
   </data>
   <data name="TitleSelectFile" xml:space="preserve">
     <value>Kies Lêer</value>
@@ -1255,5 +1252,17 @@ As dit steeds nie werk nie, maak toe en begin Lively weer / herbegin vensters.
   </data>
   <data name="WallpaperRestartRequiredNotify.Message" xml:space="preserve">
     <value>Wallpaper restart is required for the settings to take effect</value>
+  </data>
+  <data name="LanguageSettingsItemSystemDefault.Content" xml:space="preserve">
+    <value>Same as System</value>
+  </data>
+  <data name="InfoSettingsRestartRequest.Message" xml:space="preserve">
+    <value>Please restart application for settings to take effect.</value>
+  </data>
+  <data name="ScreensaverLockOnResume.Header" xml:space="preserve">
+    <value>Op hervat, vertoon aanmeldskerm</value>
+  </data>
+  <data name="ScreensaverFadeIn.Header" xml:space="preserve">
+    <value>Fade to black before start</value>
   </data>
 </root>

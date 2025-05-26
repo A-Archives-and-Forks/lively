@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AudioFocused.Content" xml:space="preserve">
-    <value>ऑडियो तभी चलायें जब Desktop फोकस में हो</value>
+    <value>ऑडियो तभी चलायें जब डेस्कटॉप फोकस में हो</value>
   </data>
   <data name="Audio.Description" xml:space="preserve">
     <value>सभी वॉलपेपर का वॉल्यूम स्तर</value>
@@ -127,7 +127,7 @@
     <value>आवाज़</value>
   </data>
   <data name="AudioGroup.Text" xml:space="preserve">
-    <value>ध्वनि</value>
+    <value>ऑडियो</value>
   </data>
   <data name="Community.Description" xml:space="preserve">
     <value>ऑनलाइन चर्चा मंच</value>
@@ -223,17 +223,17 @@ OLED, प्लाज्मा या CRT डिस्प्ले के लि
     <value>सिस्टम ट्रे आइकन</value>
   </data>
   <data name="Language.Description" xml:space="preserve">
-    <value>यह नई भाषा को लागू करने के लिए पुनः आरंभ करेगा</value>
+    <value>नई भाषा को लागू करने के लिए Lively पुनः आरंभ करेगा</value>
   </data>
   <data name="Language.Header" xml:space="preserve">
-    <value>मुहावरा</value>
+    <value>भाषा</value>
   </data>
   <data name="LivelyExceptionAppUpdateFail" xml:space="preserve">
-    <value>अपडेट नहीं हो सका; से इंस्टॉलर डाउनलोड करने का प्रयास करें:
+    <value>अपडेट नहीं हो सका; कृपया इस इंस्टॉलर को यहाँ से डाउनलोड करने का प्रयास करें:
 https://github.com/rocksdanister/lively/releases</value>
   </data>
   <data name="LivelyExceptionDamagedZipFile" xml:space="preserve">
-    <value>क्षतिग्रस्त वॉलपेपर फ़ाइल, फिर से डाउनलोड करने का प्रयास करें।</value>
+    <value>यह एक ख़राब wallpaper फ़ाइल है इसे फिर से डाउनलोड करने का प्रयास करें।</value>
   </data>
   <data name="LivelyExceptionGeneral" xml:space="preserve">
     <value>उफ़ ... लगता है कुछ गड़बड़ हो गई :(
@@ -254,7 +254,7 @@ https://github.com/rocksdanister/lively/wiki</value>
 https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="LivelyExceptionNotLivelyZip" xml:space="preserve">
-    <value>गैर-एनिमेटेड वॉलपेपर फ़ाइल।</value>
+    <value>यह एक Lively wallpaper फ़ाइल नहीं है</value>
   </data>
   <data name="LivelyExceptionSafeModeStart" xml:space="preserve">
     <value>सुरक्षित मोड में शुरू होने से लाइवली ठीक से बंद नहीं हुआ।
@@ -565,7 +565,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>वीडियो</value>
   </data>
   <data name="TextWallpaperCommandlineArgs" xml:space="preserve">
-    <value>Launch Options</value>
+    <value>लॉन्च करने के लिए विकल्प</value>
   </data>
   <data name="WallpaperFitFill.Content" xml:space="preserve">
     <value>भरण</value>
@@ -580,13 +580,13 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>सजातीय वर्दी</value>
   </data>
   <data name="WallpaperLayoutDuplicate.Text" xml:space="preserve">
-    <value>Duplicate</value>
+    <value>प्रतिरूप</value>
   </data>
   <data name="WallpaperLayoutPerScreen.Text" xml:space="preserve">
     <value>स्क्रीन</value>
   </data>
   <data name="WallpaperLayoutSpan.Text" xml:space="preserve">
-    <value>Span</value>
+    <value>अवधि</value>
   </data>
   <data name="WallpaperType.Text" xml:space="preserve">
     <value>लिखो</value>
@@ -831,9 +831,6 @@ https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="TitleScreensaver.Content" xml:space="preserve">
     <value>स्क्रीन सेवर</value>
-  </data>
-  <data name="ScreensaverLockOnResume.Content" xml:space="preserve">
-    <value>फिर से शुरू करने पर, लॉगऑन (Logon) स्क्रीन प्रदर्शन किया जाए</value>
   </data>
   <data name="TitleSelectFile" xml:space="preserve">
     <value>फ़ाइल का चयन करें</value>
@@ -1221,7 +1218,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value/>
   </data>
   <data name="DescriptionDownloadRequired.Text" xml:space="preserve">
-    <value>Additional files need to be downloaded for this feature</value>
+    <value>इस सुविधा के लिए अतिरिक्त फ़ाइलें डाउनलोड करनी होंगी</value>
   </data>
   <data name="TitleDownloadRequired.Text" xml:space="preserve">
     <value>डाउनलोड कि आवश्यकता है</value>
@@ -1230,36 +1227,49 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>डाउनलोड</value>
   </data>
   <data name="TextBecomePatreonMember.Content" xml:space="preserve">
-    <value>Become a Patreon supporter</value>
+    <value>पैट्रियन का समर्थक बनें</value>
   </data>
   <data name="TextPatreonMembersThankYou.Text" xml:space="preserve">
-    <value>Thanks to all the members who support this project.</value>
+    <value>इस परियोजना का समर्थन करने वाले सभी सदस्यों को धन्यवाद।</value>
   </data>
   <data name="TitlePatreon.Text" xml:space="preserve">
-    <value>Patreon Supporters</value>
+    <value>पैट्रियन समर्थक</value>
   </data>
   <data name="SelectScreensaverCustomMode.Text" xml:space="preserve">
-    <value>Select screensaver</value>
+    <value>स्क्रीनसेवर चुनिये</value>
   </data>
   <data name="WebViewRequired.Message" xml:space="preserve">
-    <value>Microsoft WebView2 is required to view this content</value>
+    <value>यह पेज देखने के लिए Microsoft WebView2 की जरुरत होगी</value>
   </data>
   <data name="WebViewRequired.Title" xml:space="preserve">
     <value>प्लगइन आवश्यक</value>
   </data>
   <data name="AppMusicExclusion.Description" xml:space="preserve">
-    <value>Select apps to exclude from showing music details</value>
+    <value>संगीत विवरण दिखाने से बाहर करने के लिए ऐप्स का चयन करें</value>
   </data>
   <data name="AppMusicExclusion.Header" xml:space="preserve">
-    <value>App exclusion</value>
+    <value>ऐप का बहिष्करण</value>
   </data>
   <data name="RestartCommand.Content" xml:space="preserve">
-    <value>Restart</value>
+    <value>Restar
+Nkmnk t</value>
   </data>
   <data name="WallpaperMusicGroup.Text" xml:space="preserve">
-    <value>Music</value>
+    <value>संगीत</value>
   </data>
   <data name="WallpaperRestartRequiredNotify.Message" xml:space="preserve">
-    <value>Wallpaper restart is required for the settings to take effect</value>
+    <value>सेटिंग्स को प्रभावी करने के लिए वॉलपेपर रीस्टार्ट करना आवश्यक है</value>
+  </data>
+  <data name="LanguageSettingsItemSystemDefault.Content" xml:space="preserve">
+    <value>Same as System</value>
+  </data>
+  <data name="InfoSettingsRestartRequest.Message" xml:space="preserve">
+    <value>Please restart application for settings to take effect.</value>
+  </data>
+  <data name="ScreensaverLockOnResume.Header" xml:space="preserve">
+    <value>फिर से शुरू करने पर, लॉगऑन (Logon) स्क्रीन प्रदर्शन किया जाए</value>
+  </data>
+  <data name="ScreensaverFadeIn.Header" xml:space="preserve">
+    <value>Fade to black before start</value>
   </data>
 </root>

@@ -17,14 +17,19 @@ namespace Lively.RPC
     {
         private DebugLog debugLogWindow;
         private readonly IRunnerService runner;
+        private readonly IUserSettingsService userSettings;
         private readonly IScreensaverService screensaver;
         private readonly ICommandHandler commandHandler;
 
-        public CommandsServer(IRunnerService runner, IScreensaverService screensaver, ICommandHandler commandHandler)
+        public CommandsServer(IRunnerService runner,
+            IScreensaverService screensaver,
+            ICommandHandler commandHandler,
+            IUserSettingsService userSettings)
         {
             this.runner = runner;
             this.screensaver = screensaver;
             this.commandHandler = commandHandler;
+            this.userSettings = userSettings;
         }
 
         public override Task<Empty> ShowUI(Empty _, ServerCallContext context)
@@ -70,7 +75,7 @@ namespace Lively.RPC
             switch (request.State)
             {
                 case ScreensaverState.Start:
-                    _ = screensaver.StartAsync(true);
+                    _ = screensaver.StartAsync(request.FadeIn);
                     break;
                 case ScreensaverState.Stop:
                     screensaver.Stop();

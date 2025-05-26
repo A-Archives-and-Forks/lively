@@ -563,7 +563,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>影片</value>
   </data>
   <data name="TextWallpaperCommandlineArgs" xml:space="preserve">
-    <value>Launch Options</value>
+    <value>啟動選項</value>
   </data>
   <data name="WallpaperFitFill.Content" xml:space="preserve">
     <value>填滿</value>
@@ -578,13 +578,13 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>統一並填滿</value>
   </data>
   <data name="WallpaperLayoutDuplicate.Text" xml:space="preserve">
-    <value>Duplicate</value>
+    <value>重複</value>
   </data>
   <data name="WallpaperLayoutPerScreen.Text" xml:space="preserve">
     <value>螢幕</value>
   </data>
   <data name="WallpaperLayoutSpan.Text" xml:space="preserve">
-    <value>Span</value>
+    <value>橫跨螢幕</value>
   </data>
   <data name="WallpaperType.Text" xml:space="preserve">
     <value>類型</value>
@@ -826,9 +826,6 @@ https://github.com/rocksdanister/lively/wiki</value>
   <data name="TitleScreensaver.Content" xml:space="preserve">
     <value>螢幕保護程式</value>
   </data>
-  <data name="ScreensaverLockOnResume.Content" xml:space="preserve">
-    <value>恢復工作階段後，顯示登入螢幕</value>
-  </data>
   <data name="TitleSelectFile" xml:space="preserve">
     <value>選取檔案</value>
   </data>
@@ -999,10 +996,10 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>螢幕保護程式類型</value>
   </data>
   <data name="ScreensaverModeDifferentWallpaper.Text" xml:space="preserve">
-    <value>Custom</value>
+    <value>自訂</value>
   </data>
   <data name="ScreensaverModeSameWallpaper.Text" xml:space="preserve">
-    <value>Mirror Wallpaper</value>
+    <value>鏡像桌布</value>
   </data>
   <data name="ScreensaverPlugin.Title" xml:space="preserve">
     <value>需要擴充元件</value>
@@ -1224,36 +1221,48 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>下載</value>
   </data>
   <data name="TextBecomePatreonMember.Content" xml:space="preserve">
-    <value>Become a Patreon supporter</value>
+    <value>成為 Patreon 支持者</value>
   </data>
   <data name="TextPatreonMembersThankYou.Text" xml:space="preserve">
-    <value>Thanks to all the members who support this project.</value>
+    <value>感謝所有幫助此專案的成員</value>
   </data>
   <data name="TitlePatreon.Text" xml:space="preserve">
-    <value>Patreon Supporters</value>
+    <value>Patreon 支持者</value>
   </data>
   <data name="SelectScreensaverCustomMode.Text" xml:space="preserve">
-    <value>Select screensaver</value>
+    <value>選擇螢幕保護程式</value>
   </data>
   <data name="WebViewRequired.Message" xml:space="preserve">
-    <value>Microsoft WebView2 is required to view this content</value>
+    <value>需要Microsoft WebView2以便瀏覽此內容</value>
   </data>
   <data name="WebViewRequired.Title" xml:space="preserve">
     <value>需要擴充元件</value>
   </data>
   <data name="AppMusicExclusion.Description" xml:space="preserve">
-    <value>Select apps to exclude from showing music details</value>
+    <value>選擇要排除顯示音訊資訊的應用程式</value>
   </data>
   <data name="AppMusicExclusion.Header" xml:space="preserve">
-    <value>App exclusion</value>
+    <value>排除應用程式</value>
   </data>
   <data name="RestartCommand.Content" xml:space="preserve">
-    <value>Restart</value>
+    <value>重新啟動</value>
   </data>
   <data name="WallpaperMusicGroup.Text" xml:space="preserve">
-    <value>Music</value>
+    <value>音樂</value>
   </data>
   <data name="WallpaperRestartRequiredNotify.Message" xml:space="preserve">
-    <value>Wallpaper restart is required for the settings to take effect</value>
+    <value>桌布需要重新啟動以使設定生效</value>
+  </data>
+  <data name="LanguageSettingsItemSystemDefault.Content" xml:space="preserve">
+    <value>與系統語言相同</value>
+  </data>
+  <data name="InfoSettingsRestartRequest.Message" xml:space="preserve">
+    <value>請重新啟動 Lively 動態桌布以使設定生效.</value>
+  </data>
+  <data name="ScreensaverLockOnResume.Header" xml:space="preserve">
+    <value>恢復工作階段後，顯示登入螢幕</value>
+  </data>
+  <data name="ScreensaverFadeIn.Header" xml:space="preserve">
+    <value>Fade to black before start</value>
   </data>
 </root>

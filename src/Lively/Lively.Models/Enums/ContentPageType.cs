@@ -8,6 +8,7 @@
         settingsGeneral,
         settingsPerformance,
         settingsWallpaper,
+        settingsScreensaver,
         settingsSystem
     }
 }

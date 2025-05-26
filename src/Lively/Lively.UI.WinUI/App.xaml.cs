@@ -179,6 +179,7 @@ namespace Lively.UI.WinUI
                 .AddTransient<SettingsGeneralViewModel>()
                 .AddTransient<SettingsPerformanceViewModel>()
                 .AddTransient<SettingsWallpaperViewModel>()
+                .AddTransient<SettingsScreensaverViewModel>()
                 .AddTransient<SettingsSystemViewModel>()
                 .AddTransient<ShareWallpaperViewModel>()
                 .AddTransient<AddWallpaperDataViewModel>()

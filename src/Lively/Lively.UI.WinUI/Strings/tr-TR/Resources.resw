@@ -183,7 +183,7 @@ Yalnızca güvenilir bir kaynaktan bu uygulama geldiyse devam edin.</value>
     <value>Lively sistem tepsisine küçültüldü, devam etmek için Lively simgesine sağ tıklayın.</value>
   </data>
   <data name="DescriptionPleaseRestartLively" xml:space="preserve">
-    <value>Ayarların etkili olması için Lively'yi yeniden başlatın lütfen</value>
+    <value>Ayarların geçerli olması için Lively'yi yeniden başlatın.</value>
   </data>
   <data name="DescriptionPleaseStop" xml:space="preserve">
     <value>Lütfen devam etmeden önce durdurun</value>
@@ -192,7 +192,7 @@ Yalnızca güvenilir bir kaynaktan bu uygulama geldiyse devam edin.</value>
     <value>Kayda başlamak için tıklayın</value>
   </data>
   <data name="DescriptionRestoringWallpaper" xml:space="preserve">
-    <value>Mevcut duvar kağıdınızı geri yüklüyorum, lütfen bekleyin...</value>
+    <value>Mevcut duvar kağıdınız geri yükleniyor, lütfen bekleyin...</value>
   </data>
   <data name="DescriptionScreenLayout" xml:space="preserve">
     <value>Ekranı Seçin</value>
@@ -317,7 +317,7 @@ Hala çalışmıyorsa, Lively'yi kapatın ve yeniden başlatın / Windows'u yeni
     <value>Duvar kağıtlarını yönetmek için tıklayın</value>
   </data>
   <data name="TextConvertVideo" xml:space="preserve">
-    <value>Video'ya Dönüştür</value>
+    <value>Videoya Dönüştür</value>
   </data>
   <data name="TextCreatePreview" xml:space="preserve">
     <value>Önizleme oluştur</value>
@@ -374,7 +374,7 @@ Hala çalışmıyorsa, Lively'yi kapatın ve yeniden başlatın / Windows'u yeni
     <value>Lively'yi farklı dillere çevirmemize yardım edin.</value>
   </data>
   <data name="TextHours" xml:space="preserve">
-    <value>saat</value>
+    <value>saat(ler)</value>
   </data>
   <data name="TextInstall.Content" xml:space="preserve">
     <value>Yükle</value>
@@ -656,7 +656,7 @@ Hala çalışmıyorsa, Lively'yi kapatın ve yeniden başlatın / Windows'u yeni
     <value>Windows Güç Tasarruf Modu etkinleştirildiğinde oynatımı değiştir</value>
   </data>
   <data name="RemoteDesktopPower.Description" xml:space="preserve">
-    <value>Uzak Masaüstü oturumu çalıştığında oynatımı değiştir</value>
+    <value>Uzak masaüstü bağlantısı aktifken oynatmayı değiştir.</value>
   </data>
   <data name="TipScreensaver" xml:space="preserve">
     <value>Etkinlik olmadığı süre sonrasında mevcut duvar kağıdını ekran koruyucu olarak kullan</value>
@@ -825,9 +825,6 @@ Hala çalışmıyorsa, Lively'yi kapatın ve yeniden başlatın / Windows'u yeni
   </data>
   <data name="TitleScreensaver.Content" xml:space="preserve">
     <value>Ekran Koruyucu</value>
-  </data>
-  <data name="ScreensaverLockOnResume.Content" xml:space="preserve">
-    <value>Ekran koruyucu devreye girdiğinde bilgisayarı kilitle</value>
   </data>
   <data name="TitleSelectFile" xml:space="preserve">
     <value>Dosya Seç</value>
@@ -1254,6 +1251,18 @@ Hala çalışmıyorsa, Lively'yi kapatın ve yeniden başlatın / Windows'u yeni
     <value>Müzik</value>
   </data>
   <data name="WallpaperRestartRequiredNotify.Message" xml:space="preserve">
-    <value>Ayarların uygulanabilmesi için duvar kağını yeniden başlatmak gerekli</value>
+    <value>Ayarların uygulanabilmesi için duvar kağıdını yeniden başlatmanız gerekir</value>
+  </data>
+  <data name="LanguageSettingsItemSystemDefault.Content" xml:space="preserve">
+    <value>Sistem ile Aynı</value>
+  </data>
+  <data name="InfoSettingsRestartRequest.Message" xml:space="preserve">
+    <value>Ayarların etki edebilmesi için uygulamayı yeniden başlatın.</value>
+  </data>
+  <data name="ScreensaverLockOnResume.Header" xml:space="preserve">
+    <value>Ekran koruyucu devreye girdiğinde bilgisayarı kilitle</value>
+  </data>
+  <data name="ScreensaverFadeIn.Header" xml:space="preserve">
+    <value>Fade to black before start</value>
   </data>
 </root>

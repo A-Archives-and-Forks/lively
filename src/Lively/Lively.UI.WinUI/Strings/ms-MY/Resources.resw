@@ -829,9 +829,6 @@ Edge ialah Webview sedia ada bagi Windows 10.</value>
   <data name="TitleScreensaver.Content" xml:space="preserve">
     <value>Penghias skrin</value>
   </data>
-  <data name="ScreensaverLockOnResume.Content" xml:space="preserve">
-    <value>Paparkan skrin log masuk ketika menyambung semula</value>
-  </data>
   <data name="TitleSelectFile" xml:space="preserve">
     <value>Pilih fail</value>
   </data>
@@ -1239,24 +1236,36 @@ Edge ialah Webview sedia ada bagi Windows 10.</value>
     <value>Pilih gambar skrin</value>
   </data>
   <data name="WebViewRequired.Message" xml:space="preserve">
-    <value>Microsoft WebView2 is required to view this content</value>
+    <value>Microsoft WebView2 diperlukan untuk melihat kandungan ini</value>
   </data>
   <data name="WebViewRequired.Title" xml:space="preserve">
     <value>Plugin diperlukan</value>
   </data>
   <data name="AppMusicExclusion.Description" xml:space="preserve">
-    <value>Select apps to exclude from showing music details</value>
+    <value>Pilih aplikasi untuk dikecualikan dari paparan lengkap muzik</value>
   </data>
   <data name="AppMusicExclusion.Header" xml:space="preserve">
-    <value>App exclusion</value>
+    <value>Pengecualian aplikasi</value>
   </data>
   <data name="RestartCommand.Content" xml:space="preserve">
-    <value>Restart</value>
+    <value>Hidupkan semula</value>
   </data>
   <data name="WallpaperMusicGroup.Text" xml:space="preserve">
-    <value>Music</value>
+    <value>Muzik</value>
   </data>
   <data name="WallpaperRestartRequiredNotify.Message" xml:space="preserve">
-    <value>Wallpaper restart is required for the settings to take effect</value>
+    <value>Hidupkan semula kertas dinding adalah diperlukan supaya tetapan berfungsi dengan baik</value>
+  </data>
+  <data name="LanguageSettingsItemSystemDefault.Content" xml:space="preserve">
+    <value>Same as System</value>
+  </data>
+  <data name="InfoSettingsRestartRequest.Message" xml:space="preserve">
+    <value>Please restart application for settings to take effect.</value>
+  </data>
+  <data name="ScreensaverLockOnResume.Header" xml:space="preserve">
+    <value>Paparkan skrin log masuk ketika menyambung semula</value>
+  </data>
+  <data name="ScreensaverFadeIn.Header" xml:space="preserve">
+    <value>Fade to black before start</value>
   </data>
 </root>

@@ -141,7 +141,7 @@
 Utforskaren har startat om två gånger under de senaste 30 sekunderna! Detta kan vara en konflikt mellan Lively och andra anpassningsprogram för skrivbordet eller Windows. För att undvika ytterligare fel stängs alla bakgrunder av.</value>
   </data>
   <data name="DescIncompatibleTaskbarTheme" xml:space="preserve">
-    <value>Inkompatibelt program har hittats, tematisering i aktivitetsfältet är inaktiverad.</value>
+    <value>Ett inkompatibelt program hittades, aktivitetsfältets tema har inaktiverats</value>
   </data>
   <data name="Website.Description" xml:space="preserve">
     <value>Officiell hemsida för Lively Wallpaper</value>
@@ -297,7 +297,7 @@ Utforskaren har startat om två gånger under de senaste 30 sekunderna! Detta ka
     <value>Skapa förhandsgranskning</value>
   </data>
   <data name="Customise.Text" xml:space="preserve">
-    <value>Anpassa bakgrundsbilden</value>
+    <value>Anpassa bakgrundsbild</value>
   </data>
   <data name="CustomiseWallpaper.Label" xml:space="preserve">
     <value>Anpassa bakgrundsbilden</value>
@@ -800,9 +800,6 @@ Utforskaren har startat om två gånger under de senaste 30 sekunderna! Detta ka
   <data name="TitleScreensaver.Content" xml:space="preserve">
     <value>Skärmsläckare</value>
   </data>
-  <data name="ScreensaverLockOnResume.Content" xml:space="preserve">
-    <value>Vid återupptagande visas inloggningsskärmen</value>
-  </data>
   <data name="TitleSelectFile" xml:space="preserve">
     <value>Välj fil</value>
   </data>
@@ -853,7 +850,7 @@ Utforskaren har startat om två gånger under de senaste 30 sekunderna! Detta ka
     <value>Bakgrundsbild</value>
   </data>
   <data name="TitleCustomise.Content" xml:space="preserve">
-    <value>Anpassa bakgrundsbilden</value>
+    <value>Anpassa bakgrundsbild</value>
   </data>
   <data name="WallpaperDir.Header" xml:space="preserve">
     <value>Bakgrundskatalog</value>
@@ -1210,24 +1207,36 @@ Utforskaren har startat om två gånger under de senaste 30 sekunderna! Detta ka
     <value>Välj skärmsläckare</value>
   </data>
   <data name="WebViewRequired.Message" xml:space="preserve">
-    <value>Microsoft WebView2 is required to view this content</value>
+    <value>Microsoft WebView2 krävs för att visa sidan</value>
   </data>
   <data name="WebViewRequired.Title" xml:space="preserve">
     <value>Tillägg krävs</value>
   </data>
   <data name="AppMusicExclusion.Description" xml:space="preserve">
-    <value>Select apps to exclude from showing music details</value>
+    <value>Välj appar som utesluts från att visa musikdetaljer</value>
   </data>
   <data name="AppMusicExclusion.Header" xml:space="preserve">
-    <value>App exclusion</value>
+    <value>Uteslutning av appar</value>
   </data>
   <data name="RestartCommand.Content" xml:space="preserve">
-    <value>Restart</value>
+    <value>Omstart</value>
   </data>
   <data name="WallpaperMusicGroup.Text" xml:space="preserve">
-    <value>Music</value>
+    <value>Musik</value>
   </data>
   <data name="WallpaperRestartRequiredNotify.Message" xml:space="preserve">
-    <value>Wallpaper restart is required for the settings to take effect</value>
+    <value>Omstart krävs för att inställningarna ska börja gälla</value>
+  </data>
+  <data name="LanguageSettingsItemSystemDefault.Content" xml:space="preserve">
+    <value>Same as System</value>
+  </data>
+  <data name="InfoSettingsRestartRequest.Message" xml:space="preserve">
+    <value>Please restart application for settings to take effect.</value>
+  </data>
+  <data name="ScreensaverLockOnResume.Header" xml:space="preserve">
+    <value>Vid återupptagande visas inloggningsskärmen</value>
+  </data>
+  <data name="ScreensaverFadeIn.Header" xml:space="preserve">
+    <value>Fade to black before start</value>
   </data>
 </root>

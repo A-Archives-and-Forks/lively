@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AudioFocused.Content" xml:space="preserve">
-    <value>Reproducir el audio solo cuando el escritorio esté enfocado</value>
+    <value>Reproduce audio solo cuando el escritorio esté enfocado</value>
   </data>
   <data name="Audio.Description" xml:space="preserve">
     <value>Nivel de volumen de todos los fondos.</value>
@@ -578,7 +578,7 @@ Si aún no funciona, cierra e inicia Lively nuevamente o reinicia Windows.
     <value>Relleno Uniforme</value>
   </data>
   <data name="WallpaperLayoutDuplicate.Text" xml:space="preserve">
-    <value>Dupiclar</value>
+    <value>Duplicar</value>
   </data>
   <data name="WallpaperLayoutPerScreen.Text" xml:space="preserve">
     <value>Pantalla</value>
@@ -829,9 +829,6 @@ Edge es la vista web integrada en Windows 10.</value>
   </data>
   <data name="TitleScreensaver.Content" xml:space="preserve">
     <value>Salvapantallas</value>
-  </data>
-  <data name="ScreensaverLockOnResume.Content" xml:space="preserve">
-    <value>Al resumir, mostrar pantalla de inicio</value>
   </data>
   <data name="TitleSelectFile" xml:space="preserve">
     <value>Seleccionar Archivo</value>
@@ -1261,5 +1258,17 @@ Espejo de Fondo de pantalla</value>
   </data>
   <data name="WallpaperRestartRequiredNotify.Message" xml:space="preserve">
     <value>Es necesario reiniciar el fondo de pantalla para que la configuración surta efecto</value>
+  </data>
+  <data name="LanguageSettingsItemSystemDefault.Content" xml:space="preserve">
+    <value>Same as System</value>
+  </data>
+  <data name="InfoSettingsRestartRequest.Message" xml:space="preserve">
+    <value>Please restart application for settings to take effect.</value>
+  </data>
+  <data name="ScreensaverLockOnResume.Header" xml:space="preserve">
+    <value>Al resumir, mostrar pantalla de inicio</value>
+  </data>
+  <data name="ScreensaverFadeIn.Header" xml:space="preserve">
+    <value>Fade to black before start</value>
   </data>
 </root>

@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AudioFocused.Content" xml:space="preserve">
-    <value>صدا را فقط زمانی پخش کنید که دسکتاپ فوکوس شده باشد</value>
+    <value>پخش صدا تنها زمانی که بر روی دسکتاپ هستید</value>
   </data>
   <data name="Audio.Description" xml:space="preserve">
     <value>سطح صدای همه‌ی پس زمینه‌ها</value>
@@ -141,7 +141,7 @@
 Windows Explorer دو بار در 30 ثانیه گذشته راه‌اندازی مجدد شد! این ممکن است تضاد بین Lively و سایر نرم افزارهای سفارشی‌سازی دسکتاپ یا ویندوز باشد. برای جلوگیری از مشکلات بیشتر، تمام تصاویر زمینه بسته می‌شوند.</value>
   </data>
   <data name="DescIncompatibleTaskbarTheme" xml:space="preserve">
-    <value>برنامه ناسازگار پیدا شد، پوسته نوار وظیفه غیرفعال شد</value>
+    <value>برنامۀ ناسازگار پیدا شد، پوسته‌ی نوار وظیفه غیرفعال شد</value>
   </data>
   <data name="Website.Description" xml:space="preserve">
     <value>صفحه وب رسمی Lively Wallpaper</value>
@@ -176,11 +176,11 @@ Windows Explorer دو بار در 30 ثانیه گذشته راه‌اندازی
   </data>
   <data name="DescriptionExternalAppWarning" xml:space="preserve">
     <value>شما در حال باز کردن یک برنامه خارجی به عنوان تصویر زمینه هستید.
-برنامه های مخرب می توانند میزبان بدافزارها، ویروس ها و ... باشند و به سیستم شما آسیب برسانند.
+برنامه های مخرب می توانند میزبان بدافزارها، ویروس ها.. باشند و به سیستم شما آسیب برسانند.
 فقط در صورتی ادامه دهید که این برنامه از منبع قابل اعتمادی تهیه شده باشد.</value>
   </data>
   <data name="MinimizedTray.Text" xml:space="preserve">
-    <value>لایولی کوچک شده و به سیستم تری انتقال یافته، برای ادامه آیکون لایولی را راست کلیک کنید.</value>
+    <value>Lively کوچک شده و به سیستم ترِی (زیر نوار وظیفه) انتقال یافته، برای ادامه آیکون Lively را راست کلیک کنید.</value>
   </data>
   <data name="DescriptionPleaseRestartLively" xml:space="preserve">
     <value>لطفاً Lively را مجدداً راه اندازی کنید تا تنظیمات اعمال شوند</value>
@@ -189,7 +189,7 @@ Windows Explorer دو بار در 30 ثانیه گذشته راه‌اندازی
     <value>لطفا قبل از ادامه دست نگه دارید.</value>
   </data>
   <data name="DescriptionRecordStart" xml:space="preserve">
-    <value>برای شروع ضبط فشار دهيد.</value>
+    <value>برای شروع ضبط فشار دهيد</value>
   </data>
   <data name="DescriptionRestoringWallpaper" xml:space="preserve">
     <value>در حال بازیابی کاغذدیواری(های) قبلی، لطفاً صبر کنید...</value>
@@ -564,7 +564,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>ویدیو</value>
   </data>
   <data name="TextWallpaperCommandlineArgs" xml:space="preserve">
-    <value>ویژگی‌های راه‌اندازی</value>
+    <value>راه‌اندازی گزینه ها</value>
   </data>
   <data name="WallpaperFitFill.Content" xml:space="preserve">
     <value>پر کردن</value>
@@ -585,7 +585,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>صفحه</value>
   </data>
   <data name="WallpaperLayoutSpan.Text" xml:space="preserve">
-    <value>Span</value>
+    <value>چرخیده</value>
   </data>
   <data name="WallpaperType.Text" xml:space="preserve">
     <value>نوع</value>
@@ -830,9 +830,6 @@ Edge is the built in webview of windows 10.</value>
   <data name="TitleScreensaver.Content" xml:space="preserve">
     <value>محافظ صفحه‌نمایش</value>
   </data>
-  <data name="ScreensaverLockOnResume.Content" xml:space="preserve">
-    <value>هنگام ادامه‌دادن، صفحه ورود به سیستم را نمایش بده</value>
-  </data>
   <data name="TitleSelectFile" xml:space="preserve">
     <value>انتخاب فایل</value>
   </data>
@@ -1006,7 +1003,7 @@ Edge is the built in webview of windows 10.</value>
     <value>سفارشی</value>
   </data>
   <data name="ScreensaverModeSameWallpaper.Text" xml:space="preserve">
-    <value>Mirror Wallpaper</value>
+    <value>کاغذ دیواری آینه</value>
   </data>
   <data name="ScreensaverPlugin.Title" xml:space="preserve">
     <value>پلاگین لازم است</value>
@@ -1228,16 +1225,16 @@ Edge is the built in webview of windows 10.</value>
     <value>دانلود</value>
   </data>
   <data name="TextBecomePatreonMember.Content" xml:space="preserve">
-    <value>یک حامی پاترئون شوید</value>
+    <value>یک حامی در Patreon شوید</value>
   </data>
   <data name="TextPatreonMembersThankYou.Text" xml:space="preserve">
-    <value>با تشکر از همه اعضایی‌که از این پروژه حمایت می‌کنند.</value>
+    <value>با تشکر از همه اعضایی که از این پروژه حمایت می کنند.</value>
   </data>
   <data name="TitlePatreon.Text" xml:space="preserve">
     <value>حامیان Patreon</value>
   </data>
   <data name="SelectScreensaverCustomMode.Text" xml:space="preserve">
-    <value>محافظ صفحه</value>
+    <value>انتخاب محافظ صفحه نمایش</value>
   </data>
   <data name="WebViewRequired.Message" xml:space="preserve">
     <value>Microsoft WebView2 برای مشاهده این محتوا مورد نیاز است</value>
@@ -1246,7 +1243,7 @@ Edge is the built in webview of windows 10.</value>
     <value>افزونه مورد نیاز است</value>
   </data>
   <data name="AppMusicExclusion.Description" xml:space="preserve">
-    <value>Select apps to exclude from showing music details</value>
+    <value>انتخاب برنامه ها تا از نمایش جزئیات موسیقی حذف شوند</value>
   </data>
   <data name="AppMusicExclusion.Header" xml:space="preserve">
     <value>استثناء برنامه</value>
@@ -1259,5 +1256,17 @@ Edge is the built in webview of windows 10.</value>
   </data>
   <data name="WallpaperRestartRequiredNotify.Message" xml:space="preserve">
     <value>برای اعمال تنظیمات نیاز به راه اندازی مجدد کاغذ دیواری است</value>
+  </data>
+  <data name="LanguageSettingsItemSystemDefault.Content" xml:space="preserve">
+    <value>مشابۀ تظیمات سیستم</value>
+  </data>
+  <data name="InfoSettingsRestartRequest.Message" xml:space="preserve">
+    <value>لطفاً برنامه را مجدداً راه‌ اندازی کنید تا تنظیمات اعمال شوند.</value>
+  </data>
+  <data name="ScreensaverLockOnResume.Header" xml:space="preserve">
+    <value>هنگام ادامه‌دادن، صفحه ورود به سیستم را نمایش بده</value>
+  </data>
+  <data name="ScreensaverFadeIn.Header" xml:space="preserve">
+    <value>Fade to black before start</value>
   </data>
 </root>

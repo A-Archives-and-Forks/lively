@@ -460,7 +460,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>လုပ်ဆောင်နေသည်</value>
   </data>
   <data name="TextRemove" xml:space="preserve">
-    <value>ဖယ်ရှားပါ။</value>
+    <value>ဖယ်ရှားပါ</value>
   </data>
   <data name="TextRule" xml:space="preserve">
     <value>စည်းကမ်း</value>
@@ -547,22 +547,22 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>အပ်ဒိတ် ရနိုင်ပါသည်။</value>
   </data>
   <data name="TextUpdateCheck.Content" xml:space="preserve">
-    <value>အပ်ဒိတ် စစ်ဆေးပါ။</value>
+    <value>အပ်ဒိတ် စစ်ဆေးပါ</value>
   </data>
   <data name="TextupdateCheckFail" xml:space="preserve">
-    <value>ဆော့ဖ်ဝဲအပ်ဒိတ် စစ်ဆေးမှု မအောင်မြင်ပါ။</value>
+    <value>ဆော့ဖ်ဝဲအပ်ဒိတ် စစ်ဆေးမှု မအောင်မြင်ပါ</value>
   </data>
   <data name="TextUpdateChecking" xml:space="preserve">
-    <value>အပ်ဒိတ် စစ်ဆေးနေသည်။</value>
+    <value>အပ်ဒိတ် စစ်ဆေးနေသည်</value>
   </data>
   <data name="TextUpdateUptodate" xml:space="preserve">
-    <value>ဆော့ဖ်ဝဲလ်သည် နောက်ဆုံးပေါ်ဖြစ်သည်။</value>
+    <value>ဆော့ဖ်ဝဲလ်သည် နောက်ဆုံးပေါ်ဖြစ်သည်</value>
   </data>
   <data name="TextVideo" xml:space="preserve">
     <value>ဗီဒီယို</value>
   </data>
   <data name="TextWallpaperCommandlineArgs" xml:space="preserve">
-    <value>Launch Options</value>
+    <value>စတင်မှု ရွေးချယ်စရာများ</value>
   </data>
   <data name="WallpaperFitFill.Content" xml:space="preserve">
     <value>ဖြည့်စွက်ပါ။</value>
@@ -577,13 +577,13 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>ယူနီဖောင်းဖြည့်ပါ</value>
   </data>
   <data name="WallpaperLayoutDuplicate.Text" xml:space="preserve">
-    <value>Duplicate</value>
+    <value>ထပ်ပါ</value>
   </data>
   <data name="WallpaperLayoutPerScreen.Text" xml:space="preserve">
     <value>မျက်နှာပြင်</value>
   </data>
   <data name="WallpaperLayoutSpan.Text" xml:space="preserve">
-    <value>Span</value>
+    <value>ဆပန်း</value>
   </data>
   <data name="WallpaperType.Text" xml:space="preserve">
     <value>အမျိုးအစား</value>
@@ -604,25 +604,25 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>ဗီဒီယိုဖွင့်စက်</value>
   </data>
   <data name="AddWallpaperFileBrowse.Description" xml:space="preserve">
-    <value>ပံ့ပိုးထားသော ဖိုင်အမျိုးအစားအားလုံးကို နောက်ခံပုံအဖြစ် သတ်မှတ်ပါ။</value>
+    <value>ပံ့ပိုးထားသော ဖိုင်အမျိုးအစားအားလုံးကို နောက်ခံပုံအဖြစ် သတ်မှတ်ပါ</value>
   </data>
   <data name="EnterUrl.Description" xml:space="preserve">
-    <value>သင်ထည့်သွင်းထားသော URL ၏ ဝဘ်စာမျက်နှာကို နောက်ခံပုံအဖြစ် သတ်မှတ်ပါ။</value>
+    <value>သင်ထည့်သွင်းထားသော URL ၏ ဝဘ်စာမျက်နှာကို နောက်ခံပုံအဖြစ် သတ်မှတ်ပါ</value>
   </data>
   <data name="AppFocus.Description" xml:space="preserve">
-    <value>အပလီကေးရှင်းတစ်ခုခုကို အာရုံစူးစိုက်ထားသည့်အခါ ဘာလုပ်ရမည်ကို သတ်မှတ်ပါ။</value>
+    <value>အပလီကေးရှင်းတစ်ခုခုကို အာရုံစူးစိုက်ထားသည့်အခါ ဘာလုပ်ရမည်ကို သတ်မှတ်ပါ</value>
   </data>
   <data name="AppFullScreen.Description" xml:space="preserve">
-    <value>မျက်နှာပြင်အပြည့် ဂိမ်း/အပလီကေးရှင်းများ လုပ်ဆောင်နေချိန်တွင် လုပ်ဆောင်ရမည့်အရာကို သတ်မှတ်ပါ။</value>
+    <value>မျက်နှာပြင်အပြည့် ဂိမ်း/အပလီကေးရှင်းများ လုပ်ဆောင်နေချိန်တွင် လုပ်ဆောင်ရမည့်အရာကို သတ်မှတ်ပါ</value>
   </data>
   <data name="AppRules.Description" xml:space="preserve">
-    <value>ဤအပလီကေးရှင်းများကိုအသုံးပြုသည့်အခါ နောက်ခံပုံများကို ခေတ္တရပ်ပါ။</value>
+    <value>ဤအပလီကေးရှင်းများကိုအသုံးပြုသည့်အခါ နောက်ခံပုံများကို ခေတ္တရပ်ပါ</value>
   </data>
   <data name="TipAppTheme" xml:space="preserve">
     <value>Lively အသွင်အပြင်ကိုပြောင်းရန် စနစ်အပြင်အဆင်ဆက်တင်များဆီသို့ လိုက်လျောညီထွေဖြစ်အောင်လုပ်ပါ။</value>
   </data>
   <data name="BatteryPower.Description" xml:space="preserve">
-    <value>AC ပါဝါ ချိတ်ဆက်မှု ပြတ်တောက်သောအခါတွင် ပြန်ဖွင့်ခြင်းကို ပြောင်းလဲပါ။</value>
+    <value>AC ပါဝါ ချိတ်ဆက်မှု ပြတ်တောက်သောအခါတွင် ပြန်ဖွင့်ခြင်းကို ပြောင်းလဲပါ</value>
   </data>
   <data name="BrowserDebuggingPort.Description" xml:space="preserve">
     <value>ဝဘ်စာမျက်နှာ နောက်ခံပုံများကို အမှားရှာခြင်းအတွက် port ကို ထည့်သွင်းပါ။ အဆင်သင့်ဖြစ်သောအခါ developer console ကိုဝင်ရောက်ရန် http://localhost:portnumber သို့သွားပါ။</value>
@@ -631,10 +631,10 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>ပြုစုသူ ‌မီနူးကို ပြပါ</value>
   </data>
   <data name="DesktopPicture.Description" xml:space="preserve">
-    <value>ကာတွန်းနောက်ခံပုံတစ်ပုံကို ကွန်ပျူတာ နောက်ခံပုံ အဖြစ် သတ်မှတ်ပါ။</value>
+    <value>ကာတွန်းနောက်ခံပုံတစ်ပုံကို ကွန်ပျူတာ နောက်ခံပုံ အဖြစ် သတ်မှတ်ပါ</value>
   </data>
   <data name="DisplayPauseRule.Description" xml:space="preserve">
-    <value>ဖန်သားပြင်အားလုံးတွင် နောက်ခံပုံ သို့မဟုတ် အပလီကေးရှင်းကို အာရုံစိုက်ထားသည့် မျက်နှာပြင်ကိုသာ ခေတ္တရပ်ပါ။</value>
+    <value>ဖန်သားပြင်အားလုံးတွင် နောက်ခံပုံ သို့မဟုတ် အပလီကေးရှင်းကို အာရုံစိုက်ထားသည့် မျက်နှာပြင်ကိုသာ ခေတ္တရပ်ပါ</value>
   </data>
   <data name="ExportLogs.Description" xml:space="preserve">
     <value>မှတ်တမ်း အစီရင်ခံစာဖိုင်ကို ဖန်တီးပါ</value>
@@ -658,16 +658,16 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>အဝေးထိန်း ဒက်စ်တော့ စက်ရှင်ကို ဖွင့်သောအခါတွင် ပြန်ဖွင့်ခြင်းကို ပြောင်းလဲပါ</value>
   </data>
   <data name="TipScreensaver" xml:space="preserve">
-    <value>လှုပ်ရှားမှုမရှိသောကာလပြီးနောက် လက်ရှိနောက်ခံပုံကို သင်၏စခရင်ခြာဘေးဗာအဖြစ် အသုံးပြုပါ။</value>
+    <value>လှုပ်ရှားမှုမရှိသောကာလပြီးနောက် လက်ရှိနောက်ခံပုံကို သင်၏စခရင်ခြာဘေးဗာအဖြစ် အသုံးပြုပါ</value>
   </data>
   <data name="StreamWallpaperDetect.Description" xml:space="preserve">
-    <value>ပံ့ပိုးထားသော ဗီဒီယိုစီးကြောင်းလင့်ခ်ကို တွေ့ရှိပါက ဝဘ်စာမျက်နှာကို တင်မည့်အစား ဗီဒီယိုပလေယာကို အသုံးပြုပါ။</value>
+    <value>ပံ့ပိုးထားသော ဗီဒီယိုစီးကြောင်းလင့်ခ်ကို တွေ့ရှိပါက ဝဘ်စာမျက်နှာကို တင်မည့်အစား ဗီဒီယိုပလေယာကို အသုံးပြုပါ</value>
   </data>
   <data name="StreamWallpaperVideoQuality.Description" xml:space="preserve">
-    <value>အွန်လိုင်းစီးကြောင်းများအတွက် အလိုရှိသော ဗီဒီယိုအရည်အသွေးကို ရွေးချယ်ပါ။</value>
+    <value>အွန်လိုင်းစီးကြောင်းများအတွက် အလိုရှိသော ဗီဒီယိုအရည်အသွေးကို ရွေးချယ်ပါ</value>
   </data>
   <data name="TipSwitchSoftwareBranch" xml:space="preserve">
-    <value>ဆော့ဖ်ဝဲထုတ်လွှတ်မှုကို beta မှတည်ငြိမ်သော သို့မဟုတ် အပြန်အလှန်ပြောင်းပါ။</value>
+    <value>ဆော့ဖ်ဝဲထုတ်လွှတ်မှုကို beta မှတည်ငြိမ်သော သို့မဟုတ် အပြန်အလှန်ပြောင်းပါ</value>
   </data>
   <data name="TaskbarTheme.Description" xml:space="preserve">
     <value>စနစ် Taskbar အသွင်အပြင်ကို ပြောင်းပါ။</value>
@@ -682,7 +682,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>ဖြစ်နိုင်လျှင် ဟာ့ဒ်ဝဲ အရှိန်မြှင့်ခြင်းကို သုံးပါ။</value>
   </data>
   <data name="VideoPlayer.Description" xml:space="preserve">
-    <value>ဗီဒီယိုနောက်ခံပုံအတွက် အသုံးပြုသည့် ပလေယာကို ရွေးပါ။</value>
+    <value>ဗီဒီယိုနောက်ခံပုံအတွက် အသုံးပြုသည့် ပလေယာကို ရွေးပါ</value>
   </data>
   <data name="WallpaperDir.Description" xml:space="preserve">
     <value>နောက်ခံဖိုင်များကိုသိမ်းဆည်းရန်အသုံးပြုသည့်လမ်းကြောင်း</value>
@@ -691,7 +691,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>နောက်ခံပုံချဲ့ခြင်း အယ်လဂိုရီသမ်</value>
   </data>
   <data name="WallpaperInput.Description" xml:space="preserve">
-    <value>နောက်ခံပုံများနှင့် အပြန်အလှန်တုံ့ပြန်ရန် နည်းလမ်းများကို ရွေးချယ်ပါ။</value>
+    <value>နောက်ခံပုံများနှင့် အပြန်အလှန်တုံ့ပြန်ရန် နည်းလမ်းများကို ရွေးချယ်ပါ</value>
   </data>
   <data name="WallpaperLayout.Description" xml:space="preserve">
     <value>ချိတ်ဆက်ထားသော ပြသစက်များတွင် နောက်ခံပုံကို  အသုံးပြုပုံ</value>
@@ -823,13 +823,10 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>ထိန်းချုပ်ရာနေရာ</value>
   </data>
   <data name="TitleScreensaver.Content" xml:space="preserve">
-    <value>ကွန်ပျူတာလှုပ်ရှားမှုမရှိသည့်အခါတွင်ဖန်ပြင်၌ပေါ်ခြင်း</value>
-  </data>
-  <data name="ScreensaverLockOnResume.Content" xml:space="preserve">
-    <value>ကိုယ်ရေးမှတ်တမ်းတွင်၊ အကောင့်ဝင်သည့်မျက်နှာပြင်ကိုပြသပါ</value>
+    <value>စခရင်ဆေ့ဗာ</value>
   </data>
   <data name="TitleSelectFile" xml:space="preserve">
-    <value>ဖိုင်ကို ရွေးပါ။</value>
+    <value>ဖိုင်ကို ရွေးပါ</value>
   </data>
   <data name="TitleSettings" xml:space="preserve">
     <value>ဆက်တင်များ</value>
@@ -998,10 +995,10 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>စခရင်စေဗာ အမျိုးအစား</value>
   </data>
   <data name="ScreensaverModeDifferentWallpaper.Text" xml:space="preserve">
-    <value>Custom</value>
+    <value>စိတ်ကြိုက်</value>
   </data>
   <data name="ScreensaverModeSameWallpaper.Text" xml:space="preserve">
-    <value>Mirror Wallpaper</value>
+    <value>ကြည့်မှန် နောက်ခံ</value>
   </data>
   <data name="ScreensaverPlugin.Title" xml:space="preserve">
     <value>Plugin လိုအပ်နေပါသည်</value>
@@ -1223,36 +1220,48 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>ဒေါင်းလုဒ်လုပ်ပါ</value>
   </data>
   <data name="TextBecomePatreonMember.Content" xml:space="preserve">
-    <value>Become a Patreon supporter</value>
+    <value>ငွေကြေးထောက်ပံ့သူ ဖြစ်ပါ</value>
   </data>
   <data name="TextPatreonMembersThankYou.Text" xml:space="preserve">
-    <value>Thanks to all the members who support this project.</value>
+    <value>ဒီပရောက်ဂျက်ကို ပံ့ပိုးသူအားလုံးကို ကျေးဇူးတင်ပါတယ်။</value>
   </data>
   <data name="TitlePatreon.Text" xml:space="preserve">
-    <value>Patreon Supporters</value>
+    <value>ငွေကြေးထောက်ပံ့သူများ</value>
   </data>
   <data name="SelectScreensaverCustomMode.Text" xml:space="preserve">
-    <value>Select screensaver</value>
+    <value>စခရင်ဆေ့ဗာကို ရွေးပါ</value>
   </data>
   <data name="WebViewRequired.Message" xml:space="preserve">
-    <value>Microsoft WebView2 is required to view this content</value>
+    <value>ဤအကြောင်းအရာကိုကြည့်ရှုရန် Microsoft WebView2 လိုအပ်သည်။</value>
   </data>
   <data name="WebViewRequired.Title" xml:space="preserve">
     <value>Plugin လိုအပ်နေပါသည်</value>
   </data>
   <data name="AppMusicExclusion.Description" xml:space="preserve">
-    <value>Select apps to exclude from showing music details</value>
+    <value>ဂီတအသေးစိတ်အချက်အလက်များကိုပြသခြင်းမှဖယ်ထုတ်ရန်အက်ပ်များကိုရွေးချယ်ပါ။</value>
   </data>
   <data name="AppMusicExclusion.Header" xml:space="preserve">
-    <value>App exclusion</value>
+    <value>အက်ပ်ကို ချန်လှပ်ထားသည်။</value>
   </data>
   <data name="RestartCommand.Content" xml:space="preserve">
-    <value>Restart</value>
+    <value>ပြန်စတင်သည်</value>
   </data>
   <data name="WallpaperMusicGroup.Text" xml:space="preserve">
-    <value>Music</value>
+    <value>ဂီတ</value>
   </data>
   <data name="WallpaperRestartRequiredNotify.Message" xml:space="preserve">
-    <value>Wallpaper restart is required for the settings to take effect</value>
+    <value>ဆက်တင်များအကျိုးသက်ရောက်စေရန် နောက်ခံပုံပြန်လည်စတင်ရန် လိုအပ်သည်</value>
+  </data>
+  <data name="LanguageSettingsItemSystemDefault.Content" xml:space="preserve">
+    <value>Same as System</value>
+  </data>
+  <data name="InfoSettingsRestartRequest.Message" xml:space="preserve">
+    <value>Please restart application for settings to take effect.</value>
+  </data>
+  <data name="ScreensaverLockOnResume.Header" xml:space="preserve">
+    <value>ကိုယ်ရေးမှတ်တမ်းတွင် အကောင့်ဝင်သည့်မျက်နှာပြင်ကိုပြသပါ</value>
+  </data>
+  <data name="ScreensaverFadeIn.Header" xml:space="preserve">
+    <value>Fade to black before start</value>
   </data>
 </root>

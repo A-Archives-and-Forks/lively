@@ -826,9 +826,6 @@ Hvis fortsatt ikke fungerer, lukk og start Lively igjen/restart Windows.
   <data name="TitleScreensaver.Content" xml:space="preserve">
     <value>Skjermsparer</value>
   </data>
-  <data name="ScreensaverLockOnResume.Content" xml:space="preserve">
-    <value>Når det gjenopptas, vis påloggingsskjerm</value>
-  </data>
   <data name="TitleSelectFile" xml:space="preserve">
     <value>Velg fil</value>
   </data>
@@ -1255,5 +1252,17 @@ Hvis fortsatt ikke fungerer, lukk og start Lively igjen/restart Windows.
   </data>
   <data name="WallpaperRestartRequiredNotify.Message" xml:space="preserve">
     <value>Wallpaper restart is required for the settings to take effect</value>
+  </data>
+  <data name="LanguageSettingsItemSystemDefault.Content" xml:space="preserve">
+    <value>Same as System</value>
+  </data>
+  <data name="InfoSettingsRestartRequest.Message" xml:space="preserve">
+    <value>Please restart application for settings to take effect.</value>
+  </data>
+  <data name="ScreensaverLockOnResume.Header" xml:space="preserve">
+    <value>Når det gjenopptas, vis påloggingsskjerm</value>
+  </data>
+  <data name="ScreensaverFadeIn.Header" xml:space="preserve">
+    <value>Fade to black before start</value>
   </data>
 </root>

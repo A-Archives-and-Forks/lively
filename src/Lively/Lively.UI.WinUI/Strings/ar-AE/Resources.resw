@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AudioFocused.Content" xml:space="preserve">
-    <value>تشغيل الصوت فقط عندما يكون سطح المكتب مركز</value>
+    <value>تشغيل الصوت فقط عندما تكون في الشاشة الرئيسة</value>
   </data>
   <data name="Audio.Description" xml:space="preserve">
     <value>مستوى الصوت لجميع الخلفيات</value>
@@ -154,7 +154,7 @@
 الغرض الأساسي من شاشات توقف Lively هو إضافة طبقة أخرى من التخصيص إلى جهاز الكمبيوتر الخاص بك، واستخدام شاشات التوقف كحماية ضد الاحتراق هو على مسؤوليتك الخاصة!</value>
   </data>
   <data name="ReportBug.Description" xml:space="preserve">
-    <value>الإبلاغ عن مشكلة في البرنامج</value>
+    <value>الإبلاغ عن مشكلة في التطبيق</value>
   </data>
   <data name="AddWallpaperFileBrowse.Header" xml:space="preserve">
     <value>قم بتحديد ملف</value>
@@ -172,18 +172,18 @@
     <value>هل أنت متأكد أنك تريد حذف هذه الخلفية من المكتبة؟</value>
   </data>
   <data name="DragDropFile.Text" xml:space="preserve">
-    <value>ببساطة، ما عليك سوى سحب الملفات وإفلاتها هنا</value>
+    <value>ببساطة أسحب الملفات وإفلاتها هنا</value>
   </data>
   <data name="DescriptionExternalAppWarning" xml:space="preserve">
-    <value>أنت تفتح تطبيقًا خارجيا كخلفية.
-يمكن أن تحمل التطبيقات الخارجية برامج ضارة وفيروسات.. وتضر بنظامك.
-استمر فقط إذا كنت بمصدر هذا التطبيق.</value>
+    <value>أنت تفتح تطبيقاً خارجياً كخلفية.
+يمكن للتطبيقات الضارة استضافة برامج ضارة وفيروسات... وتُلحق الضرر بنظامك.
+تابع فقط إذا كان هذا التطبيق يأتي من مصدر موثوق.</value>
   </data>
   <data name="MinimizedTray.Text" xml:space="preserve">
-    <value>تم تصغير  Lively Wallpaper إلى الأيقونات المصغرة بجانب الساعة، يرجى النقر بزر الفأرة الأيمن فوق الرمز التطبيق لمزيد من الخيارات...</value>
+    <value>تم تصغير البرنامَج إلى علبة النظام، انقر بزر الفأرة الأيمن على أيقونة البرنامَج للمتابعة.</value>
   </data>
   <data name="DescriptionPleaseRestartLively" xml:space="preserve">
-    <value>يرجى إعادة تشغيل البرنامج لتطبيق الإعدادات الجديدة...</value>
+    <value>يرجى إعادة تشغيل البرنامَج لتصبح الإعدادات سارية المفعول</value>
   </data>
   <data name="DescriptionPleaseStop" xml:space="preserve">
     <value>يرجى التوقف قبل المتابعة</value>
@@ -198,38 +198,38 @@
     <value>اختر الشاشة</value>
   </data>
   <data name="DescriptionUpdateAvailable" xml:space="preserve">
-    <value>إصدار جديد متوفر من التطبيق!</value>
+    <value>يتوفر إصدار جديد من البرنامَج!</value>
   </data>
   <data name="DescriptionWebpageLoad" xml:space="preserve">
     <value>أدخل رابط الموقع للتحميل, Shadertoy.com  روابط هذا الموقع مدعومة:-</value>
   </data>
   <data name="DescriptionWelcomeWizard" xml:space="preserve">
-    <value>هذا المساعد سوف يمكنك من البدء في إعداد Lively</value>
+    <value>هذا المساعد سيمكنك من البَدء في إعداد البرنامَج</value>
   </data>
   <data name="DescriptionWindowsNCodecInstall" xml:space="preserve">
-    <value>سيتطلب إصدار Windows N/KN تنزيل برامج ترميز إضافية لدعم تشغيل الفيديو في خلفيات.</value>
+    <value>سيتطلب إصدار Windows N/KN الخاص بك تنزيل برامج ترميز إضافية لدعم تشغيل الفيديو كخلفيات شاشة</value>
   </data>
   <data name="DescSupperDev" xml:space="preserve">
-    <value>اضهر دعمك من خلال شراء كوب قهوة للمطور</value>
+    <value>أظهر الدعم بشراء قهوة للمطورة</value>
   </data>
   <data name="DescSwitchBranchBetaWarning" xml:space="preserve">
-    <value>أنت على وشك التغير إلى النسخة التجربية (المطور) من Lively.
-التحديثات ستكون متكررة وقد تحتوي على أخطاء!</value>
+    <value>أنت على وشك الانتقال إلى الإصدار التجريبي من البرنامَج (للمطورين).
+ستكون التحديثات متكررة وقد تحتوي على أخطاء!</value>
   </data>
   <data name="HideSysTray.Description" xml:space="preserve">
-    <value>رؤية رمز بصرية النظام ، سوف تستمر في تشغيل الأيقونة المخفية</value>
+    <value>إمكانية رؤية أيقونة علبة النظام، سيستمر البرنامَج في العمل مع إخفاء الأيقونة</value>
   </data>
   <data name="HideSysTray.Header" xml:space="preserve">
     <value>أيقونة علبة النظام</value>
   </data>
   <data name="Language.Description" xml:space="preserve">
-    <value>سيتم إعادة تشغيل البرنامج لتطبيق اللغة الجديدة</value>
+    <value>سيتم إعادة تشغيل البرنامَج لتطبيق اللغة الجديدة</value>
   </data>
   <data name="Language.Header" xml:space="preserve">
     <value>اللغة</value>
   </data>
   <data name="LivelyExceptionAppUpdateFail" xml:space="preserve">
-    <value>فشل التحديث؛ حاول تحميل البرنامج من:
+    <value>فشل التحديث؛ حاول تحميل البرنامَج من:
 https://github.com/rocksdanister/lively/releasases</value>
   </data>
   <data name="LivelyExceptionDamagedZipFile" xml:space="preserve">
@@ -242,8 +242,8 @@ https://github.com/rocksdanister/lively/releasases</value>
 https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="LivelyExceptionHighContrastMode" xml:space="preserve">
-    <value>لا يمكن للتطبيق أن يعمل بصورة صحيحة في حين أن وضع التباين العالي لويندزر مُمَكّن!
-عطّل وضع التباين العالي و حاول مرة أخرى</value>
+    <value>لا يمكن للبرنامَج العمل بشكل صحيح عند تمكين وضع التباين العالي في نظام Windows!
+يمكنك تعطيل وضع التباين العالي والمحاولة مرة أخرى</value>
   </data>
   <data name="LivelyExceptionMediaPlayback" xml:space="preserve">
     <value>تشغيل الوسائط فشل :(
@@ -254,11 +254,11 @@ https://github.com/rocksdanister/lively/wiki</value>
 https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="LivelyExceptionNotLivelyZip" xml:space="preserve">
-    <value>هذا ليس مِلَفّ ليفلي</value>
+    <value>ليس مِلف خلفية حيوي</value>
   </data>
   <data name="LivelyExceptionSafeModeStart" xml:space="preserve">
-    <value>لم يتم إغلاق التطبيق بشكل صحيح وسيتم تشغيلها بالوضع الآمن.
-هل تود استعادة الخلفيات السابقة؟</value>
+    <value>لم يتم إغلاق البرنامَج بشكل صحيح، عند البَدء في الوضع الآمن.
+هل تريد استعادة خلفيات الشاشة التي تم تشغيلها مسبقاً؟</value>
   </data>
   <data name="LivelyExceptionWorkerWSetupFail" xml:space="preserve">
     <value>يبدو أنه يجب تعديل بعض الإعدادات لتشغيل Lively بشكل صحيح:
@@ -272,25 +272,25 @@ https://github.com/rocksdanister/lively/wiki</value>
 (قد لا يعمل في بعض بناءات ويندوز 10 إنسايدر)</value>
   </data>
   <data name="Startup.Description" xml:space="preserve">
-    <value>سيعمل التطبيق في الخلفية لعرض الوسائط</value>
+    <value>يجب تشغيل البرنامَج في الخلفية لتشغيل خلفية الشاشة</value>
   </data>
   <data name="Startup.Header" xml:space="preserve">
-    <value>فتح التطبيق تلقائياً عند تشغيل Windows</value>
+    <value>البَدء مع Windows</value>
   </data>
   <data name="TextAdd" xml:space="preserve">
-    <value>أضف</value>
+    <value>إضافة</value>
   </data>
   <data name="TextAllFiles" xml:space="preserve">
     <value>جميع الملفات</value>
   </data>
   <data name="Application.Text" xml:space="preserve">
-    <value>هيكلة المشروع</value>
+    <value>التطبيق</value>
   </data>
   <data name="Attribution.Header" xml:space="preserve">
     <value>المساهمة</value>
   </data>
   <data name="Author.Text" xml:space="preserve">
-    <value>المصمم</value>
+    <value>المؤلف</value>
   </data>
   <data name="TextBack" xml:space="preserve">
     <value>رجوع</value>
@@ -305,16 +305,16 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>تغيير الخلفية</value>
   </data>
   <data name="TextClose" xml:space="preserve">
-    <value>اغلاق</value>
+    <value>إغلاق</value>
   </data>
   <data name="CloseWallpapers.Label" xml:space="preserve">
     <value>إغلاق</value>
   </data>
   <data name="TextCompleted" xml:space="preserve">
-    <value>تم!</value>
+    <value>اكتمل!</value>
   </data>
   <data name="ControlPanel.Subtitle" xml:space="preserve">
-    <value>انقر هنا لإدارة خلفيات.</value>
+    <value>انقر هنا لإدارة الخلفيات</value>
   </data>
   <data name="TextConvertVideo" xml:space="preserve">
     <value>التحويل إلى فيديو</value>
@@ -326,16 +326,16 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>تخصيص</value>
   </data>
   <data name="CustomiseWallpaper.Label" xml:space="preserve">
-    <value>تخصيص خلفية</value>
+    <value>تخصيص</value>
   </data>
   <data name="DeleteWallpaper.Text" xml:space="preserve">
-    <value>حذف الخلفية</value>
+    <value>حذف</value>
   </data>
   <data name="Description.Text" xml:space="preserve">
     <value>الوصف</value>
   </data>
   <data name="DisplayPauseRuleAllScreen.Content" xml:space="preserve">
-    <value>جميع الشاشة(ات)</value>
+    <value>جميع الشاشات</value>
   </data>
   <data name="DisplayPauseRulePerScreen.Content" xml:space="preserve">
     <value>لكل شاشة</value>
@@ -353,13 +353,13 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>خروج</value>
   </data>
   <data name="ExportWallpaperZip.Text" xml:space="preserve">
-    <value>حفظ إلى ملف</value>
+    <value>الحفظ إلى مِلف</value>
   </data>
   <data name="TextFeatureMissing" xml:space="preserve">
-    <value>بعض الميزات غير متوفرة في هذا الإصدار من البرنامج</value>
+    <value>بعض الميزات غير متوفرة في هذا الإصدار من البرنامَج</value>
   </data>
   <data name="TextFileNotFound" xml:space="preserve">
-    <value>لم يتم العثور على الملف</value>
+    <value>المِلف غير موجود</value>
   </data>
   <data name="TextGIF" xml:space="preserve">
     <value>GIF المتحركة</value>
@@ -371,10 +371,10 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>اذهب</value>
   </data>
   <data name="TextHelpTranslate.Title" xml:space="preserve">
-    <value>مساعدة في ترجمة البرنامج.</value>
+    <value>المساعدة في الترجَمة</value>
   </data>
   <data name="TextHours" xml:space="preserve">
-    <value>ساعة(ات)</value>
+    <value>ساعات</value>
   </data>
   <data name="TextInstall.Content" xml:space="preserve">
     <value>تثبيت</value>
@@ -392,16 +392,16 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>الترخيص</value>
   </data>
   <data name="TextMinutes" xml:space="preserve">
-    <value>دقيقة(دقائق)</value>
+    <value>دقائق</value>
   </data>
   <data name="TextmoreInfo" xml:space="preserve">
-    <value>المعلومات</value>
+    <value>معلومات</value>
   </data>
   <data name="TextMoreWallpapers" xml:space="preserve">
     <value>المزيد من الخلفيات</value>
   </data>
   <data name="TextMouse.Content" xml:space="preserve">
-    <value>الماوس</value>
+    <value>الفأرة</value>
   </data>
   <data name="MouseInteractOnDesktop.Content" xml:space="preserve">
     <value>تفاعل الفأرة عند التركيز على التطبيق</value>
@@ -425,7 +425,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>عبر الإنترنت</value>
   </data>
   <data name="TextOpenLively" xml:space="preserve">
-    <value>تشغيل Lively</value>
+    <value>فتح البرنامَج</value>
   </data>
   <data name="PauseAlgorithmTypeAllProcess.Content" xml:space="preserve">
     <value>جميع العمليات</value>
@@ -434,7 +434,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>ثلاثي الأبعاد</value>
   </data>
   <data name="PauseAlgorithmTypeForegroundProcess.Content" xml:space="preserve">
-    <value>المعالجة الأمامية</value>
+    <value>العمليات الأمامية</value>
   </data>
   <data name="TextPauseWallpapers" xml:space="preserve">
     <value>ايقاف مؤقت للخلفيات</value>
@@ -443,22 +443,22 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>إنهاء</value>
   </data>
   <data name="TextPerformanceNone.Content" xml:space="preserve">
-    <value>لاشئ</value>
+    <value>لاشيء</value>
   </data>
   <data name="TextPerformancePause.Content" xml:space="preserve">
-    <value>توقف مؤقت</value>
+    <value>إيقاف مؤقت</value>
   </data>
   <data name="TextPicture" xml:space="preserve">
     <value>الصورة</value>
   </data>
   <data name="PreviewWallpaper.Text" xml:space="preserve">
-    <value>معاينة الخلفية</value>
+    <value>معاينة</value>
   </data>
   <data name="PrivacyPolicy.Header" xml:space="preserve">
     <value>سياسة الخصوصية</value>
   </data>
   <data name="TextProcessingWallpaper" xml:space="preserve">
-    <value>المعالجة</value>
+    <value>جاري المعالجة</value>
   </data>
   <data name="TextRemove" xml:space="preserve">
     <value>إزالة</value>
@@ -467,7 +467,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>القاعدة</value>
   </data>
   <data name="TextScreen" xml:space="preserve">
-    <value>شاشة</value>
+    <value>الشاشة</value>
   </data>
   <data name="SearchBox.PlaceholderText" xml:space="preserve">
     <value>بحث</value>
@@ -476,28 +476,28 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>تعيين كخلفية</value>
   </data>
   <data name="ShowOnDisk.Text" xml:space="preserve">
-    <value>فتح موقع الملف</value>
+    <value>فتح موقع المِلف</value>
   </data>
   <data name="WallpaperSource.Text" xml:space="preserve">
     <value>المصدر</value>
   </data>
   <data name="TextStart" xml:space="preserve">
-    <value>بدء</value>
+    <value>البَدء</value>
   </data>
   <data name="TextStop" xml:space="preserve">
-    <value>توقف</value>
+    <value>إيقاف</value>
   </data>
   <data name="StoreReview.Content" xml:space="preserve">
-    <value>هل تستمتع باستخدام Lively ؟  اترك مراجعة :)</value>
+    <value>هل تستمتع باستخدام البرنامَج؟ اترك مراجعة:)</value>
   </data>
   <data name="TextSupport.Content" xml:space="preserve">
     <value>الدعم</value>
   </data>
   <data name="TextSwitchBranchDev" xml:space="preserve">
-    <value>التبديل إلى النسخة التجريبية (قناة التطوير)</value>
+    <value>التبديل إلى الإصدار التجريبي (قناة التطوير)</value>
   </data>
   <data name="TextSwitchBranchOfficial" xml:space="preserve">
-    <value>التبديل إلى النسخة المستقرة (القناة الافتراضية)</value>
+    <value>التبديل إلى الإصدار المستقر (القناة الافتراضية)</value>
   </data>
   <data name="TextTags" xml:space="preserve">
     <value>العلامات</value>
@@ -512,13 +512,13 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>اللون</value>
   </data>
   <data name="TaskbarThemeFluent.Content" xml:space="preserve">
-    <value>متقن</value>
+    <value>سلس</value>
   </data>
   <data name="TaskbarThemeWallpaper.Content" xml:space="preserve">
     <value>الخلفية</value>
   </data>
   <data name="TaskbarThemeWallpaperFluent.Content" xml:space="preserve">
-    <value>طلاقة الخلفية</value>
+    <value>سلاسة الخلفية</value>
   </data>
   <data name="TextTileSizeLarge" xml:space="preserve">
     <value>كبير</value>
@@ -545,19 +545,19 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>تنسيق الملف غير معتمد</value>
   </data>
   <data name="TextUpdateAvailable" xml:space="preserve">
-    <value>يوجد تحديث متوفر!</value>
+    <value>يتوفر تحديث!</value>
   </data>
   <data name="TextUpdateCheck.Content" xml:space="preserve">
     <value>البحث عن تحديثات</value>
   </data>
   <data name="TextupdateCheckFail" xml:space="preserve">
-    <value>خطأ في البحث عن التحديث</value>
+    <value>فشل التحقق من تحديث البرنامَج</value>
   </data>
   <data name="TextUpdateChecking" xml:space="preserve">
     <value>جاري البحث عن تحديث</value>
   </data>
   <data name="TextUpdateUptodate" xml:space="preserve">
-    <value>البرنامج مُحدَّث!</value>
+    <value>البرنامَج مُحدث!</value>
   </data>
   <data name="TextVideo" xml:space="preserve">
     <value>فيديو</value>
@@ -566,10 +566,10 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>خيارات التشغيل</value>
   </data>
   <data name="WallpaperFitFill.Content" xml:space="preserve">
-    <value>ملء</value>
+    <value>تعبئة</value>
   </data>
   <data name="WallpaperFitNone.Content" xml:space="preserve">
-    <value>بلا</value>
+    <value>لا شيء</value>
   </data>
   <data name="WallpaperFitUniform.Content" xml:space="preserve">
     <value>موحد</value>
@@ -584,49 +584,49 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>الشاشة</value>
   </data>
   <data name="WallpaperLayoutSpan.Text" xml:space="preserve">
-    <value>امتداد</value>
+    <value>تمتد</value>
   </data>
   <data name="WallpaperType.Text" xml:space="preserve">
     <value>النوع</value>
   </data>
   <data name="Website.Header" xml:space="preserve">
-    <value>موقع</value>
+    <value>الموقع الإلكتروني</value>
   </data>
   <data name="TextWebStream" xml:space="preserve">
-    <value>بث ويب</value>
+    <value>بث الويب</value>
   </data>
   <data name="TextWelcome" xml:space="preserve">
-    <value>مرحبا</value>
+    <value>مرحباً</value>
   </data>
   <data name="TextYes" xml:space="preserve">
     <value>نعم</value>
   </data>
   <data name="VideoPlayer.Header" xml:space="preserve">
-    <value>مشغّل الفيديو</value>
+    <value>مشغل الفيديو</value>
   </data>
   <data name="AddWallpaperFileBrowse.Description" xml:space="preserve">
     <value>تعيين جميع أنواع الملفات المدعومة كخلفية</value>
   </data>
   <data name="EnterUrl.Description" xml:space="preserve">
-    <value>قم بتعيين صفحة الويب لعنوان URL الذي أدخلته كخلفية</value>
+    <value>تعيين صفحة الويب لعنوان URL الذي أدخلته كخلفية</value>
   </data>
   <data name="AppFocus.Description" xml:space="preserve">
-    <value>تعيين ما يجب القيام به عندما يكون التطبيق مركز</value>
+    <value>تعيين ما يجب فعله عند التركيز على أي تطبيق</value>
   </data>
   <data name="AppFullScreen.Description" xml:space="preserve">
-    <value>تعيين ما يجب القيام به عند تشغيل الألعاب/التطبيقات بوضع ملء الشاشة</value>
+    <value>تعيين ما يجب فعله عند تشغيل الألعاب/التطبيقات بوضع ملء الشاشة</value>
   </data>
   <data name="AppRules.Description" xml:space="preserve">
-    <value>إيقاف الخلفية مؤقتاً عند تشغيل هؤلاء التطبيقات</value>
+    <value>إيقاف الخلفية مؤقتاً عند تشغيل هذه التطبيقات</value>
   </data>
   <data name="TipAppTheme" xml:space="preserve">
     <value>تتكيف البرنامج مع إعدادات موضوع النظام، لتغيير المظهر انتقل إلى</value>
   </data>
   <data name="BatteryPower.Description" xml:space="preserve">
-    <value>قم بتغيير التشغيل عند فصل الشاحن</value>
+    <value>تغيير التشغيل عند فصل التيار المتردد</value>
   </data>
   <data name="BrowserDebuggingPort.Description" xml:space="preserve">
-    <value>أدخل المنفذ لتصحيح أخطاء خلفيات صفحة الويب ،عندما تكون جاهز انتقل إلى http://localhost:portnumber للوصول إلى وحدة تحكم المطور</value>
+    <value>أدخل المنفذ لتصحيح أخطاء خلفيات صفحات الويب؛ عندما تكون مستعداً، انتقل إلى http://localhost:portnumber للوصول إلى وحدة تحكم المطور</value>
   </data>
   <data name="Debug.Description" xml:space="preserve">
     <value>عرض قائمة المطور</value>
@@ -638,16 +638,16 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>إيقاف الخلفية مؤقتا على جميع الشاشات أو الشاشة التي يركز عليها التطبيق فقط</value>
   </data>
   <data name="ExportLogs.Description" xml:space="preserve">
-    <value>إنشاء ملف تقرير السجل</value>
+    <value>إنشاء مِلف تقرير السجل</value>
   </data>
   <data name="GifPlayer.Description" xml:space="preserve">
-    <value>حدد المشغل المستخدم لخلفية gif.</value>
+    <value>تحديد المشغل المستخدم لخلفية gif</value>
   </data>
   <data name="TipLivelySetupOnClose" xml:space="preserve">
-    <value>إنتهي من الإعداد للمتابعة</value>
+    <value>إنهاء الإعداد للمتابعة</value>
   </data>
   <data name="LockscreenPicture.Description" xml:space="preserve">
-    <value>قم بتعيين صورة خلفية متحركة كخلفية لشاشة القفل</value>
+    <value>تعيين صورة خلفية متحركة كخلفية لشاشة القفل</value>
   </data>
   <data name="PauseAlgorithm.Description" xml:space="preserve">
     <value>خوارزمية الإيقاف المؤقت للخلفية</value>
@@ -826,9 +826,6 @@ https://github.com/rocksdanister/lively/wiki</value>
   <data name="TitleScreensaver.Content" xml:space="preserve">
     <value>شاشة التوقف</value>
   </data>
-  <data name="ScreensaverLockOnResume.Content" xml:space="preserve">
-    <value>عند الاستئناف، عرض شاشة تسجيل الدخول</value>
-  </data>
   <data name="TitleSelectFile" xml:space="preserve">
     <value>تحديد ملف</value>
   </data>
@@ -951,7 +948,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>المعرض</value>
   </data>
   <data name="AboutMe.Text" xml:space="preserve">
-    <value>مرحباً، أنا داني جون معروف أيضًا باسم rocksdanister. لقد طورت تطبيق Lively والمفتوح المصدر (FOSS). شكراً على تخصيص الوقت للنظر في عملي.</value>
+    <value>Hi, I'm Dani John also known as rocksdanister. I developed Lively a Free and open-source (FOSS) wallpaper application. Thanks for taking the time to look at my work.</value>
   </data>
   <data name="LicenseLink.Content" xml:space="preserve">
     <value>ترخيص البرنامج</value>
@@ -1242,18 +1239,30 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>إضافة مطلوبة</value>
   </data>
   <data name="AppMusicExclusion.Description" xml:space="preserve">
-    <value>Select apps to exclude from showing music details</value>
+    <value>حدد التطبيقات لاستبعادها من عرض تفاصيل الموسيقى</value>
   </data>
   <data name="AppMusicExclusion.Header" xml:space="preserve">
-    <value>App exclusion</value>
+    <value>استثناء التطبيق</value>
   </data>
   <data name="RestartCommand.Content" xml:space="preserve">
-    <value>Restart</value>
+    <value>إعادة التشغيل</value>
   </data>
   <data name="WallpaperMusicGroup.Text" xml:space="preserve">
-    <value>Music</value>
+    <value>الموسيقى</value>
   </data>
   <data name="WallpaperRestartRequiredNotify.Message" xml:space="preserve">
-    <value>Wallpaper restart is required for the settings to take effect</value>
+    <value>مطلوب إعادة تشغيل الخلفية حتى تصبح الإعدادات فعالة</value>
+  </data>
+  <data name="LanguageSettingsItemSystemDefault.Content" xml:space="preserve">
+    <value>نفس النظام</value>
+  </data>
+  <data name="InfoSettingsRestartRequest.Message" xml:space="preserve">
+    <value>يرجى إعادة تشغيل التطبيق لكي يتم تطبيق الإعدادات.</value>
+  </data>
+  <data name="ScreensaverLockOnResume.Header" xml:space="preserve">
+    <value>عند الاستئناف، عرض شاشة تسجيل الدخول</value>
+  </data>
+  <data name="ScreensaverFadeIn.Header" xml:space="preserve">
+    <value>Fade to black before start</value>
   </data>
 </root>

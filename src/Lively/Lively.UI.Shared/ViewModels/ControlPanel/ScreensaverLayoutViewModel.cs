@@ -44,7 +44,6 @@ namespace Lively.UI.Shared.ViewModels
             this.libraryVm = libraryVm;
             this.dispatcher = dispatcher;
 
-            IsScreensaverLockOnResume = userSettings.Settings.ScreensaverLockOnResume;
             SelectedScreensaverArrangementIndex = (int)userSettings.Settings.ScreensaverArragement;
             SelectedScreensaverTypeIndex = (int)userSettings.Settings.ScreensaverType;
             SelectedDisplay = userSettings.Settings.SelectedDisplay;
@@ -254,21 +253,6 @@ namespace Lively.UI.Shared.ViewModels
         [ObservableProperty]
         [NotifyCanExecuteChangedFor(nameof(AddScreensaverCommand))]
         private bool isScreensaverLayout;
-
-        private bool _isScreensaverLockOnResume;
-        public bool IsScreensaverLockOnResume
-        {
-            get => _isScreensaverLockOnResume;
-            set
-            {
-                if (userSettings.Settings.ScreensaverLockOnResume != value)
-                {
-                    userSettings.Settings.ScreensaverLockOnResume = value;
-                    UpdateSettingsConfigFile();
-                }
-                SetProperty(ref _isScreensaverLockOnResume, value);
-            }
-        }
 
         [ObservableProperty]
         private bool isScreensaverPluginNotify;

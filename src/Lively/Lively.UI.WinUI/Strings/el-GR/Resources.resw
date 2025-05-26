@@ -828,9 +828,6 @@ https://github.com/rocksdanister/lively/wiki</value>
   <data name="TitleScreensaver.Content" xml:space="preserve">
     <value>Προφύλαξη Οθόνης</value>
   </data>
-  <data name="ScreensaverLockOnResume.Content" xml:space="preserve">
-    <value>Κατά την συνέχιση, εμφανίστε την οθόνη σύνδεσης</value>
-  </data>
   <data name="TitleSelectFile" xml:space="preserve">
     <value>Επιλογή Αρχείου</value>
   </data>
@@ -1258,5 +1255,17 @@ https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="WallpaperRestartRequiredNotify.Message" xml:space="preserve">
     <value>Απαιτείται επανεκκίνηση της ταπετσαρίας για να εφαρμοστούν οι ρυθμίσεις</value>
+  </data>
+  <data name="LanguageSettingsItemSystemDefault.Content" xml:space="preserve">
+    <value>Ίδιο με το Σύστημα</value>
+  </data>
+  <data name="InfoSettingsRestartRequest.Message" xml:space="preserve">
+    <value>Παρακαλώ επανεκκινήστε την εφαρμογή για να τεθούν σε ισχύ οι ρυθμίσεις.</value>
+  </data>
+  <data name="ScreensaverLockOnResume.Header" xml:space="preserve">
+    <value>Κατά την συνέχιση, εμφανίστε την οθόνη σύνδεσης</value>
+  </data>
+  <data name="ScreensaverFadeIn.Header" xml:space="preserve">
+    <value>Fade to black before start</value>
   </data>
 </root>

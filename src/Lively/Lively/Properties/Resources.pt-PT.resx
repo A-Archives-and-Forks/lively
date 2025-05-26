@@ -147,9 +147,9 @@ O Explorador do Windows reiniciou duas vezes nos últimos 30 segundos! Este pode
     <value>Página da internet oficial do Lively Wallpaper</value>
   </data>
   <data name="DescOledScreensaverNotice" xml:space="preserve">
-    <value>A maioria das telas modernas LCD e LED não sofrem com o problema de burn-in, pelo que qualquer papel de parede pode ser usado como um protetor de tela.
+    <value>A maioria dos ecrãs modernos LCD e LED não sofrem com o problema de burn-in, pelo que qualquer papel de parede pode ser usado como um protetor de tela.
 
-Para as telas OLED, Plasma ou CRT que são susceptíveis de sofrer com o problema de burn-in é aconselhável utilizar um papel de parede com movimento regular e um tema escuro global que deverá atenuar o efeito de burn-in, no entanto a eficácia deste recurso não está testada, e a mesma não está garantida.
+Para os ecrãs OLED, Plasma ou CRT que são susceptíveis a sofrer com o problema de burn-in é aconselhável utilizar um papel de parede com movimento regular e um tema escuro global que deverá atenuar o efeito de burn-in, no entanto a eficácia deste recurso não está testada, e a mesma não está garantida.
 O principal propósito do protetor de tela do Lively é adicionar outra camada de personalização ao computador, use por sua conta e risco!</value>
   </data>
   <data name="ReportBug.Description" xml:space="preserve">
@@ -232,7 +232,7 @@ As atualizações serão frequentes e poderão conter erros!</value>
 https://github.com/rocksdanister/lively/releases</value>
   </data>
   <data name="LivelyExceptionDamagedZipFile" xml:space="preserve">
-    <value>Ficheiro do papel de parede danificado, tente descarregar novamente</value>
+    <value>Ficheiro de papel de parede corrompido, tente descarregar novamente</value>
   </data>
   <data name="LivelyExceptionGeneral" xml:space="preserve">
     <value>Oops... Parece que algo correu mal :(
@@ -253,23 +253,22 @@ Instruções para patilhar o ficheiro de log:
 https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="LivelyExceptionNotLivelyZip" xml:space="preserve">
-    <value>Não é um ficheiro de fundo do Lively.</value>
+    <value>Não é um ficheiro de papel de parede do Lively</value>
   </data>
   <data name="LivelyExceptionSafeModeStart" xml:space="preserve">
-    <value>Uma nova versão está disponível!</value>
+    <value>O Lively não foi fechado e forma correta, iniciado em modo seguro.
+Deseja restaurar para os papéis de parede anteriormente definidos?</value>
   </data>
   <data name="LivelyExceptionWorkerWSetupFail" xml:space="preserve">
-    <value>Parece que algumas definições necessitam de ser definidas para que o Lively funcione:-  
-1. Abrir Este PC(O meu Computador)
-2. Clicar com o botão direito numa área vazia.
-3. Seleccionar Propriedades
-4. Seleccionar Definições Avançadas do Sistema
-5. Na aba Desempenho selecionar Definições
-6. Ativar Animar controlos e elementos dentro de janelas.
+    <value>Parece que algumas definições necessitam de ser alteradas para que o Lively funcione:
+1. Pressione as teclas Win+R para abrir "Executar";
+2. Digite SystemPropertiesPerformance.exe no "Executar" e clique em "OK" para abrir as "Opções de desempenho";
+3. Ative/Marque "Animar controlos e elementos dentro de janelas" (Se marcado, desmarque e remarque);
+4. Clique em "Aplicar" e depois clique em "Ok" para fechar a janela.
 
-Se for Windows 7 ativar - Ajustar para a melhor aparência e Aplicar.
-Se ainda não funcionar, fechei e inicie o Lively/ reinicei o Windows.
-(Não funciona nas versões insider do windows 10)</value>
+Se estiver no Windows 7 ative "Ajustar para a melhor aparência" e clique em "Aplicar".
+Se ainda não estiver a funcionar, feche e reabre o Lively/reinice o Windows.
+(Não funciona em algumas versões insider do Windows 10)</value>
   </data>
   <data name="Startup.Description" xml:space="preserve">
     <value>O Lively necessita de correr em segundo plano para a reprodução de fundos.</value>
@@ -563,7 +562,7 @@ Se ainda não funcionar, fechei e inicie o Lively/ reinicei o Windows.
     <value>Vídeo</value>
   </data>
   <data name="TextWallpaperCommandlineArgs" xml:space="preserve">
-    <value>Launch Options</value>
+    <value>Opções de Arranque</value>
   </data>
   <data name="WallpaperFitFill.Content" xml:space="preserve">
     <value>Preencher</value>
@@ -829,9 +828,6 @@ Edge é o webview integrado do windows 10.</value>
   </data>
   <data name="TitleScreensaver.Content" xml:space="preserve">
     <value>Proteção de ecrã</value>
-  </data>
-  <data name="ScreensaverLockOnResume.Content" xml:space="preserve">
-    <value>Ao retomar, exibe a tela de login</value>
   </data>
   <data name="TitleSelectFile" xml:space="preserve">
     <value>Seleccionar Ficheiro</value>
@@ -1240,24 +1236,36 @@ Edge é o webview integrado do windows 10.</value>
     <value>Selecionar proteção de ecrã</value>
   </data>
   <data name="WebViewRequired.Message" xml:space="preserve">
-    <value>Microsoft WebView2 is required to view this content</value>
+    <value>É necessário o Microsoft WebView2 para ver este conteúdo</value>
   </data>
   <data name="WebViewRequired.Title" xml:space="preserve">
     <value>Plugin necessário</value>
   </data>
   <data name="AppMusicExclusion.Description" xml:space="preserve">
-    <value>Select apps to exclude from showing music details</value>
+    <value>Selecione apps para excluir da exibição de detalhes da música</value>
   </data>
   <data name="AppMusicExclusion.Header" xml:space="preserve">
-    <value>App exclusion</value>
+    <value>Exclusão de apps</value>
   </data>
   <data name="RestartCommand.Content" xml:space="preserve">
-    <value>Restart</value>
+    <value>Reiniciar</value>
   </data>
   <data name="WallpaperMusicGroup.Text" xml:space="preserve">
-    <value>Music</value>
+    <value>Música</value>
   </data>
   <data name="WallpaperRestartRequiredNotify.Message" xml:space="preserve">
-    <value>Wallpaper restart is required for the settings to take effect</value>
+    <value>Para que as configurações tenham efeito é necessária a reinicialização do Wallpaper</value>
+  </data>
+  <data name="LanguageSettingsItemSystemDefault.Content" xml:space="preserve">
+    <value>Igual ao Sistema</value>
+  </data>
+  <data name="InfoSettingsRestartRequest.Message" xml:space="preserve">
+    <value>Por favor, reinicie a aplicação para que as configurações tomem efeito.</value>
+  </data>
+  <data name="ScreensaverLockOnResume.Header" xml:space="preserve">
+    <value>Ao retomar, exibe a tela de login</value>
+  </data>
+  <data name="ScreensaverFadeIn.Header" xml:space="preserve">
+    <value>Fade to black before start</value>
   </data>
 </root>

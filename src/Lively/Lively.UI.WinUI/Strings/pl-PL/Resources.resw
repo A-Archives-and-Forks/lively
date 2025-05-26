@@ -229,7 +229,7 @@ Aktualizacje będą częste i mogą zawierać błędy!</value>
     <value>Język</value>
   </data>
   <data name="LivelyExceptionAppUpdateFail" xml:space="preserve">
-    <value>Aktualizacja zakończona niepowodzeniem. Spróbuj pobrać instalator z: https://github.com/rocksdanister/lively/releases</value>
+    <value>Aktualizacja nieudana. Spróbuj pobrać instalator z: https://github.com/rocksdanister/lively/releases</value>
   </data>
   <data name="LivelyExceptionDamagedZipFile" xml:space="preserve">
     <value>Uszkodzony plik tapety, spróbuj pobrać ponownie</value>
@@ -830,9 +830,6 @@ Wszystkie procesy: Większe obciążenie procesora, skanuje wszystkie procesy ab
   <data name="TitleScreensaver.Content" xml:space="preserve">
     <value>Wygaszacz ekranu</value>
   </data>
-  <data name="ScreensaverLockOnResume.Content" xml:space="preserve">
-    <value>Po wznowieniu wyświetl ekran logowania</value>
-  </data>
   <data name="TitleSelectFile" xml:space="preserve">
     <value>Wybierz plik</value>
   </data>
@@ -1246,18 +1243,30 @@ Wszystkie procesy: Większe obciążenie procesora, skanuje wszystkie procesy ab
     <value>Wymagana wtyczka</value>
   </data>
   <data name="AppMusicExclusion.Description" xml:space="preserve">
-    <value>Select apps to exclude from showing music details</value>
+    <value>Wybierz aplikacje, które chcesz wyłączyć z wyświetlania szczegółów muzyki</value>
   </data>
   <data name="AppMusicExclusion.Header" xml:space="preserve">
-    <value>App exclusion</value>
+    <value>Wykluczenie aplikacji</value>
   </data>
   <data name="RestartCommand.Content" xml:space="preserve">
     <value>Restart</value>
   </data>
   <data name="WallpaperMusicGroup.Text" xml:space="preserve">
-    <value>Music</value>
+    <value>Muzyka</value>
   </data>
   <data name="WallpaperRestartRequiredNotify.Message" xml:space="preserve">
-    <value>Wallpaper restart is required for the settings to take effect</value>
+    <value>Wymagany jest restart tapety, aby zastosować ustawienia</value>
+  </data>
+  <data name="LanguageSettingsItemSystemDefault.Content" xml:space="preserve">
+    <value>Same as System</value>
+  </data>
+  <data name="InfoSettingsRestartRequest.Message" xml:space="preserve">
+    <value>Please restart application for settings to take effect.</value>
+  </data>
+  <data name="ScreensaverLockOnResume.Header" xml:space="preserve">
+    <value>Po wznowieniu wyświetl ekran logowania</value>
+  </data>
+  <data name="ScreensaverFadeIn.Header" xml:space="preserve">
+    <value>Fade to black before start</value>
   </data>
 </root>

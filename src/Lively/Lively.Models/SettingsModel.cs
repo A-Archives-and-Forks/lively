@@ -114,6 +114,8 @@ namespace Lively.Models
         public bool ScreensaverOledWarning { get; set; }
         public bool ScreensaverEmptyScreenShowBlack { get; set; }
         public bool ScreensaverLockOnResume { get; set; }
+        public int ScreensaverGlobalVolume { get; set; }
+        public bool ScreensaverFadeIn { get; set; }
         public bool KeepAwakeUI { get; set; }
         public bool RememberSelectedScreen { get; set; }
         public bool IsUpdated { get; set; }
@@ -200,6 +202,8 @@ namespace Lively.Models
             ScreensaverOledWarning = false;
             ScreensaverEmptyScreenShowBlack = true;
             ScreensaverLockOnResume = false;
+            ScreensaverGlobalVolume = 0;
+            ScreensaverFadeIn = true;
             KeepAwakeUI = false;
             RememberSelectedScreen = true;
             IsUpdated = false;

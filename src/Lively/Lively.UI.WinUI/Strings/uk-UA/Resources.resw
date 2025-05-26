@@ -832,9 +832,6 @@ Edge - веб-двигун з Windows 10 WebView.</value>
   <data name="TitleScreensaver.Content" xml:space="preserve">
     <value>Заставка</value>
   </data>
-  <data name="ScreensaverLockOnResume.Content" xml:space="preserve">
-    <value>У резюме, екрана входу</value>
-  </data>
   <data name="TitleSelectFile" xml:space="preserve">
     <value>Виберіть файл</value>
   </data>
@@ -1261,5 +1258,17 @@ Edge - веб-двигун з Windows 10 WebView.</value>
   </data>
   <data name="WallpaperRestartRequiredNotify.Message" xml:space="preserve">
     <value>Щоб налаштування набрали чинності, потрібно перезавантажити шпалери</value>
+  </data>
+  <data name="LanguageSettingsItemSystemDefault.Content" xml:space="preserve">
+    <value>Same as System</value>
+  </data>
+  <data name="InfoSettingsRestartRequest.Message" xml:space="preserve">
+    <value>Please restart application for settings to take effect.</value>
+  </data>
+  <data name="ScreensaverLockOnResume.Header" xml:space="preserve">
+    <value>У резюме, екрана входу</value>
+  </data>
+  <data name="ScreensaverFadeIn.Header" xml:space="preserve">
+    <value>Fade to black before start</value>
   </data>
 </root>

@@ -826,9 +826,6 @@ Windows 7 təzəlikcə qurulubsa - Ən yaxşı görünüş üçün ayarlar və T
   <data name="TitleScreensaver.Content" xml:space="preserve">
     <value>Ekran qoruyucu</value>
   </data>
-  <data name="ScreensaverLockOnResume.Content" xml:space="preserve">
-    <value>Davam edərkən giriş etmə ekranını göstər</value>
-  </data>
   <data name="TitleSelectFile" xml:space="preserve">
     <value>Fayl seçin</value>
   </data>
@@ -1255,5 +1252,17 @@ Windows 7 təzəlikcə qurulubsa - Ən yaxşı görünüş üçün ayarlar və T
   </data>
   <data name="WallpaperRestartRequiredNotify.Message" xml:space="preserve">
     <value>Ayarların qüvvəyə minməsi üçün divar kağızı yenidən başladılmalıdır</value>
+  </data>
+  <data name="LanguageSettingsItemSystemDefault.Content" xml:space="preserve">
+    <value>Same as System</value>
+  </data>
+  <data name="InfoSettingsRestartRequest.Message" xml:space="preserve">
+    <value>Please restart application for settings to take effect.</value>
+  </data>
+  <data name="ScreensaverLockOnResume.Header" xml:space="preserve">
+    <value>Davam edərkən giriş etmə ekranını göstər</value>
+  </data>
+  <data name="ScreensaverFadeIn.Header" xml:space="preserve">
+    <value>Fade to black before start</value>
   </data>
 </root>

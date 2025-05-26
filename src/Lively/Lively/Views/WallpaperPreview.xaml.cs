@@ -80,6 +80,11 @@ namespace Lively.Views
             }
         }
 
+        public void SetWallpaperVolume(int volume)
+        {
+            wallpaper?.SetVolume(volume);
+        }
+
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             loadingTaskCompletionSource.TrySetResult();

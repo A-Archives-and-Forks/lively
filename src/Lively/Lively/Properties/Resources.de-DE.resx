@@ -127,7 +127,7 @@
     <value>Lautstärke</value>
   </data>
   <data name="AudioGroup.Text" xml:space="preserve">
-    <value>Ton</value>
+    <value>Audio</value>
   </data>
   <data name="Community.Description" xml:space="preserve">
     <value>Online-Diskussionsforum</value>
@@ -825,9 +825,6 @@ Wenn dies immer noch nicht funktioniert, schließen &amp; starten Sie Lively ode
   <data name="TitleScreensaver.Content" xml:space="preserve">
     <value>Bildschirmschoner</value>
   </data>
-  <data name="ScreensaverLockOnResume.Content" xml:space="preserve">
-    <value>Beim Fortsetzen den Anmeldebildschirm anzeigen</value>
-  </data>
   <data name="TitleSelectFile" xml:space="preserve">
     <value>Datei auswählen</value>
   </data>
@@ -1254,5 +1251,17 @@ Wenn dies immer noch nicht funktioniert, schließen &amp; starten Sie Lively ode
   </data>
   <data name="WallpaperRestartRequiredNotify.Message" xml:space="preserve">
     <value>Ein Neustart des Hintergrundbildes ist erforderlich, damit die Einstellungen wirksam werden</value>
+  </data>
+  <data name="LanguageSettingsItemSystemDefault.Content" xml:space="preserve">
+    <value>Wie System</value>
+  </data>
+  <data name="InfoSettingsRestartRequest.Message" xml:space="preserve">
+    <value>Bitte starten Sie die Anwendung neu, damit die Einstellungen wirksam werden.</value>
+  </data>
+  <data name="ScreensaverLockOnResume.Header" xml:space="preserve">
+    <value>Beim Fortsetzen den Anmeldebildschirm anzeigen</value>
+  </data>
+  <data name="ScreensaverFadeIn.Header" xml:space="preserve">
+    <value>Fade to black before start</value>
   </data>
 </root>
