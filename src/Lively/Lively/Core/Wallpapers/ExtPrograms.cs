@@ -34,8 +34,11 @@ namespace Lively.Core.Wallpapers
 
         public bool IsExited { get; private set; }
 
+        private static readonly NLog.Logger Logger = NLog.LogManager.GetCurrentClassLogger();
         private readonly CancellationTokenSource ctsProcessWait = new CancellationTokenSource();
         private Task<IntPtr> processWaitTask;
+        private static int globalCount;
+        private readonly int uniqueId;
         private readonly int timeOut;
 
         /// <summary>
@@ -75,6 +78,9 @@ namespace Lively.Core.Wallpapers
             this.Screen = display;
             this.timeOut = timeOut;
             SuspendCnt = 0;
+
+            //for logging purpose
+            uniqueId = globalCount++;
         }
 
         public async void Close()
@@ -134,11 +140,6 @@ namespace Lively.Core.Wallpapers
             }
         }
 
-        public void Stop()
-        {
-            Pause();
-        }
-
         public async Task ShowAsync()
         {
             if (Proc is null)
@@ -172,6 +173,7 @@ namespace Lively.Core.Wallpapers
 
         private void Proc_Exited(object sender, EventArgs e)
         {
+            Logger.Info($"Program{uniqueId}: Process exited with exit code: {Proc?.ExitCode}");
             Proc?.Dispose();
             DesktopUtil.RefreshDesktop();
             IsExited = true;

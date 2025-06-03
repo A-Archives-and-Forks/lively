@@ -122,6 +122,7 @@ enum ErrorCategory {
 	screen_not_found = 6;
 	general = 7;
 	wallpaper_webview2_not_found = 8;
+	wallpaper_file_error = 9;
 }
 
 enum WallpaperCategory {

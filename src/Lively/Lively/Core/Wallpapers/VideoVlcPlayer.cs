@@ -19,8 +19,11 @@ namespace Lively.Core.Wallpapers
     //https://wiki.videolan.org/documentation:modules/rc/
     public class VideoVlcPlayer : IWallpaper
     {
+        private static readonly NLog.Logger Logger = NLog.LogManager.GetCurrentClassLogger();
         private readonly CancellationTokenSource ctsProcessWait = new CancellationTokenSource();
         private Task<IntPtr> processWaitTask;
+        private static int globalCount;
+        private readonly int uniqueId;
         private readonly int timeOut;
 
         public bool IsLoaded => Handle != IntPtr.Zero;
@@ -94,6 +97,9 @@ namespace Lively.Core.Wallpapers
             this.Model = model;
             this.Screen = display;
             this.timeOut = 20000;
+
+            //for logging purpose
+            uniqueId = globalCount++;
         }
 
         public async void Close()
@@ -171,14 +177,10 @@ namespace Lively.Core.Wallpapers
 
         private void Proc_Exited(object sender, EventArgs e)
         {
+            Logger.Info($"Vlc{uniqueId}: Process exited with exit code: {Proc?.ExitCode}");
             Proc?.Dispose();
             DesktopUtil.RefreshDesktop();
             IsExited = true;
-        }
-
-        public void Stop()
-        {
-            //todo
         }
 
         public void Terminate()

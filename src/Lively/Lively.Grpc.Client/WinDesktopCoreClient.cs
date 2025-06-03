@@ -238,6 +238,7 @@ namespace Lively.Grpc.Client
                         ErrorCategory.WallpaperPluginMediaCodecMissing => new WallpaperPluginMediaCodecException(response.ErrorMsg),
                         ErrorCategory.ScreenNotFound => new ScreenNotFoundException(response.ErrorMsg),
                         ErrorCategory.WallpaperWebview2NotFound => new WallpaperWebView2NotFoundException(response.ErrorMsg),
+                        ErrorCategory.WallpaperFileError => new WallpaperFileException(response.ErrorMsg),
                         _ => new Exception(response.ErrorMsg),
                     };
                     WallpaperError?.Invoke(this, exp);

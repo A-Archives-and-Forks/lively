@@ -115,11 +115,6 @@ namespace Lively.Core.Wallpapers
             //nothing
         }
 
-        public void Stop()
-        {
-            //nothing
-        }
-
         public void Close()
         {
             _ = Application.Current.Dispatcher.Invoke(DispatcherPriority.Normal, new ThreadStart(delegate

@@ -171,11 +171,6 @@ namespace Lively.Core.Wallpapers
             }
         }
 
-        public void Stop()
-        {
-            Pause();
-        }
-
         private void SendMessage(string msg)
         {
             try

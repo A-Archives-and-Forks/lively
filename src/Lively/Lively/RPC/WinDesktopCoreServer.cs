@@ -290,6 +290,7 @@ namespace Lively.RPC
                             WallpaperPluginMediaCodecException _ => ErrorCategory.WallpaperPluginMediaCodecMissing,
                             ScreenNotFoundException _ => ErrorCategory.ScreenNotFound,
                             WallpaperWebView2NotFoundException _ => ErrorCategory.WallpaperWebview2NotFound,
+                            WallpaperFileException _ => ErrorCategory.WallpaperFileError,
                             _ => ErrorCategory.General,
                         };
                         tcs.TrySetResult(true);

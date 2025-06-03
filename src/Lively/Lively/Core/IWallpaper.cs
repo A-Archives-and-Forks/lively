@@ -56,10 +56,6 @@ namespace Lively.Core
         /// </summary>
         void Play();
         /// <summary>
-        /// Stop wallpaper playback.
-        /// </summary>
-        void Stop();
-        /// <summary>
         /// Close wallpaper gracefully.
         /// </summary>
         void Close();

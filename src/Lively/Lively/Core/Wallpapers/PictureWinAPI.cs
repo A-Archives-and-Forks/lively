@@ -135,11 +135,6 @@ namespace Lively.Core.Wallpapers
             //Nothing to setup..
         }
 
-        public void Stop()
-        {
-            //nothing
-        }
-        
         public void Close()
         {
             RestoreWallpaper();

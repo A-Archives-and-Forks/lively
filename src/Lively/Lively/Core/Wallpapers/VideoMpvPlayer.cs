@@ -1,5 +1,6 @@
 ﻿using ImageMagick;
 using Lively.Common;
+using Lively.Common.Exceptions;
 using Lively.Common.Extensions;
 using Lively.Common.Helpers;
 using Lively.Common.Helpers.IPC;
@@ -43,9 +44,10 @@ namespace Lively.Core.Wallpapers
         private Task<IntPtr> processWaitTask;
         private readonly int timeOut;
         private readonly string ipcServerName;
-        private bool _isVideoStopped;
+        private bool isVideoStopped;
         private static int globalCount;
         private readonly int uniqueId;
+        private int? exitCode;
 
         public string LivelyPropertyCopyPath { get; }
 
@@ -163,16 +165,15 @@ namespace Lively.Core.Wallpapers
             while (!processWaitTask.IsTaskWaitCompleted())
                 await Task.Delay(1);
 
-            //Not reliable, app may refuse to close(open dialogue window.. etc)
-            //Proc.CloseMainWindow();
-            Terminate();
+            // Proc.CloseMainWindow() does not work?
+            SendMessage("{\"command\":[\"quit\"]}\n");
         }
 
         public void Play()
         {
-            if (_isVideoStopped)
+            if (isVideoStopped)
             {
-                _isVideoStopped = false;
+                isVideoStopped = false;
                 //is this always the correct channel for main video?
                 SendMessage("{\"command\":[\"set_property\",\"vid\",1]}\n");
             }
@@ -184,9 +185,9 @@ namespace Lively.Core.Wallpapers
             SendMessage("{\"command\":[\"set_property\",\"pause\",true]}\n");
         }
 
-        public void Stop()
+        private void Stop()
         {
-            _isVideoStopped = true;
+            isVideoStopped = true;
             //video=no disable video but audio can still be played,
             //which is useful for 'play audio only' option in the future.
             SendMessage("{\"command\":[\"set_property\",\"vid\",\"no\"]}\n");
@@ -318,32 +319,47 @@ namespace Lively.Core.Wallpapers
                 Proc.OutputDataReceived += Proc_OutputDataReceived;
                 Proc.Start();
                 Proc.BeginOutputReadLine();
+
                 processWaitTask = Proc.WaitForProcesWindow(timeOut, ctsProcessWait.Token, true);
                 this.Handle = await processWaitTask;
-                if (Handle.Equals(IntPtr.Zero)) {
-                    throw new InvalidOperationException(Properties.Resources.LivelyExceptionGeneral);
-                }
-                else
-                {
-                    //Program ready!
-                    //TaskView crash fix
-                    WindowUtil.BorderlessWinStyle(Handle);
-                    WindowUtil.RemoveWindowFromTaskbar(Handle);
 
-                    //Restore livelyproperties.json settings
-                    SetLivelyProperties(LivelyPropertyCopyPath);
-                    //Wait a bit for properties to apply.
-                    //Todo: check ipc mgs and do this properly.
-                    await Task.Delay(69);
-                    IsLoaded = true;
-                }
+                if (Handle.Equals(IntPtr.Zero))
+                    throw new InvalidOperationException("Process window handle is null.");
+
+                //Program ready!
+                //TaskView crash fix
+                WindowUtil.BorderlessWinStyle(Handle);
+                WindowUtil.RemoveWindowFromTaskbar(Handle);
+
+                //Restore livelyproperties.json settings
+                SetLivelyProperties(LivelyPropertyCopyPath);
+                //Wait a bit for properties to apply.
+                //Todo: check ipc mgs and do this properly.
+                await Task.Delay(69);
+                IsLoaded = true;
             }
             catch (Exception)
             {
-                Terminate();
+                if (IsExited) {
+                    throw GetMpvException(exitCode);
+                }
+                else 
+                {
+                    Terminate();
 
-                throw;
+                    throw;
+                }
             }
+        }
+
+        private void Proc_Exited(object sender, EventArgs e)
+        {
+            exitCode = Proc?.ExitCode;
+            Logger.Info($"Mpv{uniqueId}: Process exited with exit code: {exitCode}");
+            Proc.OutputDataReceived -= Proc_OutputDataReceived;
+            Proc?.Dispose();
+            DesktopUtil.RefreshDesktop();
+            IsExited = true;
         }
 
         private void Proc_OutputDataReceived(object sender, DataReceivedEventArgs e)
@@ -352,15 +368,6 @@ namespace Lively.Core.Wallpapers
             {
                 Logger.Info($"Mpv{uniqueId}: {e.Data}");
             }
-        }
-
-        private void Proc_Exited(object sender, EventArgs e)
-        {
-            Logger.Info($"Mpv{uniqueId}: Process exited with exit code: {Proc?.ExitCode}");
-            Proc.OutputDataReceived -= Proc_OutputDataReceived;
-            Proc?.Dispose();
-            DesktopUtil.RefreshDesktop();
-            IsExited = true;
         }
 
         public void Terminate()
@@ -521,6 +528,17 @@ namespace Lively.Core.Wallpapers
             }
             script.Append("]}\n");
             return script.ToString();
+        }
+
+        // Ref: https://mpv.io/manual/master/#exit-codes
+        private static Exception GetMpvException(int? exitCode)
+        {
+            return exitCode switch
+            {
+                1 => new WallpaperPluginException("Error initializing mpv. This is also returned if unknown options are passed to mpv."),
+                2 or 3 => new WallpaperFileException("The file passed to mpv couldn't be played."),
+                _ => new InvalidOperationException(Properties.Resources.LivelyExceptionGeneral),
+            };
         }
 
         private static string GetYtDlMpvArg(StreamQualitySuggestion qualitySuggestion, string link)

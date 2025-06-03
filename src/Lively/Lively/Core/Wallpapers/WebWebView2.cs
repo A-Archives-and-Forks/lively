@@ -256,11 +256,6 @@ namespace Lively.Core.Wallpapers
             }
         }
 
-        public void Stop()
-        {
-            Pause();
-        }
-
         public void Terminate()
         {
             try
