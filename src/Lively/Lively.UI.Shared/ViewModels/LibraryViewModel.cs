@@ -244,7 +244,7 @@ namespace Lively.UI.Shared.ViewModels
         {
             try
             {
-                if (unsubscribe)
+                if (obj.IsDownloading && unsubscribe)
                 {
                     CancelDownload(obj.LivelyInfo.Id);
                     return;

@@ -133,6 +133,8 @@ namespace Lively.Models
         /// </summary>
         public int TaskbarCrashTimeOutDelay { get; set; }
 
+        public VideoColorSpace VideoD3D11OutputColorSpace { get; set; }
+
         public SettingsModel()
         {
             SavedURL = "https://www.youtube.com/watch?v=aqz-KE-bpKQ";
@@ -213,6 +215,7 @@ namespace Lively.Models
             ApplicationThemeBackground = AppThemeBackground.default_mica;
             TaskbarCrashTimeOutDelay = 30;
             Language = string.Empty;
+            VideoD3D11OutputColorSpace = VideoColorSpace.srgb;
         }
     }
 }

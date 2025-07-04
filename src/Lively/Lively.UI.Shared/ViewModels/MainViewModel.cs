@@ -12,7 +12,6 @@ using Lively.Models.Services;
 using Lively.Models.UserControls;
 using Lively.UI.Shared.Helpers;
 using Lively.UI.WinUI.Factories;
-using OperationResult;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -20,7 +19,6 @@ using System.IO;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Tab;
 
 namespace Lively.UI.Shared.ViewModels
 {

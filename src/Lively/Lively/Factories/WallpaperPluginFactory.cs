@@ -64,25 +64,17 @@ namespace Lively.Factories
                             //depreciated
                             throw new DepreciatedException("libmpv depreciated player selected.");
                         case LivelyMediaPlayer.libvlcExt:
-                            //return new VideoPlayerVlcExt(obj.FilePath, obj, display);
                             throw new NotImplementedException();
                         case LivelyMediaPlayer.libmpvExt:
                             throw new NotImplementedException();
-                            /*
-                            return new VideoPlayerMpvExt(obj.FilePath, 
-                                obj, 
-                                display,
-                                lpFactory.CreateLivelyPropertyFolder(obj, display, arrangement), 
-                                userSettings.Settings.WallpaperScaling);
-                            */
                         case LivelyMediaPlayer.mpv:
                             return new VideoMpvPlayer(model.FilePath,
                                 model,
                                 display,
                                 lpFactory.CreateLivelyPropertyFolder(model, display, arrangement, userSettings),
-                                userSettings.Settings.WallpaperScaling,
                                 userSettings.Settings.VideoPlayerHwAccel,
-                                isPreview);
+                                isPreview,
+                                userSettings.Settings.VideoD3D11OutputColorSpace);
                         case LivelyMediaPlayer.vlc:
                             return new VideoVlcPlayer(model.FilePath, 
                                 model, 
@@ -103,9 +95,9 @@ namespace Lively.Factories
                                            model,
                                            display,
                                            lpFactory.CreateLivelyPropertyFolder(model, display, arrangement, userSettings),
-                                           userSettings.Settings.WallpaperScaling,
                                            userSettings.Settings.VideoPlayerHwAccel,
-                                           isPreview);
+                                           isPreview,
+                                           userSettings.Settings.VideoD3D11OutputColorSpace);
                     }
                     break;
                 case WallpaperType.picture:
@@ -120,9 +112,9 @@ namespace Lively.Factories
                                               model,
                                               display,
                                               lpFactory.CreateLivelyPropertyFolder(model, display, arrangement, userSettings),
-                                              userSettings.Settings.WallpaperScaling,
                                               userSettings.Settings.VideoPlayerHwAccel,
-                                              isPreview);
+                                              isPreview, 
+                                              userSettings.Settings.VideoD3D11OutputColorSpace);
                         case LivelyPicturePlayer.wmf:
                             return new VideoWmfProcess(model.FilePath, model, display, 0, userSettings.Settings.WallpaperScaling);
                     }
@@ -148,8 +140,10 @@ namespace Lively.Factories
                             model,
                             display,
                             lpFactory.CreateLivelyPropertyFolder(model, display, arrangement, userSettings),
-                            userSettings.Settings.WallpaperScaling, userSettings.Settings.VideoPlayerHwAccel,
-                            isPreview, userSettings.Settings.StreamQuality);
+                            userSettings.Settings.VideoPlayerHwAccel,
+                            isPreview, 
+                            userSettings.Settings.VideoD3D11OutputColorSpace, 
+                            userSettings.Settings.StreamQuality);
                     }
                     else
                     {

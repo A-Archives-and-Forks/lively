@@ -71,9 +71,9 @@ namespace Lively.Core.Wallpapers
             LibraryModel model,
             DisplayMonitor display,
             string livelyPropertyPath,
-            WallpaperScaler scaler = WallpaperScaler.fill,
             bool hwAccel = true,
             bool onScreenControl = false,
+            VideoColorSpace colorSpace = VideoColorSpace.auto,
             StreamQualitySuggestion streamQuality = StreamQualitySuggestion.Highest)
         {
             LivelyPropertyCopyPath = livelyPropertyPath;
@@ -82,45 +82,47 @@ namespace Lively.Core.Wallpapers
             var configDir = GetConfigDir();
 
             var cmdArgs = new StringBuilder();
-            //startup volume will be 0
+            // Startup volume will be 0
             cmdArgs.Append("--volume=0 ");
-            //disable progress message, ref: https://mpv.io/manual/master/#options-msg-level
+            // Disable progress message, ref: https://mpv.io/manual/master/#options-msg-level
             cmdArgs.Append("--msg-level=all=info ");
-            //alternative: --loop-file=inf
+            // Alternative: --loop-file=inf
             cmdArgs.Append("--loop-file ");
-            //do not close after media end
+            // Do not close after media end
             cmdArgs.Append("--keep-open ");
-            //open window at (-9999,0)
+            //Open window at (-9999,0)
             cmdArgs.Append("--geometry=-9999:0 ");
-            //always create gui window
+            // Always create gui window
             cmdArgs.Append("--force-window=yes ");
-            //don't move the window when clicking
+            // Don't move the window when clicking
             cmdArgs.Append("--no-window-dragging ");
-            //don't hide cursor after sometime.
+            // Don't hide cursor after sometime.
             cmdArgs.Append("--cursor-autohide=no ");
-            //start without focused
+            // Start without focused
             cmdArgs.Append("--window-minimized=yes ");
-            //allow windows screensaver
+            // Allow windows screensaver
             cmdArgs.Append("--stop-screensaver=no ");
-            //disable mpv default (built-in) key bindings
+            //Disable mpv default (built-in) key bindings
             cmdArgs.Append("--input-default-bindings=no ");
             // Win11 24H2 and new mpv builds alignment fix, ref: https://github.com/rocksdanister/lively/issues/2415
             cmdArgs.Append(!onScreenControl ? "--no-border " : " ");
-            //Permit mpv to receive pointer events reported by the video output driver. Necessary to use the OSC, or to select the buttons in DVD menus. 
+            // Permit mpv to receive pointer events reported by the video output driver. Necessary to use the OSC, or to select the buttons in DVD menus. 
             cmdArgs.Append(!onScreenControl ? "--input-cursor=no " : " ");
-            //on-screen-controller visibility
+            // On-screen-controller visibility
             cmdArgs.Append(!onScreenControl ? "--no-osc " : " ");
-            //alternative: --input-ipc-server=\\.\pipe\
+            // Alternative: --input-ipc-server=\\.\pipe\
             cmdArgs.Append("--input-ipc-server=" + ipcServerName + " ");
-            //integer scaler for sharpness
+            // Integer scaler for sharpness
             cmdArgs.Append(model.LivelyInfo.Type == WallpaperType.gif ? "--scale=nearest " : " ");
-            //gpu decode preference
+            // GPU decode preference
             cmdArgs.Append(hwAccel ? "--hwdec=auto-safe " : "--hwdec=no ");
-            //avoid global config file %APPDATA%\mpv\mpv.conf
+            // Set color space.
+            cmdArgs.Append($"--d3d11-output-csp={GetMpvD3D11ColorSpace(colorSpace)} ");
+            // Avoid global config file %APPDATA%\mpv\mpv.conf
             cmdArgs.Append(configDir is not null ? "--config-dir=" + "\"" + configDir + "\" " : "--no-config ");
-            //screenshot location, important read: https://mpv.io/manual/master/#pseudo-gui-mode
+            // Screenshot location, important read: https://mpv.io/manual/master/#pseudo-gui-mode
             cmdArgs.Append("--screenshot-template=" + "\"" + Path.Combine(Constants.CommonPaths.TempDir, ipcServerName) + "\" --screenshot-format=jpg ");
-            //file or online video stream path
+            // File or online video stream path
             cmdArgs.Append(model.LivelyInfo.Type == WallpaperType.videostream ? GetYtDlMpvArg(streamQuality, path) : "\"" + path + "\"");
 
             var start = new ProcessStartInfo
@@ -147,16 +149,6 @@ namespace Lively.Core.Wallpapers
 
             //for logging purpose
             uniqueId = globalCount++;
-        }
-
-        private static string GetConfigDir()
-        {
-            //Priority list of configuration directories
-            string[] dirs = {
-                Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "plugins", "mpv", "portable_config"),
-                Path.Combine(Constants.CommonPaths.TempVideoDir, "portable_config") 
-            };
-            return dirs.FirstOrDefault(x => Directory.Exists(x));
         }
 
         public async void Close()
@@ -502,7 +494,7 @@ namespace Lively.Core.Wallpapers
         /// </summary>
         /// <param name="parameters"></param>
         /// <returns></returns>
-        private string GetMpvCommand(params object[] parameters)
+        private static string GetMpvCommand(params object[] parameters)
         {
             var obj = new MpvCommand();
             obj.Command.AddRange(parameters);
@@ -514,7 +506,7 @@ namespace Lively.Core.Wallpapers
         /// </summary>
         /// <param name="parameters"></param>
         /// <returns></returns>
-        private string GetMpvCommandStrb(params object[] parameters)
+        private static string GetMpvCommandStrb(params object[] parameters)
         {
             var script = new StringBuilder();
             script.Append("{\"command\":[");
@@ -528,6 +520,29 @@ namespace Lively.Core.Wallpapers
             }
             script.Append("]}\n");
             return script.ToString();
+        }
+
+        private static string GetConfigDir()
+        {
+            //Priority list of configuration directories
+            string[] dirs = {
+                Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "plugins", "mpv", "portable_config"),
+                Path.Combine(Constants.CommonPaths.TempVideoDir, "portable_config")
+            };
+            return dirs.FirstOrDefault(x => Directory.Exists(x));
+        }
+
+        private static string GetMpvD3D11ColorSpace(VideoColorSpace color)
+        {
+            return color switch
+            {
+                VideoColorSpace.auto => "auto",
+                VideoColorSpace.srgb => "srgb",
+                VideoColorSpace.linear => "linear",
+                VideoColorSpace.pq => "pq",
+                VideoColorSpace.bt2020 => "bt.2020",
+                _ => throw new ArgumentOutOfRangeException(nameof(color), $"Unsupported color space: {color}")
+            };
         }
 
         // Ref: https://mpv.io/manual/master/#exit-codes
