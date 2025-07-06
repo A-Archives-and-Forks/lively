@@ -40,9 +40,9 @@ namespace Lively.Services
         private readonly List<WallpaperPreview> screensaverWindows = [];
         private readonly Timer idleTimer = new();
         private DwmThumbnailWindow dwmThumbnailWindow;
-        private Window inputWindow;
         private uint idleWaitTime = 300000;
         private bool startAsyncExecuting, stopAsyncExecuting;
+        private DateTime? startTime;
 
         private readonly IUserSettingsService userSettings;
         private readonly IDesktopCore desktopCore;
@@ -115,6 +115,7 @@ namespace Lively.Services
                     }
 
                     IsRunning = true;
+                    startTime = DateTime.UtcNow;
                     // Move cursor outside screen region.
                     _ = NativeMethods.SetCursorPos(int.MaxValue, 0);
                     Logger.Info("Starting screensaver..");
@@ -143,34 +144,9 @@ namespace Lively.Services
                     StopInputListener();
 
                     // Lock screen.
-                    if (userSettings.Settings.ScreensaverLockOnResume)
-                    {
-                        var lockTcs = new TaskCompletionSource<bool>();
-                        using var cts = new CancellationTokenSource(TimeSpan.FromSeconds(5));
-                        using var _ = cts.Token.Register(() => lockTcs.TrySetResult(false));
-
-                        void SessionSwitchHandler(object s, SessionSwitchEventArgs e)
-                        {
-                            if (e.Reason == SessionSwitchReason.SessionLock)
-                                lockTcs.TrySetResult(true);
-                        }
-                        SystemEvents.SessionSwitch += SessionSwitchHandler;
-
-                        try
-                        {
-                            // This method behaves async
-                            LockWorkStationSafe();
-                            await lockTcs.Task;
-                        }
-                        catch (Win32Exception ex)
-                        {
-                            Logger.Error(ex);
-                        }
-                        finally
-                        {
-                            SystemEvents.SessionSwitch -= SessionSwitchHandler;
-                        }
-                    }
+                    var elapsed = DateTime.UtcNow - (startTime ?? DateTime.UtcNow);
+                    if (userSettings.Settings.ScreensaverLockOnResume && elapsed.TotalSeconds > userSettings.Settings.ScreensaverGracePeriod)
+                        await LockWorkstationAndWaitAsync(userSettings.Settings.ScreensaverLockWaitTimeout);
 
                     IsRunning = false;
                     CloseScreensavers();
@@ -178,7 +154,8 @@ namespace Lively.Services
                 }
                 finally
                 { 
-                    stopAsyncExecuting = false; 
+                    stopAsyncExecuting = false;
+                    startTime = null;
                 }
             });
         }
@@ -611,38 +588,40 @@ namespace Lively.Services
             rawInput.KeyboardClickRaw -= RawInputHook_KeyboardClickRaw;
         }
 
-        //private void StartInputWindowListener()
-        //{
-        //    var window = new TransparentWindow
-        //    {
-        //        WindowStartupLocation = WindowStartupLocation.CenterScreen,
-        //        ShowActivated = true,
-        //        Topmost = true,
-        //    };
-        //    window.Show();
-        //    window.NativeResize(displayManager.VirtualScreenBounds);
-        //    window.PreviewTouchDown += (_, _) =>
-        //    {
-        //        Stop();
-        //    };
-        //    window.PreviewMouseDown += (_, _) =>
-        //    {
-        //        Stop();
-        //    };
-        //    inputWindow = window;
-        //}
-
-        //private void StopInputWindowListener()
-        //{
-        //    inputWindow?.Close();
-        //    inputWindow = null;
-        //}
-
         private async void RawInputHook_KeyboardClickRaw(object sender, KeyboardClickRawArgs e) => await StopAsync();
 
         private async void RawInputHook_MouseDownRaw(object sender, MouseClickRawArgs e) => await StopAsync();
 
         private async void RawInputHook_MouseMoveRaw(object sender, MouseRawArgs e) => await StopAsync();
+
+        private static async Task LockWorkstationAndWaitAsync(double timeoutSeconds)
+        {
+            var lockTcs = new TaskCompletionSource<bool>();
+            using var cts = new CancellationTokenSource(TimeSpan.FromSeconds(timeoutSeconds));
+            using var _ = cts.Token.Register(() => lockTcs.TrySetResult(false));
+
+            void SessionSwitchHandler(object s, SessionSwitchEventArgs e)
+            {
+                if (e.Reason == SessionSwitchReason.SessionLock)
+                    lockTcs.TrySetResult(true);
+            }
+            SystemEvents.SessionSwitch += SessionSwitchHandler;
+
+            try
+            {
+                // This method behaves async, ref: https://learn.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-lockworkstation
+                LockWorkStationSafe();
+                await lockTcs.Task;
+            }
+            catch (Win32Exception ex)
+            {
+                Logger.Error(ex);
+            }
+            finally
+            {
+                SystemEvents.SessionSwitch -= SessionSwitchHandler;
+            }
+        }
 
         private static void LockWorkStationSafe()
         {
