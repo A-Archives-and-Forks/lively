@@ -148,7 +148,7 @@ namespace Lively.UI.Shared.ViewModels
                 return;
             }
 
-            if (model is null || userSettings.Settings.RememberSelectedScreen || model.IsReadyToSet)
+            if (model is null || userSettings.Settings.RememberSelectedScreen || !model.IsReadyToSet)
                 return;
 
             var monitor = displayManager.DisplayMonitors.Count == 1 || userSettings.Settings.WallpaperArrangement != WallpaperArrangement.per ?
