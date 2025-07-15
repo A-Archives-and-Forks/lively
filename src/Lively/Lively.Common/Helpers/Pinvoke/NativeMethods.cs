@@ -1500,6 +1500,7 @@ namespace Lively.Common.Helpers.Pinvoke
 
         public abstract class WindowStyles
         {
+            public const uint WS_EX_NOREDIRECTIONBITMAP = 0x00200000;
             public const uint WS_OVERLAPPED = 0x00000000;
             public const uint WS_POPUP = 0x80000000;
             public const uint WS_CHILD = 0x40000000;

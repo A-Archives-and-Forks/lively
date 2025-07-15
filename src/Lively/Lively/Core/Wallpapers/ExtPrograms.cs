@@ -41,6 +41,8 @@ namespace Lively.Core.Wallpapers
         private readonly int uniqueId;
         private readonly int timeOut;
 
+        public event EventHandler Exited;
+
         /// <summary>
         /// Launch Program(.exe) Unity, godot.. as wallpaper.
         /// </summary>
@@ -175,8 +177,8 @@ namespace Lively.Core.Wallpapers
         {
             Logger.Info($"Program{uniqueId}: Process exited with exit code: {Proc?.ExitCode}");
             Proc?.Dispose();
-            DesktopUtil.RefreshDesktop();
             IsExited = true;
+            Exited?.Invoke(this, EventArgs.Empty);
         }
 
         public void Terminate()
@@ -186,7 +188,6 @@ namespace Lively.Core.Wallpapers
                 Proc.Kill();
             }
             catch { }
-            DesktopUtil.RefreshDesktop();
         }
 
         public void SetVolume(int volume)

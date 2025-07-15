@@ -25,6 +25,8 @@ namespace Lively.Core.Wallpapers
         private DwmThumbnailWrapper dwmThumbnail;
         private BlankWindow window;
 
+        public event EventHandler Exited;
+
         public DwmThumbnailPlayer(IntPtr thumbnailSrc, LibraryModel model, DisplayMonitor display, Rectangle targetRect)
         {
             this.Model = model;
@@ -121,7 +123,8 @@ namespace Lively.Core.Wallpapers
             {
                 window.Close();
             }));
-            DesktopUtil.RefreshDesktop();
+            IsExited = true;
+            Exited?.Invoke(this, EventArgs.Empty);
         }
 
         public void Terminate()

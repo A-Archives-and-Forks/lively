@@ -474,7 +474,6 @@ namespace Lively.Services
                     }
                 }
             }
-            DesktopUtil.RefreshDesktop();
         }
 
         private void ShowDwmThumbnailAsScreensaver()

@@ -49,6 +49,8 @@ namespace Lively.Core.Wallpapers
         private readonly int uniqueId;
         private int? exitCode;
 
+        public event EventHandler Exited;
+
         public string LivelyPropertyCopyPath { get; }
 
         public bool IsLoaded { get; private set; } = false;
@@ -350,8 +352,8 @@ namespace Lively.Core.Wallpapers
             Logger.Info($"Mpv{uniqueId}: Process exited with exit code: {exitCode}");
             Proc.OutputDataReceived -= Proc_OutputDataReceived;
             Proc?.Dispose();
-            DesktopUtil.RefreshDesktop();
             IsExited = true;
+            Exited?.Invoke(this, EventArgs.Empty);
         }
 
         private void Proc_OutputDataReceived(object sender, DataReceivedEventArgs e)
@@ -369,7 +371,6 @@ namespace Lively.Core.Wallpapers
                 Proc.Kill();
             }
             catch { }
-            DesktopUtil.RefreshDesktop();
         }
 
         private void SendMessage(string msg)

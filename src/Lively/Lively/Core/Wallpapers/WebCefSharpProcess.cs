@@ -25,6 +25,8 @@ namespace Lively.Core.Wallpapers
         private static int globalCount;
         private readonly int uniqueId;
 
+        public event EventHandler Exited;
+
         public bool IsLoaded { get; private set; } = false;
 
         public WallpaperType Category => Model.LivelyInfo.Type;
@@ -156,8 +158,8 @@ namespace Lively.Core.Wallpapers
             }
             Proc.OutputDataReceived -= Proc_OutputDataReceived;
             Proc?.Dispose();
-            DesktopUtil.RefreshDesktop();
             IsExited = true;
+            Exited?.Invoke(this, EventArgs.Empty);
         }
 
         private void Proc_OutputDataReceived(object sender, DataReceivedEventArgs e)
@@ -246,7 +248,6 @@ namespace Lively.Core.Wallpapers
                 Proc.Kill();
             }
             catch { }
-            DesktopUtil.RefreshDesktop();
         }
 
         public void Close()

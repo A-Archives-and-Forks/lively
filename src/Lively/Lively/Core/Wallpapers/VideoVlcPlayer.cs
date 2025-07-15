@@ -26,6 +26,8 @@ namespace Lively.Core.Wallpapers
         private readonly int uniqueId;
         private readonly int timeOut;
 
+        public event EventHandler Exited;
+
         public bool IsLoaded => Handle != IntPtr.Zero;
 
         public WallpaperType Category => Model.LivelyInfo.Type;
@@ -179,8 +181,8 @@ namespace Lively.Core.Wallpapers
         {
             Logger.Info($"Vlc{uniqueId}: Process exited with exit code: {Proc?.ExitCode}");
             Proc?.Dispose();
-            DesktopUtil.RefreshDesktop();
             IsExited = true;
+            Exited?.Invoke(this, EventArgs.Empty);
         }
 
         public void Terminate()
@@ -190,7 +192,6 @@ namespace Lively.Core.Wallpapers
                 Proc.Kill();
             }
             catch { }
-            DesktopUtil.RefreshDesktop();
         }
 
         public Task ScreenCapture(string filePath)

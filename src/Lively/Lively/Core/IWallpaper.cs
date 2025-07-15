@@ -102,6 +102,8 @@ namespace Lively.Core
         /// <param name="filePath"></param>
         /// <returns></returns>
         Task ScreenCapture(string filePath);
+
+        public event EventHandler Exited;
     }
 
     public enum PlaybackPosType

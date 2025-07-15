@@ -320,6 +320,18 @@ namespace Lively.Common.Helpers
             return (value & flag) == flag;
         }
 
+        public static bool HasExtendedStyle(IntPtr hwnd, uint style)
+        {
+            if (hwnd == IntPtr.Zero)
+                return false;
+
+            IntPtr exStylePtr = NativeMethods.GetWindowLongPtr(hwnd, (int)NativeMethods.GWL.GWL_EXSTYLE);
+            if (exStylePtr == IntPtr.Zero)
+                return false;
+
+            return (exStylePtr.ToInt64() & style) != 0;
+        }
+
         private static int GetExtendedWindowStyle(IntPtr hWnd)
         {
             IntPtr exStylePtr = NativeMethods.GetWindowLongPtr(hWnd, (int)NativeMethods.GWL.GWL_EXSTYLE);

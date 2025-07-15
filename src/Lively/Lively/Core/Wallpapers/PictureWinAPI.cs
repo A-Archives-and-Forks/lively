@@ -52,6 +52,8 @@ namespace Lively.Core.Wallpapers
         private readonly WallpaperArrangement arrangement;
         private readonly string filePath;
 
+        public event EventHandler Exited;
+
         public PictureWinApi(string filePath,
             LibraryModel model,
             DisplayMonitor display,
@@ -139,12 +141,12 @@ namespace Lively.Core.Wallpapers
         {
             RestoreWallpaper();
             IsExited = true;
+            Exited?.Invoke(this, EventArgs.Empty);
         }
 
         public void Terminate()
         {
-            RestoreWallpaper();
-            IsExited = true;
+            Close();
         }
 
         //restore original wallpaper (if possible.)
