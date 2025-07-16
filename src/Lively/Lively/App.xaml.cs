@@ -132,6 +132,7 @@ namespace Lively
             }
             catch (Exception ex)
             {
+                Logger.Error(ex);
                 MessageBox.Show(ex.ToString(), ex.Message, MessageBoxButton.OK, MessageBoxImage.Error);
                 QuitApp();
                 return;
