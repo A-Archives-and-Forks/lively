@@ -1,5 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using Lively.Common.Helpers;
 using Lively.Common.Services;
 using Lively.Grpc.Client;
 using Lively.Models;
@@ -20,7 +21,11 @@ namespace Lively.UI.Shared.ViewModels
             IsFadeIn = userSettings.Settings.ScreensaverFadeIn;
             IsLockOnResume = userSettings.Settings.ScreensaverLockOnResume;
             Volume = userSettings.Settings.ScreensaverGlobalVolume;
+            IsScreensaverPluginNotify = !ScreensaverUtil.IsScreensaverSelected("Lively");
         }
+
+        [ObservableProperty]
+        private bool isScreensaverPluginNotify;
 
         private bool _isLockOnResume;
         public bool IsLockOnResume

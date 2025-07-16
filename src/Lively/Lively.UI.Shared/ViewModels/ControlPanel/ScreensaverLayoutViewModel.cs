@@ -2,12 +2,12 @@
 using CommunityToolkit.Mvvm.Input;
 using Lively.Common;
 using Lively.Common.Factories;
+using Lively.Common.Helpers;
 using Lively.Common.Helpers.Storage;
 using Lively.Common.Services;
 using Lively.Grpc.Client;
 using Lively.Models;
 using Lively.Models.Enums;
-using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -47,7 +47,7 @@ namespace Lively.UI.Shared.ViewModels
             SelectedScreensaverTypeIndex = (int)userSettings.Settings.ScreensaverType;
             SelectedDisplay = userSettings.Settings.SelectedDisplay;
             screenSaverLayout = GetScreensaverConfigFile();
-            IsScreensaverPluginNotify = !IsScreensaverPluginExists() && userSettings.Settings.IsScreensaverPluginNotify;
+            IsScreensaverPluginNotify = !ScreensaverUtil.IsScreensaverSelected("Lively") && userSettings.Settings.IsScreensaverPluginNotify;
             UpdateLayout();
 
             // This event is also fired when monitor configuration changed.
@@ -384,24 +384,6 @@ namespace Lively.UI.Shared.ViewModels
         private void UpdateSettingsConfigFile()
         {
             dispatcher.TryEnqueue(userSettings.Save<SettingsModel>);
-        }
-
-        private static bool IsScreensaverPluginExists()
-        {
-            try
-            {
-                using RegistryKey key = Registry.CurrentUser.OpenSubKey(@"Control Panel\Desktop", false);
-                if (key?.GetValue("SCRNSAVE.EXE") is string path)
-                {
-                    var name = Path.GetFileNameWithoutExtension(path);
-                    return string.Equals(name, "Lively", StringComparison.OrdinalIgnoreCase);
-                }
-            }
-            catch (Exception ex)
-            {
-                Logger.Error(ex);
-            }
-            return false;
         }
     }
 }
