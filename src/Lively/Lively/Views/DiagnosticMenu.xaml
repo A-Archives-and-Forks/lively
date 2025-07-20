@@ -8,9 +8,10 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:p="clr-namespace:Lively.Properties"
     Title="Lively Diagnostics"
-    Height="200"
-    ResizeMode="NoResize"
-    SizeToContent="Width"
+    Width="300"
+    Height="250"
+    Closing="Window_Closing"
+    ResizeMode="CanMinimize"
     Style="{DynamicResource WindowUI}"
     WindowStartupLocation="CenterScreen"
     mc:Ignorable="d">
@@ -31,8 +32,16 @@
             <Button
                 MinWidth="200"
                 MinHeight="35"
+                Margin="0,0,0,5"
                 Click="Get_Help_Click"
                 Content="{ext:LocalizedString ReportBug_Description}" />
+            <Button
+                x:Name="GridOverlyButton"
+                MinWidth="200"
+                MinHeight="35"
+                Click="Grid_Overlay_Click">
+                Grid Overlay [OFF]
+            </Button>
         </StackPanel>
     </Grid>
 </Window>
