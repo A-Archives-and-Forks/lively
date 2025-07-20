@@ -8,6 +8,7 @@ using Lively.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -37,15 +38,14 @@ namespace Lively.UI.Shared.ViewModels
 
             using (ApplicationsFiltered.DeferRefresh())
             {
-                // Remove duplicates since we are fetching based on open app window.
-                var addedAppPaths = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
-                foreach (var hwnd in WindowUtil.GetVisibleTopLevelWindows())
+                foreach (var process in Process.GetProcesses())
                 {
-                    if (WindowUtil.IsUWPApp(hwnd))
+                    var hwnd = process.MainWindowHandle;
+                    if (hwnd == IntPtr.Zero || WindowUtil.IsUWPApp(hwnd) || !WindowUtil.IsVisibleTopLevelWindows(hwnd))
                         continue;
 
                     var app = appFactory.CreateApp(hwnd);
-                    if (app is not null && addedAppPaths.Add(app.AppPath))
+                    if (app is not null)
                         Applications.Add(app);
                 }
             }
