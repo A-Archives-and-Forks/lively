@@ -43,7 +43,6 @@ namespace Lively.UI.WinUI.Services
                 WallpaperType.videostream => resourceLoader.GetString("TextWebStream"),
                 WallpaperType.picture => resourceLoader.GetString("TextPicture"),
                 //WallpaperType.heic => "HEIC",
-                (WallpaperType)(100) => "Lively Wallpaper",
                 _ => resourceLoader.GetString("TextError"),
             };
         }

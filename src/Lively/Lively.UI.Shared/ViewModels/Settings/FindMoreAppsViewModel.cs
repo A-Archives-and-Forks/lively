@@ -5,6 +5,7 @@ using Lively.Common.Factories;
 using Lively.Common.Helpers;
 using Lively.Common.Services;
 using Lively.Models;
+using Lively.Models.Enums;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -18,6 +19,7 @@ namespace Lively.UI.Shared.ViewModels
     {
         private readonly IApplicationsFactory appFactory;
         private readonly IFileService fileService;
+        private readonly IResourceService i18n;
 
         [ObservableProperty]
         private ObservableCollection<ApplicationModel> applications = [];
@@ -28,10 +30,11 @@ namespace Lively.UI.Shared.ViewModels
         [ObservableProperty]
         private ApplicationModel selectedItem;
 
-        public FindMoreAppsViewModel(IApplicationsFactory appFactory, IFileService fileService)
+        public FindMoreAppsViewModel(IApplicationsFactory appFactory, IFileService fileService, IResourceService i18n)
         {
             this.appFactory = appFactory;
             this.fileService = fileService;
+            this.i18n = i18n;
 
             ApplicationsFiltered = new AdvancedCollectionView(Applications, true);
             ApplicationsFiltered.SortDescriptions.Add(new SortDescription("AppName", SortDirection.Ascending));
@@ -57,7 +60,7 @@ namespace Lively.UI.Shared.ViewModels
 
         private async Task BrowseApp()
         {
-            var files = await fileService.PickFileAsync([".exe"]);
+            var files = await fileService.PickFileAsync([(i18n.GetString(WallpaperType.app), [".exe"])]);
             if (files.Any())
             {
                 var app = appFactory.CreateApp(files[0]);

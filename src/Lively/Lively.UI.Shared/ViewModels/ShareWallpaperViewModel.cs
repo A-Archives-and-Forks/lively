@@ -66,11 +66,7 @@ namespace Lively.UI.Shared.ViewModels
                 ExportFileCommand.NotifyCanExecuteChanged();
 
                 var suggestdFileName = Model.Title;
-                var fileTypeChoices = new Dictionary<string, IList<string>>()
-                {
-                    { "Compressed archive", new List<string>() { ".zip" } }
-                };
-                var file = await fileService.PickSaveFileAsync(suggestdFileName, fileTypeChoices);
+                var file = await fileService.PickSaveFileAsync(suggestdFileName, [("Compressed archive", [".zip"])]);
                 if (file != null)
                 {
                     await libraryVm.WallpaperExport(Model, file);

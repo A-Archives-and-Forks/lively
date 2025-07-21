@@ -60,11 +60,7 @@ namespace Lively.UI.Shared.ViewModels
         private async Task ExtractLog()
         {
             var suggestedFileName = "lively_log_" + DateTime.Now.ToString("yyyyMMdd_HHmmss", CultureInfo.InvariantCulture);
-            var fileTypeChoices = new Dictionary<string, IList<string>>()
-            {
-                { "Compressed archive", new List<string>() { ".zip" } }
-            };
-            var file = await fileService.PickSaveFileAsync(suggestedFileName, fileTypeChoices);
+            var file = await fileService.PickSaveFileAsync(suggestedFileName, [("Compressed archive", [".zip"])]);
             if (file != null)
             {
                 try

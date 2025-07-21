@@ -122,7 +122,7 @@ namespace Lively.UI.Shared.ViewModels
 
         private async Task BrowseTheme()
         {
-            var files = await fileService.PickFileAsync([".jpeg", ".jpg", ".png", ".gif"]);
+            var files = await fileService.PickFileAsync([(i18n.GetString(WallpaperType.picture), [".jpeg", ".jpg", ".png", ".gif"])]);
             if (files.Any())
             {
                 try

@@ -6,14 +6,25 @@ namespace Lively.Common.Services
 {
     public interface IFileService
     {
-        public Task<IReadOnlyList<string>> PickFileAsync(string[] filters, bool multipleFile = false);
+        /// <summary>
+        /// Prompts the user to pick one or more files with optional filtering by file type.
+        /// </summary>
+        /// <param name="filters">
+        /// A collection of file type filters. Each filter is a tuple containing:
+        /// - <c>label</c>: A string describing the file type.
+        /// - <c>extensions</c>: An array of file extensions.
+        /// 
+        /// Example: <c>[("Pictures", new[] { ".jpeg", ".jpg", ".png", ".gif" })]</c>
+        /// </param>
+        /// <param name="multipleFile">Whether multiple files can be selected. Defaults to <c>false</c>.</param>
+        public Task<IReadOnlyList<string>> PickFileAsync(IEnumerable<(string label, string[] extensions)> filters, bool multipleFile = false);
 
         public Task<IReadOnlyList<string>> PickFileAsync(WallpaperType type, bool multipleFile = false);
 
         public Task<IReadOnlyList<string>> PickWallpaperFile(bool multipleFile = false);
 
-        public Task<string> PickFolderAsync(string[] filters);
+        public Task<string> PickSaveFileAsync(string suggestedFileName, IEnumerable<(string label, string[] extensions)> fileTypeChoices);
 
-        public Task<string> PickSaveFileAsync(string suggestedFileName, IDictionary<string, IList<string>> fileTypeChoices);
+        public Task<string> PickFolderAsync(string[] filters);
     }
 }
