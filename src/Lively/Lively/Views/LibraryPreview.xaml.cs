@@ -63,7 +63,7 @@ namespace Lively.Views
             }
 
             // Detach wallpaper window from this dialogue.
-            WindowUtil.SetParentSafe(viewModel.Wallpaper.Handle, IntPtr.Zero);
+            WindowUtil.TrySetParent(viewModel.Wallpaper.Handle, IntPtr.Zero);
             // Move outside visibile region.
             NativeMethods.SetWindowPos(viewModel.Wallpaper.Handle, 1, -9999, 0, 0, 0, 0x0002);
         }

@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 
@@ -12,15 +11,15 @@ namespace Lively.Common.Helpers
     public static class WindowUtil
     {
         public static bool IsDisplayCoveredByWindowGrid(
-            IEnumerable<IntPtr> topLevelWindows,
+            List<IntPtr> topLevelWindows,
             Rectangle screenBounds,
             int tileSize = 50,
             double threshold = 0.05)
         {
-            if (topLevelWindows is null || !topLevelWindows.Any())
+            if (topLevelWindows is null || topLevelWindows.Count == 0)
                 return false;
 
-            if (topLevelWindows.Any(NativeMethods.IsZoomed))
+            if (topLevelWindows.Exists(NativeMethods.IsZoomed))
                 return true;
 
             int width = screenBounds.Width;
@@ -64,9 +63,9 @@ namespace Lively.Common.Helpers
             return false;
         }
 
-        public static bool IsDisplayCoveredByAnyWindow(IEnumerable<IntPtr> topLevelWindows, Rectangle screenBounds, double threshold = 0.95)
+        public static bool IsDisplayCoveredByAnyWindow(List<IntPtr> topLevelWindows, Rectangle screenBounds, double threshold = 0.95)
         {
-            return topLevelWindows.Any(hwnd => IsDisplayCoveredByWindow(hwnd, screenBounds, threshold));
+            return topLevelWindows.Exists(hwnd => IsDisplayCoveredByWindow(hwnd, screenBounds, threshold));
         }
 
         public static bool IsDisplayCoveredByWindow(IntPtr hwnd, Rectangle screenBounds, double threshold = 0.95)
@@ -192,13 +191,22 @@ namespace Lively.Common.Helpers
             return cloakedVal != 0;
         }
 
-        public static void SetParentSafe(IntPtr child, IntPtr parent)
+        public static bool TrySetParent(IntPtr child, IntPtr parent)
         {
-            IntPtr ret = NativeMethods.SetParent(child, parent);
-            if (ret.Equals(IntPtr.Zero))
+            return NativeMethods.SetParent(child, parent) != IntPtr.Zero;
+        }
+
+        public static IntPtr GetLastChildWindow(IntPtr parent)
+        {
+            IntPtr lastChild = IntPtr.Zero;
+
+            NativeMethods.EnumChildWindows(parent, (hWnd, lParam) =>
             {
-                //LogUtil.LogWin32Error("Failed to set window parent");
-            }
+                lastChild = hWnd;
+                return true;
+            }, IntPtr.Zero);
+
+            return lastChild;
         }
 
         /// <summary>
@@ -289,19 +297,31 @@ namespace Lively.Common.Helpers
         private const int LWA_ALPHA = 0x2;
         private const int LWA_COLORKEY = 0x1;
 
-        /// <summary>
-        /// Set window alpha.
-        /// </summary>
-        /// <param name="Handle"></param>
-        public static void SetWindowTransparency(IntPtr Handle)
+        public static void SetWindowTransparency(IntPtr hwnd, byte transparency = 255)
         {
-            var styleCurrentWindowExtended = NativeMethods.GetWindowLongPtr(Handle, (-20));
-            var styleNewWindowExtended =
-                styleCurrentWindowExtended.ToInt64() ^
-                NativeMethods.WindowStyles.WS_EX_LAYERED;
+            var exStyle = GetExtendedWindowStyle(hwnd);
+            if ((exStyle & NativeMethods.WindowStyles.WS_EX_LAYERED) == 0)
+            {
+                var styleNewWindowExtended = exStyle | NativeMethods.WindowStyles.WS_EX_LAYERED;
+                NativeMethods.SetWindowLongPtr(new HandleRef(null, hwnd), (int)NativeMethods.GWL.GWL_EXSTYLE, (IntPtr)styleNewWindowExtended);
+            }
+            NativeMethods.SetLayeredWindowAttributes(hwnd, 0, transparency, LWA_ALPHA);
+        }
 
-            NativeMethods.SetWindowLongPtr(new HandleRef(null, Handle), (int)NativeMethods.GWL.GWL_EXSTYLE, (IntPtr)styleNewWindowExtended);
-            NativeMethods.SetLayeredWindowAttributes(Handle, 0, 128, LWA_ALPHA);
+        public static void SetWindowStyle(IntPtr hwnd, long styleToAdd)
+        {
+            long currentStyle = NativeMethods.GetWindowLongPtr(hwnd, (int)NativeMethods.GWL.GWL_STYLE).ToInt64();
+            long newStyle = currentStyle | styleToAdd;
+
+            NativeMethods.SetWindowLongPtr(new HandleRef(null, hwnd), (int)NativeMethods.GWL.GWL_STYLE, (IntPtr)newStyle);
+        }
+
+        public static void SetWindowExStyle(IntPtr hwnd, long exStyleToAdd)
+        {
+            long currentExStyle = NativeMethods.GetWindowLongPtr(hwnd, (int)NativeMethods.GWL.GWL_EXSTYLE).ToInt64();
+            long newExStyle = currentExStyle | exStyleToAdd;
+
+            NativeMethods.SetWindowLongPtr(new HandleRef(null, hwnd), (int)NativeMethods.GWL.GWL_EXSTYLE, (IntPtr)newExStyle);
         }
 
         public static bool HasClass(IntPtr hwnd, string expectedClassName)

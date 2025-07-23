@@ -178,14 +178,14 @@ namespace Lively.Core.Wallpapers
             SendMessage("{\"command\":[\"set_property\",\"pause\",true]}\n");
         }
 
-        private void Stop()
-        {
-            isVideoStopped = true;
-            //video=no disable video but audio can still be played,
-            //which is useful for 'play audio only' option in the future.
-            SendMessage("{\"command\":[\"set_property\",\"vid\",\"no\"]}\n");
-            Pause();
-        }
+        //private void Stop()
+        //{
+        //    isVideoStopped = true;
+        //    //video=no disable video but audio can still be played,
+        //    //which is useful for 'play audio only' option in the future.
+        //    SendMessage("{\"command\":[\"set_property\",\"vid\",\"no\"]}\n");
+        //    Pause();
+        //}
 
         public void SetVolume(int volume)
         {

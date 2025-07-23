@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
-using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
 
 namespace Lively.Common.Helpers.Pinvoke
 {
@@ -303,6 +299,12 @@ namespace Lively.Common.Helpers.Pinvoke
         }
 
         #endregion // life cycle
+
+        public delegate bool EnumWindowProc(IntPtr hwnd, IntPtr lParam);
+
+        [DllImport("user32")]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        public static extern bool EnumChildWindows(IntPtr window, EnumWindowProc callback, IntPtr i);
 
         [DllImport("user32.dll")]
         public static extern IntPtr GetWindowDC(IntPtr hWnd);
@@ -1773,6 +1775,14 @@ namespace Lively.Common.Helpers.Pinvoke
         [DllImport("user32.dll")]
         [return: MarshalAs(UnmanagedType.Bool)]
         public static extern bool IsZoomed(IntPtr hWnd);
+
+        public enum HWNDInsertAfter : int
+        {
+            HWND_TOP = 0,
+            HWND_BOTTOM = 1,
+            HWND_TOPMOST = -1,
+            HWND_NOTOPMOST = -2
+        }
 
         [Flags]
         public enum SetWindowPosFlags : int

@@ -4,7 +4,6 @@ using Lively.Common.Exceptions;
 using Lively.Common.Extensions;
 using Lively.Common.Factories;
 using Lively.Common.Helpers;
-using Lively.Common.Helpers.Files;
 using Lively.Common.Helpers.Pinvoke;
 using Lively.Common.Helpers.Shell;
 using Lively.Common.Services;
@@ -35,11 +34,11 @@ namespace Lively.Core
         private readonly SemaphoreSlim semaphoreSlimWallpaperLoadingLock = new(1, 1);
         private readonly List<IWallpaper> wallpapers = new(2);
         public ReadOnlyCollection<IWallpaper> Wallpapers => wallpapers.AsReadOnly();
-        private IntPtr workerw;
-        public IntPtr DesktopWorkerW => workerw;
+        private IntPtr workerW, progman, shellDLL_DefView;
+        public IntPtr DesktopWorkerW => workerW;
         private bool disposedValue;
-        private readonly bool isRaisedDesktop;
-        private readonly List<WallpaperLayoutModel> wallpapersDisconnected = new();
+        private bool isRaisedDesktopWithLayeredShellView;
+        private readonly List<WallpaperLayoutModel> wallpapersDisconnected = [];
 
         public event EventHandler<Exception> WallpaperError;
         public event EventHandler WallpaperChanged;
@@ -73,10 +72,6 @@ namespace Lively.Core
             if (SystemParameters.HighContrast)
                 Logger.Warn("Highcontrast mode detected, some functionalities may not work properly.");
 
-            isRaisedDesktop = IsRaisedDesktopEnvironment();
-            if (isRaisedDesktop)
-                Logger.Info("Raised desktop environment detected.");
-
             this.displayManager.DisplayUpdated += DisplaySettingsChanged_Hwnd;
             WallpaperChanged += SetupDesktop_WallpaperChanged;
 
@@ -100,20 +95,20 @@ namespace Lively.Core
                 }
             };
 
-            // Initialize WorkerW
-            UpdateWorkerW();
+            // Initialize desktop and update handles.
+            SetupDesktopLayer();
 
             try
             {
-                if (workerw != IntPtr.Zero)
+                if (workerW != IntPtr.Zero)
                 {
                     Logger.Info("Hooking WorkerW events..");
-                    var dwThreadId = NativeMethods.GetWindowThreadProcessId(workerw, out int dwProcessId);
+                    var dwThreadId = NativeMethods.GetWindowThreadProcessId(workerW, out int dwProcessId);
                     workerWHook = new WindowEventHook(WindowEvent.EVENT_OBJECT_DESTROY);
                     workerWHook.HookToThread(dwThreadId);
                     workerWHook.EventReceived += WorkerWHook_EventReceived;
                 }
-                else 
+                else
                 {
                     Logger.Error("Failed to initialize Core, WorkerW is NULL");
                 }
@@ -121,6 +116,138 @@ namespace Lively.Core
             catch (Exception ex)
             {
                 Logger.Error($"WorkerW hook failed: {ex.Message}");
+            }
+        }
+
+        private void SetupDesktopLayer()
+        {
+            Logger.Info($"Initializing WorkerW");
+
+            // Update program manager
+            progman = DesktopUtil.GetProgman();
+
+            /*
+            Microsoft:
+            As Windows evolves to help deliver the best customer experiences, we have changed how the 
+            Background renders in Windows to enable new scenarios such as HDR Backgrounds as announced 
+            in Windows Insider.
+
+            When the desktop is split out from the list view window (aka the "raised desktop") we no 
+            longer create multiple top-level HWNDs to support this scenario. Instead, the top-level 
+            "Progman" window is now created with WS_EX_NOREDIRECTIONBITMAP (so there is no GDI content 
+            for that window at all) and the shell DefView child window is a WS_EX_LAYERED child window. 
+            When the desktop is raised, we create a child WorkerW window that is z-ordered under the 
+            DefView that will render the wallpaper. The DefView window will draw mostly transparent with 
+            just the icons and text.
+
+            If your application forces the "raised desktop" state, it will now need to create its own 
+            WS_EX_LAYERED child HWND that is z-ordered under the DefView window but above the WorkerW 
+            window. This window should likely be a SetLayeredWindowAttributes(bAlpha=0xFF) window so 
+            that you can do DX blt presents to it and not suffer performance issues.
+            */
+            isRaisedDesktopWithLayeredShellView = WindowUtil.HasExtendedStyle(progman, NativeMethods.WindowStyles.WS_EX_NOREDIRECTIONBITMAP);
+            if (isRaisedDesktopWithLayeredShellView)
+                Logger.Info($"Raised desktop with layered ShellView detected.");
+
+            // Send 0x052C to Progman. This message directs Progman to spawn a 
+            // WorkerW behind the desktop icons. If it is already there, nothing 
+            // happens.
+            NativeMethods.SendMessageTimeout(progman,
+                                   0x052C,
+                                   new IntPtr(0xD),
+                                   new IntPtr(0x1),
+                                   NativeMethods.SendMessageTimeoutFlags.SMTO_NORMAL,
+                                   1000,
+                                   out _);
+
+            // Spy++ output
+            // .....
+            // 0x00010190 "" WorkerW
+            //   ...
+            //   0x000100EE "" SHELLDLL_DefView
+            //     0x000100F0 "FolderView" SysListView32
+            // 0x00100B8A "" WorkerW       <-- This is the WorkerW instance we are after!
+            // 0x000100EC "Program Manager" Progman
+            // We enumerate all Windows, until we find one, that has the SHELLDLL_DefView 
+            // as a child. 
+            // If we found that window, we take its next sibling and assign it to workerw.
+            NativeMethods.EnumWindows(new NativeMethods.EnumWindowsProc((tophandle, topparamhandle) =>
+            {
+                IntPtr p = NativeMethods.FindWindowEx(tophandle,
+                                            IntPtr.Zero,
+                                            "SHELLDLL_DefView",
+                                            IntPtr.Zero);
+
+                if (p != IntPtr.Zero)
+                {
+                    // Gets the WorkerW Window after the current one.
+                    workerW = NativeMethods.FindWindowEx(IntPtr.Zero,
+                                                    tophandle,
+                                                    "WorkerW",
+                                                    IntPtr.Zero);
+                    shellDLL_DefView = p;
+                }
+
+                return true;
+            }), IntPtr.Zero);
+
+            if (isRaisedDesktopWithLayeredShellView)
+            {
+                // Spy++ output
+                // 0x000100EC "Program Manager" Progman
+                //   0x000100EE "" SHELLDLL_DefView
+                //     0x000100F0 "FolderView" SysListView32
+                //   0x00100B8A "" WorkerW       <-- This is the WorkerW instance we are after!
+                workerW = NativeMethods.FindWindowEx(progman,
+                                                IntPtr.Zero,
+                                                "WorkerW",
+                                                IntPtr.Zero);
+            }
+
+            if (IsWindows7)
+            {
+                // This should fix the wallpaper disappearing issue.
+                if (!workerW.Equals(progman))
+                    NativeMethods.ShowWindow(workerW, (uint)0);
+
+                // WorkerW is assumed as progman here.
+                workerW = progman;
+            }
+
+            Logger.Info($"WorkerW initialized {workerW}");
+            WallpaperReset?.Invoke(this, EventArgs.Empty);
+        }
+
+        private async void WorkerWHook_EventReceived(object sender, WinEventHookEventArgs e)
+        {
+            if (e.WindowHandle != workerW || e.EventType != WindowEvent.EVENT_OBJECT_DESTROY)
+                return;
+
+            // Should we verify the thread of new workerW and re-attach the hook?
+            Logger.Error("WorkerW destroyed.");
+            if (isRaisedDesktopWithLayeredShellView)
+            {
+                SetupDesktopLayer();
+
+                var windowFlags = (int)(NativeMethods.SetWindowPosFlags.SWP_NOMOVE |
+                    NativeMethods.SetWindowPosFlags.SWP_NOSIZE |
+                    NativeMethods.SetWindowPosFlags.SWP_NOACTIVATE);
+
+                foreach (var item in wallpapers)
+                {
+                    NativeMethods.SetWindowPos(item.Handle,
+                        (int)shellDLL_DefView,
+                        0,
+                        0,
+                        0,
+                        0,
+                        windowFlags);
+                }
+                EnsureWorkerWZOrder();
+            }
+            else
+            {
+                await ResetWallpaperAsync();
             }
         }
 
@@ -266,38 +393,6 @@ namespace Lively.Core
             RefreshDesktop();
         }
 
-        private void UpdateWorkerW()
-        {
-            Logger.Info("WorkerW initializing..");
-            var retries = 5;
-            while (true)
-            {
-                workerw = CreateWorkerW();
-                if (workerw != IntPtr.Zero) {
-                    break;
-                }
-                else
-                {
-                    retries--;
-                    if (retries == 0)
-                        break;
-
-                    Logger.Error($"Failed to create WorkerW, retrying ({retries})..");
-                }
-            }
-            Logger.Info($"WorkerW initialized {workerw}");
-            WallpaperReset?.Invoke(this, EventArgs.Empty);
-        }
-
-        private async void WorkerWHook_EventReceived(object sender, WinEventHookEventArgs e)
-        {
-            if (e.WindowHandle == workerw && e.EventType == WindowEvent.EVENT_OBJECT_DESTROY)
-            {
-                Logger.Error("WorkerW destroyed.");
-                await ResetWallpaperAsync();
-            }
-        }
-
         private async Task SetDesktopPictureOrLockscreen(IWallpaper wallpaper)
         {
             //Only consider PrimaryScreen for calculating average color
@@ -393,21 +488,35 @@ namespace Lively.Core
         /// <param name="display">displaystring of display to sent wp to.</param>
         private bool TrySetWallpaperPerScreen(IntPtr handle, DisplayMonitor targetDisplay)
         {
-            NativeMethods.RECT prct = new NativeMethods.RECT();
             Logger.Info($"Sending wallpaper(Screen): {targetDisplay.DeviceName} | {targetDisplay.Bounds}");
+
+            var prct = new NativeMethods.RECT();
             //Position the wp fullscreen to corresponding display.
-            if (!NativeMethods.SetWindowPos(handle, 1, targetDisplay.Bounds.X, targetDisplay.Bounds.Y, (targetDisplay.Bounds.Width), (targetDisplay.Bounds.Height), 0x0010))
+            if (!NativeMethods.SetWindowPos(
+                handle,
+                1,
+                targetDisplay.Bounds.X,
+                targetDisplay.Bounds.Y,
+                (targetDisplay.Bounds.Width),
+                (targetDisplay.Bounds.Height),
+                (int)NativeMethods.SetWindowPosFlags.SWP_NOACTIVATE))
             {
-                //LogUtil.LogWin32Error("Failed to set perscreen wallpaper(1)");
+                Logger.Info(LogUtil.GetWin32Error("Failed to set perscreen wallpaper(1)"));
             }
 
-            NativeMethods.MapWindowPoints(handle, workerw, ref prct, 2);
-            var success = TrySetParentWorkerW(handle);
+            NativeMethods.MapWindowPoints(handle, workerW, ref prct, 2);
+            var success = TryAttachToDesktop(handle);
 
             //Position the wp window relative to the new parent window(workerw).
-            if (!NativeMethods.SetWindowPos(handle, 1, prct.Left, prct.Top, (targetDisplay.Bounds.Width), (targetDisplay.Bounds.Height), 0x0010))
+            if (!NativeMethods.SetWindowPos(handle,
+                1,
+                prct.Left,
+                prct.Top,
+                (targetDisplay.Bounds.Width),
+                (targetDisplay.Bounds.Height),
+                (int)(NativeMethods.SetWindowPosFlags.SWP_NOACTIVATE | NativeMethods.SetWindowPosFlags.SWP_NOZORDER)))
             {
-                //LogUtil.LogWin32Error("Failed to set perscreen wallpaper(2)");
+                Logger.Info(LogUtil.GetWin32Error("Failed to set perscreen wallpaper(2)"));
             }
             RefreshDesktop();
             return success;
@@ -419,14 +528,20 @@ namespace Lively.Core
         private bool TrySetWallpaperSpanScreen(IntPtr handle)
         {
             //get spawned workerw rectangle data.
-            NativeMethods.GetWindowRect(workerw, out NativeMethods.RECT prct);
-            var success = TrySetParentWorkerW(handle);
+            NativeMethods.GetWindowRect(workerW, out NativeMethods.RECT prct);
+            var success = TryAttachToDesktop(handle);
 
             //fill wp into the whole workerw area.
             Logger.Info($"Sending wallpaper(Span): ({prct.Left}, {prct.Top}, {prct.Right - prct.Left}, {prct.Bottom - prct.Top}).");
-            if (!NativeMethods.SetWindowPos(handle, 1, 0, 0, prct.Right - prct.Left, prct.Bottom - prct.Top, 0x0010))
+            if (!NativeMethods.SetWindowPos(handle,
+                                            1,
+                                            0,
+                                            0,
+                                            prct.Right - prct.Left,
+                                            prct.Bottom - prct.Top,
+                                            (int)(NativeMethods.SetWindowPosFlags.SWP_NOACTIVATE | NativeMethods.SetWindowPosFlags.SWP_NOZORDER)))
             {
-                //LogUtil.LogWin32Error("Failed to set span wallpaper");
+                Logger.Info(LogUtil.GetWin32Error("Failed to set span wallpaper"));
             }
             RefreshDesktop();
             return success;
@@ -446,17 +561,16 @@ namespace Lively.Core
                 var originalWallpapers = Wallpapers.ToList();
                 CloseAllWallpapers(false);
                 // Restart workerw
-                UpdateWorkerW();
-                if (workerw == IntPtr.Zero)
+                SetupDesktopLayer();
+                if (workerW == IntPtr.Zero)
                 {
-                    // Final attempt
                     Logger.Info("Retry creating WorkerW after delay..");
                     await Task.Delay(500);
-                    UpdateWorkerW();
+                    SetupDesktopLayer();
                 }
                 foreach (var item in originalWallpapers)
                 {
-                    SetWallpaperAsync(item.Model, item.Screen);
+                    _ = SetWallpaperAsync(item.Model, item.Screen);
                     if (userSettings.Settings.WallpaperArrangement == WallpaperArrangement.duplicate)
                         break;
                 }
@@ -895,118 +1009,83 @@ namespace Lively.Core
             });
         }
 
-        private IntPtr CreateWorkerW()
-        {
-            // Fetch the Progman window
-            var progman = NativeMethods.FindWindow("Progman", null);
-
-            // Send 0x052C to Progman. This message directs Progman to spawn a 
-            // WorkerW behind the desktop icons. If it is already there, nothing 
-            // happens.
-            NativeMethods.SendMessageTimeout(progman,
-                                   0x052C,
-                                   new IntPtr(0xD),
-                                   new IntPtr(0x1),
-                                   NativeMethods.SendMessageTimeoutFlags.SMTO_NORMAL,
-                                   1000,
-                                   out _);
-
-            var workerw = IntPtr.Zero;
-
-            if (isRaisedDesktop)
-            {
-                // Some Windows 11 builds have a different Progman window layout.
-                // Spy++ output
-                // 0x000100EC "Program Manager" Progman
-                //   0x000100EE "" SHELLDLL_DefView
-                //     0x000100F0 "FolderView" SysListView32
-                //   0x00100B8A "" WorkerW       <-- This is the WorkerW instance we are after!
-                workerw = NativeMethods.FindWindowEx(progman,
-                                                IntPtr.Zero,
-                                                "WorkerW",
-                                                IntPtr.Zero);
-            }
-            else
-            {
-                // Spy++ output
-                // .....
-                // 0x00010190 "" WorkerW
-                //   ...
-                //   0x000100EE "" SHELLDLL_DefView
-                //     0x000100F0 "FolderView" SysListView32
-                // 0x00100B8A "" WorkerW       <-- This is the WorkerW instance we are after!
-                // 0x000100EC "Program Manager" Progman
-                // We enumerate all Windows, until we find one, that has the SHELLDLL_DefView 
-                // as a child. 
-                // If we found that window, we take its next sibling and assign it to workerw.
-                NativeMethods.EnumWindows(new NativeMethods.EnumWindowsProc((tophandle, topparamhandle) =>
-                {
-                    IntPtr p = NativeMethods.FindWindowEx(tophandle,
-                                                IntPtr.Zero,
-                                                "SHELLDLL_DefView",
-                                                IntPtr.Zero);
-
-                    if (p != IntPtr.Zero)
-                    {
-                        // Gets the WorkerW Window after the current one.
-                        workerw = NativeMethods.FindWindowEx(IntPtr.Zero,
-                                                        tophandle,
-                                                        "WorkerW",
-                                                        IntPtr.Zero);
-                    }
-
-                    return true;
-                }), IntPtr.Zero);
-            }
-
-            return workerw;
-        }
-
-        /// <summary>
-        /// Adds the wp as child of spawned desktop-workerw window.
-        /// </summary>
-        /// <param name="windowHandle">handle of window</param>
-        private bool TrySetParentWorkerW(IntPtr windowHandle)
-        {
-            //Win7
-            if (Environment.OSVersion.Version.Major == 6 && Environment.OSVersion.Version.Minor == 1)
-            {
-                var progman = NativeMethods.FindWindow("Progman", null);
-                if (!workerw.Equals(progman)) //this should fix the win7 wallpaper disappearing issue.
-                    NativeMethods.ShowWindow(workerw, (uint)0);
-
-                IntPtr ret = NativeMethods.SetParent(windowHandle, progman);
-                if (ret.Equals(IntPtr.Zero))
-                    return false;
-
-                //workerw is assumed as progman in win7, this is untested with all fn's: addwallpaper(), wp pause, resize events.. 
-                workerw = progman;
-            }
-            else
-            {
-                IntPtr ret = NativeMethods.SetParent(windowHandle, workerw);
-                if (ret.Equals(IntPtr.Zero))
-                    return false;
-            }
-            return true;
-        }
-
         /// <summary>
         /// Force redraw desktop - clears wallpaper persisting on screen.
         /// </summary>
         public void RefreshDesktop()
         {
-            if (isRaisedDesktop)
+            // Otherwise will destroy the current WorkerW
+            if (isRaisedDesktopWithLayeredShellView)
                 return;
 
             NativeMethods.SystemParametersInfo(NativeMethods.SPI_SETDESKWALLPAPER, 0, null, NativeMethods.SPIF_UPDATEINIFILE);
         }
 
-        private static bool IsRaisedDesktopEnvironment()
+        private bool TryAttachToDesktop(IntPtr hwnd)
         {
-            IntPtr progman = NativeMethods.FindWindow("Progman", null);
-            return WindowUtil.HasExtendedStyle(progman, NativeMethods.WindowStyles.WS_EX_NOREDIRECTIONBITMAP);
+            if (IsWindows7)
+            {
+                if (!WindowUtil.TrySetParent(hwnd, progman))
+                    return false;
+            }
+            else
+            {
+                if (isRaisedDesktopWithLayeredShellView)
+                {
+                    WindowUtil.SetWindowStyle(hwnd, NativeMethods.WindowStyles.WS_CHILD);
+                    // Adds WS_EX_LAYERED if required.
+                    // Note: Godot fails to apply WS_EX_LAYERED if attached after SetParent.
+                    WindowUtil.SetWindowTransparency(hwnd, 255);
+
+                    if (!WindowUtil.TrySetParent(hwnd, progman))
+                        return false;
+
+                    var windowFlags = (int)(NativeMethods.SetWindowPosFlags.SWP_NOMOVE
+                        | NativeMethods.SetWindowPosFlags.SWP_NOSIZE
+                        | NativeMethods.SetWindowPosFlags.SWP_NOACTIVATE);
+
+                    NativeMethods.SetWindowPos(hwnd,
+                        (int)shellDLL_DefView,
+                        0,
+                        0,
+                        0,
+                        0,
+                        windowFlags);
+                    EnsureWorkerWZOrder();
+                }
+                else
+                {
+                    if (!WindowUtil.TrySetParent(hwnd, workerW))
+                        return false;
+                }
+            }
+            return true;
         }
+
+        private void EnsureWorkerWZOrder()
+        {
+            if (!isRaisedDesktopWithLayeredShellView)
+                return;
+
+            if (WindowUtil.GetLastChildWindow(progman) != workerW)
+            {
+                Logger.Error("Unexpected WorkerW Z-order.");
+                var windowFlags = (int)(NativeMethods.SetWindowPosFlags.SWP_NOMOVE
+                    | NativeMethods.SetWindowPosFlags.SWP_NOSIZE
+                    | NativeMethods.SetWindowPosFlags.SWP_NOACTIVATE);
+
+                NativeMethods.SetWindowPos(workerW,
+                    (int)NativeMethods.HWNDInsertAfter.HWND_BOTTOM,
+                    0,
+                    0,
+                    0,
+                    0,
+                    windowFlags);
+            }
+        }
+
+        private static bool IsWindows7 => 
+            Environment.OSVersion.Version.Major == 6 && Environment.OSVersion.Version.Minor == 1;
 
         protected virtual void Dispose(bool disposing)
         {

@@ -1,6 +1,7 @@
 ﻿using Lively.Common;
 using Lively.Common.Exceptions;
 using Lively.Common.Extensions;
+using Lively.Common.Helpers;
 using Lively.Common.Helpers.Pinvoke;
 using Lively.Common.Helpers.Shell;
 using Lively.Common.JsonConverters;
@@ -231,12 +232,10 @@ namespace Lively.Core.Wallpapers
                             Handle = Proc.GetProcessWindow(true);
 
                             if (IntPtr.Equals(Handle, IntPtr.Zero) || IntPtr.Equals(InputHandle, IntPtr.Zero))
-                            {
                                 throw new Exception("Browser input/window handle NULL.");
-                            }
 
-                            //TaskView crash fix..
-                            //WindowOperations.RemoveWindowFromTaskbar(Handle);
+                            // We are doing this player side.
+                            // WindowUtil.RemoveWindowFromTaskbar(Handle);
                         }
                         catch (Exception ie)
                         {

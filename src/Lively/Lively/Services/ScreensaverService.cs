@@ -421,7 +421,7 @@ namespace Lively.Services
             foreach (var item in desktopCore.Wallpapers)
             {
                 //detach wallpaper.
-                WindowUtil.SetParentSafe(item.Handle, IntPtr.Zero);
+                WindowUtil.TrySetParent(item.Handle, IntPtr.Zero);
                 //show on the currently running screen, not changing size.
                 if (!NativeMethods.SetWindowPos(
                     item.Handle,
@@ -445,7 +445,7 @@ namespace Lively.Services
                 {
                     //get spawned workerw rectangle data.
                     NativeMethods.GetWindowRect(desktopCore.DesktopWorkerW, out NativeMethods.RECT prct);
-                    WindowUtil.SetParentSafe(desktopCore.Wallpapers[0].Handle, desktopCore.DesktopWorkerW);
+                    WindowUtil.TrySetParent(desktopCore.Wallpapers[0].Handle, desktopCore.DesktopWorkerW);
                     //fill wp into the whole workerw area.
                     if (!NativeMethods.SetWindowPos(desktopCore.Wallpapers[0].Handle, 1, 0, 0, prct.Right - prct.Left, prct.Bottom - prct.Top, 0x0010))
                     {
@@ -466,7 +466,7 @@ namespace Lively.Services
                     NativeMethods.RECT prct = new NativeMethods.RECT();
                     NativeMethods.MapWindowPoints(item.Handle, desktopCore.DesktopWorkerW, ref prct, 2);
                     //re-attach wallpaper to desktop.
-                    WindowUtil.SetParentSafe(item.Handle, desktopCore.DesktopWorkerW);
+                    WindowUtil.TrySetParent(item.Handle, desktopCore.DesktopWorkerW);
                     //update position & size on desktop workerw.
                     if (!NativeMethods.SetWindowPos(item.Handle, 1, prct.Left, prct.Top, item.Screen.Bounds.Width, item.Screen.Bounds.Height, 0x0010))
                     {
@@ -559,7 +559,7 @@ namespace Lively.Services
             preview.Show();
             var previewHandle = new WindowInteropHelper(preview).Handle;
             //Set child of target.
-            WindowUtil.SetParentSafe(previewHandle, hwnd);
+            WindowUtil.TrySetParent(previewHandle, hwnd);
             //Make this a child window so it will close when the parent dialog closes.
             NativeMethods.SetWindowLongPtr(new HandleRef(null, previewHandle),
                 (int)NativeMethods.GWL.GWL_STYLE,

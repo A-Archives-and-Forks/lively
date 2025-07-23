@@ -96,6 +96,19 @@ namespace Lively.Player.WebView2
             });
         }
 
+        // Hide from taskview and taskbar.
+        // ShowInTaskbar = true does not create TOOLWINDOW.
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                var cp = base.CreateParams;
+                cp.ExStyle |= 0x00000080; // WS_EX_TOOLWINDOW
+                cp.ExStyle |= 0x08000000; // WS_EX_NOACTIVATE
+                return cp;
+            }
+        }
+
         private void HandleParseError(IEnumerable<Error> errs)
         {
             WriteToParent(new LivelyMessageConsole()

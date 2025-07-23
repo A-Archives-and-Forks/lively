@@ -1,5 +1,6 @@
 ﻿using Linearstar.Windows.RawInput;
 using Lively.Common.Helpers.Pinvoke;
+using Lively.Common.Helpers.Shell;
 using Lively.Common.Services;
 using Lively.Core;
 using Lively.Core.Display;
@@ -12,47 +13,14 @@ using Point = System.Drawing.Point;
 
 namespace Lively.Views.WindowMsg
 {
-    public enum RawInputMouseBtn
-    {
-        left,
-        right
-    }
-
-    public class MouseRawArgs : EventArgs
-    {
-        public int X { get; }
-        public int Y { get; }
-        public MouseRawArgs(int x, int y)
-        {
-            X = x;
-            Y = y;
-        }
-    }
-
-    public class MouseClickRawArgs : MouseRawArgs
-    {
-        public RawInputMouseBtn Button { get; }
-        public MouseClickRawArgs(int x, int y, RawInputMouseBtn btn) : base(x, y)
-        {
-            Button = btn;
-        }
-    }
-
-    public class KeyboardClickRawArgs : EventArgs
-    {
-        //todo
-    }
-
     /// <summary>
     /// Mouseinput retrival and forwarding to wallpaper using DirectX RawInput.
     /// ref: https://docs.microsoft.com/en-us/windows/win32/inputdev/raw-input
     /// </summary>
     public partial class RawInputMsgWindow : Window
     {
-        #region setup
-
         private static readonly NLog.Logger Logger = NLog.LogManager.GetCurrentClassLogger();
-        IntPtr progman, workerWOrig;
+        private IntPtr progmanHwnd, desktopHwnd;
         public InputForwardMode InputMode { get; private set; }
         //public events
         public event EventHandler<MouseRawArgs> MouseMoveRaw;
@@ -79,30 +47,8 @@ namespace Lively.Views.WindowMsg
 
         private void UpdateDesktopHandles()
         {
-            //resetting
-            workerWOrig = IntPtr.Zero;
-            progman = IntPtr.Zero;
-
-            progman = NativeMethods.FindWindow("Progman", null);
-            var folderView = NativeMethods.FindWindowEx(progman, IntPtr.Zero, "SHELLDLL_DefView", null);
-            if (folderView == IntPtr.Zero)
-            {
-                //If the desktop isn't under Progman, cycle through the WorkerW handles and find the correct one
-                do
-                {
-                    workerWOrig = NativeMethods.FindWindowEx(NativeMethods.GetDesktopWindow(), workerWOrig, "WorkerW", null);
-                    folderView = NativeMethods.FindWindowEx(workerWOrig, IntPtr.Zero, "SHELLDLL_DefView", null);
-                } while (folderView == IntPtr.Zero && workerWOrig != IntPtr.Zero);
-            }
-
-            if (workerWOrig == IntPtr.Zero)
-            {
-                workerWOrig = NativeMethods.FindWindowEx(progman,
-                                                IntPtr.Zero,
-                                                "WorkerW",
-                                                IntPtr.Zero);
-            }
-            Logger.Info("Desktop handles updated.");
+            progmanHwnd = DesktopUtil.GetProgman();
+            desktopHwnd = DesktopUtil.GetDesktopWorkerW();
         }
 
         private void Window_SourceInitialized(object sender, EventArgs e)
@@ -147,10 +93,6 @@ namespace Lively.Views.WindowMsg
                     break;
             }
         }
-
-        #endregion //setup
-
-        #region input forward
 
         protected IntPtr Hook(IntPtr hwnd, int msg, IntPtr wparam, IntPtr lparam, ref bool handled)
         {
@@ -337,10 +279,6 @@ namespace Lively.Views.WindowMsg
             }
         }
 
-        #endregion //input forward
-
-        #region helpers
-
         /// <summary>
         /// Converts global mouse cursor position value to per display localised value.
         /// </summary>
@@ -387,16 +325,41 @@ namespace Lively.Views.WindowMsg
             };
         }
 
-        /// <summary>
-        /// Is foreground live-wallpaper desktop.
-        /// </summary>
-        /// <returns></returns>
         private bool IsDesktop()
         {
             IntPtr hWnd = NativeMethods.GetForegroundWindow();
-            return (IntPtr.Equals(hWnd, workerWOrig) || IntPtr.Equals(hWnd, progman));
+            return (IntPtr.Equals(hWnd, desktopHwnd) || IntPtr.Equals(hWnd, progmanHwnd));
         }
+    }
 
-        #endregion //helpers
+    public enum RawInputMouseBtn
+    {
+        left,
+        right
+    }
+
+    public class MouseRawArgs : EventArgs
+    {
+        public int X { get; }
+        public int Y { get; }
+        public MouseRawArgs(int x, int y)
+        {
+            X = x;
+            Y = y;
+        }
+    }
+
+    public class MouseClickRawArgs : MouseRawArgs
+    {
+        public RawInputMouseBtn Button { get; }
+        public MouseClickRawArgs(int x, int y, RawInputMouseBtn btn) : base(x, y)
+        {
+            Button = btn;
+        }
+    }
+
+    public class KeyboardClickRawArgs : EventArgs
+    {
+        // TODO
     }
 }

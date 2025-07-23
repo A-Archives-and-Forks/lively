@@ -5,17 +5,6 @@ namespace Lively.Common.Helpers.Shell
 {
     public static class DesktopUtil
     {
-        /// <summary>
-        /// Initial system desktop icon visibility settings.<br>
-        /// Issue: does not update if user changes setting.</br>
-        /// </summary>
-        public static bool DesktopIconVisibilityDefault { get; }
-
-        static DesktopUtil()
-        {
-            DesktopIconVisibilityDefault = GetDesktopIconVisibility();
-        }
-
         public static bool GetDesktopIconVisibility()
         {
             NativeMethods.SHELLSTATE state = new NativeMethods.SHELLSTATE();
@@ -26,16 +15,41 @@ namespace Lively.Common.Helpers.Shell
         //ref: https://stackoverflow.com/questions/6402834/how-to-hide-desktop-icons-programmatically/
         public static void SetDesktopIconVisibility(bool isVisible)
         {
-            //Does not work in Win10
-            //NativeMethods.SHGetSetSettings(ref state, NativeMethods.SSF.SSF_HIDEICONS, true);
-
-            if (GetDesktopIconVisibility() ^ isVisible) //XOR!!!
-            {
+            // SHGetSetSettings(ref state, NativeMethods.SSF.SSF_HIDEICONS, true) is not working in Windows 10.
+            if (GetDesktopIconVisibility() ^ isVisible)
                 NativeMethods.SendMessage(GetDesktopSHELLDLL_DefView(), (int)NativeMethods.WM.COMMAND, (IntPtr)0x7402, IntPtr.Zero);
-            }
         }
 
-        private static IntPtr GetDesktopSHELLDLL_DefView()
+        /// <summary>
+        /// Retrieve Program manager.
+        /// </summary>
+        public static IntPtr GetProgman()
+        {
+            return NativeMethods.FindWindow("Progman", null);
+        }
+
+        /// <summary>
+        /// Retrieves the original WorkerW window that hosts the desktop icons (SHELLDLL_DefView).
+        /// </summary>
+        public static IntPtr GetDesktopWorkerW()
+        {
+            var progman = GetProgman();
+            var workerWOrig = IntPtr.Zero;
+            var folderView = NativeMethods.FindWindowEx(progman, IntPtr.Zero, "SHELLDLL_DefView", null);
+            if (folderView == IntPtr.Zero)
+            {
+                //If the desktop isn't under Progman, cycle through the WorkerW handles and find the correct one
+                do
+                {
+                    workerWOrig = NativeMethods.FindWindowEx(NativeMethods.GetDesktopWindow(), workerWOrig, "WorkerW", null);
+                    folderView = NativeMethods.FindWindowEx(workerWOrig, IntPtr.Zero, "SHELLDLL_DefView", null);
+                } while (folderView == IntPtr.Zero && workerWOrig != IntPtr.Zero);
+            }
+            /// Newer versions of Windows 11 (with layered ShellView.)
+            return workerWOrig != IntPtr.Zero ? workerWOrig : progman;
+        }
+
+        public static IntPtr GetDesktopSHELLDLL_DefView()
         {
             var hShellViewWin = IntPtr.Zero;
             var hWorkerW = IntPtr.Zero;
