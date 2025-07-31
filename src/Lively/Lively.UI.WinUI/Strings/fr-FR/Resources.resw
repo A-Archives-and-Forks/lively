@@ -1269,6 +1269,6 @@ Edge est la vue Web intégrée de Windows 10.</value>
     <value>Lors de la reprise, afficher l'écran de connexion</value>
   </data>
   <data name="ScreensaverFadeIn.Header" xml:space="preserve">
-    <value>Fade to black before start</value>
+    <value>Fondu au noir avant le lancement</value>
   </data>
 </root>

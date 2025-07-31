@@ -120,8 +120,8 @@
       "gamma": { "text": "Gamma" },
       "speed": { "text": "Vitesse" },
       "scaler": {
-        "text": "Choisir un ajustement",
-        "help": "Algorithme de mise à l'échelle du fond",
+        "text": "Mise à l'échelle",
+        "help": "Algorithme de mise à l'échelle du fond d'écran",
         "items": ["Aucun", "Remplir", "Uniforme", "Remplissage uniforme"]
       },
       "mute": { "text": "Muet" }
@@ -167,6 +167,20 @@
         "items": ["Tiada", "Isi", "Seragam", "Isi Seragam"]
       },
       "mute": { "text": "Senyap" }
+    },
+    "be": {
+      "saturation": { "text": "Насычанасць" },
+      "hue": { "text": "Адценне" },
+      "brightness": { "text": "Яркасць" },
+      "contrast": { "text": "Кантраст" },
+      "gamma": { "text": "Гама" },
+      "speed": { "text": "Хуткасць" },
+      "scaler": {
+        "text": "Выберыце ўпісванне",
+        "help": "Алгарытм маштабавання шпалер",
+        "items": ["Адсутнічае", "Запаўненне", "Раўнамерна", "Раўнамернае запаўненне"]
+      },
+      "mute": { "text": "Выключыць гук" }
     }
   }
 }
