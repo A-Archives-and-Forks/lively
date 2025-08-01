@@ -116,30 +116,36 @@ namespace Lively.Core.Suspend
 
         private void Timer_Tick(object sender, EventArgs e)
         {
-            if (IsPauseDueToSystemState())
+            try
             {
-                PauseWallpapers();
-            }
-            else
-            {
-                switch (userSettings.Settings.ProcessMonitorAlgorithm)
-                {
-                    case ProcessMonitorAlgorithm.foreground:
-                        EvaluatePlaybackByForegroundWindow();
-                        break;
-                    case ProcessMonitorAlgorithm.all:
-                        EvaluatePlaybackByVisibleWindow((display, windows) => WindowUtil.IsDisplayCoveredByAnyWindow(windows, display.WorkingArea));
-                        break;
-                    case ProcessMonitorAlgorithm.grid:
-                        EvaluatePlaybackByVisibleWindow((display, windows) => WindowUtil.IsDisplayCoveredByWindowGrid(windows,
-                            display.WorkingArea,
-                            userSettings.Settings.ProcessMonitorGridTileSize,
-                            userSettings.Settings.ProcessMonitorGridTileCoverageThreshold));
-                        break;
-                    case ProcessMonitorAlgorithm.gamemode:
-                        EvaluatePlaybackByGameMode();
-                        break;
+                if (IsPauseDueToSystemState()) {
+                    PauseWallpapers();
                 }
+                else
+                {
+                    switch (userSettings.Settings.ProcessMonitorAlgorithm)
+                    {
+                        case ProcessMonitorAlgorithm.foreground:
+                            EvaluatePlaybackByForegroundWindow();
+                            break;
+                        case ProcessMonitorAlgorithm.all:
+                            EvaluatePlaybackByVisibleWindow((display, windows) => WindowUtil.IsDisplayCoveredByAnyWindow(windows, display.WorkingArea));
+                            break;
+                        case ProcessMonitorAlgorithm.grid:
+                            EvaluatePlaybackByVisibleWindow((display, windows) => WindowUtil.IsDisplayCoveredByWindowGrid(windows,
+                                display.WorkingArea,
+                                userSettings.Settings.ProcessMonitorGridTileSize,
+                                userSettings.Settings.ProcessMonitorGridTileCoverageThreshold));
+                            break;
+                        case ProcessMonitorAlgorithm.gamemode:
+                            EvaluatePlaybackByGameMode();
+                            break;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.Error(ex);
             }
         }
 
