@@ -494,7 +494,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Поддержать</value>
   </data>
   <data name="TextSwitchBranchDev" xml:space="preserve">
-    <value>Перейти на бету (Dev канал)</value>
+    <value>Перейти на бета-версию (Dev канал)</value>
   </data>
   <data name="TextSwitchBranchOfficial" xml:space="preserve">
     <value>Перейти на стабильную (по умолчанию)</value>
@@ -933,7 +933,7 @@ Edge - встроенный в Windows 10 WebView.</value>
     <value>Система</value>
   </data>
   <data name="WindowsSettingsColor.Content" xml:space="preserve">
-    <value>Системная</value>
+    <value>Системные настройки цветов</value>
   </data>
   <data name="LaptopWallpaperPlaybackGroup.Text" xml:space="preserve">
     <value>Ноутбуки</value>
@@ -1173,7 +1173,7 @@ Edge - встроенный в Windows 10 WebView.</value>
     <value>Ярлыки</value>
   </data>
   <data name="TextEndOfItems.Text" xml:space="preserve">
-    <value>Пока это все..</value>
+    <value>Пока что, это все..</value>
   </data>
   <data name="DevelopmentOnHold.Message" xml:space="preserve">
     <value>Создание данного функционала приостановлено</value>
@@ -1188,7 +1188,7 @@ Edge - встроенный в Windows 10 WebView.</value>
     <value>Расширенные</value>
   </data>
   <data name="DescriptionDepthApprox.Content" xml:space="preserve">
-    <value>Приблизительная глубина..</value>
+    <value>Настройка глубины..</value>
   </data>
   <data name="DescriptionDepthWallpaperItem.Content" xml:space="preserve">
     <value>Используя преобразование изображений в 3D с помощью ИИ</value>
@@ -1263,9 +1263,9 @@ Edge - встроенный в Windows 10 WebView.</value>
     <value>Пожалуйста, перезапустите приложение, чтобы изменения вступили в силу.</value>
   </data>
   <data name="ScreensaverLockOnResume.Header" xml:space="preserve">
-    <value>На резюме, экран входа в систему</value>
+    <value>При продолжении воспроизведения, показать экран входа в систему</value>
   </data>
   <data name="ScreensaverFadeIn.Header" xml:space="preserve">
-    <value>Затухание до черноты перед началом</value>
+    <value>Затухание до темноты перед началом</value>
   </data>
 </root>
