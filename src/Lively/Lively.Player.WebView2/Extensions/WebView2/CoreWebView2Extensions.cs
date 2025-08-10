@@ -18,7 +18,9 @@ namespace Lively.Player.WebView2.Extensions.WebView2
 
             var fileName = Path.GetFileName(filePath);
             // Hex format to creates valid hostname and prevent cache conflicts between folders.
-            var hostName = LinkUtil.GetStableHostName(filePath);
+            // Append `.localhost` to trigger immediate NXDOMAIN, bypassing DNS delay in WebView2.
+            // Issue: https://github.com/MicrosoftEdge/WebView2Feedback/issues/2381
+            var hostName = $"{LinkUtil.GetStableHostName(filePath)}.localhost";
             var directoryPath = Path.GetDirectoryName(filePath);
             webView.CoreWebView2.SetVirtualHostNameToFolderMapping(
                 hostName,

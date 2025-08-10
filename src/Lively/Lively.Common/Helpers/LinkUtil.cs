@@ -97,6 +97,9 @@ namespace Lively.Common
             }
         }
 
+        /// <summary>
+        /// Generates a stable, unique, and hostname-safe identifier for a given file's directory.
+        /// </summary>
         public static string GetStableHostName(string filePath)
         {
             var folderPath = Path.GetDirectoryName(filePath) ?? filePath;
@@ -104,8 +107,7 @@ namespace Lively.Common
             var bytes = Encoding.UTF8.GetBytes(folderPath);
             var hash = sha1.ComputeHash(bytes);
 
-            var hex = BitConverter.ToString(hash, 0, 8).Replace("-", "").ToLowerInvariant();
-            return $"localapp-{hex}";
+            return BitConverter.ToString(hash, 0, 8).Replace("-", "").ToLowerInvariant();
         }
     }
 }
