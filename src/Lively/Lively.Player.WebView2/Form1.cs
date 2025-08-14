@@ -207,6 +207,11 @@ namespace Lively.Player.WebView2
 
         private void CoreWebView2_ProcessFailed(object sender, CoreWebView2ProcessFailedEventArgs e)
         {
+            // Expected behavior, reason  DebugActiveProcess(CEF_D3DRenderingSubProcess)
+            // Ref: https://learn.microsoft.com/en-us/dotnet/api/microsoft.web.webview2.core.corewebview2processfailedkind
+            if (isPaused && e.Reason == CoreWebView2ProcessFailedReason.Unresponsive)
+                return;
+
             WriteToParent(new LivelyMessageConsole()
             {
                 Category = ConsoleMessageType.error,
