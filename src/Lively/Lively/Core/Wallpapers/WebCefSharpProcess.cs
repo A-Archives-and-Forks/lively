@@ -171,20 +171,43 @@ namespace Lively.Core.Wallpapers
             //When the redirected stream is closed, a null line is sent to the event handler.
             if (!string.IsNullOrEmpty(e.Data))
             {
-                Logger.Info($"Cef{uniqueId}: {e.Data}");
+                IpcMessage obj = null;
+                try
+                {
+                    obj = JsonConvert.DeserializeObject<IpcMessage>(e.Data, new JsonSerializerSettings() { Converters = { new IpcMessageConverter() } });
+                }
+                catch (Exception ex)
+                {
+                    Logger.Error($"Cef{uniqueId}: Ipc parse error: {e.Data}.\n\nException: {ex.Message}");
+                }
+
+                if (obj is null)
+                    return;
+
+                switch (obj.Type)
+                {
+                    case MessageType.msg_console:
+                        var msg = obj as LivelyMessageConsole;
+                        switch (msg.Category)
+                        {
+                            case ConsoleMessageType.log:
+                                Logger.Info($"Cef{uniqueId}: {msg.Message}");
+                                break;
+                            case ConsoleMessageType.error:
+                                Logger.Error($"Cef{uniqueId}: {msg.Message}");
+                                break;
+                            case ConsoleMessageType.console:
+                                Logger.Info($"Cef{uniqueId}: {msg.Message}");
+                                break;
+                        }
+                        break;
+                    default:
+                        Logger.Info($"Cef{uniqueId}: {e.Data}");
+                        break;
+                }
+
                 if (!isInitialized || !IsLoaded)
                 {
-                    IpcMessage obj;
-                    try
-                    {
-                        obj = JsonConvert.DeserializeObject<IpcMessage>(e.Data, new JsonSerializerSettings() { Converters = { new IpcMessageConverter() } });
-                    }
-                    catch (Exception ex)
-                    {
-                        Logger.Error($"Ipcmessage parse error: {ex.Message}");
-                        return;
-                    }
-
                     if (obj.Type == MessageType.msg_hwnd)
                     {
                         Exception error = null;
