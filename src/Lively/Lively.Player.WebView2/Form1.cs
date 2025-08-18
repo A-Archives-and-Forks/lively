@@ -83,6 +83,16 @@ namespace Lively.Player.WebView2
                         this.Size = new Size(width, height);
                     }
                 }
+
+                var darkColor = Color.FromArgb(30, 30, 30);
+                var lightColor = Color.FromArgb(240, 240, 240);
+                this.BackColor = startArgs.Theme switch
+                {
+                    AppTheme.Auto => ThemeUtil.GetWindowsTheme() == AppTheme.Dark ? darkColor : lightColor,
+                    AppTheme.Light => lightColor,
+                    AppTheme.Dark => darkColor,
+                    _ => darkColor,
+                };
             }
 
             InitializeWebView2Async().Await(() => {

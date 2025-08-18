@@ -1,7 +1,7 @@
 ﻿using Lively.Models.Enums;
 using Microsoft.Win32;
 
-namespace Lively.Helpers
+namespace Lively.Common.Helpers
 {
     public static class ThemeUtil
     {
