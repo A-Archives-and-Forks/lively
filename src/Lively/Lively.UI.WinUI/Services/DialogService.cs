@@ -495,7 +495,7 @@ namespace Lively.UI.WinUI.Services
             var folderView = new UserControls.FolderView() { FolderPath = folderPath };
             var dlg = new ContentDialog()
             {
-                Title = "Confirm project structure?",
+                Title = i18n.GetString("DescriptionConfirmProjectDirectory/Text"),
                 Content = folderView,
                 PrimaryButtonText = i18n.GetString("TextYes"),
                 SecondaryButtonText = i18n.GetString("TextNo"),

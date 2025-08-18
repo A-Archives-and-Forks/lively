@@ -1,18 +1,18 @@
 {
   "Languages": {
     "zh-CN": {
-      "saturation": { "text": "饱和度" },
-      "hue": { "text": "色相" },
+      "saturation": { "text": "飽和度" },
+      "hue": { "text": "色調" },
       "brightness": { "text": "亮度" },
-      "contrast": { "text": "对比度" },
-      "gamma": { "text": "伽马" },
-      "speed": { "text": "速度" },
+      "contrast": { "text": "對比度" },
+      "gamma": { "text": "伽碼" },
+      "speed": { "text": "速率" },
       "scaler": {
-        "text": "选择适配方式",
-        "help": "壁纸缩放算法",
-        "items": ["无", "填充", "等比缩放", "裁剪填充"]
+        "text": "選擇顯示方式",
+        "help": "桌布縮放演算法",
+        "items": ["無", "填滿", "統一", "統一並填滿"]
       },
-      "mute": { "text": "静音" }
+      "mute": { "text": "靜音" }
     },
     "zh-Hant": {
       "saturation": { "text": "飽和度" },
@@ -195,6 +195,34 @@
         "items": ["Κανένα", "Γέμισμα", "Ομοειδής", "Ομοειδής Συμπλήρωση"]
       },
       "mute": { "text": "Σίγαση" }
+    },
+    "ro": {
+      "saturation": { "text": "Saturație" },
+      "hue": { "text": "Hue" },
+      "brightness": { "text": "Luminozitate" },
+      "contrast": { "text": "Contrast" },
+      "gamma": { "text": "Gama" },
+      "speed": { "text": "Viteză" },
+      "scaler": {
+        "text": "Alegeți o potrivire",
+        "help": "Algoritm de scalare a fundalurilor.",
+        "items": ["Nimic", "Umplere", "Uniformă", "Umplere uniformă"]
+      },
+      "mute": { "text": "Mut" }
+    },
+    "uk": {
+      "saturation": { "text": "Насиченість" },
+      "hue": { "text": "Відтінок" },
+      "brightness": { "text": "Яскравість" },
+      "contrast": { "text": "Контрастність" },
+      "gamma": { "text": "Гамма" },
+      "speed": { "text": "Швидкість" },
+      "scaler": {
+        "text": "Виберіть як Вписуватися",
+        "help": "Алгоритм масштабування шпалер.",
+        "items": ["Ніякий", "Заповнення", "Рівномірний", "Рівномірне заповнення"]
+      },
+      "mute": { "text": "Без звуку" }
     }
   }
 }

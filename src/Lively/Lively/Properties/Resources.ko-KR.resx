@@ -1268,4 +1268,13 @@ Edge는 Windows 10의 내장 웹뷰입니다.</value>
   <data name="ScreensaverFadeIn.Header" xml:space="preserve">
     <value>시작하기 전에 검은색으로 페이드인</value>
   </data>
+  <data name="VideoLetWindowsManageColor.Header" xml:space="preserve">
+    <value>Windows가 색상을 관리하도록 허용</value>
+  </data>
+  <data name="ScreensaverWindowsSettings.Header" xml:space="preserve">
+    <value>Windows 설정</value>
+  </data>
+  <data name="DescriptionConfirmProjectDirectory.Text" xml:space="preserve">
+    <value>프로젝트 구조를 확인하시겠습니까?</value>
+  </data>
 </root>

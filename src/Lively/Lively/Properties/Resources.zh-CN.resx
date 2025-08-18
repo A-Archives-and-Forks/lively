@@ -876,7 +876,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>使用GPU渲染</value>
   </data>
   <data name="TitleWallpaper.Content" xml:space="preserve">
-    <value>壁纸半透明</value>
+    <value>壁纸</value>
   </data>
   <data name="TitleCustomise.Content" xml:space="preserve">
     <value>自定义</value>
@@ -1267,5 +1267,14 @@ https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="ScreensaverFadeIn.Header" xml:space="preserve">
     <value>Fade to black before start</value>
+  </data>
+  <data name="VideoLetWindowsManageColor.Header" xml:space="preserve">
+    <value>Let Windows manage colors</value>
+  </data>
+  <data name="ScreensaverWindowsSettings.Header" xml:space="preserve">
+    <value>Windows Settings</value>
+  </data>
+  <data name="DescriptionConfirmProjectDirectory.Text" xml:space="preserve">
+    <value>Confirm project structure?</value>
   </data>
 </root>

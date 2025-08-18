@@ -1270,4 +1270,13 @@ Edge הוא תצוגת האינטרנט המובנית של Windows 10.</value>
   <data name="ScreensaverFadeIn.Header" xml:space="preserve">
     <value>דהייה לשחור לפני ההתחלה</value>
   </data>
+  <data name="VideoLetWindowsManageColor.Header" xml:space="preserve">
+    <value>Let Windows manage colors</value>
+  </data>
+  <data name="ScreensaverWindowsSettings.Header" xml:space="preserve">
+    <value>Windows Settings</value>
+  </data>
+  <data name="DescriptionConfirmProjectDirectory.Text" xml:space="preserve">
+    <value>Confirm project structure?</value>
+  </data>
 </root>

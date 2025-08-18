@@ -1215,7 +1215,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>वालपेपर बनाए</value>
   </data>
   <data name="RunningAsAdminWarning.Message" xml:space="preserve">
-    <value/>
+    <value>Some functionalities may not be available when run as administrator</value>
   </data>
   <data name="DescriptionDownloadRequired.Text" xml:space="preserve">
     <value>इस सुविधा के लिए अतिरिक्त फ़ाइलें डाउनलोड करनी होंगी</value>
@@ -1271,5 +1271,14 @@ Nkmnk t</value>
   </data>
   <data name="ScreensaverFadeIn.Header" xml:space="preserve">
     <value>Fade to black before start</value>
+  </data>
+  <data name="VideoLetWindowsManageColor.Header" xml:space="preserve">
+    <value>Let Windows manage colors</value>
+  </data>
+  <data name="ScreensaverWindowsSettings.Header" xml:space="preserve">
+    <value>Windows Settings</value>
+  </data>
+  <data name="DescriptionConfirmProjectDirectory.Text" xml:space="preserve">
+    <value>Confirm project structure?</value>
   </data>
 </root>

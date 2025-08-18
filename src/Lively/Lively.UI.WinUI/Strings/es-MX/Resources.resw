@@ -1271,4 +1271,13 @@ Espejo de Fondo de pantalla</value>
   <data name="ScreensaverFadeIn.Header" xml:space="preserve">
     <value>Fade to black before start</value>
   </data>
+  <data name="VideoLetWindowsManageColor.Header" xml:space="preserve">
+    <value>Let Windows manage colors</value>
+  </data>
+  <data name="ScreensaverWindowsSettings.Header" xml:space="preserve">
+    <value>Windows Settings</value>
+  </data>
+  <data name="DescriptionConfirmProjectDirectory.Text" xml:space="preserve">
+    <value>Confirm project structure?</value>
+  </data>
 </root>

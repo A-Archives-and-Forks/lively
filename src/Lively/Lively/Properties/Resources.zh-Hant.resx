@@ -1265,4 +1265,13 @@ https://github.com/rocksdanister/lively/wiki</value>
   <data name="ScreensaverFadeIn.Header" xml:space="preserve">
     <value>繁體中文</value>
   </data>
+  <data name="VideoLetWindowsManageColor.Header" xml:space="preserve">
+    <value>Let Windows manage colors</value>
+  </data>
+  <data name="ScreensaverWindowsSettings.Header" xml:space="preserve">
+    <value>Windows Settings</value>
+  </data>
+  <data name="DescriptionConfirmProjectDirectory.Text" xml:space="preserve">
+    <value>Confirm project structure?</value>
+  </data>
 </root>

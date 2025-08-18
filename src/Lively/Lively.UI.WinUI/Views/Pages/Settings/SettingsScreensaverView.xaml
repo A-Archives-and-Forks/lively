@@ -62,8 +62,8 @@
                         Margin="0,0,0,10"
                         FontWeight="SemiBold" />
                     <controls:SettingsCard
+                        x:Uid="ScreensaverWindowsSettings"
                         Command="{Binding OpenWindowsSettingsCommand}"
-                        Header="Windows Settings"
                         IsClickEnabled="True">
                         <controls:SettingsCard.HeaderIcon>
                             <FontIcon Glyph="&#xE770;" />

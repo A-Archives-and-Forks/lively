@@ -130,7 +130,7 @@
     <value>Звук</value>
   </data>
   <data name="Community.Description" xml:space="preserve">
-    <value>Онлайн обговорення</value>
+    <value>Онлайн форум для обговорень</value>
   </data>
   <data name="Documentation.Description" xml:space="preserve">
     <value>Документація API та допомога</value>
@@ -141,10 +141,10 @@
 Провідник Windows перезавантажився двічі за останні 30 секунд! Це може бути пов'язано з конфліктом між Lively та іншою програмою кастомізації системи. Для уникнення подальших проблем всі шпалери вимкнено.</value>
   </data>
   <data name="DescIncompatibleTaskbarTheme" xml:space="preserve">
-    <value>Знайдена несумісна програма, тема панелі завдань вимкнена</value>
+    <value>Знайдена несумісна програма, тематизація панелі завдань вимкнена.</value>
   </data>
   <data name="Website.Description" xml:space="preserve">
-    <value>Офіційна вебсторінка Lively Wallpaper</value>
+    <value>Офіційна веб-сторінка Lively Wallpaper</value>
   </data>
   <data name="DescOledScreensaverNotice" xml:space="preserve">
     <value>Більшість сучасних рідкокристалічних та світлодіодних дисплеїв не страждають від вигорання, і тому будь-які шпалери можна використовувати як заставку.
@@ -1260,15 +1260,24 @@ Edge - веб-двигун з Windows 10 WebView.</value>
     <value>Щоб налаштування набрали чинності, потрібно перезавантажити шпалери</value>
   </data>
   <data name="LanguageSettingsItemSystemDefault.Content" xml:space="preserve">
-    <value>Same as System</value>
+    <value>Така само як в системі</value>
   </data>
   <data name="InfoSettingsRestartRequest.Message" xml:space="preserve">
-    <value>Please restart application for settings to take effect.</value>
+    <value>Будь ласка, перезапустіть програму, щоб налаштування набули чинності.</value>
   </data>
   <data name="ScreensaverLockOnResume.Header" xml:space="preserve">
     <value>У резюме, екрана входу</value>
   </data>
   <data name="ScreensaverFadeIn.Header" xml:space="preserve">
-    <value>Fade to black before start</value>
+    <value>Перед початком роботи затемнити до чорного</value>
+  </data>
+  <data name="VideoLetWindowsManageColor.Header" xml:space="preserve">
+    <value>Let Windows manage colors</value>
+  </data>
+  <data name="ScreensaverWindowsSettings.Header" xml:space="preserve">
+    <value>Windows Settings</value>
+  </data>
+  <data name="DescriptionConfirmProjectDirectory.Text" xml:space="preserve">
+    <value>Confirm project structure?</value>
   </data>
 </root>
