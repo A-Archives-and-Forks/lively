@@ -1,4 +1,4 @@
-﻿using Lively.Common;
+﻿using Lively.Common.Helpers;
 using System;
 using System.IO;
 using System.Reflection;
@@ -14,7 +14,7 @@ namespace Lively.Helpers
             var result = StartupTaskState.Disabled;
             try
             {
-                if (Constants.ApplicationType.IsMSIX)
+                if (PackageUtil.IsRunningAsPackaged)
                     result = await SetStartupTask(isStartWithWindow);
                 else
                     SetStartupRegistry(isStartWithWindow);

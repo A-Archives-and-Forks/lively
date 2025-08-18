@@ -6,7 +6,6 @@ using Lively.Common.Services;
 using Lively.Grpc.Client;
 using Lively.Models;
 using Lively.Models.Enums;
-using Lively.UI.Shared.Helpers;
 using Lively.UI.WinUI.Factories;
 using System;
 using System.Collections.ObjectModel;
@@ -150,7 +149,7 @@ namespace Lively.UI.Shared.ViewModels
             _openCommand ??= new RelayCommand<ThemeModel>(async (obj) => {
                 if (obj.IsEditable)
                 {
-                    await DesktopBridgeUtil.OpenFolder(Directory.GetParent(obj.File).FullName);
+                    await fileService.OpenFolderAsync(Directory.GetParent(obj.File).FullName);
                 }
             });
 

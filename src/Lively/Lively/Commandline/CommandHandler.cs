@@ -515,7 +515,16 @@ namespace Lively.Commandline
                 {
                     var wallpaper = desktopCore.Wallpapers.FirstOrDefault(x => x.Screen.Equals(screen));
                     if (wallpaper != null)
-                        await wallpaper.ScreenCapture(opts.File);
+                    {
+                        try 
+                        {
+                            await wallpaper.ScreenCapture(opts.File);
+                        }
+                        catch (Exception ex) 
+                        {
+                            Logger.Error(ex);
+                        }
+                    }
                 }
             }
         }

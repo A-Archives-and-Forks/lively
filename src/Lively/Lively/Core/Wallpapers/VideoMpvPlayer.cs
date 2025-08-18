@@ -265,26 +265,27 @@ namespace Lively.Core.Wallpapers
             }
             else
             {
-                var tcs = new TaskCompletionSource<bool>();
+                var tcs = new TaskCompletionSource();
                 void LocalOutputDataReceived(object sender, DataReceivedEventArgs e)
                 {
-                    if (e.Data is null) 
-                        return;
-
-                    if (e.Data.Contains("Screenshot:"))
+                    if (string.IsNullOrEmpty(e.Data))
+                    {
+                        tcs.TrySetException(new InvalidOperationException("Process exited unexpectedly."));
+                    }        
+                    else if (e.Data.Contains("Screenshot:"))
                     {
                         // Screenshot: 'path'
                         var match = Regex.Match(e.Data, @"Screenshot: '([^']+)'");
                         if (match.Success && match.Groups[1].Value.Equals(filePath, StringComparison.OrdinalIgnoreCase))
                         {
                             process.OutputDataReceived -= LocalOutputDataReceived;
-                            tcs.TrySetResult(true);
+                            tcs.TrySetResult();
                         }
                     }
                 }
                 process.OutputDataReceived += LocalOutputDataReceived;
 
-                // Save screenshot
+                Logger.Info($"Mpv{uniqueId}: Taking screenshot: {filePath}");
                 SendMessage(GetMpvCommand("screenshot-to-file", filePath));
 
                 // Timeout
@@ -294,7 +295,7 @@ namespace Lively.Core.Wallpapers
                     if (!IsExited)
                         process.OutputDataReceived -= LocalOutputDataReceived;
 
-                    tcs.TrySetResult(false);
+                    tcs.TrySetException(new TimeoutException($"Screenshot timed out."));
                 }))
 
                 await tcs.Task;

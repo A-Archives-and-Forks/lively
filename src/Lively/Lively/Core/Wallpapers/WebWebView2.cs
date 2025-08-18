@@ -11,6 +11,7 @@ using Newtonsoft.Json;
 using System;
 using System.Diagnostics;
 using System.IO;
+using System.Reflection;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -56,6 +57,9 @@ namespace Lively.Core.Wallpapers
             int volume)
         {
             LivelyPropertyCopyPath = livelyPropertyPath;
+            // WebView2 runs outside the packaged sandbox, so we must redirect paths to the packaged LocalCache if it exists.
+            // This workaround addresses a known issue on Windows 10 22H2, where WebView2 does not automatically pick up the redirected path.
+            var (filePath, userDataDir) = ResolvePackagePath(path, model);
             // We correct/default the scale since dpi do not update once set as wallpaper layer.
             var wallpaperScale = 100;
             if (DpiUtil.TryGetDisplayScale(display.HMonitor, out double scale))
@@ -65,15 +69,16 @@ namespace Lively.Core.Wallpapers
             cmdArgs.Append(" --wallpaper-pause-media ");
             cmdArgs.Append(" --wallpaper-volume " + volume);
             cmdArgs.Append(" --wallpaper-scale " + wallpaperScale);
-            cmdArgs.Append(" --wallpaper-url " + "\"" + path + "\"");
+            cmdArgs.Append(" --wallpaper-url " + "\"" + filePath + "\"");
             cmdArgs.Append(" --wallpaper-color-scheme " + theme + " ");
+            cmdArgs.Append(" --wallpaper-user-data " + "\"" + userDataDir + "\"");
             cmdArgs.Append(" --wallpaper-display " + "\"" + display.DeviceId + "\"");
             cmdArgs.Append(" --wallpaper-property " + "\"" + LivelyPropertyCopyPath + "\"");
             cmdArgs.Append(" --wallpaper-geometry " + display.Bounds.Width + "x" + display.Bounds.Height);
             //--audio false Issue: https://github.com/commandlineparser/commandline/issues/702
             cmdArgs.Append(model.LivelyInfo.Type == WallpaperType.webaudio ? " --wallpaper-audio true" : " ");
             cmdArgs.Append(!string.IsNullOrWhiteSpace(debugPort) ? " --wallpaper-debug " + debugPort : " ");
-            cmdArgs.Append(model.LivelyInfo.Type == WallpaperType.url || model.LivelyInfo.Type == WallpaperType.videostream ? " --wallpaper-type online" : " --wallpaper-type local");
+            cmdArgs.Append(model.LivelyInfo.Type.IsOnlineWallpaper() ? " --wallpaper-type online" : " --wallpaper-type local");
             if (TryParseUserCommandArgs(model.LivelyInfo.Arguments, out string parsedArgs))
                 cmdArgs.Append(" " + parsedArgs);
 #if DEBUG
@@ -316,13 +321,12 @@ namespace Lively.Core.Wallpapers
 
         public async Task ScreenCapture(string filePath)
         {
-            var tcs = new TaskCompletionSource<bool>();
+            var tcs = new TaskCompletionSource();
             void LocalOutputDataReceived(object sender, DataReceivedEventArgs e)
             {
                 if (string.IsNullOrEmpty(e.Data))
                 {
-                    //process exiting..
-                    tcs.SetResult(false);
+                    tcs.TrySetException(new InvalidOperationException("Process exited unexpectedly."));
                 }
                 else
                 {
@@ -333,13 +337,17 @@ namespace Lively.Core.Wallpapers
                         if (msg.FileName == Path.GetFileName(filePath))
                         {
                             process.OutputDataReceived -= LocalOutputDataReceived;
-                            tcs.SetResult(msg.Success);
+                            if (msg.Success)
+                                tcs.TrySetResult();
+                            else
+                                tcs.TrySetException(new InvalidOperationException($"Failed to take screenshot."));
                         }
                     }
                 }
             }
             process.OutputDataReceived += LocalOutputDataReceived;
 
+            Logger.Info($"Wv2{uniqueId}: Taking screenshot: {filePath}");
             SendMessage(new LivelyScreenshotCmd()
             {
                 FilePath = Path.GetExtension(filePath) != ".jpg" ? filePath + ".jpg" : filePath,
@@ -354,7 +362,7 @@ namespace Lively.Core.Wallpapers
                 if (!IsExited)
                     process.OutputDataReceived -= LocalOutputDataReceived;
 
-                tcs.TrySetResult(false);
+                tcs.TrySetException(new TimeoutException($"Screenshot timed out."));
             }))
 
             await tcs.Task;
@@ -364,6 +372,31 @@ namespace Lively.Core.Wallpapers
         {
             // Process object is disposed in Exit event.
             Terminate();
+        }
+
+        private static (string FilePath, string UserDataDir) ResolvePackagePath(string path, LibraryModel model)
+        {
+            var assemblyName = Path.GetFileNameWithoutExtension(Constants.PlayerPartialPaths.WebView2Path);
+            var userDataDir = Path.Combine(Constants.CommonPaths.TempWebView2Dir, assemblyName);
+            var filePath = path;
+
+            if (PackageUtil.IsRunningAsPackaged)
+            {
+                try
+                {
+                    if (!model.LivelyInfo.Type.IsOnlineWallpaper())
+                        filePath = PackageUtil.ValidateAndResolvePath(path);
+
+                    var resolvedTempWebView2Dir = PackageUtil.ValidateAndResolvePath(Constants.CommonPaths.TempWebView2Dir);
+                    userDataDir = Path.Combine(resolvedTempWebView2Dir, assemblyName);
+                }
+                catch (Exception ex)
+                {
+                    Logger.Error(ex);
+                }
+            }
+
+            return (filePath, userDataDir);
         }
 
         /// <summary>

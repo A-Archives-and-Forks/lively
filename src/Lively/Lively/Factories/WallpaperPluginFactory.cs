@@ -1,4 +1,4 @@
-﻿using Lively.Common;
+﻿using Lively.Common.Helpers;
 using Lively.Common.Services;
 using Lively.Core;
 using Lively.Core.Wallpapers;
@@ -132,7 +132,7 @@ namespace Lively.Factories
                 case WallpaperType.unity:
                 case WallpaperType.unityaudio:
                 case WallpaperType.godot:
-                    if (Constants.ApplicationType.IsMSIX)
+                    if (PackageUtil.IsRunningAsPackaged)
                     {
                         throw new MsixNotAllowedException("Program wallpaper on MSIX package not allowed.");
                     }

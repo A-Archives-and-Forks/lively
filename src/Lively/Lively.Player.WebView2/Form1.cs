@@ -127,9 +127,9 @@ namespace Lively.Player.WebView2
                 "--autoplay-policy=no-user-gesture-required ";
             CoreWebView2EnvironmentOptions options = new CoreWebView2EnvironmentOptions(webViewStartArgs);
             // WebView2 does not have in-memory mode, ref: https://github.com/MicrosoftEdge/WebView2Feedback/issues/3637
-            // Custom user-data folder, ref: https://docs.microsoft.com/en-us/microsoft-edge/webview2/concepts/user-data-folder
-            var userDataPath = Path.Combine(Constants.CommonPaths.TempWebView2Dir, Assembly.GetExecutingAssembly().GetName().Name);
-            var env = await CoreWebView2Environment.CreateAsync(null, userDataPath, options);
+            // Custom user data folder, ref: https://docs.microsoft.com/en-us/microsoft-edge/webview2/concepts/user-data-folder
+            $"Setting UserData path: {startArgs.UserDataPath}".SendLog(SendToParent);
+            var env = await CoreWebView2Environment.CreateAsync(null, startArgs.UserDataPath, options);
             await webView.EnsureCoreWebView2Async(env);
 
             // Defaults
@@ -140,8 +140,10 @@ namespace Lively.Player.WebView2
                 using var g = Graphics.FromHwnd(webView.Handle);
                 // 100% scale = 96 dpi
                 var currentScale = g.DpiX / 96d;
+                var adjustedScale = (startArgs.Scale.Value / 100d) / currentScale;
                 // Adjust zoom to neutralize current DPI and apply target scale.
-                webView.ZoomFactor = (startArgs.Scale.Value / 100d) / currentScale;
+                $"Setting ZoomFactor: {adjustedScale}".SendLog(SendToParent);
+                webView.ZoomFactor = adjustedScale;
             }
 
             if (!IsDebugging)
@@ -170,18 +172,26 @@ namespace Lively.Player.WebView2
                     {
                         string tmp = null;
                         if (StreamUtil.TryParseShadertoy(startArgs.Url, ref tmp))
+                        {
+                            $"Opening shadertoy shader: {tmp}".SendLog(SendToParent);
                             webView.CoreWebView2.NavigateToString(tmp);
+                        }
                         else if (StreamUtil.TryParseYouTubeVideoIdFromUrl(startArgs.Url, ref tmp))
                         {
                             isVideoStream = true;
+                            $"Opening yt stream: {tmp}".SendLog(SendToParent);
                             webView.CoreWebView2.Navigate($"https://www.youtube.com/embed/{tmp}?version=3&rel=0&autoplay=1&loop=1&controls=0&playlist={tmp}");
                         }
                         else
+                        {
+                            $"Opening address: {startArgs.Url}".SendLog(SendToParent);
                             webView.CoreWebView2.Navigate(startArgs.Url);
+                        }
                     }
                     break;
                 case WebPageType.local:
                     {
+                        $"Opening local project: {startArgs.Url}".SendLog(SendToParent);
                         webView.NavigateToLocalPath(startArgs.Url);
                     }
                     break;

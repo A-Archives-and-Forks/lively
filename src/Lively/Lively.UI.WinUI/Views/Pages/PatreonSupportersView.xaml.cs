@@ -1,4 +1,5 @@
 using Lively.Common;
+using Lively.Common.Helpers;
 using Lively.Grpc.Client;
 using Lively.Models.Enums;
 using Lively.UI.Shared.ViewModels;
@@ -38,8 +39,11 @@ namespace Lively.UI.WinUI.Views.Pages
             try
             {
                 var options = new CoreWebView2EnvironmentOptions();
-                var userDataPath = Path.Combine(Constants.CommonPaths.TempWebView2Dir, Assembly.GetExecutingAssembly().GetName().Name);
-                var webView2Environment = await CoreWebView2Environment.CreateWithOptionsAsync(null, userDataPath, options);
+                // WebView2 runs outside the packaged sandbox, so we must redirect paths to the packaged LocalCache if it exists.
+                // This workaround addresses a known issue on Windows 10 22H2, where WebView2 does not automatically pick up the redirected path.
+                var resolvedTempWebView2Dir = PackageUtil.ValidateAndResolvePath(Constants.CommonPaths.TempWebView2Dir);
+                var userDataDir = Path.Combine(resolvedTempWebView2Dir, Assembly.GetExecutingAssembly().GetName().Name);
+                var webView2Environment = await CoreWebView2Environment.CreateWithOptionsAsync(null, userDataDir, options);
                 await WebView.EnsureCoreWebView2Async(webView2Environment);
             }
             catch (Exception ex)

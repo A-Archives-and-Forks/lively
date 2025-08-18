@@ -63,7 +63,7 @@ namespace Lively.Common.Services
 
         public async Task<AppUpdateStatus> CheckUpdate(int fetchDelay)
         {
-            if (Constants.ApplicationType.IsMSIX)
+            if (PackageUtil.IsRunningAsPackaged)
             {
                 //msix already has built-in updater.
                 return AppUpdateStatus.notchecked;

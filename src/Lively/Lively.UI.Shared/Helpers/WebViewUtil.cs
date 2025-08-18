@@ -1,4 +1,5 @@
 ﻿using Lively.Common;
+using Lively.Common.Helpers;
 using Lively.Common.Services;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Web.WebView2.Core;
@@ -28,7 +29,7 @@ namespace Lively.UI.Shared.Helpers
 
         public static async Task<bool> InstallWebView2(IDownloadService downloader)
         {
-            if (Constants.ApplicationType.IsMSIX)
+            if (PackageUtil.IsRunningAsPackaged)
                 return false;
 
             try

@@ -1,5 +1,6 @@
 ﻿using Lively.Common;
 using Lively.Common.Factories;
+using Lively.Common.Helpers;
 using Lively.Common.Services;
 using Lively.Core;
 using Lively.Core.Display;
@@ -116,7 +117,7 @@ namespace Lively.Services
             trayMenuItems[TrayMenuItem.customiseWallpaper] = customiseWallpaperMenu;
 
             // Update check, only create on installer build.
-            if (!Constants.ApplicationType.IsMSIX)
+            if (!PackageUtil.IsRunningAsPackaged)
             {
                 var updateTrayMenu = new ToolStripMenuItem(GetMenuItemString(TrayMenuItem.updateApp), null)
                 {

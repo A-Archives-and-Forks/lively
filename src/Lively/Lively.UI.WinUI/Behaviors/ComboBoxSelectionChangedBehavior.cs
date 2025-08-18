@@ -4,7 +4,7 @@ using System.Windows.Input;
 
 namespace Lively.UI.WinUI.Behaviors
 {
-    public class ComboBoxSelectionChangedBehavior
+    public static class ComboBoxSelectionChangedBehavior
     {
         public static readonly DependencyProperty CommandProperty =
             DependencyProperty.RegisterAttached("Command", typeof(ICommand), typeof(ComboBoxSelectionChangedBehavior), new PropertyMetadata(null, OnCommandChanged));

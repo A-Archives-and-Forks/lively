@@ -42,6 +42,7 @@ namespace Lively
                 FileUtil.EmptyDirectory(Constants.CommonPaths.TempDir);
                 FileUtil.EmptyDirectory(Constants.CommonPaths.ThemeCacheDir);
                 FileUtil.EmptyDirectory(Constants.CommonPaths.CefRootCacheDir);
+                FileUtil.EmptyDirectory(Constants.CommonPaths.ScreenshotDir);
             }
             catch { /* Nothing to do */ }
         }
@@ -56,6 +57,8 @@ namespace Lively
             Directory.CreateDirectory(Constants.CommonPaths.TempCefDir);
             Directory.CreateDirectory(Constants.CommonPaths.TempVideoDir);
             Directory.CreateDirectory(Constants.CommonPaths.ThemeCacheDir);
+            Directory.CreateDirectory(Constants.CommonPaths.TempWebView2Dir);
+            Directory.CreateDirectory(Constants.CommonPaths.ScreenshotDir);
         }
 
         private void SetupWallpaperDirectories()

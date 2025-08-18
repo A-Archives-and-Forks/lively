@@ -1,4 +1,5 @@
 ﻿using Lively.Common;
+using Lively.Common.Helpers;
 using Lively.Common.Helpers.Files;
 using Lively.Common.Services;
 using Lively.Models.Enums;
@@ -6,6 +7,7 @@ using Lively.UI.WinUI.Extensions;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -93,6 +95,24 @@ namespace Lively.UI.WinUI.Services
                 folderPicker.FileTypeFilter.Add(item);
             }
             return (await folderPicker.PickSingleFolderAsync())?.Path;
+        }
+
+        public async Task OpenFolderAsync(string path)
+        {
+            if (!PackageUtil.IsRunningAsPackaged)
+            {
+                FileUtil.OpenFolder(path);
+            }
+            else
+            {
+                try
+                {
+                    var packagePath = PackageUtil.ValidateAndResolvePath(path);
+                    var folder = await Windows.Storage.StorageFolder.GetFolderFromPathAsync(Path.GetDirectoryName(packagePath));
+                    await Windows.System.Launcher.LaunchFolderAsync(folder);
+                }
+                catch { }
+            }
         }
 
         private static async Task<string> PickSingleFileUwp(string[] filters)

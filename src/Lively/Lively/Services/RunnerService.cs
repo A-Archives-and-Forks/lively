@@ -1,4 +1,4 @@
-﻿using Lively.Common;
+﻿using Lively.Common.Helpers;
 using Lively.Common.Helpers.Pinvoke;
 using Lively.Common.Services;
 using Lively.Core.Display;
@@ -32,7 +32,7 @@ namespace Lively.Services
                 Logger.Warn("Process is running elevated, UI may not function properly.");
             }
 
-            if (Constants.ApplicationType.IsMSIX)
+            if (PackageUtil.IsRunningAsPackaged)
             {
                 fileName = Path.Combine(Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\")), "Lively.UI.WinUI.exe");
                 workingDirectory = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\"));

@@ -26,5 +26,7 @@ namespace Lively.Common.Services
         public Task<string> PickSaveFileAsync(string suggestedFileName, IEnumerable<(string label, string[] extensions)> fileTypeChoices);
 
         public Task<string> PickFolderAsync(string[] filters);
+
+        public Task OpenFolderAsync(string path);
     }
 }

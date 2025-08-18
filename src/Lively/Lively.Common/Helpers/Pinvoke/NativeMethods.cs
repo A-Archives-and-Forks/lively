@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32.SafeHandles;
+using System;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
@@ -9,6 +10,26 @@ namespace Lively.Common.Helpers.Pinvoke
 #pragma warning disable CA1707, CA1401, CA1712
     public static class NativeMethods
     {
+        [DllImport("kernel32.dll", CharSet = CharSet.Unicode, SetLastError = true)]
+        public static extern int GetCurrentPackageFullName(ref int packageFullNameLength, StringBuilder packageFullName);
+
+        [DllImport("kernel32.dll", SetLastError = true, CharSet = CharSet.Auto)]
+        public static extern uint GetFinalPathNameByHandle(
+            SafeFileHandle hFile,
+            StringBuilder lpszFilePath,
+            uint cchFilePath,
+            uint dwFlags);
+
+        [DllImport("kernel32.dll", SetLastError = true, CharSet = CharSet.Auto)]
+        public static extern SafeFileHandle CreateFile(
+            string lpFileName,
+            uint dwDesiredAccess,
+            uint dwShareMode,
+            IntPtr lpSecurityAttributes,
+            uint dwCreationDisposition,
+            uint dwFlagsAndAttributes,
+            IntPtr hTemplateFile);
+
         [DllImport("user32.dll")]
         public static extern IntPtr GetThreadDpiAwarenessContext();
 

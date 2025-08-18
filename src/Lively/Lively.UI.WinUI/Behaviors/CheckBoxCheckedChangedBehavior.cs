@@ -4,7 +4,7 @@ using System.Windows.Input;
 
 namespace Lively.UI.WinUI.Behaviors
 {
-    public class CheckBoxCheckedChangedBehavior
+    public static class CheckBoxCheckedChangedBehavior
     {
         public static readonly DependencyProperty CommandProperty =
             DependencyProperty.RegisterAttached("Command", typeof(ICommand), typeof(CheckBoxCheckedChangedBehavior), new PropertyMetadata(null, OnCommandChanged));

@@ -42,7 +42,7 @@ namespace Lively.Common.Helpers
         public static string GetHardwareInfo()
         {
             var arch = Environment.Is64BitProcess ? "x64" : "x86";
-            var container = Constants.ApplicationType.IsMSIX ? "desktop-bridge" : "desktop-native";
+            var container = PackageUtil.IsRunningAsPackaged ? "desktop-bridge" : "desktop-native";
             return $"\nLively v{Assembly.GetEntryAssembly().GetName().Version} {arch} {container} {CultureInfo.CurrentUICulture.Name}" +
                 $"\n{SystemInfo.GetOSInfo()}\n{SystemInfo.GetCpuInfo()}\n{SystemInfo.GetGpuInfo()}\n";
         }

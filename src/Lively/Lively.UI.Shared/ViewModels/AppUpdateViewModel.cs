@@ -1,6 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Lively.Common;
+using Lively.Common.Helpers;
 using Lively.Common.Services;
 using Lively.Grpc.Client;
 using Lively.Models.Services;
@@ -66,7 +67,7 @@ namespace Lively.UI.Shared.ViewModels
             }
         }
 
-        public bool IsWinStore => Constants.ApplicationType.IsMSIX;
+        public bool IsWinStore => PackageUtil.IsRunningAsPackaged;
 
         public bool IsBetaBuild => Constants.ApplicationType.IsTestBuild;
 

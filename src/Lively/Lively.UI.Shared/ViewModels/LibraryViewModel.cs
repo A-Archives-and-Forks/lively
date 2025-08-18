@@ -18,6 +18,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
+using System.IO.Packaging;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -43,6 +44,7 @@ namespace Lively.UI.Shared.ViewModels
         private readonly IWallpaperLibraryFactory wallpaperLibraryFactory;
         private readonly IDisplayManagerClient displayManager;
         private readonly IDialogService dialogService;
+        private readonly IFileService fileService;
         private readonly GalleryClient galleryClient;
 
         private readonly IResourceService i18n;
@@ -55,6 +57,7 @@ namespace Lively.UI.Shared.ViewModels
             IDialogService dialogService,
             IDispatcherService dispatcher,
             IResourceService i18n,
+            IFileService fileService,
             GalleryClient galleryClient)
         {
             this.wallpaperLibraryFactory = wallpaperLibraryFactory;
@@ -63,6 +66,7 @@ namespace Lively.UI.Shared.ViewModels
             this.userSettings = userSettings;
             this.dialogService = dialogService;
             this.dispatcher = dispatcher;
+            this.fileService = fileService;
             this.galleryClient = galleryClient;
 
             this.i18n = i18n;
@@ -414,7 +418,7 @@ namespace Lively.UI.Shared.ViewModels
             string folderPath =
                 libraryItem.LivelyInfo.Type == WallpaperType.url || libraryItem.LivelyInfo.Type == WallpaperType.videostream
                 ? libraryItem.LivelyInfoFolderPath : libraryItem.FilePath;
-            await DesktopBridgeUtil.OpenFolder(folderPath);
+            await fileService.OpenFolderAsync(folderPath);
         }
 
         public void CancelDownload(string id)
@@ -771,32 +775,6 @@ namespace Lively.UI.Shared.ViewModels
             model.Title = localized?.Title ?? model.LivelyInfo.Title;
             model.Desc = localized?.Desc ?? model.LivelyInfo.Desc;
             model.Author = localized?.Author ?? model.LivelyInfo.Author;
-        }
-
-        private int BinarySearch(ObservableCollection<LibraryModel> item, string x)
-        {
-            if (x is null)
-            {
-                throw new ArgumentNullException(nameof(x));
-            }
-
-            int l = 0, r = item.Count - 1, m, res;
-            while (l <= r)
-            {
-                m = (l + r) / 2;
-
-                res = String.Compare(x, item[m].Title);
-
-                if (res == 0)
-                    return m;
-
-                if (res > 0)
-                    l = m + 1;
-
-                else
-                    r = m - 1;
-            }
-            return l;//(l - 1);
         }
 
         #endregion //helpers

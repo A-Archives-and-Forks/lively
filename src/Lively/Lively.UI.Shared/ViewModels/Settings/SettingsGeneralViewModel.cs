@@ -182,7 +182,7 @@ namespace Lively.UI.Shared.ViewModels
         [RelayCommand]
         private async Task OpenWallpaperDirectory()
         {
-            await DesktopBridgeUtil.OpenFolder(userSettings.Settings.WallpaperDir);
+            await fileService.OpenFolderAsync(userSettings.Settings.WallpaperDir);
         }
 
         [RelayCommand(CanExecute = nameof(CanExecuteDirectoryChange))]

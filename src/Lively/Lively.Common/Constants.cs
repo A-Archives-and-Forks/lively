@@ -1,8 +1,7 @@
-﻿using Lively.Models.Enums;
+﻿using Lively.Common.Helpers;
+using Lively.Models.Enums;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Text;
 
 namespace Lively.Common
 {
@@ -10,7 +9,7 @@ namespace Lively.Common
     {
         public static class CommonPaths
         {
-            public static string AppDataDir { get; } = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Lively Wallpaper");
+            public static string AppDataDir { get; } = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), ApplicationType.Name);
             public static string LogDir { get; } = Path.Combine(AppDataDir, "logs");
             public static string LogDirUI { get; } = Path.Combine(AppDataDir, "UI"); //temp use..
             public static string TempDir { get; } = Path.Combine(AppDataDir, "temp");
@@ -27,6 +26,7 @@ namespace Lively.Common
             public static string ThemeCacheDir { get; } = Path.Combine(Path.GetTempPath(), "Lively Wallpaper", "themes");
             public static string CefRootCacheDir { get; } = Path.Combine(Path.GetTempPath(), "Lively Wallpaper", "CEF");
             public static string TokensPath { get; } = Path.Combine(AppDataDir, "Tokens.dat");
+            public static string ScreenshotDir { get; } = Path.Combine(AppDataDir, "Screenshots");
         }
 
         /// <summary>
@@ -75,8 +75,7 @@ namespace Lively.Common
         
         public static class ApplicationType
         {
-            public static bool IsMSIX { get; } = new DesktopBridge.Helpers().IsRunningAsUwp();
-            //todo: make compile-time flag.
+            public static string Name { get; } = "Lively Wallpaper";
             public static bool IsTestBuild { get; } = false;
         }
 

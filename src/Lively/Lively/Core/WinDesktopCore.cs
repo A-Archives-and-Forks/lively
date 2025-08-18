@@ -10,7 +10,6 @@ using Lively.Common.Services;
 using Lively.Core.Display;
 using Lively.Core.Watchdog;
 using Lively.Factories;
-using Lively.Helpers;
 using Lively.Models;
 using Lively.Models.Enums;
 using Lively.Models.Message;
@@ -422,13 +421,10 @@ namespace Lively.Core
                         await Task.Delay(100);
                     }
 
-                    //capture frame from wallpaper..
-                    var imgPath = Path.Combine(Constants.CommonPaths.TempDir, Path.GetRandomFileName() + ".jpg");
+                    // Desktop-bridge redirection not working IDesktopWallpaper COM/SystemParametersInfo.
+                    var resolvedScreenshotDir = PackageUtil.ValidateAndResolvePath(Constants.CommonPaths.ScreenshotDir);
+                    var imgPath = Path.Combine(resolvedScreenshotDir, Path.GetRandomFileName() + ".jpg");
                     await wallpaper.ScreenCapture(imgPath);
-                    if (!File.Exists(imgPath))
-                    {
-                        throw new FileNotFoundException();
-                    }
 
                     //set accent color of taskbar..
                     if (thumbRequiredAvgColor)
@@ -469,14 +465,14 @@ namespace Lively.Core
                                     break;
                             }
                             desktop.SetPosition(userSettings.Settings.WallpaperArrangement == WallpaperArrangement.span ? DesktopWallpaperPosition.Span : scaler);
-                            desktop.SetWallpaper(userSettings.Settings.WallpaperArrangement == WallpaperArrangement.span ? null : wallpaper.Screen.DeviceId, DesktopBridgeUtil.GetVirtualizedPath(imgPath));
+                            desktop.SetWallpaper(userSettings.Settings.WallpaperArrangement == WallpaperArrangement.span ? null : wallpaper.Screen.DeviceId, imgPath);
                         }
                         else
                         {
                             //No transition animation..
                             _ = NativeMethods.SystemParametersInfo(NativeMethods.SPI_SETDESKWALLPAPER,
                                 0,
-                                DesktopBridgeUtil.GetVirtualizedPath(imgPath),
+                                imgPath,
                                 NativeMethods.SPIF_UPDATEINIFILE | NativeMethods.SPIF_SENDWININICHANGE);
                         }
                     }

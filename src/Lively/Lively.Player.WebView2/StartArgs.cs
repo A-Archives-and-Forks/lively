@@ -46,10 +46,10 @@ namespace Lively.Player.WebView2
         HelpText = "Debugging port.")]
         public string DebugPort { get; set; }
 
-        [Option("wallpaper-cache",
+        [Option("wallpaper-user-data",
         Required = false,
-        HelpText = "disk cache path.")]
-        public string CachePath { get; set; }
+        HelpText = "WebView2 user data path")]
+        public string UserDataPath { get; set; }
 
         [Option("wallpaper-volume",
         Required = false,
