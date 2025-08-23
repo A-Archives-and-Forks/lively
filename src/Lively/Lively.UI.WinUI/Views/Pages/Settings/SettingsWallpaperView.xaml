@@ -29,24 +29,30 @@
                         <ToggleSwitch IsOn="{Binding IsLockScreenAutoWallpaper, Mode=TwoWay}" />
                     </controls:SettingsCard>-->
 
-                    <controls:SettingsCard x:Uid="DesktopPicture">
-                        <controls:SettingsCard.HeaderIcon>
+                    <controls:SettingsExpander x:Uid="DesktopPicture" IsExpanded="True">
+                        <controls:SettingsExpander.HeaderIcon>
                             <FontIcon Glyph="&#xE8B9;" />
-                        </controls:SettingsCard.HeaderIcon>
+                        </controls:SettingsExpander.HeaderIcon>
                         <ToggleSwitch IsOn="{Binding IsDesktopAutoWallpaper, Mode=TwoWay}" />
-                    </controls:SettingsCard>
-
-                    <controls:SettingsCard x:Uid="WallpaperFit" Visibility="{Binding IsBackwardCompatibilityWallpaperScaler, Mode=OneWay, Converter={StaticResource VisibilityConverter}}">
-                        <controls:SettingsCard.HeaderIcon>
-                            <FontIcon Glyph="&#xE73F;" />
-                        </controls:SettingsCard.HeaderIcon>
-                        <ComboBox MinWidth="{StaticResource SettingActionControlMinWidth}" SelectedIndex="{Binding SelectedWallpaperScalingIndex, Mode=TwoWay}">
-                            <ComboBoxItem x:Uid="WallpaperFitNone" />
-                            <ComboBoxItem x:Uid="WallpaperFitFill" />
-                            <ComboBoxItem x:Uid="WallpaperFitUniform" />
-                            <ComboBoxItem x:Uid="WallpaperFitUniformToFill" />
-                        </ComboBox>
-                    </controls:SettingsCard>
+                        <controls:SettingsExpander.Items>
+                            <!--
+                                This setting was originally used as a global scaling option for live wallpapers.
+                                Since scaling is now handled per wallpaper, we repurpose it here for Desktop Picture mode.
+                                Some plugins (eg: VLC) still rely on this since they don’t yet support per-wallpaper scaling.
+                            -->
+                            <controls:SettingsCard x:Uid="WallpaperFit">
+                                <controls:SettingsCard.HeaderIcon>
+                                    <FontIcon Glyph="&#xE73F;" />
+                                </controls:SettingsCard.HeaderIcon>
+                                <ComboBox MinWidth="{StaticResource SettingActionControlMinWidth}" SelectedIndex="{Binding SelectedWallpaperScalingIndex, Mode=TwoWay}">
+                                    <ComboBoxItem x:Uid="WallpaperFitNone" />
+                                    <ComboBoxItem x:Uid="WallpaperFitFill" />
+                                    <ComboBoxItem x:Uid="WallpaperFitUniform" />
+                                    <ComboBoxItem x:Uid="WallpaperFitUniformToFill" />
+                                </ComboBox>
+                            </controls:SettingsCard>
+                        </controls:SettingsExpander.Items>
+                    </controls:SettingsExpander>
 
                     <controls:SettingsExpander x:Uid="WallpaperInput" IsExpanded="True">
                         <controls:SettingsExpander.HeaderIcon>

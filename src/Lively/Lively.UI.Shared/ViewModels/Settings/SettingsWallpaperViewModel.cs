@@ -152,9 +152,6 @@ namespace Lively.UI.Shared.ViewModels
         [ObservableProperty]
         private bool isSelectedVideoPlayerAvailable;
 
-        [ObservableProperty]
-        private bool isBackwardCompatibilityWallpaperScaler;
-
         private int _selectedVideoPlayerIndex;
         public int SelectedVideoPlayerIndex
         {
@@ -162,8 +159,6 @@ namespace Lively.UI.Shared.ViewModels
             set
             {
                 IsSelectedVideoPlayerAvailable = IsVideoPlayerAvailable((LivelyMediaPlayer)value);
-                // Only mpv supports scaler settings in customise menu, enable global scaler menu for older players.
-                IsBackwardCompatibilityWallpaperScaler = IsSelectedVideoPlayerAvailable && (LivelyMediaPlayer)value != LivelyMediaPlayer.mpv;
 
                 if (userSettings.Settings.VideoPlayer != (LivelyMediaPlayer)value && IsSelectedVideoPlayerAvailable)
                 {
