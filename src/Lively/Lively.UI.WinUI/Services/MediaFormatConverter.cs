@@ -23,10 +23,17 @@ namespace Lively.UI.WinUI.Services
             {
                 if (ext == ".webp")
                 {
-                    // Check if it's animated
-                    using var images = new MagickImageCollection(filePath);
-                    if (images.Count > 1)
-                        return true;
+                    try
+                    {
+                        // Check if it's animated
+                        using var images = new MagickImageCollection(filePath);
+                        if (images.Count > 1)
+                            return true;
+                    }
+                    catch
+                    {
+                        return false;
+                    }
                 }
                 else
                 {
