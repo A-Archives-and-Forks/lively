@@ -3,11 +3,10 @@ using Lively.Models.Enums;
 using System;
 using System.Globalization;
 using System.Resources;
-using System.Text.RegularExpressions;
-using System.Threading;
+using System.Runtime.InteropServices;
+using System.Text;
 using System.Windows;
 using System.Windows.Markup;
-using Windows.ApplicationModel.Resources;
 
 namespace Lively.Services
 {
@@ -27,13 +26,14 @@ namespace Lively.Services
             CultureInfo culture;
             try
             {
-                culture = string.IsNullOrEmpty(name) ? 
-                    CultureInfo.InstalledUICulture : new CultureInfo(name);
+                // CultureInfo.CurrentUICulture is no longer reliable since we are changing DefaultThreadCurrentUICulture, so we use win32 to retrive system culture.
+                culture = string.IsNullOrEmpty(name) ?
+                    GetSystemDefaultUICulture() : new CultureInfo(name);
             }
-            catch (CultureNotFoundException)
+            catch
             {
-                // Fallback to system language
-                culture = CultureInfo.InstalledUICulture;
+                // Fallback
+                culture = CultureInfo.InvariantCulture;
             }
 
             if (CultureInfo.DefaultThreadCurrentCulture?.Name == culture.Name)
@@ -84,5 +84,41 @@ namespace Lively.Services
                 _ => resourceManager.GetString("TextError"),
             };
         }
+
+        // Ref: https://pinvoke.net/default.aspx/kernel32.GetUserPreferredUILanguages
+        private static CultureInfo GetSystemDefaultUICulture()
+        {
+            StringBuilder languagesBuffer = new();
+            uint languagesCount, languagesBufferSize = 0;
+
+            if (GetUserPreferredUILanguages(
+                MUI_LANGUAGE_NAME,
+                out languagesCount,
+                null,
+                ref languagesBufferSize))
+            {
+                languagesBuffer.EnsureCapacity((int)languagesBufferSize);
+                if (GetUserPreferredUILanguages(
+                    MUI_LANGUAGE_NAME,
+                    out languagesCount,
+                    languagesBuffer,
+                    ref languagesBufferSize))
+                {
+                    string[] languages = languagesBuffer.ToString().Split(['\0'], StringSplitOptions.RemoveEmptyEntries);
+                    return new CultureInfo(languages[0]);
+                }
+            }
+
+            return CultureInfo.InvariantCulture;
+        }
+
+        const uint MUI_LANGUAGE_NAME = 0x8; // Use ISO language (culture) name convention
+
+        [DllImport("Kernel32.dll", CharSet = CharSet.Auto, SetLastError = true)]
+        static extern bool GetUserPreferredUILanguages(
+            uint dwFlags,
+            out uint pulNumLanguages,
+            StringBuilder pwszLanguagesBuffer,
+            ref uint pcchLanguagesBuffer);
     }
 }

@@ -52,13 +52,13 @@ namespace Lively.UI.WinUI.Services
             CultureInfo culture;
             try
             {
-                culture = string.IsNullOrEmpty(name) ? 
-                    CultureInfo.InstalledUICulture : new CultureInfo(name);
+                culture = string.IsNullOrEmpty(name) ?
+                    CultureInfo.CurrentUICulture : new CultureInfo(name);
             }
-            catch (CultureNotFoundException)
+            catch
             {
-                // Fallback to system language
-                culture = CultureInfo.InstalledUICulture;
+                // Fallback
+                culture = CultureInfo.InvariantCulture;
             }
 
             // Setting is persisted between sessions (?.)
