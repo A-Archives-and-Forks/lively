@@ -343,7 +343,7 @@
                     <TextBlock Text="{Binding ErrorNotification.Message}" TextWrapping="Wrap" />
                 </ScrollViewer>
                 <HyperlinkButton NavigateUri="https://github.com/rocksdanister/lively/wiki/Common-Problems">
-                    <TextBlock x:Uid="LearnMore" />
+                    <TextBlock x:Uid="TextLearnMore" />
                 </HyperlinkButton>
             </StackPanel>
         </InfoBar>
