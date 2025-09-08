@@ -148,8 +148,8 @@
                     </controls:Segmented>
                 </controls:SettingsCard>
                 <controls:SettingsCard
+                    x:Uid="ScreensaverDialogSettings"
                     Command="{Binding OpenSettingsCommand}"
-                    Header="Settings"
                     IsClickEnabled="True">
                     <controls:SettingsCard.HeaderIcon>
                         <FontIcon Glyph="&#xE713;" />

@@ -1274,4 +1274,16 @@ If still not working, close &amp; start Lively again/restart windows.
   <data name="DescriptionConfirmProjectDirectory.Text" xml:space="preserve">
     <value>Confirm project structure?</value>
   </data>
+  <data name="DescriptionConfirmFileConvertion.Text" xml:space="preserve">
+    <value>This file format isn’t supported directly. It will be converted before use. Do you want to continue?</value>
+  </data>
+  <data name="ScreensaverDialogSettings.Header" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="DisplayAudioPauseRule.Header" xml:space="preserve">
+    <value>Output</value>
+  </data>
+  <data name="DisplayAudioPauseRule.Description" xml:space="preserve">
+    <value>Control how wallpaper audio plays across your screens</value>
+  </data>
 </root>

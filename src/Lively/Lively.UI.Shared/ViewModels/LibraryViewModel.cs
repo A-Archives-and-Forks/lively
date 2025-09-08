@@ -590,8 +590,7 @@ namespace Lively.UI.Shared.ViewModels
             {
                 if (mediaFormatConverter.RequiresConversion(filePath, out var newExt))
                 {
-                    if (!await dialogService.ShowConfirmationDialogAsync($"This file format isn’t supported directly. It will be converted to {newExt} before use. " +
-                        $"Do you want to continue?"))
+                    if (!await dialogService.ShowConfirmationDialogAsync($"{i18n.GetString("DescriptionConfirmFileConvertion/Text")}"))
                         return null;
 
                     var fileName = Path.GetFileNameWithoutExtension(filePath) + newExt;

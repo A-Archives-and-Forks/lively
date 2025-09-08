@@ -121,10 +121,7 @@
                             Value="{Binding GlobalWallpaperVolume, Mode=TwoWay}" />
                     </controls:SettingsCard>
 
-                    <controls:SettingsExpander
-                        Description="Choose how wallpaper audio is played across your screens"
-                        Header="Display pause rule"
-                        IsExpanded="{Binding IsAudioOutputScreenSelection, Mode=OneWay}">
+                    <controls:SettingsExpander x:Uid="DisplayAudioPauseRule" IsExpanded="{Binding IsAudioOutputScreenSelection, Mode=OneWay}">
                         <controls:SettingsExpander.HeaderIcon>
                             <FontIcon Glyph="&#xE7F4;" />
                         </controls:SettingsExpander.HeaderIcon>
