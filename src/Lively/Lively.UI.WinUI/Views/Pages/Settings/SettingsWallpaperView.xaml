@@ -315,7 +315,7 @@
                             <controls:SettingsCard ContentAlignment="Left">
                                 <ListView
                                     MinWidth="500"
-                                    MinHeight="200"
+                                    MinHeight="100"
                                     MaxHeight="200"
                                     Background="{ThemeResource ControlFillColorDefault}"
                                     CornerRadius="5"
@@ -345,14 +345,14 @@
                         <controls:SettingsExpander.Items>
                             <controls:SettingsCard ContentAlignment="Left">
                                 <Grid>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*" />
-                                        <ColumnDefinition Width="Auto" />
-                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
                                     <ListView
-                                        Grid.Column="0"
+                                        Grid.Row="0"
                                         MinWidth="500"
-                                        MinHeight="200"
+                                        MinHeight="100"
                                         MaxHeight="200"
                                         Background="{ThemeResource ControlFillColorDefault}"
                                         CornerRadius="5"
@@ -365,11 +365,16 @@
                                             </DataTemplate>
                                         </ListView.ItemTemplate>
                                     </ListView>
-                                    <StackPanel Grid.Column="1" VerticalAlignment="Center">
-                                        <Button Margin="5" Command="{Binding AddAppMusicExclusionRuleCommand}">
+                                    <StackPanel
+                                        Grid.Row="1"
+                                        Margin="0,5,0,0"
+                                        HorizontalAlignment="Left"
+                                        Orientation="Horizontal"
+                                        Spacing="5">
+                                        <Button Command="{Binding AddAppMusicExclusionRuleCommand}">
                                             <FontIcon FontSize="12" Glyph="&#xE710;" />
                                         </Button>
-                                        <Button Margin="5" Command="{Binding RemoveAppMusicExclusionRuleCommand}">
+                                        <Button Command="{Binding RemoveAppMusicExclusionRuleCommand}">
                                             <FontIcon FontSize="12" Glyph="&#xE738;" />
                                         </Button>
                                     </StackPanel>
