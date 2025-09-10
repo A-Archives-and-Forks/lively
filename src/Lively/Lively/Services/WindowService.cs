@@ -49,7 +49,7 @@ namespace Lively.Services
         public async Task<bool> ShowWallpaperDialogWindowAsync(object wallpaper)
         {
             bool? success = false;
-            await Application.Current.Dispatcher.BeginInvoke(DispatcherPriority.Normal, new ThreadStart(delegate
+            await Application.Current.Dispatcher.InvokeAsync(() =>
             {
                 var previewWindow = new LibraryPreview(wallpaper as IWallpaper)
                 {
@@ -62,8 +62,17 @@ namespace Lively.Services
                     if (runner.IsVisibleUI)
                         previewWindow.CenterToWindow(runner.HwndUI);
                 };
-                success = previewWindow.ShowDialog();
-            }));
+
+                try
+                {
+                    success = previewWindow.ShowDialog();
+                }
+                catch
+                {
+                    previewWindow.Close();
+                    throw;
+                }
+            });
             return success ?? false;
         }
 
