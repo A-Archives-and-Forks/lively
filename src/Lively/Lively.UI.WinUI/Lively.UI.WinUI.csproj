@@ -53,6 +53,7 @@
     <None Remove="Assets\icon-lively-48.png" />
     <None Remove="Assets\icons8-application-window-96.png" />
     <None Remove="Assets\icons8-artificial-intelligence-100.png" />
+    <None Remove="Assets\icons8-audio-96.png" />
     <None Remove="Assets\icons8-cat-back-view-64.png" />
     <None Remove="Assets\icons8-depth-effect-96.png" />
     <None Remove="Assets\icons8-github-96.png" />
@@ -181,6 +182,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Update="Assets\icons8-artificial-intelligence-100.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\icons8-audio-96.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Update="Assets\icons8-cat-back-view-64.png">

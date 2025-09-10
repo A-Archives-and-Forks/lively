@@ -123,7 +123,7 @@
 
                     <controls:SettingsExpander x:Uid="DisplayAudioPauseRule" IsExpanded="{Binding IsAudioOutputScreenSelection, Mode=OneWay}">
                         <controls:SettingsExpander.HeaderIcon>
-                            <FontIcon Glyph="&#xE7F4;" />
+                            <FontIcon Glyph="&#xE7f3;" />
                         </controls:SettingsExpander.HeaderIcon>
                         <ComboBox MinWidth="{StaticResource SettingActionControlMinWidth}" SelectedIndex="{Binding SelectedDisplayAudioOutputIndex, Mode=TwoWay}">
                             <ComboBoxItem x:Uid="DisplayPauseRulePerScreen" />

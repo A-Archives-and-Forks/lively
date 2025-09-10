@@ -389,14 +389,19 @@ namespace Lively.UI.Shared.ViewModels
             {
                 if (value && AudioDevices == null)
                 {
+                    var defaultName = i18n.GetString("TextDefault/Text");
+                    var defaultIcon = "ms-appx:///Assets/icons8-audio-96.png";
                     try
                     {
                         AudioDevices = new ObservableCollection<AudioDevice>(audioDeviceFactory.GetRenderDevices());
+                        var defaultDevice = audioDeviceFactory.GetDefaultRenderDevice();
+                        defaultName = $"{defaultName} [{defaultDevice.Name}]";
+                        defaultIcon = defaultDevice.DeviceIcon;
                     }
                     catch {
                         AudioDevices = [];
                     }
-                    AudioDevices.Insert(0, new(string.Empty, i18n.GetString("TextDefault/Text"), "ms-appx:///Assets/icons8-application-window-96.png"));
+                    AudioDevices.Insert(0, new(string.Empty, defaultName, defaultIcon));
                     SelectedAudioDevice = AudioDevices.FirstOrDefault(x => x.Id == userSettings.Settings.VisualizerAudioDeviceId) ?? AudioDevices[0];
                 }
                 SetProperty(ref _isShowAudioDevices, value);
