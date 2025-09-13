@@ -211,13 +211,10 @@ namespace Lively
                 }
             };
 
-#if !DEBUG
             var appUpdater = Services.GetRequiredService<IAppUpdaterService>();
             appUpdater.UpdateChecked += AppUpdateChecked;
             _ = appUpdater.CheckUpdate(30 * 1000);
             appUpdater.Start();
-#endif
-            Debug.WriteLine("App Update checking disabled in DEBUG mode.");
         }
 
         private IServiceProvider ConfigureServices()

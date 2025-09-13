@@ -1,7 +1,6 @@
 ﻿using Lively.Models.Services;
 using System;
-using System.Collections.Generic;
-using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Lively.Grpc.Client
@@ -18,6 +17,8 @@ namespace Lively.Grpc.Client
         event EventHandler<AppUpdaterEventArgs> UpdateChecked;
 
         Task CheckUpdate();
+        Task<(Uri Url, string FileName, Version AppVersion)> GetLatestRelease(bool isBeta);
         Task StartUpdate();
+        Task SwitchReleaseChannel(bool isBeta, CancellationToken ct);
     }
 }

@@ -4,10 +4,16 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:animations="using:CommunityToolkit.WinUI.Animations"
     xmlns:controls="using:CommunityToolkit.WinUI.Controls"
+    xmlns:converters="using:CommunityToolkit.WinUI.Converters"
+    xmlns:customconverters="using:Lively.UI.WinUI.Helpers.Converters"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="using:Lively.UI.WinUI.Views.Pages.Settings"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
+
+    <Page.Resources>
+        <customconverters:BooleanToVisibilityConverter x:Key="VisibilityConverter" />
+    </Page.Resources>
 
     <Grid>
         <ScrollViewer>
@@ -91,6 +97,35 @@
                             <FontIcon Glyph="&#xE9F9;" />
                         </controls:SettingsCard.HeaderIcon>
                     </controls:SettingsCard>
+
+                    <Grid CornerRadius="5" Visibility="{Binding IsWinStore, Converter={StaticResource VisibilityConverter}, Mode=OneWay, ConverterParameter=Reverse}">
+                        <!--  Swtich to Stable channel  -->
+                        <Grid Background="#2525ff00" Visibility="{Binding IsBetaBuild, Converter={StaticResource VisibilityConverter}, Mode=OneWay}">
+                            <controls:SettingsCard
+                                Background="Transparent"
+                                Command="{Binding SwitchReleaseChannelCommand}"
+                                Description="Return to the regular public release for the most reliable updates."
+                                Header="Switch to Stable release"
+                                IsClickEnabled="True">
+                                <controls:SettingsCard.HeaderIcon>
+                                    <FontIcon Glyph="&#xE90f;" />
+                                </controls:SettingsCard.HeaderIcon>
+                            </controls:SettingsCard>
+                        </Grid>
+                        <!--  Switch to Beta channel  -->
+                        <Grid Background="#25ffff00" Visibility="{Binding IsBetaBuild, Converter={StaticResource VisibilityConverter}, Mode=OneWay, ConverterParameter=Reverse}">
+                            <controls:SettingsCard
+                                Background="Transparent"
+                                Command="{Binding SwitchReleaseChannelCommand}"
+                                Description="Get early features and help test them before public release. These builds may be unstable."
+                                Header="Join the Beta release"
+                                IsClickEnabled="True">
+                                <controls:SettingsCard.HeaderIcon>
+                                    <FontIcon Glyph="&#xE90f;" />
+                                </controls:SettingsCard.HeaderIcon>
+                            </controls:SettingsCard>
+                        </Grid>
+                    </Grid>
                 </StackPanel>
 
             </StackPanel>

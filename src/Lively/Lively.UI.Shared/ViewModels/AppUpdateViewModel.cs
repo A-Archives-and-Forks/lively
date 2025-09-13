@@ -4,6 +4,7 @@ using Lively.Common;
 using Lively.Common.Helpers;
 using Lively.Common.Services;
 using Lively.Grpc.Client;
+using Lively.Models.Enums;
 using Lively.Models.Services;
 using Lively.UI.Shared.Helpers;
 using System;
@@ -49,22 +50,8 @@ namespace Lively.UI.Shared.ViewModels
 
             // This is only run once if the main interface is opened before the initial fetchDelay in Core for update check.
             if (appUpdater.Status == AppUpdateStatus.notchecked)
-            {
                 _ = CheckUpdate();
-            }
-            else if (appUpdater.Status == AppUpdateStatus.available)
-            {
-                try
-                {
-                    var fileName = appUpdater.LastCheckFileName;
-                    var filePath = Path.Combine(Constants.CommonPaths.TempDir, fileName);
-                    IsUpdateDownloaded = File.Exists(filePath);
-                }
-                catch (Exception ex)
-                {
-                    Logger.Error(ex);
-                }
-            }
+           
         }
 
         public bool IsWinStore => PackageUtil.IsRunningAsPackaged;
@@ -221,32 +208,53 @@ namespace Lively.UI.Shared.ViewModels
             {
                 case AppUpdateStatus.uptodate:
                     IsUpdateAvailable = false;
+                    IsUpdateDownloaded = false;
                     UpdateStatusSeverity = "Informational";
                     UpdateStatusText = i18n.GetString("TextUpdateUptodate");
                     break;
                 case AppUpdateStatus.available:
                     IsUpdateAvailable = true;
+                    IsUpdateDownloaded = IsUpdateFileExists();
                     UpdateStatusSeverity = "Success";
                     UpdateStatusText = i18n.GetString("DescriptionUpdateAvailable");
                     break;
                 case AppUpdateStatus.invalid:
                     IsUpdateAvailable = false;
+                    IsUpdateDownloaded = false;
                     UpdateStatusSeverity = "Error";
                     UpdateStatusText = "This software has unique version tag~";
                     break;
                 case AppUpdateStatus.notchecked:
                     IsUpdateAvailable = false;
+                    IsUpdateDownloaded = false;
                     UpdateStatusSeverity = IsWinStore ? "Informational" : "Warning";
                     UpdateStatusText = i18n.GetString("TextUpdateChecking");
                     break;
                 case AppUpdateStatus.error:
                     IsUpdateAvailable = false;
+                    IsUpdateDownloaded = false;
                     UpdateStatusSeverity = "Error";
                     UpdateStatusText = i18n.GetString("TextupdateCheckFail");
                     break;
             }
             UpdateStatus = status;
             UpdateDateText = status == AppUpdateStatus.notchecked ? $"{i18n.GetString("TextLastChecked")}: ---" : $"{i18n.GetString("TextLastChecked")}: {date}";
+        }
+
+        private bool IsUpdateFileExists()
+        {
+            try
+            {
+                var fileName = appUpdater.LastCheckFileName;
+                var filePath = Path.Combine(Constants.CommonPaths.TempDir, fileName);
+                return File.Exists(filePath);
+            }
+            catch (Exception ex)
+            {
+                Logger.Error(ex);
+            }
+
+            return false;
         }
     }
 }

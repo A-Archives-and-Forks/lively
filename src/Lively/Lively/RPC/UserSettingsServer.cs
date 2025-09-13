@@ -164,7 +164,7 @@ namespace Lively.RPC
             userSettings.Settings.WallpaperScaling = (WallpaperScaler)req.WallpaperScaling;
             userSettings.Settings.CefDiskCache = req.CefDiskCache;
             userSettings.Settings.DebugMenu = req.DebugMenu;
-            userSettings.Settings.TestBuild = req.TestBuild;
+            userSettings.Settings.IsBetaOptIn = req.TestBuild;
             userSettings.Settings.ApplicationTheme = (Models.Enums.AppTheme)req.ApplicationTheme;
             userSettings.Settings.RemoteDesktopPause = (Models.Enums.AppRules)req.RemoteDesktopPause;
             userSettings.Settings.PowerSaveModePause = (Models.Enums.AppRules)req.PowerSaveModePause;
@@ -280,7 +280,7 @@ namespace Lively.RPC
                 WallpaperScaling = (WallpaperScalerRule)settings.WallpaperScaling,
                 CefDiskCache = settings.CefDiskCache,
                 DebugMenu = settings.DebugMenu,
-                TestBuild = settings.TestBuild,
+                TestBuild = settings.IsBetaOptIn,
                 ApplicationTheme = (Grpc.Common.Proto.Settings.AppTheme)settings.ApplicationTheme,
                 RemoteDesktopPause = (Grpc.Common.Proto.Settings.AppRules)settings.RemoteDesktopPause,
                 PowerSaveModePause = (Grpc.Common.Proto.Settings.AppRules)settings.PowerSaveModePause,

@@ -85,6 +85,7 @@ namespace Lively.UI.Shared.ViewModels
             MenuItems = new(GetPages());
             WallpaperCount = desktopCore.Wallpapers.Count;
             IsUpdatedNotify = userSettings.Settings.IsUpdatedNotify;
+            IsUpdateAvailable = appUpdater.Status == AppUpdateStatus.available;
             SearchPlaceholderText = GetSearchPlaceholderText();
 
             i18n.SetCulture(userSettings.Settings.Language);
@@ -206,7 +207,7 @@ namespace Lively.UI.Shared.ViewModels
                 if (IsSettingsPage)
                     return;
 
-                MenuItems.First(x => x.PageType == ContentPageType.appupdate).IsAlert = true;
+                MenuItems.First(x => x.PageType == ContentPageType.appupdate).IsAlert = IsUpdateAvailable;
             });
         }
 

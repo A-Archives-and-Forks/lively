@@ -93,7 +93,7 @@ namespace Lively.Models
         /// <summary>
         /// Fetch beta lively release updates from lively-beta repository.
         /// </summary>
-        public bool TestBuild { get; set; }
+        public bool IsBetaOptIn { get; set; }
         /// <summary>
         /// Not used currently.
         /// </summary>
@@ -200,7 +200,7 @@ namespace Lively.Models
             WallpaperScaling = WallpaperScaler.fill;
             CefDiskCache = false;
             DebugMenu = false;
-            TestBuild = false;
+            IsBetaOptIn = false;
             ApplicationTheme = AppTheme.Dark;
             RemoteDesktopPause = AppRules.pause;
             PowerSaveModePause = AppRules.ignore;

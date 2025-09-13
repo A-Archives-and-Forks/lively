@@ -2,7 +2,6 @@
 using Lively.Models.Services;
 using System;
 using System.Diagnostics;
-using System.Linq;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using Timer = System.Timers.Timer;
@@ -32,6 +31,8 @@ namespace Lively.Common.Services
             retryTimer.Elapsed += RetryTimer_Elapsed;
             //giving the retry delay is not reliable since it will reset if system sleeps/suspends.
             retryTimer.Interval = 5 * 60 * 1000;
+
+            Debug.WriteLine("App Update checking is disabled in DEBUG mode.");
         }
 
         /// <summary>
@@ -63,11 +64,9 @@ namespace Lively.Common.Services
 
         public async Task<AppUpdateStatus> CheckUpdate(int fetchDelay)
         {
-            if (PackageUtil.IsRunningAsPackaged)
-            {
-                //msix already has built-in updater.
+            // msix already has built-in updater Or skip on debugging.
+            if (PackageUtil.IsRunningAsPackaged || BuildInfoUtil.IsDebugBuild())
                 return AppUpdateStatus.notchecked;
-            }
 
             try
             {
@@ -100,11 +99,16 @@ namespace Lively.Common.Services
             }
             LastCheckTime = DateTime.Now;
 
-            UpdateChecked?.Invoke(this, new AppUpdaterEventArgs(Status, LastCheckVersion, LastCheckTime, LastCheckUri, LastCheckFileName));
+            UpdateChecked?.Invoke(this,
+                new AppUpdaterEventArgs(Status,
+                    LastCheckVersion,
+                    LastCheckTime,
+                    LastCheckUri,
+                    LastCheckFileName));
             return Status;
         }
 
-        public static async Task<(Uri, string, Version)> GetLatestRelease(bool isBeta)
+        public async Task<(Uri Url, string FileName, Version AppVersion)> GetLatestRelease(bool isBeta)
         {
             var userName = "rocksdanister";
             var repositoryName = isBeta ? "lively-beta" : "lively";

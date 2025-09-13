@@ -18,54 +18,98 @@ namespace Lively.RPC
     {
         private static readonly NLog.Logger Logger = NLog.LogManager.GetCurrentClassLogger();
         private readonly IAppUpdaterService updater;
+        private readonly IDownloadService downloader;
 
-        public AppUpdateServer(IAppUpdaterService updater)
+        public AppUpdateServer(IAppUpdaterService updater, IDownloadService downloader)
         {
             this.updater = updater;
+            this.downloader = downloader;
         }
 
         public override async Task<Empty> CheckUpdate(Empty _, ServerCallContext context)
         {
-#if !DEBUG
             await updater.CheckUpdate(0);
-#endif
-            Debug.WriteLine("App Update checking disabled in DEBUG mode.");
             return await Task.FromResult(new Empty());
+        }
+
+        public override async Task<GetLatestReleaseResponse> GetLatestRelease(GetLatestReleaseRequest request, ServerCallContext context)
+        {
+            try
+            {
+                var (SetupUri, SetupFileName, SetupVersion) = await updater.GetLatestRelease(request.Channel == ReleaseChannel.Beta);
+
+                return await Task.FromResult(new GetLatestReleaseResponse()
+                {
+                    Url = SetupUri?.OriginalString ?? string.Empty,
+                    FileName = SetupFileName ?? string.Empty,
+                    Version = SetupVersion?.ToString() ?? string.Empty
+                });
+            }
+            catch (Exception ex)
+            {
+                throw new RpcException(new Status(StatusCode.Internal, $"Update lookup failed: {ex.Message}"));
+            }
         }
 
         public override Task<Empty> StartUpdate(Empty _, ServerCallContext context)
         {
-            if (updater.Status == AppUpdateStatus.available)
+            if (updater.Status != AppUpdateStatus.available)
+                return Task.FromResult(new Empty());
+
+            try
             {
                 try
                 {
-                    try
-                    {
-                        // Main user interface downloads the setup.
-                        var fileName = updater.LastCheckFileName;
-                        var filePath = Path.Combine(Constants.CommonPaths.TempDir, fileName);
-                        if (!File.Exists(filePath))
-                            throw new FileNotFoundException(filePath);
+                    // Main user interface downloads the setup.
+                    var fileName = updater.LastCheckFileName;
+                    var filePath = Path.Combine(Constants.CommonPaths.TempDir, fileName);
+                    if (!File.Exists(filePath))
+                        throw new FileNotFoundException(filePath);
 
-                        // Run setup in silent mode.
-                        Process.Start(filePath, "/SILENT /CLOSEAPPLICATIONS /RESTARTAPPLICATIONS");
-                        // Inno installer will auto retry, waiting for application exit.
-                        App.QuitApp();
-                    }
-                    catch (Exception ex)
-                    {
-                        Application.Current.Dispatcher.BeginInvoke(DispatcherPriority.Normal, new ThreadStart(delegate
-                        {
-                            MessageBox.Show($"{Properties.Resources.LivelyExceptionAppUpdateFail}\n\nException:\n{ex}", Properties.Resources.TextError, MessageBoxButton.OK, MessageBoxImage.Error);
-                        }));
-                    }
+                    // Run setup in silent mode.
+                    Process.Start(filePath, "/SILENT /CLOSEAPPLICATIONS /RESTARTAPPLICATIONS");
+                    // Inno installer will auto retry, waiting for application exit.
+                    App.QuitApp();
                 }
                 catch (Exception ex)
                 {
-                    Logger.Error(ex);
+                    Application.Current.Dispatcher.BeginInvoke(DispatcherPriority.Normal, new ThreadStart(delegate
+                    {
+                        MessageBox.Show($"{Properties.Resources.LivelyExceptionAppUpdateFail}\n\nException:\n{ex}", Properties.Resources.TextError, MessageBoxButton.OK, MessageBoxImage.Error);
+                    }));
                 }
             }
+            catch (Exception ex)
+            {
+                Logger.Error(ex);
+            }
             return Task.FromResult(new Empty());
+        }
+
+        public override async Task<Empty> SwitchReleaseChannel(SwitchReleaseChannelRequest request, ServerCallContext context)
+        {
+            try
+            {
+                var isRequestedBetaChannel = request.Channel == ReleaseChannel.Beta;
+                var isCurrentBetaChannel = Constants.ApplicationType.IsTestBuild;
+
+                if (isCurrentBetaChannel && isRequestedBetaChannel || !(isCurrentBetaChannel || isRequestedBetaChannel))
+                    return await Task.FromResult(new Empty());
+
+                var (SetupUri, SetupFileName, _) = await updater.GetLatestRelease(isRequestedBetaChannel);
+                var filePath = Path.Combine(Constants.CommonPaths.TempDir, SetupFileName);
+
+                await downloader.DownloadFile(SetupUri, filePath, null, context.CancellationToken);
+                // Run setup in silent mode.
+                Process.Start(filePath, "/SILENT /CLOSEAPPLICATIONS /RESTARTAPPLICATIONS");
+                // Inno installer will auto retry, waiting for application exit.
+                App.QuitApp();
+            }
+            catch (Exception ex)
+            {
+                Logger.Error(ex);
+            }
+            return await Task.FromResult(new Empty());
         }
 
         public override Task<UpdateResponse> GetUpdateStatus(Empty _, ServerCallContext context)

@@ -2,10 +2,10 @@
 using GrpcDotNetNamedPipes;
 using Lively.Common;
 using Lively.Grpc.Common.Proto.Update;
+using Lively.Models;
+using Lively.Models.Enums;
 using Lively.Models.Services;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -46,9 +46,27 @@ namespace Lively.Grpc.Client
             await client.CheckUpdateAsync(new Empty());
         }
 
+        public async Task<(Uri Url, string FileName, Version AppVersion)> GetLatestRelease(bool isBeta)
+        {
+            var resp = await client.GetLatestReleaseAsync(new GetLatestReleaseRequest() { 
+                Channel = isBeta ? ReleaseChannel.Beta : ReleaseChannel.Stable 
+            });
+            var url = string.IsNullOrEmpty(resp.Url) ? null : new Uri(resp.Url);
+            var version = string.IsNullOrEmpty(resp.Version) ? null : new Version(resp.Version);
+
+            return (url, resp.FileName, version);
+        }
+
         public async Task StartUpdate()
         {
             await client.StartUpdateAsync(new Empty());
+        }
+
+        public async Task SwitchReleaseChannel(bool isBeta, CancellationToken ct)
+        {
+            await client.SwitchReleaseChannelAsync(new SwitchReleaseChannelRequest() { 
+                Channel = isBeta ? ReleaseChannel.Beta : ReleaseChannel.Stable 
+            }, cancellationToken: ct);
         }
 
         private async Task UpdateStatusRefresh()
@@ -78,7 +96,12 @@ namespace Lively.Grpc.Client
                     {
                         var resp = call.ResponseStream.Current;
                         await UpdateStatusRefresh();
-                        UpdateChecked?.Invoke(this, new AppUpdaterEventArgs(Status, LastCheckVersion, LastCheckTime, LastCheckUri, LastCheckFileName));
+                        UpdateChecked?.Invoke(this,
+                            new AppUpdaterEventArgs(Status,
+                                LastCheckVersion,
+                                LastCheckTime,
+                                LastCheckUri,
+                                LastCheckFileName));
                     }
                     finally
                     {

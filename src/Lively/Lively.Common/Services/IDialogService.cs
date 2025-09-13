@@ -38,6 +38,7 @@ namespace Lively.Common.Services
         Task<bool> ShowWallpaperProjectDirectoryDialogAsync(string folderPath);
         Task<IEnumerable<GalleryModel>> ShowGalleryRestoreWallpaperDialogAsync(IEnumerable<WallpaperDto> wallpapers);
         Task ShowGalleryEditProfileDialogAsync();
+        Task<bool> ShowCancellableProgressDialogAsync(string message);
     }
 
     public enum DialogResult

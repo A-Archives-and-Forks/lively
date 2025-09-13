@@ -8,6 +8,8 @@ service UpdateService {
 	  rpc GetUpdateStatus (google.protobuf.Empty) returns (UpdateResponse);
 	  rpc StartUpdate (google.protobuf.Empty) returns (google.protobuf.Empty);
 	  rpc SubscribeUpdateChecked (google.protobuf.Empty) returns (stream google.protobuf.Empty);
+	  rpc GetLatestRelease (GetLatestReleaseRequest) returns (GetLatestReleaseResponse);
+	  rpc SwitchReleaseChannel (SwitchReleaseChannelRequest) returns (google.protobuf.Empty);
 }
 
 message UpdateResponse {
@@ -25,4 +27,23 @@ enum UpdateStatus {
 	invalid = 2;
 	notchecked = 3;
 	error = 4;
+}
+
+message GetLatestReleaseRequest {
+	ReleaseChannel channel = 1;
+}
+
+message GetLatestReleaseResponse {
+	string version = 1;
+	string file_name = 2;
+	string url = 3;
+}
+
+message SwitchReleaseChannelRequest {
+	ReleaseChannel channel = 1;
+}
+
+enum ReleaseChannel {
+	stable = 0;
+	beta = 1;
 }
