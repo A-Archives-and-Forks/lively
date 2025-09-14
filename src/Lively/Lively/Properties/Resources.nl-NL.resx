@@ -486,12 +486,6 @@ Geanimeerde GIF</value>
   <data name="TextSupport.Content" xml:space="preserve">
     <value>Ondersteuning</value>
   </data>
-  <data name="TextSwitchBranchDev" xml:space="preserve">
-    <value>Schakel over naar bèta (ontwikkelkanaal)</value>
-  </data>
-  <data name="TextSwitchBranchOfficial" xml:space="preserve">
-    <value>Schakel over naar stabiel (standaard kanaal)</value>
-  </data>
   <data name="TextTags" xml:space="preserve">
     <value>Labels</value>
   </data>
@@ -660,9 +654,6 @@ Alle processen: Heavier, Scant alle processen om afspeelmogelijkheden te bepalen
   </data>
   <data name="StreamWallpaperVideoQuality.Description" xml:space="preserve">
     <value>Selecteer de gewenste videokwaliteit voor online streams.</value>
-  </data>
-  <data name="TipSwitchSoftwareBranch" xml:space="preserve">
-    <value>Schakel tussen de stabiele en de bèta versie van de software.</value>
   </data>
   <data name="TaskbarTheme.Description" xml:space="preserve">
     <value>Verander het uiterlijk van de taakbalk.</value>
@@ -1257,15 +1248,45 @@ Alle processen: Heavier, Scant alle processen om afspeelmogelijkheden te bepalen
     <value>Bij hervatten, weergeef aanmeldscherm</value>
   </data>
   <data name="ScreensaverFadeIn.Header" xml:space="preserve">
-    <value>Fade to black before start</value>
+    <value>Voor de start naar zwart vervagen</value>
   </data>
   <data name="VideoLetWindowsManageColor.Header" xml:space="preserve">
-    <value>Let Windows manage colors</value>
+    <value>Laat Windows de kleuren beheren</value>
   </data>
   <data name="ScreensaverWindowsSettings.Header" xml:space="preserve">
-    <value>Windows Settings</value>
+    <value>Windows Instellingen</value>
   </data>
   <data name="DescriptionConfirmProjectDirectory.Text" xml:space="preserve">
-    <value>Confirm project structure?</value>
+    <value>Projectstructuur bevestigen?</value>
+  </data>
+  <data name="DescriptionConfirmFileConvertion.Text" xml:space="preserve">
+    <value>This file format isn’t supported directly. It will be converted before use. Do you want to continue?</value>
+  </data>
+  <data name="ScreensaverDialogSettings.Header" xml:space="preserve">
+    <value>Eigenschappen</value>
+  </data>
+  <data name="DisplayAudioPauseRule.Header" xml:space="preserve">
+    <value>Output</value>
+  </data>
+  <data name="DisplayAudioPauseRule.Description" xml:space="preserve">
+    <value>Control how wallpaper audio plays across your screens</value>
+  </data>
+  <data name="VisualizerAudioDevice.Description" xml:space="preserve">
+    <value>Select the playback device used for visualizing sound</value>
+  </data>
+  <data name="VisualizerAudioDevice.Header" xml:space="preserve">
+    <value>Audio device</value>
+  </data>
+  <data name="SwitchReleaseBranchBeta.Description" xml:space="preserve">
+    <value>Get early features and help test them before public release. These builds may be unstable.</value>
+  </data>
+  <data name="SwitchReleaseBranchBeta.Header" xml:space="preserve">
+    <value>Join the Beta release</value>
+  </data>
+  <data name="SwitchReleaseBranchStable.Description" xml:space="preserve">
+    <value>Return to the regular public release for the most reliable updates.</value>
+  </data>
+  <data name="SwitchReleaseBranchStable.Header" xml:space="preserve">
+    <value>Switch to Stable release</value>
   </data>
 </root>

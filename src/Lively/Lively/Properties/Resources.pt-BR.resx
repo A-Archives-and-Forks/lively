@@ -493,12 +493,6 @@ Se ainda não funcionar, abra o Lively novamente ou reinicie o Windows.
   <data name="TextSupport.Content" xml:space="preserve">
     <value>Suporte</value>
   </data>
-  <data name="TextSwitchBranchDev" xml:space="preserve">
-    <value>Mudar para o beta (Canal Dev)</value>
-  </data>
-  <data name="TextSwitchBranchOfficial" xml:space="preserve">
-    <value>Mudar para estável (Canal Padrão)</value>
-  </data>
   <data name="TextTags" xml:space="preserve">
     <value>Categorias</value>
   </data>
@@ -669,9 +663,6 @@ Todos os processos: Mais pesado, escaneia todos os processos para determinar o c
   </data>
   <data name="StreamWallpaperVideoQuality.Description" xml:space="preserve">
     <value>Selecione a qualidade de vídeo desejada para streams online.</value>
-  </data>
-  <data name="TipSwitchSoftwareBranch" xml:space="preserve">
-    <value>Alterar a versão do software do beta para o estável ou vice-versa.</value>
   </data>
   <data name="TaskbarTheme.Description" xml:space="preserve">
     <value>Alterar a aparência da barra de tarefas do sistema.</value>
@@ -1277,5 +1268,35 @@ O Edge é a webview embutida do Windows 10.</value>
   </data>
   <data name="DescriptionConfirmProjectDirectory.Text" xml:space="preserve">
     <value>Confirm project structure?</value>
+  </data>
+  <data name="DescriptionConfirmFileConvertion.Text" xml:space="preserve">
+    <value>This file format isn’t supported directly. It will be converted before use. Do you want to continue?</value>
+  </data>
+  <data name="ScreensaverDialogSettings.Header" xml:space="preserve">
+    <value>Configurações</value>
+  </data>
+  <data name="DisplayAudioPauseRule.Header" xml:space="preserve">
+    <value>Output</value>
+  </data>
+  <data name="DisplayAudioPauseRule.Description" xml:space="preserve">
+    <value>Control how wallpaper audio plays across your screens</value>
+  </data>
+  <data name="VisualizerAudioDevice.Description" xml:space="preserve">
+    <value>Select the playback device used for visualizing sound</value>
+  </data>
+  <data name="VisualizerAudioDevice.Header" xml:space="preserve">
+    <value>Audio device</value>
+  </data>
+  <data name="SwitchReleaseBranchBeta.Description" xml:space="preserve">
+    <value>Get early features and help test them before public release. These builds may be unstable.</value>
+  </data>
+  <data name="SwitchReleaseBranchBeta.Header" xml:space="preserve">
+    <value>Join the Beta release</value>
+  </data>
+  <data name="SwitchReleaseBranchStable.Description" xml:space="preserve">
+    <value>Return to the regular public release for the most reliable updates.</value>
+  </data>
+  <data name="SwitchReleaseBranchStable.Header" xml:space="preserve">
+    <value>Switch to Stable release</value>
   </data>
 </root>

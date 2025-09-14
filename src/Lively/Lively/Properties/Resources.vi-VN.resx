@@ -493,12 +493,6 @@ Nếu vẫn không thể hoạt động, đóng lại &amp; khởi động lại
   <data name="TextSupport.Content" xml:space="preserve">
     <value>Hỗ trợ</value>
   </data>
-  <data name="TextSwitchBranchDev" xml:space="preserve">
-    <value>Chuyển qua bản thử nghiệm (Dành cho nhà phát triển)</value>
-  </data>
-  <data name="TextSwitchBranchOfficial" xml:space="preserve">
-    <value>Chuyển qua bản ổn định (Người dùng bình thường)</value>
-  </data>
   <data name="TextTags" xml:space="preserve">
     <value>Thẻ</value>
   </data>
@@ -666,9 +660,6 @@ Nếu vẫn không thể hoạt động, đóng lại &amp; khởi động lại
   </data>
   <data name="StreamWallpaperVideoQuality.Description" xml:space="preserve">
     <value>Chọn chất lượng video mong muốn khi đang stream</value>
-  </data>
-  <data name="TipSwitchSoftwareBranch" xml:space="preserve">
-    <value>Chuyển phiên bản hiện tại từ beta sang bản gốc hoặc ngược lại</value>
   </data>
   <data name="TaskbarTheme.Description" xml:space="preserve">
     <value>Chỉnh lại taskbar của hệ thống</value>
@@ -1273,5 +1264,35 @@ Nếu vẫn không thể hoạt động, đóng lại &amp; khởi động lại
   </data>
   <data name="DescriptionConfirmProjectDirectory.Text" xml:space="preserve">
     <value>Confirm project structure?</value>
+  </data>
+  <data name="DescriptionConfirmFileConvertion.Text" xml:space="preserve">
+    <value>This file format isn’t supported directly. It will be converted before use. Do you want to continue?</value>
+  </data>
+  <data name="ScreensaverDialogSettings.Header" xml:space="preserve">
+    <value>Cài đặt</value>
+  </data>
+  <data name="DisplayAudioPauseRule.Header" xml:space="preserve">
+    <value>Output</value>
+  </data>
+  <data name="DisplayAudioPauseRule.Description" xml:space="preserve">
+    <value>Control how wallpaper audio plays across your screens</value>
+  </data>
+  <data name="VisualizerAudioDevice.Description" xml:space="preserve">
+    <value>Select the playback device used for visualizing sound</value>
+  </data>
+  <data name="VisualizerAudioDevice.Header" xml:space="preserve">
+    <value>Audio device</value>
+  </data>
+  <data name="SwitchReleaseBranchBeta.Description" xml:space="preserve">
+    <value>Get early features and help test them before public release. These builds may be unstable.</value>
+  </data>
+  <data name="SwitchReleaseBranchBeta.Header" xml:space="preserve">
+    <value>Join the Beta release</value>
+  </data>
+  <data name="SwitchReleaseBranchStable.Description" xml:space="preserve">
+    <value>Return to the regular public release for the most reliable updates.</value>
+  </data>
+  <data name="SwitchReleaseBranchStable.Header" xml:space="preserve">
+    <value>Switch to Stable release</value>
   </data>
 </root>

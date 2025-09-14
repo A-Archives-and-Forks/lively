@@ -493,12 +493,6 @@ Si cela ne fonctionne toujours pas, fermez et relancez Lively / redémarrez Wind
   <data name="TextSupport.Content" xml:space="preserve">
     <value>Aide</value>
   </data>
-  <data name="TextSwitchBranchDev" xml:space="preserve">
-    <value>Changer vers bêta (Canal de développement)</value>
-  </data>
-  <data name="TextSwitchBranchOfficial" xml:space="preserve">
-    <value>Changer vers stable (Canal par défaut)</value>
-  </data>
   <data name="TextTags" xml:space="preserve">
     <value>Étiquette</value>
   </data>
@@ -670,9 +664,6 @@ Tous les processus : plus lourd, analyse tous les processus pour déterminer le 
   </data>
   <data name="StreamWallpaperVideoQuality.Description" xml:space="preserve">
     <value>Sélection de la qualité vidéo souhaitée pour les flux en ligne</value>
-  </data>
-  <data name="TipSwitchSoftwareBranch" xml:space="preserve">
-    <value>Change le canal de mises à jour de stable vers bêta et inversement</value>
   </data>
   <data name="TaskbarTheme.Description" xml:space="preserve">
     <value>Changez l'apparence de la barre des tâches système</value>
@@ -1272,12 +1263,42 @@ Edge est la vue Web intégrée de Windows 10.</value>
     <value>Fondu au noir avant le lancement</value>
   </data>
   <data name="VideoLetWindowsManageColor.Header" xml:space="preserve">
-    <value>Let Windows manage colors</value>
+    <value>Laisser Windows gérer les couleurs</value>
   </data>
   <data name="ScreensaverWindowsSettings.Header" xml:space="preserve">
-    <value>Windows Settings</value>
+    <value>Paramètres Windows</value>
   </data>
   <data name="DescriptionConfirmProjectDirectory.Text" xml:space="preserve">
-    <value>Confirm project structure?</value>
+    <value>Confirmer la structure du projet ?</value>
+  </data>
+  <data name="DescriptionConfirmFileConvertion.Text" xml:space="preserve">
+    <value>This file format isn’t supported directly. It will be converted before use. Do you want to continue?</value>
+  </data>
+  <data name="ScreensaverDialogSettings.Header" xml:space="preserve">
+    <value>Paramètres</value>
+  </data>
+  <data name="DisplayAudioPauseRule.Header" xml:space="preserve">
+    <value>Output</value>
+  </data>
+  <data name="DisplayAudioPauseRule.Description" xml:space="preserve">
+    <value>Control how wallpaper audio plays across your screens</value>
+  </data>
+  <data name="VisualizerAudioDevice.Description" xml:space="preserve">
+    <value>Select the playback device used for visualizing sound</value>
+  </data>
+  <data name="VisualizerAudioDevice.Header" xml:space="preserve">
+    <value>Audio device</value>
+  </data>
+  <data name="SwitchReleaseBranchBeta.Description" xml:space="preserve">
+    <value>Get early features and help test them before public release. These builds may be unstable.</value>
+  </data>
+  <data name="SwitchReleaseBranchBeta.Header" xml:space="preserve">
+    <value>Join the Beta release</value>
+  </data>
+  <data name="SwitchReleaseBranchStable.Description" xml:space="preserve">
+    <value>Return to the regular public release for the most reliable updates.</value>
+  </data>
+  <data name="SwitchReleaseBranchStable.Header" xml:space="preserve">
+    <value>Switch to Stable release</value>
   </data>
 </root>

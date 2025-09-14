@@ -495,12 +495,6 @@ Si aún no funciona, cierra e inicia Lively nuevamente o reinicia Windows.
   <data name="TextSupport.Content" xml:space="preserve">
     <value>Soporte</value>
   </data>
-  <data name="TextSwitchBranchDev" xml:space="preserve">
-    <value>Cambiar a beta (Canal dev)</value>
-  </data>
-  <data name="TextSwitchBranchOfficial" xml:space="preserve">
-    <value>Cambiar a estable (Canal por defecto)</value>
-  </data>
   <data name="TextTags" xml:space="preserve">
     <value>Etiquetas</value>
   </data>
@@ -671,9 +665,6 @@ Todos los procesos: Pesado, analiza todos los procesos abiertos para determinar 
   </data>
   <data name="StreamWallpaperVideoQuality.Description" xml:space="preserve">
     <value>Selecciona la calidad de video deseada para los streams</value>
-  </data>
-  <data name="TipSwitchSoftwareBranch" xml:space="preserve">
-    <value>Cambiar la versión del programa de 'Beta' a 'Estable' o viceversa</value>
   </data>
   <data name="TaskbarTheme.Description" xml:space="preserve">
     <value>Cambiar la apariencia de la barra de tareas del sistema</value>
@@ -1279,5 +1270,35 @@ Edge es la vista web integrada en Windows 10.</value>
   </data>
   <data name="DescriptionConfirmProjectDirectory.Text" xml:space="preserve">
     <value>¿Confirmar estructura del proyecto?</value>
+  </data>
+  <data name="DescriptionConfirmFileConvertion.Text" xml:space="preserve">
+    <value>El formato de este archivo no es compatible directamente. Se convertirá antes de usarse. ¿Quieres continuar?</value>
+  </data>
+  <data name="ScreensaverDialogSettings.Header" xml:space="preserve">
+    <value>Configuraciones</value>
+  </data>
+  <data name="DisplayAudioPauseRule.Header" xml:space="preserve">
+    <value>Salida</value>
+  </data>
+  <data name="DisplayAudioPauseRule.Description" xml:space="preserve">
+    <value>Controla cómo se reproduce el audio del fondo de pantalla entre monitores</value>
+  </data>
+  <data name="VisualizerAudioDevice.Description" xml:space="preserve">
+    <value>Seleccione el dispositivo de reproducción de audio para visualizar el sonido</value>
+  </data>
+  <data name="VisualizerAudioDevice.Header" xml:space="preserve">
+    <value>Dispositivo de audio</value>
+  </data>
+  <data name="SwitchReleaseBranchBeta.Description" xml:space="preserve">
+    <value>Obtén características tempranas y ayuda a probarlas antes de que entren a la versión estable. Estas versiones pueden ser inestables.</value>
+  </data>
+  <data name="SwitchReleaseBranchBeta.Header" xml:space="preserve">
+    <value>Únete a la versión beta</value>
+  </data>
+  <data name="SwitchReleaseBranchStable.Description" xml:space="preserve">
+    <value>Vuelve a la versión estable para obtener actualizaciones más fiables.</value>
+  </data>
+  <data name="SwitchReleaseBranchStable.Header" xml:space="preserve">
+    <value>Cambiar a la versión estable</value>
   </data>
 </root>

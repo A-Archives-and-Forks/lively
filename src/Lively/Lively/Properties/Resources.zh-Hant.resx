@@ -493,12 +493,6 @@ https://github.com/rocksdanister/lively/wiki</value>
   <data name="TextSupport.Content" xml:space="preserve">
     <value>支援開發</value>
   </data>
-  <data name="TextSwitchBranchDev" xml:space="preserve">
-    <value>切換至 Beta 版本 (開發頻道)</value>
-  </data>
-  <data name="TextSwitchBranchOfficial" xml:space="preserve">
-    <value>切換至穩定版本 (預設頻道)</value>
-  </data>
   <data name="TextTags" xml:space="preserve">
     <value>標籤</value>
   </data>
@@ -666,9 +660,6 @@ https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="StreamWallpaperVideoQuality.Description" xml:space="preserve">
     <value>選擇你想要的線上影片品質</value>
-  </data>
-  <data name="TipSwitchSoftwareBranch" xml:space="preserve">
-    <value>將軟體版本從 Beta 版本變更為穩定版本，或是相反</value>
   </data>
   <data name="TaskbarTheme.Description" xml:space="preserve">
     <value>改變系統工作列外觀</value>
@@ -1273,5 +1264,35 @@ https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="DescriptionConfirmProjectDirectory.Text" xml:space="preserve">
     <value>Confirm project structure?</value>
+  </data>
+  <data name="DescriptionConfirmFileConvertion.Text" xml:space="preserve">
+    <value>This file format isn’t supported directly. It will be converted before use. Do you want to continue?</value>
+  </data>
+  <data name="ScreensaverDialogSettings.Header" xml:space="preserve">
+    <value>設定</value>
+  </data>
+  <data name="DisplayAudioPauseRule.Header" xml:space="preserve">
+    <value>Output</value>
+  </data>
+  <data name="DisplayAudioPauseRule.Description" xml:space="preserve">
+    <value>Control how wallpaper audio plays across your screens</value>
+  </data>
+  <data name="VisualizerAudioDevice.Description" xml:space="preserve">
+    <value>Select the playback device used for visualizing sound</value>
+  </data>
+  <data name="VisualizerAudioDevice.Header" xml:space="preserve">
+    <value>Audio device</value>
+  </data>
+  <data name="SwitchReleaseBranchBeta.Description" xml:space="preserve">
+    <value>Get early features and help test them before public release. These builds may be unstable.</value>
+  </data>
+  <data name="SwitchReleaseBranchBeta.Header" xml:space="preserve">
+    <value>Join the Beta release</value>
+  </data>
+  <data name="SwitchReleaseBranchStable.Description" xml:space="preserve">
+    <value>Return to the regular public release for the most reliable updates.</value>
+  </data>
+  <data name="SwitchReleaseBranchStable.Header" xml:space="preserve">
+    <value>Switch to Stable release</value>
   </data>
 </root>
