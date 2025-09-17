@@ -1269,33 +1269,33 @@ Windows 7 系统只需设置“调整为最佳外观”&amp; 并应用。
     <value>确认目录结构？</value>
   </data>
   <data name="DescriptionConfirmFileConvertion.Text" xml:space="preserve">
-    <value>This file format isn’t supported directly. It will be converted before use. Do you want to continue?</value>
+    <value>此文件格式不被直接支持。它将在使用前被转换。您想要继续吗？</value>
   </data>
   <data name="ScreensaverDialogSettings.Header" xml:space="preserve">
     <value>设置</value>
   </data>
   <data name="DisplayAudioPauseRule.Header" xml:space="preserve">
-    <value>Output</value>
+    <value>输出</value>
   </data>
   <data name="DisplayAudioPauseRule.Description" xml:space="preserve">
-    <value>Control how wallpaper audio plays across your screens</value>
+    <value>控制壁纸音频如何在您的屏幕上播放</value>
   </data>
   <data name="VisualizerAudioDevice.Description" xml:space="preserve">
-    <value>Select the playback device used for visualizing sound</value>
+    <value>选择用于声音可视化的回放设备</value>
   </data>
   <data name="VisualizerAudioDevice.Header" xml:space="preserve">
-    <value>Audio device</value>
+    <value>音频设备</value>
   </data>
   <data name="SwitchReleaseBranchBeta.Description" xml:space="preserve">
-    <value>Get early features and help test them before public release. These builds may be unstable.</value>
+    <value>获取最新的功能，并在公开发布前帮助测试它们。这些构建版本可能不稳定。</value>
   </data>
   <data name="SwitchReleaseBranchBeta.Header" xml:space="preserve">
-    <value>Join the Beta release</value>
+    <value>加入测试版计划</value>
   </data>
   <data name="SwitchReleaseBranchStable.Description" xml:space="preserve">
-    <value>Return to the regular public release for the most reliable updates.</value>
+    <value>回到常规公共发行版以获取最可靠的更新。</value>
   </data>
   <data name="SwitchReleaseBranchStable.Header" xml:space="preserve">
-    <value>Switch to Stable release</value>
+    <value>切换到稳定版本</value>
   </data>
 </root>

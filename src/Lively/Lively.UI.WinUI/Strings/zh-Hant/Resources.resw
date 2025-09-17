@@ -1257,42 +1257,42 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>繁體中文</value>
   </data>
   <data name="VideoLetWindowsManageColor.Header" xml:space="preserve">
-    <value>Let Windows manage colors</value>
+    <value>讓 Windows 管理顔色</value>
   </data>
   <data name="ScreensaverWindowsSettings.Header" xml:space="preserve">
-    <value>Windows Settings</value>
+    <value>Windows 設定</value>
   </data>
   <data name="DescriptionConfirmProjectDirectory.Text" xml:space="preserve">
-    <value>Confirm project structure?</value>
+    <value>確認項目結構？</value>
   </data>
   <data name="DescriptionConfirmFileConvertion.Text" xml:space="preserve">
-    <value>This file format isn’t supported directly. It will be converted before use. Do you want to continue?</value>
+    <value>這個文件還沒被直接支持。它需要在使用之前被轉換。您想要繼續嗎？</value>
   </data>
   <data name="ScreensaverDialogSettings.Header" xml:space="preserve">
     <value>設定</value>
   </data>
   <data name="DisplayAudioPauseRule.Header" xml:space="preserve">
-    <value>Output</value>
+    <value>輸出</value>
   </data>
   <data name="DisplayAudioPauseRule.Description" xml:space="preserve">
-    <value>Control how wallpaper audio plays across your screens</value>
+    <value>控制桌布音頻如何在您的屏幕間播放</value>
   </data>
   <data name="VisualizerAudioDevice.Description" xml:space="preserve">
-    <value>Select the playback device used for visualizing sound</value>
+    <value>選擇用於聲音可視化的播放裝置</value>
   </data>
   <data name="VisualizerAudioDevice.Header" xml:space="preserve">
-    <value>Audio device</value>
+    <value>音訊裝置</value>
   </data>
   <data name="SwitchReleaseBranchBeta.Description" xml:space="preserve">
-    <value>Get early features and help test them before public release. These builds may be unstable.</value>
+    <value>獲得最新的功能，并在公開發佈之前測試它們。這些構建版本可能不穩定。</value>
   </data>
   <data name="SwitchReleaseBranchBeta.Header" xml:space="preserve">
-    <value>Join the Beta release</value>
+    <value>進入測試版計劃</value>
   </data>
   <data name="SwitchReleaseBranchStable.Description" xml:space="preserve">
-    <value>Return to the regular public release for the most reliable updates.</value>
+    <value>回到常規公開發行版本來獲取最可靠的更新。</value>
   </data>
   <data name="SwitchReleaseBranchStable.Header" xml:space="preserve">
-    <value>Switch to Stable release</value>
+    <value>切換到穩定版本</value>
   </data>
 </root>
