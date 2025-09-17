@@ -291,18 +291,23 @@ namespace Lively.Core.Suspend
             }
 
             // Audio playback impl.
+            var effectiveDisplayAudioOutput = userSettings.Settings.WallpaperArrangement switch
+            {
+                WallpaperArrangement.per => userSettings.Settings.DisplayAudioOutput,
+                _ => DisplayAudioMode.all,
+            };
+            var effectiveSelectedAudioOutputDisplay = 
+                displayManager.DisplayMonitors.FirstOrDefault(x => x.Equals(userSettings.Settings.SelectedAudioOutputDisplay))
+                ?? displayManager.PrimaryDisplayMonitor;
             foreach (var display in displayManager.DisplayMonitors)
             {
                 var windowsOnDisplay = monitorWindowsMap.GetValueOrDefault(display) ?? [];
                 var isDesktop = windowsOnDisplay.Count == 0;
-
-                switch (userSettings.Settings.DisplayAudioOutput)
+                switch (effectiveDisplayAudioOutput)
                 {
                     case DisplayAudioMode.selection:
                         {
-                            if (display.Equals(userSettings.Settings.SelectedAudioOutputDisplay)
-                                || userSettings.Settings.ScreensaverArragement != WallpaperArrangement.per
-                                || !displayManager.IsMultiScreen())
+                            if (!displayManager.IsMultiScreen() || display.Equals(effectiveSelectedAudioOutputDisplay))
                             {
                                 if (isDesktop)
                                     SetWallpaperVolume(userSettings.Settings.AudioVolumeGlobal, display);
