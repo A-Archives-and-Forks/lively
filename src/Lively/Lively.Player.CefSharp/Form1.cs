@@ -2,7 +2,9 @@
 using CefSharp.SchemeHandler;
 using CefSharp.WinForms;
 using CommandLine;
+using Lively.Common.Extensions;
 using Lively.Common.Helpers;
+using Lively.Common.Helpers.Pinvoke;
 using Lively.Common.JsonConverters;
 using Lively.Common.Services;
 using Lively.Models.Enums;
@@ -15,11 +17,9 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
-using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Lively.Common.Extensions;
 
 namespace Lively.Player.CefSharp
 {
@@ -33,6 +33,7 @@ namespace Lively.Player.CefSharp
         private IHardwareUsageService hardwareUsageService;
         private IAudioVisualizerService audioVisualizerService;
         private INowPlayingService nowPlayingService;
+        private int cefD3DRenderingSubProcessId;
 
         private AppTheme SystemTheme { get; } = ThemeUtil.GetWindowsTheme();
         private bool IsDebugging { get; } = BuildInfoUtil.IsDebugBuild();
@@ -129,13 +130,6 @@ namespace Lively.Player.CefSharp
             Environment.Exit(87);
         }
 
-        #region ipc
-
-        public class WallpaperPlaybackState
-        {
-            public bool IsPaused { get; set; }
-        }
-
         /// <summary>
         /// std I/O redirect, used to communicate with lively. 
         /// </summary>
@@ -145,7 +139,6 @@ namespace Lively.Player.CefSharp
                 return;
 
             var reader = new StreamReader(Console.OpenStandardInput(), Encoding.UTF8);
-
             try
             {
                 await Task.Run(async () =>
@@ -155,9 +148,7 @@ namespace Lively.Player.CefSharp
                         // Since UTF8 is backward compatible, will work without this reader for non unicode characters.
                         string text = await reader.ReadLineAsync();
                         if (startArgs.VerboseLog)
-                        {
                             Console.WriteLine(text);
-                        }
 
                         if (string.IsNullOrEmpty(text))
                         {
@@ -168,140 +159,165 @@ namespace Lively.Player.CefSharp
                         {
                             try
                             {
-                                var close = false;
                                 var obj = JsonConvert.DeserializeObject<IpcMessage>(text, new JsonSerializerSettings() { Converters = { new IpcMessageConverter() } });
-                                switch (obj.Type)
-                                {
-                                    case MessageType.cmd_reload:
-                                        chromeBrowser?.Reload(true);
-                                        break;
-                                    case MessageType.cmd_suspend:
-                                        if (chromeBrowser.CanExecuteJavascriptInMainFrame && startArgs.PauseEvent && !isPaused) //if js context ready
-                                        {
-                                            chromeBrowser.ExecuteScriptAsync("livelyWallpaperPlaybackChanged",
-                                                JsonConvert.SerializeObject(new WallpaperPlaybackState() { IsPaused = true }),
-                                                Formatting.Indented);
-                                        }
-                                        isPaused = true;
-                                        break;
-                                    case MessageType.cmd_resume:
-                                        if (chromeBrowser.CanExecuteJavascriptInMainFrame && isPaused)
-                                        {
-                                            if (startArgs.PauseEvent)
-                                            {
-                                                chromeBrowser.ExecuteScriptAsync("livelyWallpaperPlaybackChanged",
-                                                    JsonConvert.SerializeObject(new WallpaperPlaybackState() { IsPaused = false }),
-                                                    Formatting.Indented);
-                                            }
-
-                                            if (startArgs.NowPlaying)
-                                            {
-                                                //update media state
-                                                chromeBrowser.ExecuteScriptAsync("livelyCurrentTrack", JsonConvert.SerializeObject(nowPlayingService?.CurrentTrack, Formatting.Indented));
-                                            }
-                                        }
-                                        isPaused = false;
-                                        break;
-                                    case MessageType.cmd_volume:
-                                        var vc = (LivelyVolumeCmd)obj;
-                                        chromeBrowser.GetBrowserHost()?.SetAudioMuted(vc.Volume == 0);
-                                        break;
-                                    case MessageType.cmd_screenshot:
-                                        var success = true;
-                                        var scr = (LivelyScreenshotCmd)obj;
-                                        try
-                                        {
-                                            await chromeBrowser.CaptureScreenshot(scr.Format, scr.FilePath);
-                                        }
-                                        catch (Exception ie)
-                                        {
-                                            success = false;
-                                            ie.SendError(SendToParent, "Failed to capture screenshot");
-                                        }
-                                        finally
-                                        {
-                                            SendToParent(new LivelyMessageScreenshot()
-                                            {
-                                                FileName = Path.GetFileName(scr.FilePath),
-                                                Success = success
-                                            });
-                                        }
-                                        break;
-                                    case MessageType.lp_slider:
-                                        var sl = (LivelySlider)obj;
-                                        chromeBrowser.ExecuteScriptAsync("livelyPropertyListener", sl.Name, sl.Value);
-                                        break;
-                                    case MessageType.lp_textbox:
-                                        var tb = (LivelyTextBox)obj;
-                                        chromeBrowser.ExecuteScriptAsync("livelyPropertyListener", tb.Name, tb.Value);
-                                        break;
-                                    case MessageType.lp_dropdown:
-                                        var dd = (LivelyDropdown)obj;
-                                        chromeBrowser.ExecuteScriptAsync("livelyPropertyListener", dd.Name, dd.Value);
-                                        break;
-                                    case MessageType.lp_cpicker:
-                                        var cp = (LivelyColorPicker)obj;
-                                        chromeBrowser.ExecuteScriptAsync("livelyPropertyListener", cp.Name, cp.Value);
-                                        break;
-                                    case MessageType.lp_chekbox:
-                                        var cb = (LivelyCheckbox)obj;
-                                        chromeBrowser.ExecuteScriptAsync("livelyPropertyListener", cb.Name, cb.Value);
-                                        break;
-                                    case MessageType.lp_fdropdown:
-                                        var fd = (LivelyFolderDropdown)obj;
-                                        var filePath = fd.Value is null ? null : Path.Combine(Path.GetDirectoryName(startArgs.Url), fd.Value);
-                                        chromeBrowser.ExecuteScriptAsync("livelyPropertyListener", fd.Name, File.Exists(filePath) ? fd.Value : null);
-                                        break;
-                                    case MessageType.lp_button:
-                                        var btn = (LivelyButton)obj;
-                                        if (btn.IsDefault)
-                                        {
-                                            RestoreLivelyProperties(startArgs.Properties);
-                                        }
-                                        else
-                                        {
-                                            chromeBrowser.ExecuteScriptAsync("livelyPropertyListener", btn.Name, true);
-                                        }
-                                        break;
-                                    case MessageType.lsp_perfcntr:
-                                        if (chromeBrowser.CanExecuteJavascriptInMainFrame) //if js context ready
-                                        {
-                                            chromeBrowser.ExecuteScriptAsync("livelySystemInformation", JsonConvert.SerializeObject(((LivelySystemInformation)obj).Info, Formatting.Indented));
-                                        }
-                                        break;
-                                    case MessageType.lsp_nowplaying:
-                                        if (chromeBrowser.CanExecuteJavascriptInMainFrame)
-                                        {
-                                            chromeBrowser.ExecuteScriptAsync("livelyCurrentTrack", JsonConvert.SerializeObject(((LivelySystemNowPlaying)obj).Info, Formatting.Indented));
-                                        }
-                                        break;
-                                    case MessageType.cmd_close:
-                                        close = true;
-                                        break;
-                                }
-
-                                if (close)
-                                {
+                                if (obj.Type == MessageType.cmd_close)
                                     break;
-                                }
+
+                                // Ensure all processing is on the same thread.
+                                this.Invoke((Action)(async () =>
+                                {
+                                    try
+                                    {
+                                        await ProcessMessage(obj);
+                                    }
+                                    catch (Exception ie1)
+                                    {
+                                        ie1.SendError(SendToParent);
+                                    }
+                                }));
                             }
-                            catch (Exception ie)
+                            catch (Exception ie2)
                             {
-                                ie.SendError(SendToParent);
+                                ie2.SendError(SendToParent);
                             }
                         }
                     }
                 });
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                e.SendError(SendToParent);
+                ex.SendError(SendToParent);
             }
             finally
             {
                 reader?.Dispose();
                 Application.Exit();
             }
+        }
+
+        private async Task ProcessMessage(IpcMessage obj)
+        {
+            switch (obj.Type)
+            {
+                case MessageType.cmd_reload:
+                    chromeBrowser?.Reload(true);
+                    break;
+                case MessageType.cmd_suspend:
+                    HandleSuspend();
+                    break;
+                case MessageType.cmd_resume:
+                    HandleResume();
+                    break;
+                case MessageType.cmd_volume:
+                    var vc = (LivelyVolumeCmd)obj;
+                    chromeBrowser.GetBrowserHost()?.SetAudioMuted(vc.Volume == 0);
+                    break;
+                case MessageType.cmd_screenshot:
+                    var success = true;
+                    var scr = (LivelyScreenshotCmd)obj;
+                    try
+                    {
+                        await chromeBrowser.CaptureScreenshot(scr.Format, scr.FilePath);
+                    }
+                    catch (Exception ie)
+                    {
+                        success = false;
+                        ie.SendError(SendToParent, "Failed to capture screenshot");
+                    }
+                    finally
+                    {
+                        SendToParent(new LivelyMessageScreenshot()
+                        {
+                            FileName = Path.GetFileName(scr.FilePath),
+                            Success = success
+                        });
+                    }
+                    break;
+                case MessageType.lp_slider:
+                    var sl = (LivelySlider)obj;
+                    chromeBrowser.ExecuteScriptAsync("livelyPropertyListener", sl.Name, sl.Value);
+                    break;
+                case MessageType.lp_textbox:
+                    var tb = (LivelyTextBox)obj;
+                    chromeBrowser.ExecuteScriptAsync("livelyPropertyListener", tb.Name, tb.Value);
+                    break;
+                case MessageType.lp_dropdown:
+                    var dd = (LivelyDropdown)obj;
+                    chromeBrowser.ExecuteScriptAsync("livelyPropertyListener", dd.Name, dd.Value);
+                    break;
+                case MessageType.lp_cpicker:
+                    var cp = (LivelyColorPicker)obj;
+                    chromeBrowser.ExecuteScriptAsync("livelyPropertyListener", cp.Name, cp.Value);
+                    break;
+                case MessageType.lp_chekbox:
+                    var cb = (LivelyCheckbox)obj;
+                    chromeBrowser.ExecuteScriptAsync("livelyPropertyListener", cb.Name, cb.Value);
+                    break;
+                case MessageType.lp_fdropdown:
+                    var fd = (LivelyFolderDropdown)obj;
+                    var filePath = fd.Value is null ? null : Path.Combine(Path.GetDirectoryName(startArgs.Url), fd.Value);
+                    chromeBrowser.ExecuteScriptAsync("livelyPropertyListener", fd.Name, File.Exists(filePath) ? fd.Value : null);
+                    break;
+                case MessageType.lp_button:
+                    var btn = (LivelyButton)obj;
+                    if (btn.IsDefault)
+                    {
+                        RestoreLivelyProperties(startArgs.Properties);
+                    }
+                    else
+                    {
+                        chromeBrowser.ExecuteScriptAsync("livelyPropertyListener", btn.Name, true);
+                    }
+                    break;
+                case MessageType.lsp_perfcntr:
+                    if (chromeBrowser.CanExecuteJavascriptInMainFrame) //if js context ready
+                    {
+                        chromeBrowser.ExecuteScriptAsync("livelySystemInformation", JsonConvert.SerializeObject(((LivelySystemInformation)obj).Info, Formatting.Indented));
+                    }
+                    break;
+                case MessageType.lsp_nowplaying:
+                    if (chromeBrowser.CanExecuteJavascriptInMainFrame)
+                    {
+                        chromeBrowser.ExecuteScriptAsync("livelyCurrentTrack", JsonConvert.SerializeObject(((LivelySystemNowPlaying)obj).Info, Formatting.Indented));
+                    }
+                    break;
+                case MessageType.cmd_close:
+                    // Handle in caller.
+                    break;
+            }
+        }
+
+        private void HandleSuspend()
+        {
+            SuspendRenderingSubProcess();
+            if (chromeBrowser.CanExecuteJavascriptInMainFrame && startArgs.PauseEvent && !isPaused) //if js context ready
+            {
+                chromeBrowser.ExecuteScriptAsync("livelyWallpaperPlaybackChanged",
+                    JsonConvert.SerializeObject(new WallpaperPlaybackState() { IsPaused = true }),
+                    Formatting.Indented);
+            }
+            isPaused = true;
+        }
+
+        private void HandleResume()
+        {
+            ResumeRenderingSubProcess();
+            if (chromeBrowser.CanExecuteJavascriptInMainFrame && isPaused)
+            {
+                if (startArgs.PauseEvent)
+                {
+                    chromeBrowser.ExecuteScriptAsync("livelyWallpaperPlaybackChanged",
+                        JsonConvert.SerializeObject(new WallpaperPlaybackState() { IsPaused = false }),
+                        Formatting.Indented);
+                }
+
+                if (startArgs.NowPlaying)
+                {
+                    //update media state
+                    chromeBrowser.ExecuteScriptAsync("livelyCurrentTrack", JsonConvert.SerializeObject(nowPlayingService?.CurrentTrack, Formatting.Indented));
+                }
+            }
+            isPaused = false;
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -320,10 +336,6 @@ namespace Lively.Player.CefSharp
 
             Debug.WriteLine(JsonConvert.SerializeObject(obj));
         }
-
-        #endregion //ipc
-
-        #region cef
 
         /// <summary>
         /// starts up & loads cef instance.
@@ -431,6 +443,10 @@ namespace Lively.Player.CefSharp
             if (e.IsLoading)
                 return;
 
+            // Wait for loading to complete for the window to be created.
+            if (!chromeBrowser.TryGetCefD3DRenderingSubProcessId(out cefD3DRenderingSubProcessId))
+                "Failed to retrieve GetCefD3DRenderingSubProcessId".SendError(SendToParent);
+
             RestoreLivelyProperties(startArgs.Properties);
             SendToParent(new LivelyMessageWallpaperLoaded() { Success = true });
 
@@ -449,7 +465,7 @@ namespace Lively.Player.CefSharp
 
                             if (chromeBrowser.CanExecuteJavascriptInMainFrame) //if js context ready
                             {
-                                ExecuteScriptFunctionAsync("livelyAudioListener", data);
+                                chromeBrowser.ExecuteScriptAsyncEx("livelyAudioListener", data);
                             }
                         }
                         catch (Exception)
@@ -566,28 +582,36 @@ namespace Lively.Player.CefSharp
             //chromeBrowser.LoadHtml(@"<body style=""background-color:black;""><h1 style = ""color:white;"">Error Loading webpage:" + e.ErrorText + "</h1></body>");            
         }
 
-        #endregion //cef
+        /// <summary>
+        /// Resumes the suspended CEF Direct3D rendering subprocess by detaching the debugger.
+        /// Must be called on the same thread that previously attached, since debugger state is thread-specific.
+        /// </summary>
+        private void ResumeRenderingSubProcess()
+        {
+            if (cefD3DRenderingSubProcessId == 0)
+                return;
+
+            _ = NativeMethods.DebugActiveProcessStop((uint)cefD3DRenderingSubProcessId);
+        }
 
         /// <summary>
-        /// Supports arrays
+        /// Suspends the CEF Direct3D rendering subprocess by attaching a debugger.
+        /// Must be called on the same thread to ensure proper detachment later.
         /// </summary>
-        /// <param name="functionName"></param>
-        /// <param name="parameters"></param>
-        private void ExecuteScriptFunctionAsync(string functionName, params object[] parameters)
+        private void SuspendRenderingSubProcess()
         {
-            var script = new StringBuilder();
-            script.Append(functionName);
-            script.Append("(");
-            for (int i = 0; i < parameters.Length; i++)
-            {
-                script.Append(JsonConvert.SerializeObject(parameters[i]));
-                if (i < parameters.Length - 1)
-                {
-                    script.Append(", ");
-                }
-            }
-            script.Append(");");
-            chromeBrowser?.ExecuteScriptAsync(script.ToString());
+            // The "System Idle Process" is given process ID 0, Kernel is 1.
+            if (cefD3DRenderingSubProcessId == 0)
+                return;
+
+            // DebugSetProcessKillOnExit by default is TRUE.
+            // Ref: https://learn.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-debugsetprocesskillonexit
+            _ = NativeMethods.DebugActiveProcess((uint)cefD3DRenderingSubProcessId);
+        }
+
+        private sealed class WallpaperPlaybackState
+        {
+            public bool IsPaused { get; set; }
         }
     }
 }

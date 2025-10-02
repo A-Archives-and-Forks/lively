@@ -2,6 +2,7 @@
 using Lively.Common;
 using Lively.Common.Extensions;
 using Lively.Common.Helpers;
+using Lively.Common.Helpers.Pinvoke;
 using Lively.Common.JsonConverters;
 using Lively.Common.Services;
 using Lively.Models.Enums;
@@ -28,6 +29,7 @@ namespace Lively.Player.WebView2
         private StartArgs startArgs;
         private bool isPaused = false;
         private bool isVideoStream = false;
+        private int cefD3DRenderingSubProcessId;
 
         private bool initializedServices = false; //delay API init till loaded page
         private IAudioVisualizerService visualizerService;
@@ -280,6 +282,9 @@ namespace Lively.Player.WebView2
                 return;
             }
 
+            if (!webView.TryGetCefD3DRenderingSubProcessId(out cefD3DRenderingSubProcessId))
+                "Failed to retrieve GetCefD3DRenderingSubProcessId".SendError(SendToParent);
+
             await RestoreLivelyProperties(startArgs.Properties);
             SendToParent(new LivelyMessageWallpaperLoaded() { Success = e.IsSuccess });
 
@@ -354,9 +359,31 @@ namespace Lively.Player.WebView2
             }
         }
 
-        private class WallpaperPlaybackState
+        /// <summary>
+        /// Resumes the suspended CEF Direct3D rendering subprocess by detaching the debugger.
+        /// Must be called on the same thread that previously attached, since debugger state is thread-specific.
+        /// </summary>
+        private void ResumeRenderingSubProcess()
         {
-            public bool IsPaused { get; set; }
+            if (cefD3DRenderingSubProcessId == 0)
+                return;
+
+            _ = NativeMethods.DebugActiveProcessStop((uint)cefD3DRenderingSubProcessId);
+        }
+
+        /// <summary>
+        /// Suspends the CEF Direct3D rendering subprocess by attaching a debugger.
+        /// Must be called on the same thread to ensure proper detachment later.
+        /// </summary>
+        private void SuspendRenderingSubProcess()
+        {
+            // The "System Idle Process" is given process ID 0, Kernel is 1.
+            if (cefD3DRenderingSubProcessId == 0)
+                return;
+
+            // DebugSetProcessKillOnExit by default is TRUE.
+            // Ref: https://learn.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-debugsetprocesskillonexit
+            _ = NativeMethods.DebugActiveProcess((uint)cefD3DRenderingSubProcessId);
         }
 
         public async Task ListenToParent()
@@ -386,145 +413,171 @@ namespace Lively.Player.WebView2
                         {
                             try
                             {
-                                var close = false;
                                 var obj = JsonConvert.DeserializeObject<IpcMessage>(text, new JsonSerializerSettings() { Converters = { new IpcMessageConverter() } });
+                                if (obj.Type == MessageType.cmd_close)
+                                    break;
+
+                                // Ensure all processing is on the same thread.
+                                // Some WebView2 calls require UI thread.
                                 this.Invoke((Action)(async () =>
                                 {
-                                    switch (obj.Type)
+                                    try
                                     {
-                                        case MessageType.cmd_reload:
-                                            // ConnectionAborted issue.
-                                            //try
-                                            //{
-                                            //    webView?.Reload();
-                                            //}
-                                            //catch (Exception ie)
-                                            //{
-                                            //    WriteToParent(new LivelyMessageConsole()
-                                            //    {
-                                            //        Category = ConsoleMessageType.error,
-                                            //        Message = $"Reload failed: {ie.Message}"
-                                            //    });
-                                            //}
-                                            break;
-                                        case MessageType.cmd_suspend:
-                                            if (!isPaused)
-                                            {
-                                                if (startArgs.PauseWebMedia || isVideoStream)
-                                                    await webView.TryPauseMedia();
-
-                                                if (startArgs.PauseEvent)
-                                                    await webView.ExecuteScriptFunctionAsync("livelyWallpaperPlaybackChanged",
-                                                        JsonConvert.SerializeObject(new WallpaperPlaybackState() { IsPaused = true }),
-                                                        Formatting.Indented);
-                                            }
-                                            isPaused = true;
-                                            break;
-                                        case MessageType.cmd_resume:
-                                            if (isPaused)
-                                            {
-                                                if (startArgs.PauseWebMedia || isVideoStream)
-                                                    await webView.TryPlayMedia();
-
-                                                if (startArgs.PauseEvent)
-                                                    await webView.ExecuteScriptFunctionAsync("livelyWallpaperPlaybackChanged",
-                                                           JsonConvert.SerializeObject(new WallpaperPlaybackState() { IsPaused = false }),
-                                                           Formatting.Indented);
-
-                                                if (startArgs.NowPlaying)
-                                                    await webView.ExecuteScriptFunctionAsync("livelyCurrentTrack", JsonConvert.SerializeObject(nowPlayingService?.CurrentTrack, Formatting.Indented));
-                                            }
-                                            isPaused = false;
-                                            break;
-                                        case MessageType.cmd_volume:
-                                            var vc = (LivelyVolumeCmd)obj;
-                                            webView.CoreWebView2.IsMuted = vc.Volume == 0;
-                                            break;
-                                        case MessageType.cmd_screenshot:
-                                            var success = true;
-                                            var scr = (LivelyScreenshotCmd)obj;
-                                            try
-                                            {
-                                                await webView.CaptureScreenshot(scr.Format, scr.FilePath);
-                                            }
-                                            catch (Exception ie)
-                                            {
-                                                success = false;
-                                                ie.SendError(SendToParent, "Failed to capture screenshot");
-                                            }
-                                            finally
-                                            {
-                                                SendToParent(new LivelyMessageScreenshot()
-                                                {
-                                                    FileName = Path.GetFileName(scr.FilePath),
-                                                    Success = success
-                                                });
-                                            }
-                                            break;
-                                        case MessageType.lp_slider:
-                                            var sl = (LivelySlider)obj;
-                                            await webView.ExecuteScriptFunctionAsync("livelyPropertyListener", sl.Name, sl.Value);
-                                            break;
-                                        case MessageType.lp_textbox:
-                                            var tb = (LivelyTextBox)obj;
-                                            await webView.ExecuteScriptFunctionAsync("livelyPropertyListener", tb.Name, tb.Value);
-                                            break;
-                                        case MessageType.lp_dropdown:
-                                            var dd = (LivelyDropdown)obj;
-                                            await webView.ExecuteScriptFunctionAsync("livelyPropertyListener", dd.Name, dd.Value);
-                                            break;
-                                        case MessageType.lp_cpicker:
-                                            var cp = (LivelyColorPicker)obj;
-                                            await webView.ExecuteScriptFunctionAsync("livelyPropertyListener", cp.Name, cp.Value);
-                                            break;
-                                        case MessageType.lp_chekbox:
-                                            var cb = (LivelyCheckbox)obj;
-                                            await webView.ExecuteScriptFunctionAsync("livelyPropertyListener", cb.Name, cb.Value);
-                                            break;
-                                        case MessageType.lp_fdropdown:
-                                            var fd = (LivelyFolderDropdown)obj;
-                                            var filePath = fd.Value is null ? null : Path.Combine(Path.GetDirectoryName(startArgs.Url), fd.Value);
-                                            await webView.ExecuteScriptFunctionAsync("livelyPropertyListener", fd.Name, File.Exists(filePath) ? fd.Value : null);
-                                            break;
-                                        case MessageType.lp_button:
-                                            var btn = (LivelyButton)obj;
-                                            if (btn.IsDefault)
-                                                await RestoreLivelyProperties(startArgs.Properties);
-                                            else
-                                                await webView.ExecuteScriptFunctionAsync("livelyPropertyListener", btn.Name, true);
-                                            break;
-                                        case MessageType.lsp_perfcntr:
-                                            await webView.ExecuteScriptFunctionAsync("livelySystemInformation", JsonConvert.SerializeObject(((LivelySystemInformation)obj).Info, Formatting.Indented));
-
-                                            break;
-                                        case MessageType.lsp_nowplaying:
-                                            await webView.ExecuteScriptFunctionAsync("livelyCurrentTrack", JsonConvert.SerializeObject(((LivelySystemNowPlaying)obj).Info, Formatting.Indented));
-                                            break;
-                                        case MessageType.cmd_close:
-                                            close = true;
-                                            break;
+                                        await ProcessMessage(obj);
+                                    }
+                                    catch (Exception ie1)
+                                    {
+                                        ie1.SendError(SendToParent);
                                     }
                                 }));
-
-                                if (close)
-                                    break;
                             }
-                            catch (Exception ie)
+                            catch (Exception ie2)
                             {
-                                ie.SendError(SendToParent);
+                                ie2.SendError(SendToParent);
                             }
                         }
                     }
                 });
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                e.SendError(SendToParent);
+                ex.SendError(SendToParent);
             }
             finally
             {
+                reader?.Dispose();
                 this.Invoke((Action)Application.Exit);
             }
+        }
+
+        private async Task ProcessMessage(IpcMessage obj)
+        {
+            switch (obj.Type)
+            {
+                case MessageType.cmd_reload:
+                    // ConnectionAborted issue.
+                    //try
+                    //{
+                    //    webView?.Reload();
+                    //}
+                    //catch (Exception ie)
+                    //{
+                    //    WriteToParent(new LivelyMessageConsole()
+                    //    {
+                    //        Category = ConsoleMessageType.error,
+                    //        Message = $"Reload failed: {ie.Message}"
+                    //    });
+                    //}
+                    break;
+                case MessageType.cmd_suspend:
+                    await HandleSuspend();
+                    break;
+                case MessageType.cmd_resume:
+                    await HandleResume();
+                    break;
+                case MessageType.cmd_volume:
+                    var vc = (LivelyVolumeCmd)obj;
+                    webView.CoreWebView2.IsMuted = vc.Volume == 0;
+                    break;
+                case MessageType.cmd_screenshot:
+                    var success = true;
+                    var scr = (LivelyScreenshotCmd)obj;
+                    try
+                    {
+                        await webView.CaptureScreenshot(scr.Format, scr.FilePath);
+                    }
+                    catch (Exception ie)
+                    {
+                        success = false;
+                        ie.SendError(SendToParent, "Failed to capture screenshot");
+                    }
+                    finally
+                    {
+                        SendToParent(new LivelyMessageScreenshot()
+                        {
+                            FileName = Path.GetFileName(scr.FilePath),
+                            Success = success
+                        });
+                    }
+                    break;
+                case MessageType.lp_slider:
+                    var sl = (LivelySlider)obj;
+                    await webView.ExecuteScriptFunctionAsync("livelyPropertyListener", sl.Name, sl.Value);
+                    break;
+                case MessageType.lp_textbox:
+                    var tb = (LivelyTextBox)obj;
+                    await webView.ExecuteScriptFunctionAsync("livelyPropertyListener", tb.Name, tb.Value);
+                    break;
+                case MessageType.lp_dropdown:
+                    var dd = (LivelyDropdown)obj;
+                    await webView.ExecuteScriptFunctionAsync("livelyPropertyListener", dd.Name, dd.Value);
+                    break;
+                case MessageType.lp_cpicker:
+                    var cp = (LivelyColorPicker)obj;
+                    await webView.ExecuteScriptFunctionAsync("livelyPropertyListener", cp.Name, cp.Value);
+                    break;
+                case MessageType.lp_chekbox:
+                    var cb = (LivelyCheckbox)obj;
+                    await webView.ExecuteScriptFunctionAsync("livelyPropertyListener", cb.Name, cb.Value);
+                    break;
+                case MessageType.lp_fdropdown:
+                    var fd = (LivelyFolderDropdown)obj;
+                    var filePath = fd.Value is null ? null : Path.Combine(Path.GetDirectoryName(startArgs.Url), fd.Value);
+                    await webView.ExecuteScriptFunctionAsync("livelyPropertyListener", fd.Name, File.Exists(filePath) ? fd.Value : null);
+                    break;
+                case MessageType.lp_button:
+                    var btn = (LivelyButton)obj;
+                    if (btn.IsDefault)
+                        await RestoreLivelyProperties(startArgs.Properties);
+                    else
+                        await webView.ExecuteScriptFunctionAsync("livelyPropertyListener", btn.Name, true);
+                    break;
+                case MessageType.lsp_perfcntr:
+                    await webView.ExecuteScriptFunctionAsync("livelySystemInformation", JsonConvert.SerializeObject(((LivelySystemInformation)obj).Info, Formatting.Indented));
+
+                    break;
+                case MessageType.lsp_nowplaying:
+                    await webView.ExecuteScriptFunctionAsync("livelyCurrentTrack", JsonConvert.SerializeObject(((LivelySystemNowPlaying)obj).Info, Formatting.Indented));
+                    break;
+                case MessageType.cmd_close:
+                    // Handle on caller
+                    break;
+            }
+        }
+
+        private async Task HandleSuspend()
+        {
+            SuspendRenderingSubProcess();
+            if (!isPaused)
+            {
+                if (startArgs.PauseWebMedia || isVideoStream)
+                    await webView.TryPauseMedia();
+
+                if (startArgs.PauseEvent)
+                    await webView.ExecuteScriptFunctionAsync("livelyWallpaperPlaybackChanged",
+                        JsonConvert.SerializeObject(new WallpaperPlaybackState() { IsPaused = true }),
+                        Formatting.Indented);
+            }
+            isPaused = true;
+        }
+
+        private async Task HandleResume()
+        {
+            ResumeRenderingSubProcess();
+            if (isPaused)
+            {
+                if (startArgs.PauseWebMedia || isVideoStream)
+                    await webView.TryPlayMedia();
+
+                if (startArgs.PauseEvent)
+                    await webView.ExecuteScriptFunctionAsync("livelyWallpaperPlaybackChanged",
+                            JsonConvert.SerializeObject(new WallpaperPlaybackState() { IsPaused = false }),
+                            Formatting.Indented);
+
+                if (startArgs.NowPlaying)
+                    await webView.ExecuteScriptFunctionAsync("livelyCurrentTrack", JsonConvert.SerializeObject(nowPlayingService?.CurrentTrack, Formatting.Indented));
+            }
+            isPaused = false;
         }
 
         private async Task RestoreLivelyProperties(string propertyPath)
@@ -556,6 +609,11 @@ namespace Lively.Player.WebView2
                 Console.WriteLine(JsonConvert.SerializeObject(obj));
 
             Debug.WriteLine(JsonConvert.SerializeObject(obj));
+        }
+
+        private sealed class WallpaperPlaybackState
+        {
+            public bool IsPaused { get; set; }
         }
     }
 }

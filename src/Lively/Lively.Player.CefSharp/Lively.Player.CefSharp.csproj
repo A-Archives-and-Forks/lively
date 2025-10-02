@@ -86,6 +86,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extensions\CefSharp\BrowserExtensions.cs" />
     <Compile Include="Extensions\CefSharp\MenuHandler.cs" />
     <Compile Include="Extensions\CefSharp\PopUpHandle.cs" />
     <Compile Include="Extensions\CefSharp\DevTools\DevToolsExtensions.cs" />

@@ -1,4 +1,5 @@
 ﻿using Lively.Common;
+using Lively.Common.Helpers.Pinvoke;
 using Lively.Models.Enums;
 using Microsoft.Web.WebView2.Core;
 using Newtonsoft.Json;
@@ -90,6 +91,49 @@ namespace Lively.Player.WebView2.Extensions.WebView2
                 AppTheme.Light => CoreWebView2PreferredColorScheme.Light,
                 _ => CoreWebView2PreferredColorScheme.Auto,
             };
+        }
+
+        /// <summary>
+        /// This should be called after the WebView has finished initializing (e.g. after NavigationCompleted),
+        /// otherwise the internal Chromium window may not yet exist.
+        /// </summary>
+        public static bool TryGetChrome_WidgetWin_0(this WebView webView, out IntPtr chrome_WidgetWin_0)
+        {
+            // WindowsForms10.Window.8.app.0.141b42a_r9_ad1
+            chrome_WidgetWin_0 = NativeMethods.FindWindowEx(webView.Handle, IntPtr.Zero, "Chrome_WidgetWin_0", null);
+            return chrome_WidgetWin_0 != IntPtr.Zero;
+        }
+
+        /// <summary>
+        /// This should be called after the WebView has finished initializing (e.g. after NavigationCompleted),
+        /// otherwise the internal Chromium window may not yet exist.
+        /// </summary>
+        public static bool TryGetIntermediateD3DWindow(this WebView webView, out IntPtr intermediateD3DWindow)
+        {
+            intermediateD3DWindow = IntPtr.Zero;
+            if (!TryGetChrome_WidgetWin_0(webView, out IntPtr chrome_WidgetWin_0))
+                return false;
+
+            var chrome_WidgetWin_1 = NativeMethods.FindWindowEx(chrome_WidgetWin_0, IntPtr.Zero, "Chrome_WidgetWin_1", null);
+            if (chrome_WidgetWin_1 == IntPtr.Zero)
+                return false;
+
+            intermediateD3DWindow = NativeMethods.FindWindowEx(chrome_WidgetWin_1, IntPtr.Zero, "Intermediate D3D Window", null);
+            return intermediateD3DWindow != IntPtr.Zero;
+        }
+
+        /// <summary>
+        /// This should be called after the WebView has finished initializing (e.g. after NavigationCompleted),
+        /// otherwise the internal Chromium window may not yet exist.
+        /// </summary>
+        public static bool TryGetCefD3DRenderingSubProcessId(this WebView webView, out int cefD3DRenderingSubProcessId)
+        {
+            cefD3DRenderingSubProcessId = 0;
+            if (!TryGetIntermediateD3DWindow(webView, out IntPtr intermediateD3DWindow))
+                return false;
+
+            var result = NativeMethods.GetWindowThreadProcessId(intermediateD3DWindow, out cefD3DRenderingSubProcessId);
+            return result != 0;
         }
     }
 }

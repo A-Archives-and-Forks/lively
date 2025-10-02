@@ -25,7 +25,6 @@ namespace Lively.Core.Wallpapers
         private readonly TaskCompletionSource contentReadyTcs = new();
         private bool IsContentReady => contentReadyTcs.Task.IsCompleted;
         private readonly Process process;
-        private int cefD3DRenderingSubProcessPid;
         private static int globalCount;
         private readonly int uniqueId;
         private int currentVolume = 0;
@@ -118,21 +117,17 @@ namespace Lively.Core.Wallpapers
 
         public void Pause()
         {
-            // The "System Idle Process" is given process ID 0, Kernel is 1.
-            if (!IsContentReady || cefD3DRenderingSubProcessPid == 0)
+            if (!IsContentReady)
                 return;
 
-            // Cef spawns multiple subprocess but "Intermediate D3D Window" seems to do the trick..
-            _ = NativeMethods.DebugActiveProcess((uint)cefD3DRenderingSubProcessPid);
             SendMessage(new LivelySuspendCmd()); //"{\"Type\":7}"
         }
 
         public void Play()
         {
-            if (!IsContentReady || cefD3DRenderingSubProcessPid == 0)
+            if (!IsContentReady)
                 return;
 
-            _ = NativeMethods.DebugActiveProcessStop((uint)cefD3DRenderingSubProcessPid);
             SendMessage(new LivelyResumeCmd()); //"{\"Type\":8}"
         }
 
@@ -305,8 +300,6 @@ namespace Lively.Core.Wallpapers
                     case MessageType.msg_wploaded:
                         if (!IsLoaded)
                         {
-                            // CoreWebView2InitializationCompleted impl.
-                            _ = NativeMethods.GetWindowThreadProcessId(NativeMethods.FindWindowEx(InputHandle, IntPtr.Zero, "Intermediate D3D Window", null), out cefD3DRenderingSubProcessPid);
                             IsLoaded = true;
                             Loaded?.Invoke(this, EventArgs.Empty);
 
