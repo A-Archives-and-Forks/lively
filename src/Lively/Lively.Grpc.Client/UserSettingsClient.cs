@@ -285,7 +285,8 @@ namespace Lively.Grpc.Client
                         Width = settings.SelectedAudioOutputDisplay.Bounds.Width,
                         Height = settings.SelectedAudioOutputDisplay.Bounds.Height
                     }
-                }
+                },
+                RestartAfterLockscreen = settings.IsRestartAfterLockscreen,
             };
         }
 
@@ -401,6 +402,7 @@ namespace Lively.Grpc.Client
                         settings.SelectedAudioOutputDisplay.WorkingArea.Width,
                         settings.SelectedAudioOutputDisplay.WorkingArea.Height),
                 },
+                IsRestartAfterLockscreen = settings.RestartAfterLockscreen,
             };
         }
 

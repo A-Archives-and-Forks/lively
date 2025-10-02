@@ -35,6 +35,7 @@ namespace Lively.UI.Shared.ViewModels
             SelectedAppFocusIndex = (int)userSettings.Settings.AppFocusPause;
             SelectedBatteryPowerIndex = (int)userSettings.Settings.BatteryPause;
             SelectedRemoteDestopPowerIndex = (int)userSettings.Settings.RemoteDesktopPause;
+            IsRestartAfterLockscreen = userSettings.Settings.IsRestartAfterLockscreen;
             SelectedPowerSaveModeIndex = (int)userSettings.Settings.PowerSaveModePause;
             SelectedDisplayPauseRuleIndex = (int)userSettings.Settings.DisplayPauseSettings;
             SelectedPauseAlgorithmIndex = (int)userSettings.Settings.ProcessMonitorAlgorithm;
@@ -118,6 +119,21 @@ namespace Lively.UI.Shared.ViewModels
                     UpdateSettingsConfigFile();
                 }
                 SetProperty(ref _selectedRemoteDestopPowerIndex, value);
+            }
+        }
+
+        private bool _isRestartAfterLockscreen;
+        public bool IsRestartAfterLockscreen
+        {
+            get => _isRestartAfterLockscreen;
+            set
+            {
+                if (userSettings.Settings.IsRestartAfterLockscreen != value)
+                {
+                    userSettings.Settings.IsRestartAfterLockscreen = value;
+                    UpdateSettingsConfigFile();
+                }
+                SetProperty(ref _isRestartAfterLockscreen, value);
             }
         }
 

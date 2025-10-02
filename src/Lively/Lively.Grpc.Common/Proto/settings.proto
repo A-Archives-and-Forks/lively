@@ -83,6 +83,7 @@ message SettingsDataModel {
     DisplayAudioMode display_audio_output = 71;
     GetScreensResponse selected_audio_output_display = 72;
     string visualizer_audio_device_id = 73;
+    bool restart_after_lockscreen = 74;
 }
 
 message AppRulesSettings {

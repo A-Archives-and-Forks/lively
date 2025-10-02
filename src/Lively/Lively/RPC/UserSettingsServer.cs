@@ -190,6 +190,7 @@ namespace Lively.RPC
             userSettings.Settings.VisualizerAudioDeviceId = req.VisualizerAudioDeviceId;
             userSettings.Settings.DisplayAudioOutput = (Models.Enums.DisplayAudioMode)req.DisplayAudioOutput;
             userSettings.Settings.SelectedAudioOutputDisplay = displayManager.DisplayMonitors.FirstOrDefault(x => req.SelectedAudioOutputDisplay.DeviceId == x.DeviceId) ?? displayManager.PrimaryDisplayMonitor;
+            userSettings.Settings.IsRestartAfterLockscreen = req.RestartAfterLockscreen;
 
             try
             {
@@ -329,6 +330,7 @@ namespace Lively.RPC
                         Height = settings.SelectedAudioOutputDisplay.Bounds.Height
                     }
                 },
+                RestartAfterLockscreen = settings.IsRestartAfterLockscreen,
             };
             return Task.FromResult(resp);
         }

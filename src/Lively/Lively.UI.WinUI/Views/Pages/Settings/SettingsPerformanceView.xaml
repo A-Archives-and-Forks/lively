@@ -132,6 +132,13 @@
                         </Grid>
                     </controls:SettingsCard>
 
+                    <controls:SettingsCard Header="Restart wallpaper when returning from lock screen">
+                        <controls:SettingsCard.HeaderIcon>
+                            <FontIcon Glyph="&#xE72E;" />
+                        </controls:SettingsCard.HeaderIcon>
+                        <ToggleSwitch IsOn="{Binding IsRestartAfterLockscreen, Mode=TwoWay}" />
+                    </controls:SettingsCard>
+
                     <controls:SettingsCard x:Uid="DisplayPauseRule">
                         <controls:SettingsCard.HeaderIcon>
                             <FontIcon Glyph="&#xE7F4;" />
