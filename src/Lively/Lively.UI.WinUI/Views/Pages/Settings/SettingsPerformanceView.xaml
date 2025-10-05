@@ -132,7 +132,7 @@
                         </Grid>
                     </controls:SettingsCard>
 
-                    <controls:SettingsCard Header="Restart wallpaper when returning from lock screen">
+                    <controls:SettingsCard x:Uid="RestartWallpaperAfterLockscreen">
                         <controls:SettingsCard.HeaderIcon>
                             <FontIcon Glyph="&#xE72E;" />
                         </controls:SettingsCard.HeaderIcon>
