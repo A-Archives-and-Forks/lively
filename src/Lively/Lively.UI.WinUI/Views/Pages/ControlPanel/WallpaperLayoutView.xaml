@@ -63,7 +63,7 @@
                 <FontIcon Glyph="&#xE90C;" />
             </controls:SettingsExpander.HeaderIcon>
             <controls:SettingsExpander.Items>
-                <controls:SettingsCard ContentAlignment="Left">
+                <controls:SettingsCard ContentAlignment="Left" IsEnabled="{Binding IsUpdatingWallpaperLayout, Mode=OneWay, Converter={StaticResource BoolNegationConverter}}">
                     <controls:Segmented SelectedIndex="{Binding SelectedWallpaperLayoutIndex, Mode=TwoWay}">
                         <controls:SegmentedItem>
                             <TextBlock>

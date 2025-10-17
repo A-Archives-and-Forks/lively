@@ -42,7 +42,7 @@ namespace Lively.UI.Shared.ViewModels
 
             SelectedWallpaperLayoutIndex = (int)userSettings.Settings.WallpaperArrangement;
             IsRememberSelectedScreen = userSettings.Settings.RememberSelectedScreen;
-            UpdateLayout();
+            UpdateDisplayLayout();
 
             // This event is also fired when monitor configuration changed.
             desktopCore.WallpaperChanged += DesktopCore_WallpaperChanged;
@@ -77,6 +77,9 @@ namespace Lively.UI.Shared.ViewModels
         [ObservableProperty]
         private WallpaperArrangement selectedWallpaperLayout;
 
+        [ObservableProperty]
+        private bool isUpdatingWallpaperLayout;
+
         private int _selectedWallpaperLayoutIndex;
         public int SelectedWallpaperLayoutIndex
         {
@@ -88,7 +91,7 @@ namespace Lively.UI.Shared.ViewModels
                     var prevArrangement = userSettings.Settings.WallpaperArrangement;
                     userSettings.Settings.WallpaperArrangement = (WallpaperArrangement)value;
                     UpdateSettingsConfigFile();
-                    _ = UpdateWallpaper(prevArrangement, userSettings.Settings.WallpaperArrangement);
+                    _ = UpdateWallpaperLayout(prevArrangement, userSettings.Settings.WallpaperArrangement);
                 }
                 SetProperty(ref _selectedWallpaperLayoutIndex, value);
                 SelectedWallpaperLayout = (WallpaperArrangement)value;
@@ -219,7 +222,7 @@ namespace Lively.UI.Shared.ViewModels
             CustomiseWallpaperPageOnClosed();
         }
 
-        private void UpdateLayout()
+        private void UpdateDisplayLayout()
         {
             ScreenItems.Clear();
             foreach (var item in displayManager.DisplayMonitors)
@@ -246,13 +249,21 @@ namespace Lively.UI.Shared.ViewModels
 
         private void DesktopCore_WallpaperChanged(object sender, EventArgs e)
         {
-            dispatcher.TryEnqueue(UpdateLayout);
+            dispatcher.TryEnqueue(UpdateDisplayLayout);
         }
 
-        private async Task UpdateWallpaper(WallpaperArrangement prev, WallpaperArrangement curr)
+        private async Task UpdateWallpaperLayout(WallpaperArrangement prev, WallpaperArrangement curr)
         {
-            if (desktopCore.Wallpapers.Count > 0)
+            if (desktopCore.Wallpapers.Count == 0)
             {
+                UpdateDisplayLayout();
+                return;
+            }
+
+            try
+            {
+                IsUpdatingWallpaperLayout = true;
+
                 var wallpapers = desktopCore.Wallpapers.ToList();
                 await desktopCore.CloseAllWallpapers();
                 if ((prev == WallpaperArrangement.per && curr == WallpaperArrangement.span) || (prev == WallpaperArrangement.per && curr == WallpaperArrangement.duplicate))
@@ -271,9 +282,9 @@ namespace Lively.UI.Shared.ViewModels
                     await desktopCore.SetWallpaper(wallpapers[0].LivelyInfoFolderPath, primary.DeviceId);
                 }
             }
-            else
+            finally
             {
-                UpdateLayout();
+                IsUpdatingWallpaperLayout = false;
             }
         }
     }
