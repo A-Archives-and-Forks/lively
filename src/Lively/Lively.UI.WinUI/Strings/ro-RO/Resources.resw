@@ -1296,4 +1296,7 @@ redat pe ecranele dvs.</value>
   <data name="SwitchReleaseBranchStable.Header" xml:space="preserve">
     <value>Treceți la versiunea publică</value>
   </data>
+  <data name="RestartWallpaperAfterLockscreen.Header" xml:space="preserve">
+    <value>Reporniți fundalul când vă întoarceți de la ecranul de blocare</value>
+  </data>
 </root>

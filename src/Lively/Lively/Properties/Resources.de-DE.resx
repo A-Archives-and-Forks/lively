@@ -1294,4 +1294,7 @@ Wenn dies immer noch nicht funktioniert, schließen &amp; starten Sie Lively ode
   <data name="SwitchReleaseBranchStable.Header" xml:space="preserve">
     <value>Zur stabilen Version wechseln</value>
   </data>
+  <data name="RestartWallpaperAfterLockscreen.Header" xml:space="preserve">
+    <value>Hintergrund nach Rückkehr vom Sperrbildschirm neu starten</value>
+  </data>
 </root>

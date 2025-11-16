@@ -1295,4 +1295,7 @@ https://github.com/rocksdanister/lively/wiki</value>
   <data name="SwitchReleaseBranchStable.Header" xml:space="preserve">
     <value>切換到穩定版本</value>
   </data>
+  <data name="RestartWallpaperAfterLockscreen.Header" xml:space="preserve">
+    <value>Restart wallpaper when returning from lock screen</value>
+  </data>
 </root>

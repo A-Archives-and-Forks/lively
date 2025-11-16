@@ -1262,42 +1262,45 @@ Edge הוא תצוגת האינטרנט המובנית של Windows 10.</value>
     <value>דהייה לשחור לפני ההתחלה</value>
   </data>
   <data name="VideoLetWindowsManageColor.Header" xml:space="preserve">
-    <value>Let Windows manage colors</value>
+    <value>תתן לWindows לנהל צבעים</value>
   </data>
   <data name="ScreensaverWindowsSettings.Header" xml:space="preserve">
-    <value>Windows Settings</value>
+    <value>הגדרות Windows</value>
   </data>
   <data name="DescriptionConfirmProjectDirectory.Text" xml:space="preserve">
-    <value>Confirm project structure?</value>
+    <value>לאשר את מבנה הפרויקט?</value>
   </data>
   <data name="DescriptionConfirmFileConvertion.Text" xml:space="preserve">
-    <value>This file format isn’t supported directly. It will be converted before use. Do you want to continue?</value>
+    <value>פורמט הזמן הזה לא נתמך. הוא יומר לפני שימוש. האם אתה רוצה להמשיך?</value>
   </data>
   <data name="ScreensaverDialogSettings.Header" xml:space="preserve">
     <value>הגדרות</value>
   </data>
   <data name="DisplayAudioPauseRule.Header" xml:space="preserve">
-    <value>Output</value>
+    <value>פלט</value>
   </data>
   <data name="DisplayAudioPauseRule.Description" xml:space="preserve">
-    <value>Control how wallpaper audio plays across your screens</value>
+    <value>שלוט באופן שבו אודיו של טפטים מתנגן על פני המסכים שלך</value>
   </data>
   <data name="VisualizerAudioDevice.Description" xml:space="preserve">
-    <value>Select the playback device used for visualizing sound</value>
+    <value>בחר מכשיר השמעה להשתמש לדמיין צליל</value>
   </data>
   <data name="VisualizerAudioDevice.Header" xml:space="preserve">
-    <value>Audio device</value>
+    <value>מכשיר שמע</value>
   </data>
   <data name="SwitchReleaseBranchBeta.Description" xml:space="preserve">
-    <value>Get early features and help test them before public release. These builds may be unstable.</value>
+    <value>קבל תוכנות מוקדמות ותעזור לבדוק אותם לפשי שחררור ציבורי. ייתכן שהגרסאות לא יהיו יציבות.</value>
   </data>
   <data name="SwitchReleaseBranchBeta.Header" xml:space="preserve">
-    <value>Join the Beta release</value>
+    <value>הצטרף לבטא</value>
   </data>
   <data name="SwitchReleaseBranchStable.Description" xml:space="preserve">
-    <value>Return to the regular public release for the most reliable updates.</value>
+    <value>חזרה לגרסת רגיל כדי לקבל עדכונים הכי אמינים.</value>
   </data>
   <data name="SwitchReleaseBranchStable.Header" xml:space="preserve">
-    <value>Switch to Stable release</value>
+    <value>עבור לגרסה יציבה</value>
+  </data>
+  <data name="RestartWallpaperAfterLockscreen.Header" xml:space="preserve">
+    <value>התחל טפט מחדש אחרי חזירה ממסך הנעילה</value>
   </data>
 </root>

@@ -1287,15 +1287,18 @@ Edge - встроенный в Windows 10 WebView.</value>
     <value>Аудио устройство</value>
   </data>
   <data name="SwitchReleaseBranchBeta.Description" xml:space="preserve">
-    <value>Get early features and help test them before public release. These builds may be unstable.</value>
+    <value>Получите ранние функции и помогите протестировать их до публичного релиза. Эти сборки могут быть нестабильными.</value>
   </data>
   <data name="SwitchReleaseBranchBeta.Header" xml:space="preserve">
-    <value>Join the Beta release</value>
+    <value>Присоединиться к бета-релизу</value>
   </data>
   <data name="SwitchReleaseBranchStable.Description" xml:space="preserve">
-    <value>Return to the regular public release for the most reliable updates.</value>
+    <value>Вернуться к регулярному публичному релизу для наиболее надежных обновлений.</value>
   </data>
   <data name="SwitchReleaseBranchStable.Header" xml:space="preserve">
-    <value>Switch to Stable release</value>
+    <value>Переключиться на стабильный релиз</value>
+  </data>
+  <data name="RestartWallpaperAfterLockscreen.Header" xml:space="preserve">
+    <value>Запускать обои с начала после разблокировки</value>
   </data>
 </root>

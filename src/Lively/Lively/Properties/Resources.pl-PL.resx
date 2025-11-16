@@ -260,7 +260,7 @@ https://github.com/rocksdanister/lively/wiki</value>
 Czy chcesz przywrócić użyte poprzednio tapety?</value>
   </data>
   <data name="LivelyExceptionWorkerWSetupFail" xml:space="preserve">
-    <value>Do poprawnego działania lively wymagane są dodatkowe ustawienia:-  
+    <value>Do poprawnego działania lively wymagane są dodatkowe ustawienia:  
 1. Otwórz Ten komputer(Mój komputer)
 2. Kliknij prawym myszy na pustym obszarze
 3. Wybierz właściwości
@@ -943,7 +943,7 @@ Wszystkie procesy: Większe obciążenie procesora, skanuje wszystkie procesy ab
     <value>Galeria</value>
   </data>
   <data name="AboutMe.Text" xml:space="preserve">
-    <value>Cześć, nazywam się Dani John znany także jako rocksdanister. Stworzyłem Lively darmową, otwarto-źródłową (FOSS) aplikację do tapet. Dzięki za poświęcenie czasu na obejrzenie mojej pracy.</value>
+    <value>Cześć, jestem Dani John, znany także jako rocksdanister. Stworzyłem Lively, darmową i otwarto-źródłową (FOSS) aplikację do tapet. Dzięki, że poświęciłeś czas, aby zapoznać się z moją pracą.</value>
   </data>
   <data name="LicenseLink.Content" xml:space="preserve">
     <value>Licencja oprogramowania</value>
@@ -1165,7 +1165,7 @@ Wszystkie procesy: Większe obciążenie procesora, skanuje wszystkie procesy ab
     <value>Ikony pulpitu</value>
   </data>
   <data name="TextEndOfItems.Text" xml:space="preserve">
-    <value>W tej chwili to wszystko..</value>
+    <value>W tej chwili to wszystko...</value>
   </data>
   <data name="DevelopmentOnHold.Message" xml:space="preserve">
     <value>Rozwój tej funkcji jest wstrzymany</value>
@@ -1183,7 +1183,7 @@ Wszystkie procesy: Większe obciążenie procesora, skanuje wszystkie procesy ab
     <value>Przybliżanie głębokości..</value>
   </data>
   <data name="DescriptionDepthWallpaperItem.Content" xml:space="preserve">
-    <value>Używając AI przekształć zdjęcia w 3D</value>
+    <value>Przekształć zdjęcia w 3D używając AI</value>
   </data>
   <data name="TextContinue.Content" xml:space="preserve">
     <value>Kontynuuj</value>
@@ -1249,54 +1249,57 @@ Wszystkie procesy: Większe obciążenie procesora, skanuje wszystkie procesy ab
     <value>Wymagany jest restart tapety, aby zastosować ustawienia</value>
   </data>
   <data name="LanguageSettingsItemSystemDefault.Content" xml:space="preserve">
-    <value>Same as System</value>
+    <value>Użyj języka systemu</value>
   </data>
   <data name="InfoSettingsRestartRequest.Message" xml:space="preserve">
-    <value>Please restart application for settings to take effect.</value>
+    <value>Uruchom ponownie aplikację, aby nowe ustawienia weszły w życie.</value>
   </data>
   <data name="ScreensaverLockOnResume.Header" xml:space="preserve">
     <value>Po wznowieniu wyświetl ekran logowania</value>
   </data>
   <data name="ScreensaverFadeIn.Header" xml:space="preserve">
-    <value>Fade to black before start</value>
+    <value>Wygasz do czerni przed startem</value>
   </data>
   <data name="VideoLetWindowsManageColor.Header" xml:space="preserve">
-    <value>Let Windows manage colors</value>
+    <value>Pozwól systemowi Windows zarządzać kolorami</value>
   </data>
   <data name="ScreensaverWindowsSettings.Header" xml:space="preserve">
-    <value>Windows Settings</value>
+    <value>Ustawienia Windowsa</value>
   </data>
   <data name="DescriptionConfirmProjectDirectory.Text" xml:space="preserve">
-    <value>Confirm project structure?</value>
+    <value>Potwierdzić strukturę?</value>
   </data>
   <data name="DescriptionConfirmFileConvertion.Text" xml:space="preserve">
-    <value>This file format isn’t supported directly. It will be converted before use. Do you want to continue?</value>
+    <value>Ten format pliku nie jest bezpośrednio obsługiwany. Przed użyciem zostanie przekonwertowany. Czy chcesz kontynuować?</value>
   </data>
   <data name="ScreensaverDialogSettings.Header" xml:space="preserve">
     <value>Ustawienia</value>
   </data>
   <data name="DisplayAudioPauseRule.Header" xml:space="preserve">
-    <value>Output</value>
+    <value>Wyjście audio</value>
   </data>
   <data name="DisplayAudioPauseRule.Description" xml:space="preserve">
-    <value>Control how wallpaper audio plays across your screens</value>
+    <value>Wybierz, na których ekranach odtwarzany jest dźwięk tapety</value>
   </data>
   <data name="VisualizerAudioDevice.Description" xml:space="preserve">
-    <value>Select the playback device used for visualizing sound</value>
+    <value>Wybierz urządzenie do wizualizacji dźwięku</value>
   </data>
   <data name="VisualizerAudioDevice.Header" xml:space="preserve">
-    <value>Audio device</value>
+    <value>Urządzenia dźwięku</value>
   </data>
   <data name="SwitchReleaseBranchBeta.Description" xml:space="preserve">
-    <value>Get early features and help test them before public release. These builds may be unstable.</value>
+    <value>Uzyskaj dostęp do nowych funkcji i pomóż je przetestować przed wydaniem w publicznej wersji. Wersje beta mogą być niestabilne.</value>
   </data>
   <data name="SwitchReleaseBranchBeta.Header" xml:space="preserve">
-    <value>Join the Beta release</value>
+    <value>Dołącz do wersji Beta</value>
   </data>
   <data name="SwitchReleaseBranchStable.Description" xml:space="preserve">
-    <value>Return to the regular public release for the most reliable updates.</value>
+    <value>Powróć do stabilnej wersji, aby otrzymywać najbardziej niezawodne aktualizacje.</value>
   </data>
   <data name="SwitchReleaseBranchStable.Header" xml:space="preserve">
-    <value>Switch to Stable release</value>
+    <value>Przełącz na stabilną wersję</value>
+  </data>
+  <data name="RestartWallpaperAfterLockscreen.Header" xml:space="preserve">
+    <value>Restart wallpaper when returning from lock screen</value>
   </data>
 </root>

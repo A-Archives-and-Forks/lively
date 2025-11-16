@@ -1263,7 +1263,7 @@ Edge é o webview integrado do windows 10.</value>
     <value>Let Windows manage colors</value>
   </data>
   <data name="ScreensaverWindowsSettings.Header" xml:space="preserve">
-    <value>Windows Settings</value>
+    <value>Configurações do Windows</value>
   </data>
   <data name="DescriptionConfirmProjectDirectory.Text" xml:space="preserve">
     <value>Confirm project structure?</value>
@@ -1297,5 +1297,8 @@ Edge é o webview integrado do windows 10.</value>
   </data>
   <data name="SwitchReleaseBranchStable.Header" xml:space="preserve">
     <value>Switch to Stable release</value>
+  </data>
+  <data name="RestartWallpaperAfterLockscreen.Header" xml:space="preserve">
+    <value>Restart wallpaper when returning from lock screen</value>
   </data>
 </root>

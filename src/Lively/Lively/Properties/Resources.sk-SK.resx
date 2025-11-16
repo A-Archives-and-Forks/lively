@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AudioFocused.Content" xml:space="preserve">
-    <value>Prehrávať zvuk iba vtedy, keď je zameranie na pracovnú plochu</value>
+    <value>Prehrávať zvuk iba pri zameraní na pracovnú plochu</value>
   </data>
   <data name="Audio.Description" xml:space="preserve">
     <value>Úroveň hlasitosti všetkých pozadí</value>
@@ -207,7 +207,7 @@ Pokračujte len vtedy, ak táto aplikácia pochádza z dôveryhodného zdroja.</
     <value>Tento sprievodca vám pomôže nastaviť Lively</value>
   </data>
   <data name="DescriptionWindowsNCodecInstall" xml:space="preserve">
-    <value>Vaša N/KN verzia Windowsu bude potrebovať inštaláciu prídavných kodekov pre podporu prehrávania videopozadí</value>
+    <value>Vaša N/KN verzia Windowsu vyžaduje inštaláciu doplnkových kodekov pre podporu prehrávania videopozadí</value>
   </data>
   <data name="DescSupperDev" xml:space="preserve">
     <value>Preukážte vývojárovi podporu kúpením kávy</value>
@@ -311,7 +311,7 @@ Ak aj napriek tomu Lively nefunguje, zatvorte a otvorte Lively alebo reštartujt
     <value>Zavrieť</value>
   </data>
   <data name="TextCompleted" xml:space="preserve">
-    <value>Dokončené!</value>
+    <value>Hotovo!</value>
   </data>
   <data name="ControlPanel.Subtitle" xml:space="preserve">
     <value>Kliknite sem pre správu pozadí</value>
@@ -329,7 +329,7 @@ Ak aj napriek tomu Lively nefunguje, zatvorte a otvorte Lively alebo reštartujt
     <value>Prispôsobiť</value>
   </data>
   <data name="DeleteWallpaper.Text" xml:space="preserve">
-    <value>Vymazať</value>
+    <value>Odstrániť</value>
   </data>
   <data name="Description.Text" xml:space="preserve">
     <value>Popis</value>
@@ -338,7 +338,7 @@ Ak aj napriek tomu Lively nefunguje, zatvorte a otvorte Lively alebo reštartujt
     <value>Na všetkých obrazovkách</value>
   </data>
   <data name="DisplayPauseRulePerScreen.Content" xml:space="preserve">
-    <value>Zvlášť na obrazovke</value>
+    <value>Zvlášť pre každú obrazovku</value>
   </data>
   <data name="TextDownload.Content" xml:space="preserve">
     <value>Stiahnuť</value>
@@ -353,7 +353,7 @@ Ak aj napriek tomu Lively nefunguje, zatvorte a otvorte Lively alebo reštartujt
     <value>Ukončiť</value>
   </data>
   <data name="ExportWallpaperZip.Text" xml:space="preserve">
-    <value>Uložiť ako súbor</value>
+    <value>Uložiť do súboru</value>
   </data>
   <data name="TextFeatureMissing" xml:space="preserve">
     <value>Niektoré funkcie nie sú v tejto verzii Lively dostupné</value>
@@ -488,7 +488,7 @@ Ak aj napriek tomu Lively nefunguje, zatvorte a otvorte Lively alebo reštartujt
     <value>Zastaviť</value>
   </data>
   <data name="StoreReview.Content" xml:space="preserve">
-    <value>Radi používate Lively? Napíšte recenziu :)</value>
+    <value>Ste s Lively spokojný? Napíšte recenziu :)</value>
   </data>
   <data name="TextSupport.Content" xml:space="preserve">
     <value>Podpora</value>
@@ -575,7 +575,7 @@ Ak aj napriek tomu Lively nefunguje, zatvorte a otvorte Lively alebo reštartujt
     <value>Duplikovať</value>
   </data>
   <data name="WallpaperLayoutPerScreen.Text" xml:space="preserve">
-    <value>Obrazovka</value>
+    <value>Výber</value>
   </data>
   <data name="WallpaperLayoutSpan.Text" xml:space="preserve">
     <value>Naprieč obrazovkami</value>
@@ -605,10 +605,10 @@ Ak aj napriek tomu Lively nefunguje, zatvorte a otvorte Lively alebo reštartujt
     <value>Nastaviť zadané URL (stránku) ako pozadie</value>
   </data>
   <data name="AppFocus.Description" xml:space="preserve">
-    <value>Nastavte, čo sa stane, keď je zameranie na nejakú aplikáciu</value>
+    <value>Čo sa stane, keď je zameranie na nejakú aplikáciu</value>
   </data>
   <data name="AppFullScreen.Description" xml:space="preserve">
-    <value>Nastavte, čo sa stane, keď je nejaká aplikácia zobrazená na celú obrazovku</value>
+    <value>Čo sa stane, keď je nejaká aplikácia zobrazená na celú obrazovku</value>
   </data>
   <data name="AppRules.Description" xml:space="preserve">
     <value>Pozadia sa pozastavia, keď sú spustené tieto aplikácie</value>
@@ -617,25 +617,25 @@ Ak aj napriek tomu Lively nefunguje, zatvorte a otvorte Lively alebo reštartujt
     <value>Lively sa prispôsobí systémovému nastaveniu motívu, zmení vzhľad</value>
   </data>
   <data name="BatteryPower.Description" xml:space="preserve">
-    <value>Zmení prehrávanie pri odpojení z napájania</value>
+    <value>Zmena prehrávania pri odpojení počítača z napájania</value>
   </data>
   <data name="BrowserDebuggingPort.Description" xml:space="preserve">
     <value>Zadajte port na debugovanie webových pozadí. Konzolu nájdete na http://localhost:cisloportu</value>
   </data>
   <data name="Debug.Description" xml:space="preserve">
-    <value>Zobrazí vývojárske možnosti</value>
+    <value>Zobraziť vývojárske možnosti</value>
   </data>
   <data name="DesktopPicture.Description" xml:space="preserve">
-    <value>Nastavte si obrázok animovaného pozadia ako pozadie</value>
+    <value>Nastaviť obrázok animovaného pozadia ako pozadie</value>
   </data>
   <data name="DisplayPauseRule.Description" xml:space="preserve">
     <value>Pozastaviť pozadie na všetkých obrazovkách alebo len na tej, kde je zameranie na aplikáciu</value>
   </data>
   <data name="ExportLogs.Description" xml:space="preserve">
-    <value>Vytvorí záznamový log</value>
+    <value>Vytvoriť záznamový log</value>
   </data>
   <data name="GifPlayer.Description" xml:space="preserve">
-    <value>Vyberte, ktorý prehrávač sa použije na prehrávanie GIF pozadí</value>
+    <value>Prehrávač, ktorý sa použije na prehrávanie GIF pozadí</value>
   </data>
   <data name="TipLivelySetupOnClose" xml:space="preserve">
     <value>Pred pokračovaním dokončite prípravu</value>
@@ -647,22 +647,22 @@ Ak aj napriek tomu Lively nefunguje, zatvorte a otvorte Lively alebo reštartujt
     <value>Algoritmus na pozastavenie pozadia</value>
   </data>
   <data name="PowerSavingModePower.Description" xml:space="preserve">
-    <value>Zmení prehrávanie, keď je zapnutý režim šetrenia batérie vo Windowse</value>
+    <value>Zmena prehrávania pri zapnutom režime šetrenia batérie</value>
   </data>
   <data name="RemoteDesktopPower.Description" xml:space="preserve">
-    <value>Zmení prehrávanie, keď pristupujete zo vzdialenej pracovnej plochy</value>
+    <value>Zmena prehrávania pri prístupe zo vzdialenej plochy</value>
   </data>
   <data name="TipScreensaver" xml:space="preserve">
-    <value>Po uplynutí zadanej doby neaktivity nastaví aktuálne pozadie ako šetrič obrazovky</value>
+    <value>Po uplynutí zadanej doby neaktivity sa aktuálne pozadie nastaví ako šetrič obrazovky</value>
   </data>
   <data name="StreamWallpaperDetect.Description" xml:space="preserve">
-    <value>Ak sa detegne odkaz na stream, bude na prehratie použitý prehrávač videa namiesto načítania stránky</value>
+    <value>Ak bude detegovaný odkaz na stream, na prehratie sa použije prehrávač videa namiesto načítania stránky</value>
   </data>
   <data name="StreamWallpaperVideoQuality.Description" xml:space="preserve">
-    <value>Vyberte si video kvalitu, ktorou sa budú streamy prehrávať</value>
+    <value>Kvalita videa, akou sa budú online streamy prehrávať</value>
   </data>
   <data name="TaskbarTheme.Description" xml:space="preserve">
-    <value>Zmení vzhľad panelu úloh</value>
+    <value>Zmena vzhľadu panelu úloh</value>
   </data>
   <data name="TipTileSize" xml:space="preserve">
     <value>Size of the wallpaper tiles in Library</value>
@@ -671,10 +671,10 @@ Ak aj napriek tomu Lively nefunguje, zatvorte a otvorte Lively alebo reštartujt
     <value>For low-end systems select Lite mode</value>
   </data>
   <data name="VideoHardwareDecode.Description" xml:space="preserve">
-    <value>Ak je to možné, použije sa hardvérová akcelerácia</value>
+    <value>Ak je to možné, použiť hardvérovú akceleráciu</value>
   </data>
   <data name="VideoPlayer.Description" xml:space="preserve">
-    <value>Vyberte, ktorý prehrávač sa použije na prehrávanie videopozadí</value>
+    <value>Prehrávač, ktorý sa použije na prehrávanie videopozadí</value>
   </data>
   <data name="WallpaperDir.Description" xml:space="preserve">
     <value>Cesta k priečinku, kde sú uložené pozadia</value>
@@ -683,7 +683,7 @@ Ak aj napriek tomu Lively nefunguje, zatvorte a otvorte Lively alebo reštartujt
     <value>Algoritmus na škálovanie pozadí</value>
   </data>
   <data name="WallpaperInput.Description" xml:space="preserve">
-    <value>Vyberte spôsoby na interakciu s pozadím</value>
+    <value>Spôsoby na interakciu s pozadím</value>
   </data>
   <data name="WallpaperLayout.Description" xml:space="preserve">
     <value>Ako sa pozadie aplikuje na obrazovky</value>
@@ -695,7 +695,7 @@ Ak aj napriek tomu Lively nefunguje, zatvorte a otvorte Lively alebo reštartujt
     <value>Ukladať dočasné súbory na disk namiesto pamäte</value>
   </data>
   <data name="WebBrowser.Description" xml:space="preserve">
-    <value>Vyberte, ktorý prehrávač sa použije na prehrávanie HTML pozadí</value>
+    <value>Prehrávač, ktorý sa použije na prehrávanie HTML pozadí</value>
   </data>
   <data name="About.Label" xml:space="preserve">
     <value>Informácie</value>
@@ -707,7 +707,7 @@ Ak aj napriek tomu Lively nefunguje, zatvorte a otvorte Lively alebo reštartujt
     <value>Zameranie na aplikáciu</value>
   </data>
   <data name="AppFullScreen.Header" xml:space="preserve">
-    <value>Aplikácia na celej obrazovke</value>
+    <value>Aplikácie na celej obrazovke</value>
   </data>
   <data name="TitleAppName" xml:space="preserve">
     <value>Lively Wallpaper</value>
@@ -849,7 +849,7 @@ Ak aj napriek tomu Lively nefunguje, zatvorte a otvorte Lively alebo reštartujt
     <value>Motív panelu úloh</value>
   </data>
   <data name="TitleTileSize" xml:space="preserve">
-    <value>Veľkosť dlaždice</value>
+    <value>Veľkosť dlaždíc</value>
   </data>
   <data name="TitleUIMode" xml:space="preserve">
     <value>Užívateľské rozhranie</value>
@@ -939,13 +939,13 @@ Ak aj napriek tomu Lively nefunguje, zatvorte a otvorte Lively alebo reštartujt
     <value>Galéria</value>
   </data>
   <data name="AboutMe.Text" xml:space="preserve">
-    <value>Ahoj, volám sa Dani John, tiež známy ako rocksdanister. Som vývojárom Lively, čo je zdarma a open-source (FOSS) aplikácia na zmenu pozadia. Ďakujem, že si si našiel čas, aby si si prezrel moju prácu.</value>
+    <value>Ahoj, volám sa Dani John, tiež známy ako rocksdanister. Vyvíjam Lively - zdarma a open-source (FOSS) aplikáciu na zmenu pozadia. Ďakujem, že si si našiel čas, aby si si pozrel moje dielo.</value>
   </data>
   <data name="LicenseLink.Content" xml:space="preserve">
     <value>Licencia</value>
   </data>
   <data name="AttributionLink.Content" xml:space="preserve">
-    <value>Oznámenie o softvére tretích strán</value>
+    <value>Oznámenie o softvéri tretích strán</value>
   </data>
   <data name="PrivacyPolicyLink.Content" xml:space="preserve">
     <value>Zásady zhromažďovania údajov</value>
@@ -999,7 +999,7 @@ Ak aj napriek tomu Lively nefunguje, zatvorte a otvorte Lively alebo reštartujt
     <value>Na fungovanie je potrebné jednorazové nastavenie šetriča obrazovky</value>
   </data>
   <data name="WallpaperLayoutScreenPicker.Content" xml:space="preserve">
-    <value>Vždy zobrazovať výber obrazovky pri výbere pozadia</value>
+    <value>Vždy poskytovať výber obrazovky pri výbere pozadia</value>
   </data>
   <data name="GalleryAccount.Text" xml:space="preserve">
     <value>Účet</value>
@@ -1029,7 +1029,7 @@ Ak aj napriek tomu Lively nefunguje, zatvorte a otvorte Lively alebo reštartujt
     <value>Profil</value>
   </data>
   <data name="GalleryPleaseLogin.Text" xml:space="preserve">
-    <value>Prosím, prihláste sa, ak chcete pokračovať</value>
+    <value>Pre pokračovanie sa, prosím, prihláste</value>
   </data>
   <data name="GalleryWelcomeMessage.Text" xml:space="preserve">
     <value>Ahoj,</value>
@@ -1038,7 +1038,7 @@ Ak aj napriek tomu Lively nefunguje, zatvorte a otvorte Lively alebo reštartujt
     <value>V tvojom účte sme našli tieto pozadia</value>
   </data>
   <data name="TextDownloadNow.Content" xml:space="preserve">
-    <value>Stiahnuť teraz</value>
+    <value>Stiahnuť</value>
   </data>
   <data name="TextMaybeLater.Content" xml:space="preserve">
     <value>Možno neskôr</value>
@@ -1107,16 +1107,17 @@ Ak aj napriek tomu Lively nefunguje, zatvorte a otvorte Lively alebo reštartujt
     <value>Zdieľať pozadie</value>
   </data>
   <data name="ExportWallpaperGallery.Text" xml:space="preserve">
-    <value>Uverejniť v galérii</value>
+    <value>Uverejniť v
+galérii</value>
   </data>
   <data name="ExportWallpaperLink.Text" xml:space="preserve">
     <value>Kopírovať odkaz</value>
   </data>
   <data name="TextCustomiseWallpaper" xml:space="preserve">
-    <value>Prispôsobiť pozadia</value>
+    <value>Prispôsobiť pozadie</value>
   </data>
   <data name="TextCloseWallpapers" xml:space="preserve">
-    <value>Ukončiť pozadia</value>
+    <value>Vypnúť pozadia</value>
   </data>
   <data name="TitleChooseApplication.Text" xml:space="preserve">
     <value>Vybrať aplikáciu</value>
@@ -1134,7 +1135,7 @@ Ak aj napriek tomu Lively nefunguje, zatvorte a otvorte Lively alebo reštartujt
     <value>Aktualizácia dokončená</value>
   </data>
   <data name="UpdateWhatsNew.Text" xml:space="preserve">
-    <value>Čo je nové</value>
+    <value>Čo je nové?</value>
   </data>
   <data name="AppThemeColor.Header" xml:space="preserve">
     <value>Farba</value>
@@ -1170,7 +1171,7 @@ Ak aj napriek tomu Lively nefunguje, zatvorte a otvorte Lively alebo reštartujt
     <value>Pluginy</value>
   </data>
   <data name="AddWallpaperAdvanced.Description" xml:space="preserve">
-    <value>Vytvorte si dynamické pozadie</value>
+    <value>Vytvoriť dynamické pozadie</value>
   </data>
   <data name="AddWallpaperAdvanced.Header" xml:space="preserve">
     <value>Rozšírené</value>
@@ -1188,13 +1189,13 @@ Ak aj napriek tomu Lively nefunguje, zatvorte a otvorte Lively alebo reštartujt
     <value>Vytvoriť jednoduché pozadie</value>
   </data>
   <data name="TitleDepthWallpaper.Content" xml:space="preserve">
-    <value>Hĺbkové pozadie s AI</value>
+    <value>Pozadie s hĺbkou</value>
   </data>
   <data name="TitleDepthWallpaperItem.Content" xml:space="preserve">
     <value>Pozadie s hĺbkou</value>
   </data>
   <data name="DescriptionDepthWallpaperTemplate.Content" xml:space="preserve">
-    <value>Pozadie s AI generovanou hĺbkou</value>
+    <value>Pozadie s hĺbkou generovanou AI</value>
   </data>
   <data name="TitleCreateWallpaper.Content" xml:space="preserve">
     <value>Vytvoriť pozadie</value>
@@ -1203,7 +1204,7 @@ Ak aj napriek tomu Lively nefunguje, zatvorte a otvorte Lively alebo reštartujt
     <value>Niektoré funkcie nemusia byť dostupné, keď aplikácia beží ako správca</value>
   </data>
   <data name="DescriptionDownloadRequired.Text" xml:space="preserve">
-    <value>Táto funkcia si vyžaduje prídavné súbory</value>
+    <value>Táto funkcia vyžaduje doplnkové súbory</value>
   </data>
   <data name="TitleDownloadRequired.Text" xml:space="preserve">
     <value>Vyžaduje sa stiahnutie</value>
@@ -1212,7 +1213,7 @@ Ak aj napriek tomu Lively nefunguje, zatvorte a otvorte Lively alebo reštartujt
     <value>Stiahnuť</value>
   </data>
   <data name="TextBecomePatreonMember.Content" xml:space="preserve">
-    <value>Staňte sa podporovateľom na Patreone</value>
+    <value>Chcem sa stať podporovateľom</value>
   </data>
   <data name="TextPatreonMembersThankYou.Text" xml:space="preserve">
     <value>Ďakujeme všetkým členom, ktorí podporili tento projekt.</value>
@@ -1233,7 +1234,7 @@ Ak aj napriek tomu Lively nefunguje, zatvorte a otvorte Lively alebo reštartujt
     <value>Vyberte aplikácie, pri ktorých sa nebudú zobrazovať detaily o hudbe</value>
   </data>
   <data name="AppMusicExclusion.Header" xml:space="preserve">
-    <value>Vynechanie aplikácií</value>
+    <value>Vylúčené aplikácie</value>
   </data>
   <data name="RestartCommand.Content" xml:space="preserve">
     <value>Reštartovať</value>
@@ -1245,54 +1246,57 @@ Ak aj napriek tomu Lively nefunguje, zatvorte a otvorte Lively alebo reštartujt
     <value>Na aplikovanie zmien sa vyžaduje reštart pozadia</value>
   </data>
   <data name="LanguageSettingsItemSystemDefault.Content" xml:space="preserve">
-    <value>Same as System</value>
+    <value>Rovnaký ako systémový</value>
   </data>
   <data name="InfoSettingsRestartRequest.Message" xml:space="preserve">
-    <value>Please restart application for settings to take effect.</value>
+    <value>Prosím, reštartujte Lively, aby sa zmeny aplikovali.</value>
   </data>
   <data name="ScreensaverLockOnResume.Header" xml:space="preserve">
     <value>Po skončení šetriča zobraziť prihlásenie</value>
   </data>
   <data name="ScreensaverFadeIn.Header" xml:space="preserve">
-    <value>Fade to black before start</value>
+    <value>Prechod do čiernej farby pred spustením</value>
   </data>
   <data name="VideoLetWindowsManageColor.Header" xml:space="preserve">
-    <value>Let Windows manage colors</value>
+    <value>Prenechať správu farieb systému Windows</value>
   </data>
   <data name="ScreensaverWindowsSettings.Header" xml:space="preserve">
-    <value>Windows Settings</value>
+    <value>Nastavenia systému Windows</value>
   </data>
   <data name="DescriptionConfirmProjectDirectory.Text" xml:space="preserve">
-    <value>Confirm project structure?</value>
+    <value>Je štruktúra projektu správna?</value>
   </data>
   <data name="DescriptionConfirmFileConvertion.Text" xml:space="preserve">
-    <value>This file format isn’t supported directly. It will be converted before use. Do you want to continue?</value>
+    <value>Tento formát nie je priamo podporovaný a pred použitím bude skonvertovaný. Pokračovať?</value>
   </data>
   <data name="ScreensaverDialogSettings.Header" xml:space="preserve">
     <value>Nastavenia</value>
   </data>
   <data name="DisplayAudioPauseRule.Header" xml:space="preserve">
-    <value>Output</value>
+    <value>Výstup</value>
   </data>
   <data name="DisplayAudioPauseRule.Description" xml:space="preserve">
-    <value>Control how wallpaper audio plays across your screens</value>
+    <value>Správanie prehrávania zvuku</value>
   </data>
   <data name="VisualizerAudioDevice.Description" xml:space="preserve">
-    <value>Select the playback device used for visualizing sound</value>
+    <value>Výstupné zariadenie, ktoré sa bude používať na vizualizáciu zvuku</value>
   </data>
   <data name="VisualizerAudioDevice.Header" xml:space="preserve">
-    <value>Audio device</value>
+    <value>Zvukové zariadenie</value>
   </data>
   <data name="SwitchReleaseBranchBeta.Description" xml:space="preserve">
-    <value>Get early features and help test them before public release. These builds may be unstable.</value>
+    <value>Získajte prednostný prístup k novovyvíjaným funkciám. Tieto vydania aplikácie môžu byť nestabilné.</value>
   </data>
   <data name="SwitchReleaseBranchBeta.Header" xml:space="preserve">
-    <value>Join the Beta release</value>
+    <value>Pripojiť sa k prednostnému prístupu k funkciám (Beta)</value>
   </data>
   <data name="SwitchReleaseBranchStable.Description" xml:space="preserve">
-    <value>Return to the regular public release for the most reliable updates.</value>
+    <value>Vráti aplikáciu na klasické, stabilné vydanie.</value>
   </data>
   <data name="SwitchReleaseBranchStable.Header" xml:space="preserve">
-    <value>Switch to Stable release</value>
+    <value>Vrátiť stabilné vydanie aplikácie</value>
+  </data>
+  <data name="RestartWallpaperAfterLockscreen.Header" xml:space="preserve">
+    <value>Obnoviť pozadie pri návrate zo zamknutej obrazovky</value>
   </data>
 </root>

@@ -803,7 +803,7 @@ Edge est la vue Web intégrée de Windows 10.</value>
     <value>Playlist</value>
   </data>
   <data name="PleaseWait.Text" xml:space="preserve">
-    <value>Veuillez patientez ...</value>
+    <value>Patientez s'il vous plaît</value>
   </data>
   <data name="PowerSavingModePower.Header" xml:space="preserve">
     <value>Quand le mode économie d'énergie est activé</value>
@@ -1272,33 +1272,36 @@ Edge est la vue Web intégrée de Windows 10.</value>
     <value>Confirmer la structure du projet ?</value>
   </data>
   <data name="DescriptionConfirmFileConvertion.Text" xml:space="preserve">
-    <value>This file format isn’t supported directly. It will be converted before use. Do you want to continue?</value>
+    <value>Le format de ce fichier n'est pas supporté. Il sera converti avant son utilisation. Voulez-vous continuer ?</value>
   </data>
   <data name="ScreensaverDialogSettings.Header" xml:space="preserve">
     <value>Paramètres</value>
   </data>
   <data name="DisplayAudioPauseRule.Header" xml:space="preserve">
-    <value>Output</value>
+    <value>Sortie</value>
   </data>
   <data name="DisplayAudioPauseRule.Description" xml:space="preserve">
-    <value>Control how wallpaper audio plays across your screens</value>
+    <value>Contrôlez comment le son de votre arrière-plan fonctionne selon vos écrans</value>
   </data>
   <data name="VisualizerAudioDevice.Description" xml:space="preserve">
-    <value>Select the playback device used for visualizing sound</value>
+    <value>Sélectionnez l'appareil de lecture utilisé pour la visualisation du son</value>
   </data>
   <data name="VisualizerAudioDevice.Header" xml:space="preserve">
-    <value>Audio device</value>
+    <value>Appareil audio</value>
   </data>
   <data name="SwitchReleaseBranchBeta.Description" xml:space="preserve">
-    <value>Get early features and help test them before public release. These builds may be unstable.</value>
+    <value>Essayez les fonctionnalités avant leur publication sur la version publique. Ces versions sont potentiellement instables.</value>
   </data>
   <data name="SwitchReleaseBranchBeta.Header" xml:space="preserve">
-    <value>Join the Beta release</value>
+    <value>Rejoignez la version Beta </value>
   </data>
   <data name="SwitchReleaseBranchStable.Description" xml:space="preserve">
-    <value>Return to the regular public release for the most reliable updates.</value>
+    <value>Revenez à la version publique régulière pour les mises à jour les plus fiables.</value>
   </data>
   <data name="SwitchReleaseBranchStable.Header" xml:space="preserve">
-    <value>Switch to Stable release</value>
+    <value>Passez à la version stable</value>
+  </data>
+  <data name="RestartWallpaperAfterLockscreen.Header" xml:space="preserve">
+    <value>Redémarrer le fond d'écran en revenant dans l'écran de verrouillage</value>
   </data>
 </root>

@@ -983,10 +983,10 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Как скрийнсейвъра е поставен на свързаните монитори</value>
   </data>
   <data name="Screensaver.Header" xml:space="preserve">
-    <value>Вид скрийсейвър</value>
+    <value>Вид скрийнсейвър</value>
   </data>
   <data name="ScreensaverModeDifferentWallpaper.Text" xml:space="preserve">
-    <value>Custom</value>
+    <value>Персонализирано</value>
   </data>
   <data name="ScreensaverModeSameWallpaper.Text" xml:space="preserve">
     <value>Mirror Wallpaper</value>
@@ -995,7 +995,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Необходим е плъгин</value>
   </data>
   <data name="ScreensaverPluginMessage.Text" xml:space="preserve">
-    <value>Еднократно настройване е нужно за скрийсейвър</value>
+    <value>Еднократно настройване е нужно за скрийнсейвър</value>
   </data>
   <data name="WallpaperLayoutScreenPicker.Content" xml:space="preserve">
     <value>Винаги избирай екран при избиране на тапет</value>
@@ -1211,34 +1211,34 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Изтегли</value>
   </data>
   <data name="TextBecomePatreonMember.Content" xml:space="preserve">
-    <value>Become a Patreon supporter</value>
+    <value>Стани Patreon дарител</value>
   </data>
   <data name="TextPatreonMembersThankYou.Text" xml:space="preserve">
-    <value>Thanks to all the members who support this project.</value>
+    <value>Благодарим на всички членове, които подкрепят този проект.</value>
   </data>
   <data name="TitlePatreon.Text" xml:space="preserve">
-    <value>Patreon Supporters</value>
+    <value>Patreon Дарители</value>
   </data>
   <data name="SelectScreensaverCustomMode.Text" xml:space="preserve">
-    <value>Select screensaver</value>
+    <value>Избери скрийнсейвър</value>
   </data>
   <data name="WebViewRequired.Message" xml:space="preserve">
-    <value>Microsoft WebView2 is required to view this content</value>
+    <value>Изисква се Microsoft WebView2, за да се прегледа това съдържание</value>
   </data>
   <data name="WebViewRequired.Title" xml:space="preserve">
     <value>Необходим е плъгин</value>
   </data>
   <data name="AppMusicExclusion.Description" xml:space="preserve">
-    <value>Select apps to exclude from showing music details</value>
+    <value>Изберете приложения, които да не показват детайли за музиката</value>
   </data>
   <data name="AppMusicExclusion.Header" xml:space="preserve">
-    <value>App exclusion</value>
+    <value>Изключване на приложения</value>
   </data>
   <data name="RestartCommand.Content" xml:space="preserve">
-    <value>Restart</value>
+    <value>Рестарт</value>
   </data>
   <data name="WallpaperMusicGroup.Text" xml:space="preserve">
-    <value>Music</value>
+    <value>Музика</value>
   </data>
   <data name="WallpaperRestartRequiredNotify.Message" xml:space="preserve">
     <value>Wallpaper restart is required for the settings to take effect</value>
@@ -1253,7 +1253,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>При събужане на компютъра, покажи екрана за влизане</value>
   </data>
   <data name="ScreensaverFadeIn.Header" xml:space="preserve">
-    <value>Fade to black before start</value>
+    <value>Затъмняване до черно преди началото</value>
   </data>
   <data name="VideoLetWindowsManageColor.Header" xml:space="preserve">
     <value>Let Windows manage colors</value>
@@ -1265,13 +1265,13 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Confirm project structure?</value>
   </data>
   <data name="DescriptionConfirmFileConvertion.Text" xml:space="preserve">
-    <value>This file format isn’t supported directly. It will be converted before use. Do you want to continue?</value>
+    <value>Файловият формат не е поддържан директно. Преди да бъде използван, той ще бъде конвертиран. Желаете ли да продължите?</value>
   </data>
   <data name="ScreensaverDialogSettings.Header" xml:space="preserve">
     <value>Настройки</value>
   </data>
   <data name="DisplayAudioPauseRule.Header" xml:space="preserve">
-    <value>Output</value>
+    <value>Изход</value>
   </data>
   <data name="DisplayAudioPauseRule.Description" xml:space="preserve">
     <value>Control how wallpaper audio plays across your screens</value>
@@ -1280,7 +1280,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Select the playback device used for visualizing sound</value>
   </data>
   <data name="VisualizerAudioDevice.Header" xml:space="preserve">
-    <value>Audio device</value>
+    <value>Аудио устройство</value>
   </data>
   <data name="SwitchReleaseBranchBeta.Description" xml:space="preserve">
     <value>Get early features and help test them before public release. These builds may be unstable.</value>
@@ -1293,5 +1293,8 @@ https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="SwitchReleaseBranchStable.Header" xml:space="preserve">
     <value>Switch to Stable release</value>
+  </data>
+  <data name="RestartWallpaperAfterLockscreen.Header" xml:space="preserve">
+    <value>Restart wallpaper when returning from lock screen</value>
   </data>
 </root>

@@ -623,7 +623,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Увядзіце порт адладкі шпалер з вэб-старонкі шпалер; калі будзеце гатовы, перайдзіце па спасылцы http://localhost:portnumber, каб трапіць у кансоль распрацоўшчыка</value>
   </data>
   <data name="Debug.Description" xml:space="preserve">
-    <value>Паказаць меню распрацоўшчыка</value>
+    <value>Паказвае меню распрацоўшчыка</value>
   </data>
   <data name="DesktopPicture.Description" xml:space="preserve">
     <value>Задаць відарыс з аніміраванымі шпалерамі ў якасці шпалер працоўнага стала</value>
@@ -632,7 +632,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Прыпыніць шпалеры на ўсіх экранах або толькі на экране, дзе сфакусіравана праграма</value>
   </data>
   <data name="ExportLogs.Description" xml:space="preserve">
-    <value>Стварыць файл справаздачы журнала</value>
+    <value>Стварае файл справаздачы журнала</value>
   </data>
   <data name="GifPlayer.Description" xml:space="preserve">
     <value>Выберыце тып прайгравальніка для шпалер GIF</value>
@@ -662,7 +662,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Выберыце пажаданую якасць відэа для патокавага прайгравання</value>
   </data>
   <data name="TaskbarTheme.Description" xml:space="preserve">
-    <value>Змяніць афармленне сістэмнай панэлі задач</value>
+    <value>Змяняе афармленне сістэмнай панэлі задач</value>
   </data>
   <data name="TipTileSize" xml:space="preserve">
     <value>Size of the wallpaper tiles in Library</value>
@@ -1266,33 +1266,36 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Пацвердзіць структуру праекта?</value>
   </data>
   <data name="DescriptionConfirmFileConvertion.Text" xml:space="preserve">
-    <value>This file format isn’t supported directly. It will be converted before use. Do you want to continue?</value>
+    <value>Гэты фармат файлаў не падтрымліваецца наўпрост. Ён будзе пераўтвораны перад выкарыстаннем. Працягнуць?</value>
   </data>
   <data name="ScreensaverDialogSettings.Header" xml:space="preserve">
     <value>Налады</value>
   </data>
   <data name="DisplayAudioPauseRule.Header" xml:space="preserve">
-    <value>Output</value>
+    <value>Вывад</value>
   </data>
   <data name="DisplayAudioPauseRule.Description" xml:space="preserve">
-    <value>Control how wallpaper audio plays across your screens</value>
+    <value>Кантралюйце як аўдыя шпалер узнаўляецца паміж вашымі экранамі</value>
   </data>
   <data name="VisualizerAudioDevice.Description" xml:space="preserve">
-    <value>Select the playback device used for visualizing sound</value>
+    <value>Выберыце прыладу ўзнаўлення для візуалізацыі гука</value>
   </data>
   <data name="VisualizerAudioDevice.Header" xml:space="preserve">
-    <value>Audio device</value>
+    <value>Аўдыяпрылада</value>
   </data>
   <data name="SwitchReleaseBranchBeta.Description" xml:space="preserve">
-    <value>Get early features and help test them before public release. These builds may be unstable.</value>
+    <value>Атрымлівайце раннія функцыі і дапамагайце ў іх тэсціраванні перад выпускам. Гэтыя зборкі могуць быць нестабільнымі.</value>
   </data>
   <data name="SwitchReleaseBranchBeta.Header" xml:space="preserve">
-    <value>Join the Beta release</value>
+    <value>Далучыцца да выпускаў бэта-версій</value>
   </data>
   <data name="SwitchReleaseBranchStable.Description" xml:space="preserve">
-    <value>Return to the regular public release for the most reliable updates.</value>
+    <value>Вяртае да звычайных публічных выпускаў для самых надзейных абнаўленняў.</value>
   </data>
   <data name="SwitchReleaseBranchStable.Header" xml:space="preserve">
-    <value>Switch to Stable release</value>
+    <value>Пераключыцца на стабільныя выпускі</value>
+  </data>
+  <data name="RestartWallpaperAfterLockscreen.Header" xml:space="preserve">
+    <value>Перазагружаць шпалеры пры вяртанні з экрана блакіроўкі</value>
   </data>
 </root>

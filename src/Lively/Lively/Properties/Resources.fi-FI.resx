@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AudioFocused.Content" xml:space="preserve">
-    <value>Toista ääntä vain, kun työpöytä on näkyvissä</value>
+    <value>Toista ääntä vain, kun työpöytä on kohdistettuna</value>
   </data>
   <data name="Audio.Description" xml:space="preserve">
     <value>Kaikkien taustakuvien äänenvoimakkuus</value>
@@ -1245,54 +1245,57 @@ Jos ikkuna ei vieläkään toimi, sulje ja käynnistä Windows ja Lively uudesta
     <value>Taustakuva on käynnistettävä uudelleen, jotta asetukset tulevat voimaan</value>
   </data>
   <data name="LanguageSettingsItemSystemDefault.Content" xml:space="preserve">
-    <value>Same as System</value>
+    <value>Sama kuin järjestelmän</value>
   </data>
   <data name="InfoSettingsRestartRequest.Message" xml:space="preserve">
-    <value>Please restart application for settings to take effect.</value>
+    <value>Käynnistä ohjelma uudelleen, jotta asetukset tulevat voimaan.</value>
   </data>
   <data name="ScreensaverLockOnResume.Header" xml:space="preserve">
     <value>Jatkaessa, näytä kirjautumisruutu</value>
   </data>
   <data name="ScreensaverFadeIn.Header" xml:space="preserve">
-    <value>Fade to black before start</value>
+    <value>Häivytä mustaan ennen alkua</value>
   </data>
   <data name="VideoLetWindowsManageColor.Header" xml:space="preserve">
-    <value>Let Windows manage colors</value>
+    <value>Anna Windowsin hallita värejä</value>
   </data>
   <data name="ScreensaverWindowsSettings.Header" xml:space="preserve">
-    <value>Windows Settings</value>
+    <value>Windowsin Asetukset</value>
   </data>
   <data name="DescriptionConfirmProjectDirectory.Text" xml:space="preserve">
-    <value>Confirm project structure?</value>
+    <value>Vahvista projektin rakenne?</value>
   </data>
   <data name="DescriptionConfirmFileConvertion.Text" xml:space="preserve">
-    <value>This file format isn’t supported directly. It will be converted before use. Do you want to continue?</value>
+    <value>Tämä tiedostomuoto ei ole suoraan tuettu. Se muunnetaan ennen käyttöönottoa. Haluatko jatkaa?</value>
   </data>
   <data name="ScreensaverDialogSettings.Header" xml:space="preserve">
     <value>Asetukset</value>
   </data>
   <data name="DisplayAudioPauseRule.Header" xml:space="preserve">
-    <value>Output</value>
+    <value>Ulostulo</value>
   </data>
   <data name="DisplayAudioPauseRule.Description" xml:space="preserve">
-    <value>Control how wallpaper audio plays across your screens</value>
+    <value>Hallitse miten taustakuvan ääni toistetaan näytöissä</value>
   </data>
   <data name="VisualizerAudioDevice.Description" xml:space="preserve">
-    <value>Select the playback device used for visualizing sound</value>
+    <value>Valitse äänen visualisointiin käytettävä toistolaite</value>
   </data>
   <data name="VisualizerAudioDevice.Header" xml:space="preserve">
-    <value>Audio device</value>
+    <value>Äänilaite</value>
   </data>
   <data name="SwitchReleaseBranchBeta.Description" xml:space="preserve">
-    <value>Get early features and help test them before public release. These builds may be unstable.</value>
+    <value>Hanki pääsy uusiin ominaisuuksiin ja auta niiden testauksessa ennen julkaisua. Nämä versiot saattavat olla epävakaita.</value>
   </data>
   <data name="SwitchReleaseBranchBeta.Header" xml:space="preserve">
-    <value>Join the Beta release</value>
+    <value>Liity Beta-ohjelmaan</value>
   </data>
   <data name="SwitchReleaseBranchStable.Description" xml:space="preserve">
-    <value>Return to the regular public release for the most reliable updates.</value>
+    <value>Palaa takaisin julkiseen päivitysohjelmaan saadaksesi kaikkein luotettavimmat päivitykset.</value>
   </data>
   <data name="SwitchReleaseBranchStable.Header" xml:space="preserve">
-    <value>Switch to Stable release</value>
+    <value>Vaihda vakaaseen versioon</value>
+  </data>
+  <data name="RestartWallpaperAfterLockscreen.Header" xml:space="preserve">
+    <value>Uudelleenkäynnistä taustakuva lukitusnäytöltä palattaessa</value>
   </data>
 </root>

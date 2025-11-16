@@ -338,7 +338,7 @@ Hala çalışmıyorsa, Lively'yi kapatın ve yeniden başlatın / Windows'u yeni
     <value>Tüm ekranlar</value>
   </data>
   <data name="DisplayPauseRulePerScreen.Content" xml:space="preserve">
-    <value>Tek ekran</value>
+    <value>Ekran başına</value>
   </data>
   <data name="TextDownload.Content" xml:space="preserve">
     <value>İndir</value>
@@ -695,7 +695,7 @@ Hala çalışmıyorsa, Lively'yi kapatın ve yeniden başlatın / Windows'u yeni
     <value>Geçici dosyaları bellek yerine diske kaydet</value>
   </data>
   <data name="WebBrowser.Description" xml:space="preserve">
-    <value>HTML duvar kağıdı için kullanılan oynatıcıyı seç</value>
+    <value>Html duvar kağıdı için kullanılan oynatıcıyı seç</value>
   </data>
   <data name="About.Label" xml:space="preserve">
     <value>Hakkında</value>
@@ -1035,7 +1035,7 @@ Hala çalışmıyorsa, Lively'yi kapatın ve yeniden başlatın / Windows'u yeni
     <value>Merhaba</value>
   </data>
   <data name="RestoreWallpaper.Text" xml:space="preserve">
-    <value>Hesabınızda bu duvar kağıtlarını bulduk.</value>
+    <value>Hesabınızda bu duvar kağıtlarını bulduk</value>
   </data>
   <data name="TextDownloadNow.Content" xml:space="preserve">
     <value>Şimdi Yükle</value>
@@ -1155,7 +1155,7 @@ Hala çalışmıyorsa, Lively'yi kapatın ve yeniden başlatın / Windows'u yeni
     <value>Tema</value>
   </data>
   <data name="IconsHidden.Message" xml:space="preserve">
-    <value>Yanlışlıkla seçmenizi önlemek için masaüstü simgeleri gizlendi.</value>
+    <value>Yanlışlıkla seçmenizi önlemek için masaüstü simgeleri gizlendi</value>
   </data>
   <data name="IconsHidden.Title" xml:space="preserve">
     <value>Masaüstü simgeleri</value>
@@ -1179,7 +1179,7 @@ Hala çalışmıyorsa, Lively'yi kapatın ve yeniden başlatın / Windows'u yeni
     <value>Yaklaşan derinlik..</value>
   </data>
   <data name="DescriptionDepthWallpaperItem.Content" xml:space="preserve">
-    <value>YZ kullanarak fotoğrafları 3D'ye dönüştürün</value>
+    <value>Yapay am kullanarak fotoğrafları 3D'ye dönüştürün</value>
   </data>
   <data name="TextContinue.Content" xml:space="preserve">
     <value>Devam</value>
@@ -1266,33 +1266,36 @@ Hala çalışmıyorsa, Lively'yi kapatın ve yeniden başlatın / Windows'u yeni
     <value>Proje yapısını onayla?</value>
   </data>
   <data name="DescriptionConfirmFileConvertion.Text" xml:space="preserve">
-    <value>This file format isn’t supported directly. It will be converted before use. Do you want to continue?</value>
+    <value>Bu dosya biçimi direkt olarak desteklenmiyor. Kullanılmadan önce dönüştürülecek. Devam etmek istiyor musunuz?</value>
   </data>
   <data name="ScreensaverDialogSettings.Header" xml:space="preserve">
     <value>Ayarlar</value>
   </data>
   <data name="DisplayAudioPauseRule.Header" xml:space="preserve">
-    <value>Output</value>
+    <value>Çıkış</value>
   </data>
   <data name="DisplayAudioPauseRule.Description" xml:space="preserve">
-    <value>Control how wallpaper audio plays across your screens</value>
+    <value>Arkaplan sesinin ekranların arasında nasıl oynatılacağını kontrol edin</value>
   </data>
   <data name="VisualizerAudioDevice.Description" xml:space="preserve">
-    <value>Select the playback device used for visualizing sound</value>
+    <value>Sesi görselleştirmek için kullanılan oynatma aygıtını seçin</value>
   </data>
   <data name="VisualizerAudioDevice.Header" xml:space="preserve">
-    <value>Audio device</value>
+    <value>Ses cihazı</value>
   </data>
   <data name="SwitchReleaseBranchBeta.Description" xml:space="preserve">
-    <value>Get early features and help test them before public release. These builds may be unstable.</value>
+    <value>Özellikleri daha erken alın ve onların test edilmesine yardımcı olun. Bu sürümler kararsız olabilir.</value>
   </data>
   <data name="SwitchReleaseBranchBeta.Header" xml:space="preserve">
-    <value>Join the Beta release</value>
+    <value>Beta sürümüne katılın</value>
   </data>
   <data name="SwitchReleaseBranchStable.Description" xml:space="preserve">
-    <value>Return to the regular public release for the most reliable updates.</value>
+    <value>Daha güvenilir güncellemeler için güncel sürümler kullanın.</value>
   </data>
   <data name="SwitchReleaseBranchStable.Header" xml:space="preserve">
-    <value>Switch to Stable release</value>
+    <value>Düzgün olan sürüme geçin</value>
+  </data>
+  <data name="RestartWallpaperAfterLockscreen.Header" xml:space="preserve">
+    <value>Kilit ekranından gelirken arkaplanı yeniden başlat</value>
   </data>
 </root>

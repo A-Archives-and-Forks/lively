@@ -1263,22 +1263,22 @@ Edge - веб-двигун з Windows 10 WebView.</value>
     <value>Перед початком роботи затемнити до чорного</value>
   </data>
   <data name="VideoLetWindowsManageColor.Header" xml:space="preserve">
-    <value>Let Windows manage colors</value>
+    <value>Дозвольте Windows керувати кольорами</value>
   </data>
   <data name="ScreensaverWindowsSettings.Header" xml:space="preserve">
-    <value>Windows Settings</value>
+    <value>Налаштування Windows</value>
   </data>
   <data name="DescriptionConfirmProjectDirectory.Text" xml:space="preserve">
-    <value>Confirm project structure?</value>
+    <value>Підтверджуєте структуру проєкту?</value>
   </data>
   <data name="DescriptionConfirmFileConvertion.Text" xml:space="preserve">
-    <value>This file format isn’t supported directly. It will be converted before use. Do you want to continue?</value>
+    <value>Цей формат файлу не підтримується безпосередньо. Він буде конвертований перед використанням. Бажаєте продовжити?</value>
   </data>
   <data name="ScreensaverDialogSettings.Header" xml:space="preserve">
     <value>Налаштування</value>
   </data>
   <data name="DisplayAudioPauseRule.Header" xml:space="preserve">
-    <value>Output</value>
+    <value>Виведення</value>
   </data>
   <data name="DisplayAudioPauseRule.Description" xml:space="preserve">
     <value>Control how wallpaper audio plays across your screens</value>
@@ -1287,18 +1287,21 @@ Edge - веб-двигун з Windows 10 WebView.</value>
     <value>Select the playback device used for visualizing sound</value>
   </data>
   <data name="VisualizerAudioDevice.Header" xml:space="preserve">
-    <value>Audio device</value>
+    <value>Аудіопристрій</value>
   </data>
   <data name="SwitchReleaseBranchBeta.Description" xml:space="preserve">
-    <value>Get early features and help test them before public release. These builds may be unstable.</value>
+    <value>Отримуйте ранні функції та допоможіть випробувати їх перед публічним релізом. Ці збірки можуть бути нестабільними.</value>
   </data>
   <data name="SwitchReleaseBranchBeta.Header" xml:space="preserve">
-    <value>Join the Beta release</value>
+    <value>Приєднатися до бета-версії</value>
   </data>
   <data name="SwitchReleaseBranchStable.Description" xml:space="preserve">
-    <value>Return to the regular public release for the most reliable updates.</value>
+    <value>Повернутися до звичайного публічного випуску для надійних оновлень.</value>
   </data>
   <data name="SwitchReleaseBranchStable.Header" xml:space="preserve">
-    <value>Switch to Stable release</value>
+    <value>Перейти на стабільний реліз</value>
+  </data>
+  <data name="RestartWallpaperAfterLockscreen.Header" xml:space="preserve">
+    <value>Restart wallpaper when returning from lock screen</value>
   </data>
 </root>

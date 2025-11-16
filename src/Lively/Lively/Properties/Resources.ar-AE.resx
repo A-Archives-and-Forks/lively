@@ -939,7 +939,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>المعرض</value>
   </data>
   <data name="AboutMe.Text" xml:space="preserve">
-    <value>Hi, I'm Dani John also known as rocksdanister. I developed Lively a Free and open-source (FOSS) wallpaper application. Thanks for taking the time to look at my work.</value>
+    <value>مرحباً، أنا داني جون المعروف أيضاً باسم روكسدانيستر. قمت بتطوير Lively وهو تطبيق خلفيات مجاني ومفتوح المصدر (FOSS). شكراً لتخصيص بعض الوقت لإلقاء نظرة على عملي.</value>
   </data>
   <data name="LicenseLink.Content" xml:space="preserve">
     <value>ترخيص البرنامج</value>
@@ -1257,42 +1257,45 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>تلاشي إلى الأسود قبل البدء</value>
   </data>
   <data name="VideoLetWindowsManageColor.Header" xml:space="preserve">
-    <value>Let Windows manage colors</value>
+    <value>السماح لنظام Windows بإدارة الألوان</value>
   </data>
   <data name="ScreensaverWindowsSettings.Header" xml:space="preserve">
-    <value>Windows Settings</value>
+    <value>إعدادات النافذة</value>
   </data>
   <data name="DescriptionConfirmProjectDirectory.Text" xml:space="preserve">
-    <value>Confirm project structure?</value>
+    <value>تأكيد هيكل المشروع؟</value>
   </data>
   <data name="DescriptionConfirmFileConvertion.Text" xml:space="preserve">
-    <value>This file format isn’t supported directly. It will be converted before use. Do you want to continue?</value>
+    <value>تنسيق هذا الملف غير مدعوم مباشرة. سيتم تحويله قبل الاستخدام. هل تريد الاستمرار.</value>
   </data>
   <data name="ScreensaverDialogSettings.Header" xml:space="preserve">
     <value>الإعدادات</value>
   </data>
   <data name="DisplayAudioPauseRule.Header" xml:space="preserve">
-    <value>Output</value>
+    <value>المخرج</value>
   </data>
   <data name="DisplayAudioPauseRule.Description" xml:space="preserve">
-    <value>Control how wallpaper audio plays across your screens</value>
+    <value>التحكم في كيفية تشغيل صوت الخلفية عبر شاشاتك</value>
   </data>
   <data name="VisualizerAudioDevice.Description" xml:space="preserve">
-    <value>Select the playback device used for visualizing sound</value>
+    <value>حدد جهاز التشغيل المستخدم لتصور الصوت</value>
   </data>
   <data name="VisualizerAudioDevice.Header" xml:space="preserve">
-    <value>Audio device</value>
+    <value>جهاز الصوت</value>
   </data>
   <data name="SwitchReleaseBranchBeta.Description" xml:space="preserve">
-    <value>Get early features and help test them before public release. These builds may be unstable.</value>
+    <value>احصل على الميزات المبكرة وساعد في اختبارها قبل الإصدار العام. قد تكون هذه الإصدارات غير مستقرة.</value>
   </data>
   <data name="SwitchReleaseBranchBeta.Header" xml:space="preserve">
-    <value>Join the Beta release</value>
+    <value>انضم إلى الإصدار التجريبي</value>
   </data>
   <data name="SwitchReleaseBranchStable.Description" xml:space="preserve">
-    <value>Return to the regular public release for the most reliable updates.</value>
+    <value>ارجع إلى الإصدار العام المنتظم للحصول على التحديثات الأكثر موثوقية.</value>
   </data>
   <data name="SwitchReleaseBranchStable.Header" xml:space="preserve">
-    <value>Switch to Stable release</value>
+    <value>التبديل إلى الإصدار المستقر</value>
+  </data>
+  <data name="RestartWallpaperAfterLockscreen.Header" xml:space="preserve">
+    <value>إعادة تشغيل الخلفية عند العودة من شاشة القُفْل</value>
   </data>
 </root>

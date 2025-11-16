@@ -1298,4 +1298,7 @@ Edge는 Windows 10의 내장 웹뷰입니다.</value>
   <data name="SwitchReleaseBranchStable.Header" xml:space="preserve">
     <value>안정적인 릴리스로 전환</value>
   </data>
+  <data name="RestartWallpaperAfterLockscreen.Header" xml:space="preserve">
+    <value>잠금 화면에서 돌아오면 배경화면 재시작</value>
+  </data>
 </root>

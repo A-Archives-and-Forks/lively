@@ -266,8 +266,8 @@ https://github.com/rocksdanister/lively/wiki</value>
 2. Selecciona Propiedades
 3. Selecciona Configuración avanzada del sistema
 4. En la pestaña Rendimiento, selecciona Configuración
-5. Habilita la opcion animar los elementos y controles de las ventanas
-6. Aplica los cambios
+5. Habilita la opción animar los elementos y controles de las ventanas
+6. Aplica los cambios y presiona  "Aceptar" para cerrar la ventana
 
 Si Windows 7 se acaba de configurar: ajusta para obtener la mejor apariencia y aplica los cambios.
 Si aún no funciona, cierra e inicia Lively nuevamente o reinicia Windows.
@@ -1300,5 +1300,8 @@ Edge es la vista web integrada en Windows 10.</value>
   </data>
   <data name="SwitchReleaseBranchStable.Header" xml:space="preserve">
     <value>Cambiar a la versión estable</value>
+  </data>
+  <data name="RestartWallpaperAfterLockscreen.Header" xml:space="preserve">
+    <value>Reiniciar el fondo de pantalla cuando vuelvas de la pantalla de bloqueo</value>
   </data>
 </root>

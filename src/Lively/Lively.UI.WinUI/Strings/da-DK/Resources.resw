@@ -1295,4 +1295,7 @@ Hvis det stadig ikke virker, luk &amp; start livligt igen/genstart vinduer.
   <data name="SwitchReleaseBranchStable.Header" xml:space="preserve">
     <value>Switch to Stable release</value>
   </data>
+  <data name="RestartWallpaperAfterLockscreen.Header" xml:space="preserve">
+    <value>Restart wallpaper when returning from lock screen</value>
+  </data>
 </root>

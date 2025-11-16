@@ -1255,7 +1255,7 @@ Utforskaren har startat om två gånger under de senaste 30 sekunderna! Detta ka
     <value>Select the playback device used for visualizing sound</value>
   </data>
   <data name="VisualizerAudioDevice.Header" xml:space="preserve">
-    <value>Audio device</value>
+    <value>Ljudenhet</value>
   </data>
   <data name="SwitchReleaseBranchBeta.Description" xml:space="preserve">
     <value>Get early features and help test them before public release. These builds may be unstable.</value>
@@ -1268,5 +1268,8 @@ Utforskaren har startat om två gånger under de senaste 30 sekunderna! Detta ka
   </data>
   <data name="SwitchReleaseBranchStable.Header" xml:space="preserve">
     <value>Switch to Stable release</value>
+  </data>
+  <data name="RestartWallpaperAfterLockscreen.Header" xml:space="preserve">
+    <value>Restart wallpaper when returning from lock screen</value>
   </data>
 </root>

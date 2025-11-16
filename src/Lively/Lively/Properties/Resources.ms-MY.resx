@@ -1298,4 +1298,7 @@ Edge ialah Webview sedia ada bagi Windows 10.</value>
   <data name="SwitchReleaseBranchStable.Header" xml:space="preserve">
     <value>Tukar kepada keluaran Stabil</value>
   </data>
+  <data name="RestartWallpaperAfterLockscreen.Header" xml:space="preserve">
+    <value>Mulakan semula kertas dinding apabila kembali dari skrin kunci</value>
+  </data>
 </root>

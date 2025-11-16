@@ -1248,51 +1248,55 @@ Nếu vẫn không thể hoạt động, đóng lại &amp; khởi động lại
     <value>Giống với Hệ thống</value>
   </data>
   <data name="InfoSettingsRestartRequest.Message" xml:space="preserve">
-    <value>Vui lòng khởi động lại app để cài đặt được áp dụng.</value>
+    <value>Vui lòng khởi động lại ứng dụng để cài đặt được áp dụng.</value>
   </data>
   <data name="ScreensaverLockOnResume.Header" xml:space="preserve">
     <value>Khi trở lại, hiển thị màn hình đăng nhập</value>
   </data>
   <data name="ScreensaverFadeIn.Header" xml:space="preserve">
-    <value>Fade to black before start</value>
+    <value>Chuyển mờ sang màu đen trước khi bắt đầu hình nền</value>
   </data>
   <data name="VideoLetWindowsManageColor.Header" xml:space="preserve">
-    <value>Let Windows manage colors</value>
+    <value>Để Windows quản lý màu sắc</value>
   </data>
   <data name="ScreensaverWindowsSettings.Header" xml:space="preserve">
-    <value>Windows Settings</value>
+    <value>Thiết lập cửa sổ</value>
   </data>
   <data name="DescriptionConfirmProjectDirectory.Text" xml:space="preserve">
-    <value>Confirm project structure?</value>
+    <value>Xác nhận cấu trúc dự án</value>
   </data>
   <data name="DescriptionConfirmFileConvertion.Text" xml:space="preserve">
-    <value>This file format isn’t supported directly. It will be converted before use. Do you want to continue?</value>
+    <value>Định dạng này chưa được hỗ trợ trực tiếp. Nó sẽ được chuyển đổi trước khi dùng. Bạn có muốn tiếp tục không?
+</value>
   </data>
   <data name="ScreensaverDialogSettings.Header" xml:space="preserve">
     <value>Cài đặt</value>
   </data>
   <data name="DisplayAudioPauseRule.Header" xml:space="preserve">
-    <value>Output</value>
+    <value>Đầu ra âm thanh cho màn hình</value>
   </data>
   <data name="DisplayAudioPauseRule.Description" xml:space="preserve">
-    <value>Control how wallpaper audio plays across your screens</value>
+    <value>Kiểm soát hình nền sẽ phát âm thanh ở màn hình nào </value>
   </data>
   <data name="VisualizerAudioDevice.Description" xml:space="preserve">
-    <value>Select the playback device used for visualizing sound</value>
+    <value>Chọn thiết bị mà bạn muốn phát ra âm thanh</value>
   </data>
   <data name="VisualizerAudioDevice.Header" xml:space="preserve">
-    <value>Audio device</value>
+    <value>Thiết bị phát âm thanh</value>
   </data>
   <data name="SwitchReleaseBranchBeta.Description" xml:space="preserve">
-    <value>Get early features and help test them before public release. These builds may be unstable.</value>
+    <value>Nhận các tính năng mới sớm hơn và kiểm tra chúng trước khi phát hành. Có thể nó không ổn định</value>
   </data>
   <data name="SwitchReleaseBranchBeta.Header" xml:space="preserve">
-    <value>Join the Beta release</value>
+    <value>Tham gia bản phát hành thử nghiệm</value>
   </data>
   <data name="SwitchReleaseBranchStable.Description" xml:space="preserve">
-    <value>Return to the regular public release for the most reliable updates.</value>
+    <value>Quay về bản phát hành đáng tin cậy nhất của ứng dụng</value>
   </data>
   <data name="SwitchReleaseBranchStable.Header" xml:space="preserve">
-    <value>Switch to Stable release</value>
+    <value>Chuyển sang bản phát hành ổn định </value>
+  </data>
+  <data name="RestartWallpaperAfterLockscreen.Header" xml:space="preserve">
+    <value>Khởi động lại hình nền khi quay lại từ màn hình khoá</value>
   </data>
 </root>
