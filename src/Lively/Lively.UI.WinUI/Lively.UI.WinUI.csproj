@@ -11,6 +11,8 @@
     <UseWinUI>true</UseWinUI>
     <EnablePreviewMsixTooling>true</EnablePreviewMsixTooling>
     <ApplicationIcon>appicon.ico</ApplicationIcon>
+    <!-- .NET 9 Win10 issue, ref: https://github.com/rocksdanister/lively/issues/3028 -->
+    <CETCompat>false</CETCompat>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(IsMsixRelease)' != 'true'">

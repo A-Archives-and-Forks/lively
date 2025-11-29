@@ -9,6 +9,8 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <AssemblyVersion>2.2.1.0</AssemblyVersion>
     <Platforms>AnyCPU;x64</Platforms>
+    <!-- .NET 9 Win10 issue, ref: https://github.com/rocksdanister/lively/issues/3028 -->
+    <CETCompat>false</CETCompat>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
