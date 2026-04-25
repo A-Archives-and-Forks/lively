@@ -24,6 +24,7 @@ using System.Timers;
 using System.Windows;
 using System.Windows.Interop;
 using System.Windows.Threading;
+using Windows.Media.Control;
 using Timer = System.Timers.Timer;
 
 namespace Lively.Services
@@ -62,6 +63,9 @@ namespace Lively.Services
             displayManager.DisplayUpdated += DisplayManager_DisplayUpdated;
             idleTimer.Elapsed += IdleCheckTimer;
             idleTimer.Interval = 30000;
+
+            if (userSettings.Settings.ScreensaverIdleDelay != ScreensaverIdleTime.none)
+                StartIdleTimer(userSettings.Settings.ScreensaverIdleDelay.ToMilliseconds());
         }
 
         public async Task StartAsync(bool isFadeIn)
@@ -442,7 +446,11 @@ namespace Lively.Services
         {
             try
             {
-                if (GetLastInputTime() >= idleWaitTime && !IsExclusiveFullScreenAppRunning())
+                // Only start if input idle, non exclusive window and smtc media playback.
+                // For future improvement can also use naudio WASAPI to check for active audio sessions (skip wallpaper.)
+                if (GetLastInputTime() >= idleWaitTime 
+                    && !IsExclusiveFullScreenAppRunning() 
+                    && !await IsSmtcPlayingAsync())
                 {
                     await StartAsync(userSettings.Settings.ScreensaverFadeIn);
                 }
@@ -608,13 +616,29 @@ namespace Lively.Services
             }
         }
 
-        //private Rectangle GetDesktopRect()
-        //{
-        //    var progman = NativeMethods.FindWindow("Progman", null);
-        //    _ = NativeMethods.GetWindowRect(progman, out NativeMethods.RECT prct);
-        //    int width = prct.Right - prct.Left,
-        //        height = prct.Bottom - prct.Top;
-        //    return new Rectangle(prct.Left, prct.Top, width, height);
-        //}
+        private static async Task<bool> IsSmtcPlayingAsync()
+        {
+            try
+            {
+                // GlobalSystemMediaTransportControlsSessionManager.RequestAsync() can hang due to system instability.
+                using var cts = new CancellationTokenSource(TimeSpan.FromSeconds(5));
+                var manager = await GlobalSystemMediaTransportControlsSessionManager.RequestAsync().AsTask(cts.Token);
+
+                foreach (var session in manager.GetSessions())
+                {
+                    var status = session.GetPlaybackInfo()?.PlaybackStatus;
+                    if (status == GlobalSystemMediaTransportControlsSessionPlaybackStatus.Playing)
+                        return true;
+                }
+            }
+            catch (OperationCanceledException ce) {
+                Logger.Warn($"GSMTC not responding, {ce}");
+            }
+            catch(Exception ex) {
+                Logger.Error(ex);
+            }
+
+            return false;
+        }
     }
 }

@@ -4,6 +4,7 @@ using Lively.Common.Helpers;
 using Lively.Common.Services;
 using Lively.Grpc.Client;
 using Lively.Models;
+using Lively.Models.Enums;
 using System.Diagnostics;
 
 namespace Lively.UI.Shared.ViewModels
@@ -21,7 +22,10 @@ namespace Lively.UI.Shared.ViewModels
             IsFadeIn = userSettings.Settings.ScreensaverFadeIn;
             IsLockOnResume = userSettings.Settings.ScreensaverLockOnResume;
             Volume = userSettings.Settings.ScreensaverGlobalVolume;
-            IsScreensaverPluginNotify = !ScreensaverUtil.IsScreensaverSelected("Lively");
+            SelectedScreensaverWaitIndex = (int)userSettings.Settings.ScreensaverIdleDelay;
+            // Comply with 10.1.5 Software Distribution
+            // Ref: https://learn.microsoft.com/en-us/windows/apps/publish/store-policies
+            IsScreensaverPluginNotify = !PackageUtil.IsRunningAsPackaged && !ScreensaverUtil.IsScreensaverSelected("Lively");
         }
 
         [ObservableProperty]
@@ -69,6 +73,21 @@ namespace Lively.UI.Shared.ViewModels
                     UpdateSettingsConfigFile();
                 }
                 SetProperty(ref _volume, value);
+            }
+        }
+
+        private int _selectedScreensaverWaitIndex;
+        public int SelectedScreensaverWaitIndex
+        {
+            get => _selectedScreensaverWaitIndex;
+            set
+            {
+                if (userSettings.Settings.ScreensaverIdleDelay != (ScreensaverIdleTime)value)
+                {
+                    userSettings.Settings.ScreensaverIdleDelay = (ScreensaverIdleTime)value;
+                    UpdateSettingsConfigFile();
+                }
+                SetProperty(ref _selectedScreensaverWaitIndex, value);
             }
         }
 

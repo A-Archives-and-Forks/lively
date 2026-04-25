@@ -47,9 +47,13 @@ namespace Lively.UI.Shared.ViewModels
             SelectedScreensaverTypeIndex = (int)userSettings.Settings.ScreensaverType;
             SelectedDisplay = userSettings.Settings.SelectedDisplay;
             screenSaverLayout = GetScreensaverConfigFile();
-            IsScreensaverPluginNotify = !ScreensaverUtil.IsScreensaverSelected("Lively") && userSettings.Settings.IsScreensaverPluginNotify;
-            UpdateLayout();
+            // Comply with 10.1.5 Software Distribution
+            // Ref: https://learn.microsoft.com/en-us/windows/apps/publish/store-policies
+            IsScreensaverPluginNotify = !PackageUtil.IsRunningAsPackaged && 
+                !ScreensaverUtil.IsScreensaverSelected("Lively") && 
+                userSettings.Settings.IsScreensaverPluginNotify;
 
+            UpdateLayout();
             // This event is also fired when monitor configuration changed.
             desktopCore.WallpaperChanged += DesktopCore_WallpaperChanged;
         }

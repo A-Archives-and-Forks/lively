@@ -2,6 +2,7 @@
 using Grpc.Core;
 using Lively.Common.Services;
 using Lively.Core.Display;
+using Lively.Extensions;
 using Lively.Grpc.Common.Proto.Settings;
 using Lively.Helpers;
 using Lively.Models;
@@ -19,6 +20,7 @@ namespace Lively.RPC
     {
         private static readonly NLog.Logger Logger = NLog.LogManager.GetCurrentClassLogger();
         private readonly IDisplayManager displayManager;
+        private readonly IScreensaverService screensaverService;
         private readonly ITransparentTbService ttbService;
         private readonly IUserSettingsService userSettings;
         private readonly IRunnerService runner;
@@ -30,6 +32,7 @@ namespace Lively.RPC
 
         public UserSettingsServer(IDisplayManager displayManager,
             IUserSettingsService userSettings,
+            IScreensaverService ScreensaverService,
             IRunnerService runner,
             ISystray sysTray,
             IResourceService i18n,
@@ -37,6 +40,7 @@ namespace Lively.RPC
         {
             this.displayManager = displayManager;
             this.userSettings = userSettings;
+            this.screensaverService = ScreensaverService;
             this.ttbService = ttbService;
             this.sysTray = sysTray;
             this.runner = runner;
@@ -119,6 +123,16 @@ namespace Lively.RPC
                 }));
             }
 
+            if ((Models.Enums.ScreensaverIdleTime)((int)req.ScreensaverIdleWait) != userSettings.Settings.ScreensaverIdleDelay)
+            {
+                userSettings.Settings.ScreensaverIdleDelay = (Models.Enums.ScreensaverIdleTime)((int)req.ScreensaverIdleWait);
+
+                if (userSettings.Settings.ScreensaverIdleDelay == Models.Enums.ScreensaverIdleTime.none)
+                    screensaverService.StopIdleTimer();
+                else
+                    screensaverService.StartIdleTimer(userSettings.Settings.ScreensaverIdleDelay.ToMilliseconds());
+            }
+
             userSettings.Settings.SavedURL = req.SavedUrl;
             userSettings.Settings.ProcessMonitorAlgorithm = (ProcessMonitorAlgorithm)((int)req.ProcessMonitorAlogorithm);
             userSettings.Settings.SelectedDisplay = displayManager.DisplayMonitors.FirstOrDefault(x => req.SelectedDisplay.DeviceId == x.DeviceId) ?? displayManager.PrimaryDisplayMonitor;
@@ -171,7 +185,6 @@ namespace Lively.RPC
             userSettings.Settings.LockScreenAutoWallpaper = req.LockScreenAutoWallpaper;
             userSettings.Settings.DesktopAutoWallpaper = req.DesktopAutoWallpaper;
             //userSettings.Settings.SystemTaskbarTheme = (Common.TaskbarTheme)req.SystemTaskbarTheme;
-            userSettings.Settings.ScreensaverIdleDelay = (Models.Enums.ScreensaverIdleTime)((int)req.ScreensaverIdleWait);
             userSettings.Settings.ScreensaverOledWarning = req.ScreensaverOledWarning;
             userSettings.Settings.ScreensaverEmptyScreenShowBlack = req.ScreensaverEmptyScreenShowBlack;
             userSettings.Settings.ScreensaverLockOnResume = req.ScreensaverLockOnResume;
