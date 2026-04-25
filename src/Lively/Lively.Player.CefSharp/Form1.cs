@@ -357,6 +357,8 @@ namespace Lively.Player.CefSharp
                 settings.CefCommandLineArgs.Add("mute-audio", "1");
             //auto-play video without it being muted (default cef behaviour is overriden.)
             settings.CefCommandLineArgs.Add("autoplay-policy", "no-user-gesture-required");
+            //disable smtc
+            settings.CefCommandLineArgs.Add("disable-features", "HardwareMediaKeyHandling");
             settings.LogFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
                 "Lively Wallpaper", "Cef", "logfile.txt");
 

@@ -138,7 +138,9 @@ namespace Lively.Player.WebView2
 
             var webViewStartArgs =
                 // Allow media autoplay even if not muted.
-                "--autoplay-policy=no-user-gesture-required ";
+                "--autoplay-policy=no-user-gesture-required " +
+                // Disable SMTC.
+                "--disable-features=HardwareMediaKeyHandling ";
             CoreWebView2EnvironmentOptions options = new CoreWebView2EnvironmentOptions(webViewStartArgs);
             // WebView2 does not have in-memory mode, ref: https://github.com/MicrosoftEdge/WebView2Feedback/issues/3637
             // Custom user data folder, ref: https://docs.microsoft.com/en-us/microsoft-edge/webview2/concepts/user-data-folder
