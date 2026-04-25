@@ -653,7 +653,7 @@ https://github.com/rocksdanister/lively/wiki</value>
   <data name="RemoteDesktopPower.Description" xml:space="preserve">
     <value>Қашықтағы жұмыс үстелі режимінде ойнату параметрлері</value>
   </data>
-  <data name="TipScreensaver" xml:space="preserve">
+  <data name="ScreensaverWaitTime.Header" xml:space="preserve">
     <value>Әрекетсіздік режиміне өту кезінде экран сақтағыштың орнына ағымдағы тұсқағазды пайдалану</value>
   </data>
   <data name="StreamWallpaperDetect.Description" xml:space="preserve">

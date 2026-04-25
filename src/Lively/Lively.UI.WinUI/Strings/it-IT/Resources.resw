@@ -652,7 +652,7 @@ Quando sei pronto, vai a: http://localhost:portnumber per accedere al portale de
   <data name="RemoteDesktopPower.Description" xml:space="preserve">
     <value>Cambia riproduzione quando si esegue una sessione Desktop remoto</value>
   </data>
-  <data name="TipScreensaver" xml:space="preserve">
+  <data name="ScreensaverWaitTime.Header" xml:space="preserve">
     <value>Dopo il tempo di inattività selezionato usa lo sfondo corrente come salvaschermo</value>
   </data>
   <data name="StreamWallpaperDetect.Description" xml:space="preserve">

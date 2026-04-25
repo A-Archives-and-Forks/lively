@@ -652,7 +652,7 @@ Mura bhfuil sé ag feidhmiú go fóill, déan Lively a dhúnadh agus a atosnú a
   <data name="RemoteDesktopPower.Description" xml:space="preserve">
     <value>Athraigh an athsheinnt agus seisiún ciandeisce ar siúl</value>
   </data>
-  <data name="TipScreensaver" xml:space="preserve">
+  <data name="ScreensaverWaitTime.Header" xml:space="preserve">
     <value>Úsáid an cúlbhrat reatha mar spárálaí scáileáin i ndiaidh an aga neamhghníomhaíochta socraithe</value>
   </data>
   <data name="StreamWallpaperDetect.Description" xml:space="preserve">

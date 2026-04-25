@@ -652,7 +652,7 @@ Si encara no funciona, tanca i inicia de nou o reinicia Windows.
   <data name="RemoteDesktopPower.Description" xml:space="preserve">
     <value>Canvieu la reproducció en executar una sessió d'escriptori remot</value>
   </data>
-  <data name="TipScreensaver" xml:space="preserve">
+  <data name="ScreensaverWaitTime.Header" xml:space="preserve">
     <value>Després del període d'inactivitat, fes servir el fons de pantalla actual com a protector de pantalla</value>
   </data>
   <data name="StreamWallpaperDetect.Description" xml:space="preserve">

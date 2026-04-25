@@ -656,7 +656,7 @@ https://github.com/rocksdanister/lively/wiki
   <data name="RemoteDesktopPower.Description" xml:space="preserve">
     <value>שנה השמעה בעת הפעלת הפעלה של שולחן עבודה מרוחק</value>
   </data>
-  <data name="TipScreensaver" xml:space="preserve">
+  <data name="ScreensaverWaitTime.Header" xml:space="preserve">
     <value>לאחר תקופת חוסר הפעילות שנבחרה השתמש בטפט הנוכחי כשומר המסך שלך.</value>
   </data>
   <data name="StreamWallpaperDetect.Description" xml:space="preserve">

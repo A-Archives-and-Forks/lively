@@ -652,7 +652,7 @@ Hvis det stadig ikke virker, luk &amp; start livligt igen/genstart vinduer.
   <data name="RemoteDesktopPower.Description" xml:space="preserve">
     <value>Skift afspilning når en fjernskrivebordssession køres</value>
   </data>
-  <data name="TipScreensaver" xml:space="preserve">
+  <data name="ScreensaverWaitTime.Header" xml:space="preserve">
     <value>Efter inaktivitet periode bruge den aktuelle baggrund som din screensaver</value>
   </data>
   <data name="StreamWallpaperDetect.Description" xml:space="preserve">

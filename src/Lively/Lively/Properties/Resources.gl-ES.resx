@@ -657,7 +657,7 @@ Se aínda non funciona, pecha e inicia Lively de novo ou reinicia Windows.
   <data name="RemoteDesktopPower.Description" xml:space="preserve">
     <value>Cambia a reprodución ao executar unha sesión de Escritorio remoto</value>
   </data>
-  <data name="TipScreensaver" xml:space="preserve">
+  <data name="ScreensaverWaitTime.Header" xml:space="preserve">
     <value>Despois do período de inactividade, utiliza o fondo de pantalla actual como salvapantallas</value>
   </data>
   <data name="StreamWallpaperDetect.Description" xml:space="preserve">

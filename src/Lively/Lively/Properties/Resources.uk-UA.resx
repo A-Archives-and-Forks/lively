@@ -657,7 +657,7 @@ https://github.com/rocksdanister/lively/wiki</value>
   <data name="RemoteDesktopPower.Description" xml:space="preserve">
     <value>Змінити відтворення під час запуску сеансу віддаленого робочого стола</value>
   </data>
-  <data name="TipScreensaver" xml:space="preserve">
+  <data name="ScreensaverWaitTime.Header" xml:space="preserve">
     <value>Після вибраного періоду бездіяльності використовуйте поточні шпалери як заставку.</value>
   </data>
   <data name="StreamWallpaperDetect.Description" xml:space="preserve">

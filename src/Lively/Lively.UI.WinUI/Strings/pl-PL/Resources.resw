@@ -656,7 +656,7 @@ Wszystkie procesy: Większe obciążenie procesora, skanuje wszystkie procesy ab
   <data name="RemoteDesktopPower.Description" xml:space="preserve">
     <value>Zmień odtwarzanie, podczas sesji zdalnego pulpitu</value>
   </data>
-  <data name="TipScreensaver" xml:space="preserve">
+  <data name="ScreensaverWaitTime.Header" xml:space="preserve">
     <value>Po upływie wskazanego czasu bezczynności, użyj obecnie wybranej tapety jako wygaszacza ekranu.</value>
   </data>
   <data name="StreamWallpaperDetect.Description" xml:space="preserve">

@@ -652,7 +652,7 @@ Windows 7 təzəlikcə qurulubsa - Ən yaxşı görünüş üçün ayarlar və T
   <data name="RemoteDesktopPower.Description" xml:space="preserve">
     <value>Uzaq Masaüstü seansını işlədən zaman oxutmanı dəyişdir</value>
   </data>
-  <data name="TipScreensaver" xml:space="preserve">
+  <data name="ScreensaverWaitTime.Header" xml:space="preserve">
     <value>Seçilmiş hərəkətsizlik müddətindən sonra hazırkı divar kağızını ekran qoruyucu olaraq istifadə et</value>
   </data>
   <data name="StreamWallpaperDetect.Description" xml:space="preserve">

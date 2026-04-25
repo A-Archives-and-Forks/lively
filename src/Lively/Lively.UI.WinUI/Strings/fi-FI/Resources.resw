@@ -652,7 +652,7 @@ Jos ikkuna ei vieläkään toimi, sulje ja käynnistä Windows ja Lively uudesta
   <data name="RemoteDesktopPower.Description" xml:space="preserve">
     <value>Vaihda toistoa kun käytät etätyöpöytäistuntoa</value>
   </data>
-  <data name="TipScreensaver" xml:space="preserve">
+  <data name="ScreensaverWaitTime.Header" xml:space="preserve">
     <value>Käyttämättömyyden jälkeen, näytä nykyistä taustakuvaa näytönsäästäjänä</value>
   </data>
   <data name="StreamWallpaperDetect.Description" xml:space="preserve">

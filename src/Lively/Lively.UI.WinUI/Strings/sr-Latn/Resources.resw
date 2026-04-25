@@ -645,7 +645,7 @@ Ako još ne radi, ugasi i upali Lively opet/restartuj windows.
   <data name="RemoteDesktopPower.Description" xml:space="preserve">
     <value>Promeni režim dok je upaljena sesija upravljanja na daljinu</value>
   </data>
-  <data name="TipScreensaver" xml:space="preserve">
+  <data name="ScreensaverWaitTime.Header" xml:space="preserve">
     <value>After the selected inactivity period use the current wallpaper as your screensaver.</value>
   </data>
   <data name="StreamWallpaperDetect.Description" xml:space="preserve">

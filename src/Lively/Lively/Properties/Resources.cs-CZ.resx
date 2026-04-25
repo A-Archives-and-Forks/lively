@@ -652,7 +652,7 @@ Pokud stále nefunguje, zavřete a spusťte Lively znova/restartujte okna.
   <data name="RemoteDesktopPower.Description" xml:space="preserve">
     <value>Změnit přehrávání při spuštění relace vzdálené plochy</value>
   </data>
-  <data name="TipScreensaver" xml:space="preserve">
+  <data name="ScreensaverWaitTime.Header" xml:space="preserve">
     <value>Po uplynutí doby nečinnosti použijte jako spořič obrazovky aktuální tapetu</value>
   </data>
   <data name="StreamWallpaperDetect.Description" xml:space="preserve">

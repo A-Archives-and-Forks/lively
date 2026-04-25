@@ -654,7 +654,7 @@ Todos os Processos: Pesado, varre todos os processos para determinar o comportam
   <data name="RemoteDesktopPower.Description" xml:space="preserve">
     <value>Mudar a reprodução ao executar uma sessão de Desktop Remota</value>
   </data>
-  <data name="TipScreensaver" xml:space="preserve">
+  <data name="ScreensaverWaitTime.Header" xml:space="preserve">
     <value>After the selected inactivity period use the current wallpaper as your screensaver.</value>
   </data>
   <data name="StreamWallpaperDetect.Description" xml:space="preserve">

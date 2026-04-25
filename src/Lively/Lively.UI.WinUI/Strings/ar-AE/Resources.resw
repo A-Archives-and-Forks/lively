@@ -652,7 +652,7 @@ https://github.com/rocksdanister/lively/wiki</value>
   <data name="RemoteDesktopPower.Description" xml:space="preserve">
     <value>تغيير التشغيل عند تشغيل جلسة سطح المكتب عن بعد</value>
   </data>
-  <data name="TipScreensaver" xml:space="preserve">
+  <data name="ScreensaverWaitTime.Header" xml:space="preserve">
     <value>بعد مدّة عدم النشاط، استخدم خلفية الشاشة الحالية كشاشة توقف على جهازك</value>
   </data>
   <data name="StreamWallpaperDetect.Description" xml:space="preserve">

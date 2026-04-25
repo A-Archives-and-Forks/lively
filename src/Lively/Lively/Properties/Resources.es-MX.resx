@@ -655,7 +655,7 @@ Todos los procesos: Pesado, analiza todos los procesos abiertos para determinar 
   <data name="RemoteDesktopPower.Description" xml:space="preserve">
     <value>Cambiar la reproducción cuando se activa una sesión de Escritorio Remoto</value>
   </data>
-  <data name="TipScreensaver" xml:space="preserve">
+  <data name="ScreensaverWaitTime.Header" xml:space="preserve">
     <value>Depues de entrar periodo de inactividad usar el actual fondo de pantalla como tu Salvapantallas.</value>
   </data>
   <data name="StreamWallpaperDetect.Description" xml:space="preserve">

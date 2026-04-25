@@ -626,7 +626,7 @@ Utforskaren har startat om två gånger under de senaste 30 sekunderna! Detta ka
   <data name="RemoteDesktopPower.Description" xml:space="preserve">
     <value>Ändra uppspelningen när en fjärrskrivbordssession körs</value>
   </data>
-  <data name="TipScreensaver" xml:space="preserve">
+  <data name="ScreensaverWaitTime.Header" xml:space="preserve">
     <value>Efter den valda inaktivitetsperioden kan du använda den aktuella tapeten som skärmsläckare.</value>
   </data>
   <data name="StreamWallpaperDetect.Description" xml:space="preserve">

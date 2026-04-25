@@ -652,7 +652,7 @@ Hvis fortsatt ikke fungerer, lukk og start Lively igjen/restart Windows.
   <data name="RemoteDesktopPower.Description" xml:space="preserve">
     <value>Endre avspilling når du kjører en fjernskrivebordsøkt</value>
   </data>
-  <data name="TipScreensaver" xml:space="preserve">
+  <data name="ScreensaverWaitTime.Header" xml:space="preserve">
     <value>Etter inaktivitet bruker du gjeldende bakgrunn som skjermsparer</value>
   </data>
   <data name="StreamWallpaperDetect.Description" xml:space="preserve">

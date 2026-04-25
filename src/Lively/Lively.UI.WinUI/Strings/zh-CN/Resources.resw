@@ -656,7 +656,7 @@ Grid 网格：利用网格算法更精准地确定暂停时机</value>
   <data name="RemoteDesktopPower.Description" xml:space="preserve">
     <value>当运行远程桌面会话时切换播放方式</value>
   </data>
-  <data name="TipScreensaver" xml:space="preserve">
+  <data name="ScreensaverWaitTime.Header" xml:space="preserve">
     <value>在进入已选定的屏幕休眠期后，使用当前的墙纸作为你的屏保。</value>
   </data>
   <data name="StreamWallpaperDetect.Description" xml:space="preserve">

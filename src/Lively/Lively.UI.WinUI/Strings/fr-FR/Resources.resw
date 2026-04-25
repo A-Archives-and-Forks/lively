@@ -656,7 +656,7 @@ Tous les processus : plus lourd, analyse tous les processus pour déterminer le 
   <data name="RemoteDesktopPower.Description" xml:space="preserve">
     <value>Définir le comportement de lecture lorsqu'une session de bureau distant est en cours</value>
   </data>
-  <data name="TipScreensaver" xml:space="preserve">
+  <data name="ScreensaverWaitTime.Header" xml:space="preserve">
     <value>Après la période d'inactivité sélectionnée, définit le fond d'écran actuel comme économiseur d'écran</value>
   </data>
   <data name="StreamWallpaperDetect.Description" xml:space="preserve">

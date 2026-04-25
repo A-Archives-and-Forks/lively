@@ -652,7 +652,7 @@ Ak aj napriek tomu Lively nefunguje, zatvorte a otvorte Lively alebo reštartujt
   <data name="RemoteDesktopPower.Description" xml:space="preserve">
     <value>Zmena prehrávania pri prístupe zo vzdialenej plochy</value>
   </data>
-  <data name="TipScreensaver" xml:space="preserve">
+  <data name="ScreensaverWaitTime.Header" xml:space="preserve">
     <value>Po uplynutí zadanej doby neaktivity sa aktuálne pozadie nastaví ako šetrič obrazovky</value>
   </data>
   <data name="StreamWallpaperDetect.Description" xml:space="preserve">

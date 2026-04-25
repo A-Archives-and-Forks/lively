@@ -646,7 +646,7 @@ Alle processen: Heavier, Scant alle processen om afspeelmogelijkheden te bepalen
   <data name="RemoteDesktopPower.Description" xml:space="preserve">
     <value>Wijzig afspelen bij het uitvoeren van een sessie voor extern bureaublad</value>
   </data>
-  <data name="TipScreensaver" xml:space="preserve">
+  <data name="ScreensaverWaitTime.Header" xml:space="preserve">
     <value>After the selected inactivity period use the current wallpaper as your screensaver.</value>
   </data>
   <data name="StreamWallpaperDetect.Description" xml:space="preserve">

@@ -640,7 +640,7 @@ https://github.com/rocksdanister/lively/releases</value>
   <data name="RemoteDesktopPower.Description" xml:space="preserve">
     <value>Промените репродукцију када покренете сесију удаљене радне површине</value>
   </data>
-  <data name="TipScreensaver" xml:space="preserve">
+  <data name="ScreensaverWaitTime.Header" xml:space="preserve">
     <value>After the selected inactivity period use the current wallpaper as your screensaver.</value>
   </data>
   <data name="StreamWallpaperDetect.Description" xml:space="preserve">

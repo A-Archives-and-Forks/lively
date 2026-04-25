@@ -655,7 +655,7 @@ Todos os processos: Mais pesado, escaneia todos os processos para determinar o c
   <data name="RemoteDesktopPower.Description" xml:space="preserve">
     <value>Mudar reprodução quando estiver em uma sessão da Área de Trabalho Remota.</value>
   </data>
-  <data name="TipScreensaver" xml:space="preserve">
+  <data name="ScreensaverWaitTime.Header" xml:space="preserve">
     <value>Após o tempo de inatividade selecionado, usar o papel de parede atual como seu protetor de tela.</value>
   </data>
   <data name="StreamWallpaperDetect.Description" xml:space="preserve">

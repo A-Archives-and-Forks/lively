@@ -652,7 +652,7 @@ As dit steeds nie werk nie, maak toe en begin Lively weer / herbegin vensters.
   <data name="RemoteDesktopPower.Description" xml:space="preserve">
     <value>Verander afspeel wanneer 'n Remote Desktop-sessie uitgevoer word</value>
   </data>
-  <data name="TipScreensaver" xml:space="preserve">
+  <data name="ScreensaverWaitTime.Header" xml:space="preserve">
     <value>Gebruik na die onaktiwiteitsperiode die huidige muurpapier as jou skermbewaarder</value>
   </data>
   <data name="StreamWallpaperDetect.Description" xml:space="preserve">

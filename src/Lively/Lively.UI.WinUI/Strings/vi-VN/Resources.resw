@@ -652,7 +652,7 @@ Nếu vẫn không thể hoạt động, đóng lại &amp; khởi động lại
   <data name="RemoteDesktopPower.Description" xml:space="preserve">
     <value>Chuyển chế độ chạy video khi đang điều khiển máy tính từ xa</value>
   </data>
-  <data name="TipScreensaver" xml:space="preserve">
+  <data name="ScreensaverWaitTime.Header" xml:space="preserve">
     <value>Sau một lúc không sử dụng máy thì sử dụng hình nền hiện tại để làm màn hình chờ</value>
   </data>
   <data name="StreamWallpaperDetect.Description" xml:space="preserve">

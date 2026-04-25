@@ -651,7 +651,7 @@ Wenn dies immer noch nicht funktioniert, schließen &amp; starten Sie Lively ode
   <data name="RemoteDesktopPower.Description" xml:space="preserve">
     <value>Wiedergabeverhalten ändern, wenn eine Remotedesktopsitzung ausgeführt wird</value>
   </data>
-  <data name="TipScreensaver" xml:space="preserve">
+  <data name="ScreensaverWaitTime.Header" xml:space="preserve">
     <value>Wähle, nach welcher Zeitspanne der aktuelle Hintergrund als Bildschirmschoner verwendet wird</value>
   </data>
   <data name="StreamWallpaperDetect.Description" xml:space="preserve">

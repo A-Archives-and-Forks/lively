@@ -26,7 +26,7 @@
                         Margin="0,0,0,10"
                         FontWeight="SemiBold" />
 
-                    <controls:SettingsCard Description="After the selected inactivity period use the current wallpaper as your screensaver." Header="Screensaver">
+                    <controls:SettingsCard x:Uid="ScreensaverWaitTime">
                         <controls:SettingsCard.HeaderIcon>
                             <FontIcon Glyph="&#xE916;" />
                         </controls:SettingsCard.HeaderIcon>
