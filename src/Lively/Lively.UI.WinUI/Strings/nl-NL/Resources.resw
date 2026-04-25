@@ -138,7 +138,7 @@
   <data name="DescExplorerCrash" xml:space="preserve">
     <value>Lively is een fatale fout tegen gekomen.
 
-Windows Explorer is in de laatste 30 seconden twee keer gestart! Dit kan een conflict zijn tussen Lively en andere desktop customisatie software van Windows. Om verdere problemen te vermijden, worden alle achtergronden beëindigd.</value>
+Windows Explorer is in de laatste 30 seconden twee keer gestart! Dit kan een conflict zijn tussen Lively en andere bureaublad aanpassingssoftware van Windows. Om verdere problemen te vermijden, worden alle achtergronden beëindigd.</value>
   </data>
   <data name="DescIncompatibleTaskbarTheme" xml:space="preserve">
     <value>Incompatibel programma gevonden, taakbalk thematisering uitgeschakeld</value>
@@ -237,7 +237,7 @@ Updates zullen vaker voorkomen en de updates kunnen bugs bevatten!</value>
 Om de foutmelding beter te begrijpen en te corrigeren, raden we aan om het logboekbestand te delen met de ontwikkelaar. Instructie voor het delen van logboekbestanden zijn hier te vinden: https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="LivelyExceptionHighContrastMode" xml:space="preserve">
-    <value>Lively werkt niet goed met Windows High Contrast modus inschakeld! Schakel High Contrast modus uit en probeer het opnieuw.</value>
+    <value>Lively werkt niet goed als de Windows Hoog Contrast modus is inschakeld! Schakel de Hoog Contrast modus uit en probeer het opnieuw</value>
   </data>
   <data name="LivelyExceptionMediaPlayback" xml:space="preserve">
     <value>Afspelen van media is mislukt :(
@@ -348,7 +348,7 @@ Als dat niet werkt herstart Lively en Windows. (Werkt niet met sommige insider W
     <value>Exporteer Lively .zip</value>
   </data>
   <data name="TextFeatureMissing" xml:space="preserve">
-    <value>Some features are not available in this version of Lively.Sommige functies zijn niet beschikbaar in deze versie van Lively.</value>
+    <value>Sommige functies zijn niet beschikbaar in deze versie van Lively</value>
   </data>
   <data name="TextFileNotFound" xml:space="preserve">
     <value>Bestand niet gevonden</value>
@@ -376,7 +376,7 @@ Geanimeerde GIF</value>
     <value>Toetsenbord</value>
   </data>
   <data name="TextLastChecked" xml:space="preserve">
-    <value>Laatst gecontroleerd</value>
+    <value>Laatst gecontroleerd op</value>
   </data>
   <data name="TextLearnMore.Text" xml:space="preserve">
     <value>Lees meer</value>
@@ -397,7 +397,7 @@ Geanimeerde GIF</value>
     <value>Muis</value>
   </data>
   <data name="MouseInteractOnDesktop.Content" xml:space="preserve">
-    <value>Muisinteractie bij focus van applicatie</value>
+    <value>Muisinteractie bij focus van een programma</value>
   </data>
   <data name="TextNext" xml:space="preserve">
     <value>Volgende</value>
@@ -553,7 +553,7 @@ Geanimeerde GIF</value>
     <value>Opties openen</value>
   </data>
   <data name="WallpaperFitFill.Content" xml:space="preserve">
-    <value>Schermvullend</value>
+    <value>Beeldvullend</value>
   </data>
   <data name="WallpaperFitNone.Content" xml:space="preserve">
     <value>Geen</value>
@@ -601,10 +601,10 @@ Geanimeerde GIF</value>
     <value>Stel in wat u wilt doen wanneer een applicatie in focus is.</value>
   </data>
   <data name="AppFullScreen.Description" xml:space="preserve">
-    <value>Stel in wat u wilt doen wanneer games/toepassingen op het volledig scherm worden uitgevoerd. </value>
+    <value>Stel in wat u wilt doen wanneer games/toepassingen beeldvullend worden uitgevoerd</value>
   </data>
   <data name="AppRules.Description" xml:space="preserve">
-    <value>Stel verschillende achtergrond afspeelmogelijkheden in gebaseerd op actieve toepassingen. </value>
+    <value>Stel verschillende achtergrond afspeelmogelijkheden in gebaseerd op actieve programma's</value>
   </data>
   <data name="TipAppTheme" xml:space="preserve">
     <value>Lively past zich aan op het systeem thema om het uiterlijk te wijzigen.</value>
@@ -1260,36 +1260,36 @@ Alle processen: Heavier, Scant alle processen om afspeelmogelijkheden te bepalen
     <value>Projectstructuur bevestigen?</value>
   </data>
   <data name="DescriptionConfirmFileConvertion.Text" xml:space="preserve">
-    <value>This file format isn’t supported directly. It will be converted before use. Do you want to continue?</value>
+    <value>Dit bestandsformaat wordt niet herkend. Voordat het wordt gebruikt wordt het omgezet. Wilt u doorgaan?</value>
   </data>
   <data name="ScreensaverDialogSettings.Header" xml:space="preserve">
     <value>Eigenschappen</value>
   </data>
   <data name="DisplayAudioPauseRule.Header" xml:space="preserve">
-    <value>Output</value>
+    <value>Audioausgabe</value>
   </data>
   <data name="DisplayAudioPauseRule.Description" xml:space="preserve">
-    <value>Control how wallpaper audio plays across your screens</value>
+    <value>Bepaal hoe het geluid wordt afgespeeld op al uw schermen</value>
   </data>
   <data name="VisualizerAudioDevice.Description" xml:space="preserve">
-    <value>Select the playback device used for visualizing sound</value>
+    <value>Wählen Sie das Wiedergabegerät aus, das zur Visualisierung des Tons verwendet wird</value>
   </data>
   <data name="VisualizerAudioDevice.Header" xml:space="preserve">
-    <value>Audio device</value>
+    <value>Audiogerät</value>
   </data>
   <data name="SwitchReleaseBranchBeta.Description" xml:space="preserve">
     <value>Get early features and help test them before public release. These builds may be unstable.</value>
   </data>
   <data name="SwitchReleaseBranchBeta.Header" xml:space="preserve">
-    <value>Join the Beta release</value>
+    <value>Doe mee met de Bèta versie</value>
   </data>
   <data name="SwitchReleaseBranchStable.Description" xml:space="preserve">
     <value>Return to the regular public release for the most reliable updates.</value>
   </data>
   <data name="SwitchReleaseBranchStable.Header" xml:space="preserve">
-    <value>Switch to Stable release</value>
+    <value>Wechseln Sie zur stabilen Version</value>
   </data>
   <data name="RestartWallpaperAfterLockscreen.Header" xml:space="preserve">
-    <value>Restart wallpaper when returning from lock screen</value>
+    <value>Herstart achtergrond bij terugkeren vanuit vergrendelingsscherm</value>
   </data>
 </root>

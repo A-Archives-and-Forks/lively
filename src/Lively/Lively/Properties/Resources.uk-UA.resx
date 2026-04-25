@@ -589,7 +589,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Вебсайт</value>
   </data>
   <data name="TextWebStream" xml:space="preserve">
-    <value>Стрім</value>
+    <value>Трансляція</value>
   </data>
   <data name="TextWelcome" xml:space="preserve">
     <value>Вітаємо</value>
@@ -1251,13 +1251,13 @@ Edge - веб-двигун з Windows 10 WebView.</value>
     <value>Щоб налаштування набрали чинності, потрібно перезавантажити шпалери</value>
   </data>
   <data name="LanguageSettingsItemSystemDefault.Content" xml:space="preserve">
-    <value>Така само як в системі</value>
+    <value>Така сама, як системи</value>
   </data>
   <data name="InfoSettingsRestartRequest.Message" xml:space="preserve">
     <value>Будь ласка, перезапустіть програму, щоб налаштування набули чинності.</value>
   </data>
   <data name="ScreensaverLockOnResume.Header" xml:space="preserve">
-    <value>У резюме, екрана входу</value>
+    <value>При відновленні роботи показувати екран входу</value>
   </data>
   <data name="ScreensaverFadeIn.Header" xml:space="preserve">
     <value>Перед початком роботи затемнити до чорного</value>
@@ -1281,10 +1281,10 @@ Edge - веб-двигун з Windows 10 WebView.</value>
     <value>Виведення</value>
   </data>
   <data name="DisplayAudioPauseRule.Description" xml:space="preserve">
-    <value>Control how wallpaper audio plays across your screens</value>
+    <value>Контроль відтворення звуку шпалер на екранах</value>
   </data>
   <data name="VisualizerAudioDevice.Description" xml:space="preserve">
-    <value>Select the playback device used for visualizing sound</value>
+    <value>Виберіть пристрій, який буде використовуватися для візуалізації звуку</value>
   </data>
   <data name="VisualizerAudioDevice.Header" xml:space="preserve">
     <value>Аудіопристрій</value>
@@ -1302,6 +1302,6 @@ Edge - веб-двигун з Windows 10 WebView.</value>
     <value>Перейти на стабільний реліз</value>
   </data>
   <data name="RestartWallpaperAfterLockscreen.Header" xml:space="preserve">
-    <value>Restart wallpaper when returning from lock screen</value>
+    <value>Перезапустити шпалери, коли екран розблоковується</value>
   </data>
 </root>

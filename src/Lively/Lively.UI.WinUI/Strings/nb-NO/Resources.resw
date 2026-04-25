@@ -141,7 +141,7 @@
 Windows Explorer har startet på nytt to ganger i løpet av de siste 30 sekund! Årsaken kan være en konflikt mellom Lively og andre skrivebordstilpasningsprogramvare eller Windows. For å unngå ytterligere problemer avsluttes alle bakgrunnsbilder.</value>
   </data>
   <data name="DescIncompatibleTaskbarTheme" xml:space="preserve">
-    <value>Inkompatibelt program funnet, tema på oppgavelinjen er deaktivert</value>
+    <value>Inkompatibelt program funnet, oppgavelinje-tema deaktivert</value>
   </data>
   <data name="Website.Description" xml:space="preserve">
     <value>Offisiell nettside til Lively Wallpaper</value>
@@ -557,7 +557,7 @@ Hvis fortsatt ikke fungerer, lukk og start Lively igjen/restart Windows.
     <value>Video</value>
   </data>
   <data name="TextWallpaperCommandlineArgs" xml:space="preserve">
-    <value>Launch Options</value>
+    <value>Oppstartsalternativer</value>
   </data>
   <data name="WallpaperFitFill.Content" xml:space="preserve">
     <value>Fyll</value>
@@ -572,13 +572,13 @@ Hvis fortsatt ikke fungerer, lukk og start Lively igjen/restart Windows.
     <value>Enhetlig utfylling</value>
   </data>
   <data name="WallpaperLayoutDuplicate.Text" xml:space="preserve">
-    <value>Duplicate</value>
+    <value>Dupliser</value>
   </data>
   <data name="WallpaperLayoutPerScreen.Text" xml:space="preserve">
     <value>Skjerm</value>
   </data>
   <data name="WallpaperLayoutSpan.Text" xml:space="preserve">
-    <value>Span</value>
+    <value>Utvid</value>
   </data>
   <data name="WallpaperType.Text" xml:space="preserve">
     <value>Type</value>
@@ -987,10 +987,10 @@ Hvis fortsatt ikke fungerer, lukk og start Lively igjen/restart Windows.
     <value>Type skjermsparer</value>
   </data>
   <data name="ScreensaverModeDifferentWallpaper.Text" xml:space="preserve">
-    <value>Custom</value>
+    <value>Egendefinert</value>
   </data>
   <data name="ScreensaverModeSameWallpaper.Text" xml:space="preserve">
-    <value>Mirror Wallpaper</value>
+    <value>Speil Bakgrunnsbilde</value>
   </data>
   <data name="ScreensaverPlugin.Title" xml:space="preserve">
     <value>Programtillegg kreves</value>
@@ -1212,55 +1212,55 @@ Hvis fortsatt ikke fungerer, lukk og start Lively igjen/restart Windows.
     <value>Last ned</value>
   </data>
   <data name="TextBecomePatreonMember.Content" xml:space="preserve">
-    <value>Become a Patreon supporter</value>
+    <value>Bli en Patreon-supporter</value>
   </data>
   <data name="TextPatreonMembersThankYou.Text" xml:space="preserve">
-    <value>Thanks to all the members who support this project.</value>
+    <value>Takk til alle medlemmer som støtter dette prosjektet.</value>
   </data>
   <data name="TitlePatreon.Text" xml:space="preserve">
-    <value>Patreon Supporters</value>
+    <value>Patreon-supportere</value>
   </data>
   <data name="SelectScreensaverCustomMode.Text" xml:space="preserve">
-    <value>Select screensaver</value>
+    <value>Velg skjermsparer</value>
   </data>
   <data name="WebViewRequired.Message" xml:space="preserve">
-    <value>Microsoft WebView2 is required to view this content</value>
+    <value>Microsoft WebView2 kreves for å se dette innholdet</value>
   </data>
   <data name="WebViewRequired.Title" xml:space="preserve">
     <value>Programtillegg kreves</value>
   </data>
   <data name="AppMusicExclusion.Description" xml:space="preserve">
-    <value>Select apps to exclude from showing music details</value>
+    <value>Velg apper som skal ekskluderes fra visning av musikkinformasjon</value>
   </data>
   <data name="AppMusicExclusion.Header" xml:space="preserve">
-    <value>App exclusion</value>
+    <value>App-ekskludering</value>
   </data>
   <data name="RestartCommand.Content" xml:space="preserve">
-    <value>Restart</value>
+    <value>Start på nytt</value>
   </data>
   <data name="WallpaperMusicGroup.Text" xml:space="preserve">
-    <value>Music</value>
+    <value>Musikk</value>
   </data>
   <data name="WallpaperRestartRequiredNotify.Message" xml:space="preserve">
-    <value>Wallpaper restart is required for the settings to take effect</value>
+    <value>Bakgrunnsbildet må startes på nytt for at innstillingene skal tre i kraft</value>
   </data>
   <data name="LanguageSettingsItemSystemDefault.Content" xml:space="preserve">
-    <value>Same as System</value>
+    <value>Samme som System</value>
   </data>
   <data name="InfoSettingsRestartRequest.Message" xml:space="preserve">
-    <value>Please restart application for settings to take effect.</value>
+    <value>Start Lively på nytt for at innstillingene skal tre i kraft</value>
   </data>
   <data name="ScreensaverLockOnResume.Header" xml:space="preserve">
     <value>Når det gjenopptas, vis påloggingsskjerm</value>
   </data>
   <data name="ScreensaverFadeIn.Header" xml:space="preserve">
-    <value>Fade to black before start</value>
+    <value>Windows-innstillinger</value>
   </data>
   <data name="VideoLetWindowsManageColor.Header" xml:space="preserve">
-    <value>Let Windows manage colors</value>
+    <value>La Windows administrere farger</value>
   </data>
   <data name="ScreensaverWindowsSettings.Header" xml:space="preserve">
-    <value>Windows Settings</value>
+    <value>Windows-innstillinger</value>
   </data>
   <data name="DescriptionConfirmProjectDirectory.Text" xml:space="preserve">
     <value>Confirm project structure?</value>

@@ -1293,7 +1293,7 @@ Edge est la vue Web intégrée de Windows 10.</value>
     <value>Essayez les fonctionnalités avant leur publication sur la version publique. Ces versions sont potentiellement instables.</value>
   </data>
   <data name="SwitchReleaseBranchBeta.Header" xml:space="preserve">
-    <value>Rejoignez la version Beta </value>
+    <value>Rejoignez la version Bêta</value>
   </data>
   <data name="SwitchReleaseBranchStable.Description" xml:space="preserve">
     <value>Revenez à la version publique régulière pour les mises à jour les plus fiables.</value>

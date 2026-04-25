@@ -138,7 +138,7 @@
   <data name="DescExplorerCrash" xml:space="preserve">
     <value>O Lively encontrou um erro fatal.
 
-O Explorador do Windows reiniciou duas vezes nos últimos 30 segundos! Este pode ser um conflito entre a aplicação e outro software de personalização do ambiente de trabalho, ou do Windows. Para evitar mais problemas, todos os papéis de parede foram encerrados.</value>
+O Explorador do Windows reiniciou duas vezes nos últimos 30 segundos! Isso pode ser um conflito entre a aplicação e outro “software” de personalização do ambiente de trabalho, ou do Windows. Para evitar mais problemas, todos os papéis de parede foram encerrados.</value>
   </data>
   <data name="DescIncompatibleTaskbarTheme" xml:space="preserve">
     <value>Programa incompatível encontrado, animação da barra de tarefas foi desativada</value>
@@ -1257,48 +1257,48 @@ Edge é o webview integrado do windows 10.</value>
     <value>Ao retomar, exibe a tela de login</value>
   </data>
   <data name="ScreensaverFadeIn.Header" xml:space="preserve">
-    <value>Fade to black before start</value>
+    <value>Escurece antes de começar.</value>
   </data>
   <data name="VideoLetWindowsManageColor.Header" xml:space="preserve">
-    <value>Let Windows manage colors</value>
+    <value/>
   </data>
   <data name="ScreensaverWindowsSettings.Header" xml:space="preserve">
     <value>Configurações do Windows</value>
   </data>
   <data name="DescriptionConfirmProjectDirectory.Text" xml:space="preserve">
-    <value>Confirm project structure?</value>
+    <value>Confirmar estrutura do projeto?</value>
   </data>
   <data name="DescriptionConfirmFileConvertion.Text" xml:space="preserve">
-    <value>This file format isn’t supported directly. It will be converted before use. Do you want to continue?</value>
+    <value>Esse formato de arquivo não é diretamente suportado. Ele será convertido antes da utilização. Deseja continuar?</value>
   </data>
   <data name="ScreensaverDialogSettings.Header" xml:space="preserve">
     <value>Definições</value>
   </data>
   <data name="DisplayAudioPauseRule.Header" xml:space="preserve">
-    <value>Output</value>
+    <value>Saída de áudio</value>
   </data>
   <data name="DisplayAudioPauseRule.Description" xml:space="preserve">
-    <value>Control how wallpaper audio plays across your screens</value>
+    <value>Controlar como o áudio do papel de parede é reproduzido pelas suas telas</value>
   </data>
   <data name="VisualizerAudioDevice.Description" xml:space="preserve">
-    <value>Select the playback device used for visualizing sound</value>
+    <value>Selecionar o dispositivo de áudio utilizado para visualizar o som</value>
   </data>
   <data name="VisualizerAudioDevice.Header" xml:space="preserve">
-    <value>Audio device</value>
+    <value>Dispositivo de áudio</value>
   </data>
   <data name="SwitchReleaseBranchBeta.Description" xml:space="preserve">
-    <value>Get early features and help test them before public release. These builds may be unstable.</value>
+    <value>Obtenha recursos iniciais e ajude a testá-los antes do lançamento público. Essas versões podem ser instáveis.</value>
   </data>
   <data name="SwitchReleaseBranchBeta.Header" xml:space="preserve">
-    <value>Join the Beta release</value>
+    <value>Junte-se à versão beta</value>
   </data>
   <data name="SwitchReleaseBranchStable.Description" xml:space="preserve">
-    <value>Return to the regular public release for the most reliable updates.</value>
+    <value>Retorne à versão pública regular para as atualizações mais confiáveis.</value>
   </data>
   <data name="SwitchReleaseBranchStable.Header" xml:space="preserve">
-    <value>Switch to Stable release</value>
+    <value>Mudar para versão estável</value>
   </data>
   <data name="RestartWallpaperAfterLockscreen.Header" xml:space="preserve">
-    <value>Restart wallpaper when returning from lock screen</value>
+    <value>Reiniciar plano de fundo quando retornar da tela de bloqueio</value>
   </data>
 </root>

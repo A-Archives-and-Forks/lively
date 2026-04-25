@@ -1227,7 +1227,7 @@ Nếu vẫn không thể hoạt động, đóng lại &amp; khởi động lại
     <value>Cần có phần mềm Microsoft WebView2 để xem nội dung này</value>
   </data>
   <data name="WebViewRequired.Title" xml:space="preserve">
-    <value>yêu cầu phần mềm bổ trợ</value>
+    <value>Yêu cầu phần mềm bổ trợ</value>
   </data>
   <data name="AppMusicExclusion.Description" xml:space="preserve">
     <value>Chọn các ứng dụng để loại trừ khỏi hiển thị chi tiết nhạc</value>
@@ -1285,16 +1285,16 @@ Nếu vẫn không thể hoạt động, đóng lại &amp; khởi động lại
     <value>Thiết bị phát âm thanh</value>
   </data>
   <data name="SwitchReleaseBranchBeta.Description" xml:space="preserve">
-    <value>Nhận các tính năng mới sớm hơn và kiểm tra chúng trước khi phát hành. Có thể nó không ổn định</value>
+    <value>Nhận các tính năng mới sớm hơn và kiểm tra chúng trước khi phát hành. Phiên bản này có thể không ổn định.</value>
   </data>
   <data name="SwitchReleaseBranchBeta.Header" xml:space="preserve">
     <value>Tham gia bản phát hành thử nghiệm</value>
   </data>
   <data name="SwitchReleaseBranchStable.Description" xml:space="preserve">
-    <value>Quay về bản phát hành đáng tin cậy nhất của ứng dụng</value>
+    <value>Quay về bản phát hành đáng tin cậy nhất của ứng dụng.</value>
   </data>
   <data name="SwitchReleaseBranchStable.Header" xml:space="preserve">
-    <value>Chuyển sang bản phát hành ổn định </value>
+    <value>Chuyển sang bản phát hành ổn định</value>
   </data>
   <data name="RestartWallpaperAfterLockscreen.Header" xml:space="preserve">
     <value>Khởi động lại hình nền khi quay lại từ màn hình khoá</value>

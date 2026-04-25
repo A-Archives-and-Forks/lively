@@ -136,28 +136,28 @@
     <value>Documentació de l'API i ajuda</value>
   </data>
   <data name="DescExplorerCrash" xml:space="preserve">
-    <value>Lively ha trobat amb un error fatal.
+    <value>El Lively ha trobat un error fatal.
 
-L'Explorador de Windows s'ha reiniciat dues vegades en els últims 30 segons. Això pot ser degut a un conflicte entre Lively i un altre software de personalització de l'escriptori. Per evitar futurs problemes, tots els fons de pantalla s'han tancat.</value>
+L'Explorador de Windows s'ha reiniciat dues vegades en els darrers 30 segons! Pot ser que es tracti d'un conflicte entre el Lively i altres programes de personalització d'escriptori o Windows. Per evitar més problemes, tots els fons de pantalla s'han cancel·lat.</value>
   </data>
   <data name="DescIncompatibleTaskbarTheme" xml:space="preserve">
     <value>S'ha trobat programa incompatible, s'ha deshabilitat la personalització de la barra de tasques</value>
   </data>
   <data name="Website.Description" xml:space="preserve">
-    <value>Pàgina web oficial de Lively Wallpaper</value>
+    <value>Pàgina web oficial del Lively Wallpaper</value>
   </data>
   <data name="DescOledScreensaverNotice" xml:space="preserve">
     <value>La majoria de pantalles LCD i LED modernes no pateixen de cremades, per tant, es pot fer servir qualsevol fons de pantalla.
 
-Per a pantalles OLED, Plasma o CRT, que són susceptibles a cremades, es recomana usar uns fons de pantalla amb constant moviment i un fons generalment fosc. Això se suposa que mitiga els problemes de cremades, encara que és una funcionalitat no provada i la seva efectivitat no pot ser demostrada.
+Per a pantalles OLED, plasma o CRT, que són susceptibles a cremades, es recomana usar uns fons de pantalla amb moviment regular i un tema generalment fosc. Això se suposa que mitiga els problemes de cremades, encara que és una funcionalitat no provada i no se'n pot garantir l'eficàcia.
 
-El propòsit principal dels estalvis de pantalla Lively és afegir una nova capa de customització al teu PC, fes-lo servir com a protecció contra cremades de pantalla sota el teu risc!</value>
+L'objectiu principal dels protectors de pantalla del Lively és afegir una nova capa de personaltzació al vostre PC, feu-lo servir com a protecció contra cremades de pantalla sota la vostra responsabilitat!</value>
   </data>
   <data name="ReportBug.Description" xml:space="preserve">
-    <value>Reporta un problema amb el programari</value>
+    <value>Informeu d'un problema amb el programari</value>
   </data>
   <data name="AddWallpaperFileBrowse.Header" xml:space="preserve">
-    <value>Escull un fitxer</value>
+    <value>Trieu un fitxer</value>
   </data>
   <data name="DescriptionAppRules" xml:space="preserve">
     <value>Comportament del fons de pantalla d'acord amb quina aplicació està en execució.</value>
@@ -166,84 +166,84 @@ El propòsit principal dels estalvis de pantalla Lively és afegir una nova capa
     <value>Esteu segur que voleu cancel·lar?</value>
   </data>
   <data name="DescriptionDeleteConfirmation" xml:space="preserve">
-    <value>Esteu segurs que voleu eliminar permanentment aquest fons de pantalla del disc dur?</value>
+    <value>Esteu segur que voleu suprimir permanentment aquest fons de pantalla del disc?</value>
   </data>
   <data name="DescriptionDeleteConfirmationLibrary" xml:space="preserve">
-    <value>Esteu segurs que voleu eliminar aquest fons de pantalla de la Llibreria?</value>
+    <value>Esteu segur que voleu suprimir aquest fons de pantalla de la Biblioteca?</value>
   </data>
   <data name="DragDropFile.Text" xml:space="preserve">
     <value>Simplement arrossega i deixa anar els arxius aquí</value>
   </data>
   <data name="DescriptionExternalAppWarning" xml:space="preserve">
     <value>Esteu obrint una aplicació externa com a fons de pantalla.
-Les aplicacions externes poden contenir programari maliciós, virus... i malmetre el teu sistema. 
-Només contínua si aquesta aplicació prové d'una font fiable.</value>
+Les aplicacions externes poden contenir programari maliciós, virus... i malmetre el vostre sistema. 
+Només continueu si aquesta aplicació prové d'una font de confiança.</value>
   </data>
   <data name="MinimizedTray.Text" xml:space="preserve">
-    <value>Lively es minimitza a la safata del sistema, fes clic dret a la icona de lively per continuar.</value>
+    <value>El Lively es minimitza a la safata del sistema, feu clic amb el botó dret a la icona del Lively per continuar.</value>
   </data>
   <data name="DescriptionPleaseRestartLively" xml:space="preserve">
-    <value>Si us plau, reinicia Lively perquè les configuracions tinguin efecte</value>
+    <value>Reinicieu el Lively perquè les configuracions tinguin efecte</value>
   </data>
   <data name="DescriptionPleaseStop" xml:space="preserve">
     <value>Si us plau, atura't abans de continuar</value>
   </data>
   <data name="DescriptionRecordStart" xml:space="preserve">
-    <value>Pressiona per començar a gravar</value>
+    <value>Premeu per començar a gravar</value>
   </data>
   <data name="DescriptionRestoringWallpaper" xml:space="preserve">
     <value>Restaurant fons de pantalla anterior(s), si us plau espera...</value>
   </data>
   <data name="DescriptionScreenLayout" xml:space="preserve">
-    <value>Escollir pantalla</value>
+    <value>Trieu una pantalla</value>
   </data>
   <data name="DescriptionUpdateAvailable" xml:space="preserve">
-    <value>Una nova versió de software està disponible!</value>
+    <value>Hi ha disponible una nova versió del programari!</value>
   </data>
   <data name="DescriptionWebpageLoad" xml:space="preserve">
     <value>Ingressa l'enllaç d'un lloc web per carregar-ho. També pots utilitzar enllaços de shadertoy.com.</value>
   </data>
   <data name="DescriptionWelcomeWizard" xml:space="preserve">
-    <value>Aquest assistent t'ajudarà a configurar Lively</value>
+    <value>Aquest assistent us ajudarà a començar a configurar el Lively</value>
   </data>
   <data name="DescriptionWindowsNCodecInstall" xml:space="preserve">
-    <value>La teva versió de Windows N/KN, requerirà la descàrrega de còdecs addicionals pel suport de reproducció de vídeo en fons de pantalla</value>
+    <value>La versió N/KN del Windows requerirà la baixada de còdecs addicionals per admetre la reproducció de vídeo com a fons de pantalla</value>
   </data>
   <data name="DescSupperDev" xml:space="preserve">
-    <value>Mostra suport comprant un cafè al desenvolupador</value>
+    <value>Mostreu el vostre suport comprant un cafè per al desenvolupador</value>
   </data>
   <data name="DescSwitchBranchBetaWarning" xml:space="preserve">
-    <value>Estàs a punt de canviar a la compilació beta (desenvolupador) de Lively.
-Les actualitzacions poden ser freqüents i contenir errors!</value>
+    <value>Esteu a punt de canviar a la versió beta (per a desenvolupadors) del Lively.
+Les actualitzacions seran més freqüents i poden contenir errors!</value>
   </data>
   <data name="HideSysTray.Description" xml:space="preserve">
-    <value>Visibilitat de la safata del sistema, Lively continuarà executant-se amb la icona amagada</value>
+    <value>Visibilitat de la icona a la safata del sistema, el Lively continuarà executant-se amb la icona oculta</value>
   </data>
   <data name="HideSysTray.Header" xml:space="preserve">
     <value>Icona de la safata del sistema</value>
   </data>
   <data name="Language.Description" xml:space="preserve">
-    <value>Lively es reiniciarà per a aplicar el nou idioma</value>
+    <value>El Lively es reiniciarà per aplicar el nou idioma</value>
   </data>
   <data name="Language.Header" xml:space="preserve">
     <value>Idioma</value>
   </data>
   <data name="LivelyExceptionAppUpdateFail" xml:space="preserve">
-    <value>Error en actualitzar; intenta descarregar l'instal·lador des de:
+    <value>No s'ha pogut actualitzar; proveu de baixar l'instal·lador des de:
 https://github.com/rocksdanister/lively/releases</value>
   </data>
   <data name="LivelyExceptionDamagedZipFile" xml:space="preserve">
-    <value>Arxiu de fons de pantalla malmès, intenta descarregar-lo novament</value>
+    <value>Fitxer de fons de pantalla malmès, proveu de tornar-lo a baixar</value>
   </data>
   <data name="LivelyExceptionGeneral" xml:space="preserve">
     <value>Vaja... sembla que quelcom ha anat malament :(
-Per entendre millor aquest error i solucionar el problema, comparteix el fitxer de registre amb el desenvolupador.
-Visita el següent enllaç amb instruccions sobre com compartir l'arxiu de registre:
+Per entendre millor aquest error i solucionar el problema, compartiu el fitxer de registre amb el desenvolupador.
+Instruccions per compartir el fitxer de registre:
 https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="LivelyExceptionHighContrastMode" xml:space="preserve">
-    <value>Lively no pot funcionar correctament amb el mode d'alt contrast de Windows activat!
-Deshabilita el mode d'alt contrast i intenti-ho novament.</value>
+    <value>El Lively no pot funcionar correctament amb el mode d'alt contrast del Windows activat!
+Desactiveu el mode d'alt contrast i torneu-ho a provar</value>
   </data>
   <data name="LivelyExceptionMediaPlayback" xml:space="preserve">
     <value>El reproductor de contingut ha fallat :(
@@ -314,22 +314,22 @@ Si encara no funciona, tanca i inicia de nou o reinicia Windows.
     <value>Completat!</value>
   </data>
   <data name="ControlPanel.Subtitle" xml:space="preserve">
-    <value>Click here to manage wallpapers.</value>
+    <value>Feu clic aquí per gestionar els fons de pantalla</value>
   </data>
   <data name="TextConvertVideo" xml:space="preserve">
-    <value>Convertir a Vídeo</value>
+    <value>Converteix a vídeo</value>
   </data>
   <data name="TextCreatePreview" xml:space="preserve">
     <value>Crea una previsualització</value>
   </data>
   <data name="Customise.Text" xml:space="preserve">
-    <value>Personalitzar</value>
+    <value>Personalitza</value>
   </data>
   <data name="CustomiseWallpaper.Label" xml:space="preserve">
-    <value>Personalitzar el fons de pantalla</value>
+    <value>Personalitza</value>
   </data>
   <data name="DeleteWallpaper.Text" xml:space="preserve">
-    <value>Eliminar el fons de pantalla</value>
+    <value>Suprimeix</value>
   </data>
   <data name="Description.Text" xml:space="preserve">
     <value>Descripció</value>
@@ -341,22 +341,22 @@ Si encara no funciona, tanca i inicia de nou o reinicia Windows.
     <value>Per pantalla</value>
   </data>
   <data name="TextDownload.Content" xml:space="preserve">
-    <value>Descarregar</value>
+    <value>Baixa</value>
   </data>
   <data name="EditWallpaper.Text" xml:space="preserve">
-    <value>Editar</value>
+    <value>Edita</value>
   </data>
   <data name="TextError" xml:space="preserve">
     <value>Error</value>
   </data>
   <data name="TextExit" xml:space="preserve">
-    <value>Sortir</value>
+    <value>Surt</value>
   </data>
   <data name="ExportWallpaperZip.Text" xml:space="preserve">
-    <value>Exportar .zip de Lively</value>
+    <value>Desa en un fitxer</value>
   </data>
   <data name="TextFeatureMissing" xml:space="preserve">
-    <value>Some features are not available in this version of Lively.</value>
+    <value>Algunes funcions no estan disponibles en aquesta versió del Lively</value>
   </data>
   <data name="TextFileNotFound" xml:space="preserve">
     <value>No s'ha trobat el fitxer</value>
@@ -365,19 +365,19 @@ Si encara no funciona, tanca i inicia de nou o reinicia Windows.
     <value>GIF animat</value>
   </data>
   <data name="SourceCode.Description" xml:space="preserve">
-    <value>Mostra una mica d'amor deixant una estrella</value>
+    <value>Mostreu una mica d'amor deixant una estrella</value>
   </data>
   <data name="TextGo" xml:space="preserve">
     <value>Iniciar</value>
   </data>
   <data name="TextHelpTranslate.Title" xml:space="preserve">
-    <value>Ajuda a traduïr Lively.</value>
+    <value>Ajudeu amb la traducció</value>
   </data>
   <data name="TextHours" xml:space="preserve">
-    <value>hours</value>
+    <value>hora/es</value>
   </data>
   <data name="TextInstall.Content" xml:space="preserve">
-    <value>Instal·lar</value>
+    <value>Instal·la</value>
   </data>
   <data name="TextKeyboard.Content" xml:space="preserve">
     <value>Teclat</value>
@@ -386,13 +386,13 @@ Si encara no funciona, tanca i inicia de nou o reinicia Windows.
     <value>Darrera comprovació</value>
   </data>
   <data name="TextLearnMore.Text" xml:space="preserve">
-    <value>Saber-ne més</value>
+    <value>Més informació</value>
   </data>
   <data name="License.Header" xml:space="preserve">
     <value>Llicència</value>
   </data>
   <data name="TextMinutes" xml:space="preserve">
-    <value>minutes</value>
+    <value>minut/s</value>
   </data>
   <data name="TextmoreInfo" xml:space="preserve">
     <value>Informació</value>
@@ -404,7 +404,7 @@ Si encara no funciona, tanca i inicia de nou o reinicia Windows.
     <value>Ratolí</value>
   </data>
   <data name="MouseInteractOnDesktop.Content" xml:space="preserve">
-    <value>Interactuar amb el mouse quan una aplicació està enfocada.</value>
+    <value>Interacció del ratolí quan l'aplicació està enfocada</value>
   </data>
   <data name="TextNext" xml:space="preserve">
     <value>Següent</value>
@@ -413,19 +413,19 @@ Si encara no funciona, tanca i inicia de nou o reinicia Windows.
     <value>No</value>
   </data>
   <data name="TextOff.Content" xml:space="preserve">
-    <value>APAGAT</value>
+    <value>Desactivat</value>
   </data>
   <data name="TextOK" xml:space="preserve">
     <value>D'acord</value>
   </data>
   <data name="TextOn.Content" xml:space="preserve">
-    <value>ENCÈS</value>
+    <value>Activat</value>
   </data>
   <data name="TextOnline" xml:space="preserve">
     <value>En línia</value>
   </data>
   <data name="TextOpenLively" xml:space="preserve">
-    <value>Obrir Lively</value>
+    <value>Obre el Lively</value>
   </data>
   <data name="PauseAlgorithmTypeAllProcess.Content" xml:space="preserve">
     <value>Tots els processos</value>
@@ -434,13 +434,13 @@ Si encara no funciona, tanca i inicia de nou o reinicia Windows.
     <value>Direct3D</value>
   </data>
   <data name="PauseAlgorithmTypeForegroundProcess.Content" xml:space="preserve">
-    <value>Processos en primer plà</value>
+    <value>Processos en primer pla</value>
   </data>
   <data name="TextPauseWallpapers" xml:space="preserve">
-    <value>Pausar els fons de pantalla</value>
+    <value>Pausa els fons de pantalla</value>
   </data>
   <data name="TextPerformanceKill.Content" xml:space="preserve">
-    <value>Acabar</value>
+    <value>Finalitza</value>
   </data>
   <data name="TextPerformanceNone.Content" xml:space="preserve">
     <value>Res</value>
@@ -452,16 +452,16 @@ Si encara no funciona, tanca i inicia de nou o reinicia Windows.
     <value>Imatge</value>
   </data>
   <data name="PreviewWallpaper.Text" xml:space="preserve">
-    <value>Preview Wallpaper</value>
+    <value>Previsualitza</value>
   </data>
   <data name="PrivacyPolicy.Header" xml:space="preserve">
-    <value>Política de privacitat</value>
+    <value>Política de privadesa</value>
   </data>
   <data name="TextProcessingWallpaper" xml:space="preserve">
-    <value>Processant</value>
+    <value>S'està processant</value>
   </data>
   <data name="TextRemove" xml:space="preserve">
-    <value>Eliminar</value>
+    <value>Elimina</value>
   </data>
   <data name="TextRule" xml:space="preserve">
     <value>Regla</value>
@@ -470,25 +470,25 @@ Si encara no funciona, tanca i inicia de nou o reinicia Windows.
     <value>Pantalla</value>
   </data>
   <data name="SearchBox.PlaceholderText" xml:space="preserve">
-    <value>Cercar</value>
+    <value>Cerca</value>
   </data>
   <data name="SetWallpaper.Text" xml:space="preserve">
-    <value>Establir com a fons de pantalla</value>
+    <value>Estableix com a fons de pantalla</value>
   </data>
   <data name="ShowOnDisk.Text" xml:space="preserve">
-    <value>Mostrar en el disc dur.</value>
+    <value>Obre la ubicació del fitxer</value>
   </data>
   <data name="WallpaperSource.Text" xml:space="preserve">
     <value>Font</value>
   </data>
   <data name="TextStart" xml:space="preserve">
-    <value>Començar</value>
+    <value>Inicia</value>
   </data>
   <data name="TextStop" xml:space="preserve">
-    <value>Pausar</value>
+    <value>Atura</value>
   </data>
   <data name="StoreReview.Content" xml:space="preserve">
-    <value>T'agrada Lively? Deixa una ressenya :)</value>
+    <value>Us agrada el Lively? Deixeu una ressenya :)</value>
   </data>
   <data name="TextSupport.Content" xml:space="preserve">
     <value>Suport</value>
@@ -500,7 +500,7 @@ Si encara no funciona, tanca i inicia de nou o reinicia Windows.
     <value>Difuminat</value>
   </data>
   <data name="TaskbarThemeClear.Content" xml:space="preserve">
-    <value>Netejar</value>
+    <value>Transparent</value>
   </data>
   <data name="TaskbarThemeColor.Content" xml:space="preserve">
     <value>Color</value>
@@ -512,7 +512,7 @@ Si encara no funciona, tanca i inicia de nou o reinicia Windows.
     <value>Fons de pantalla</value>
   </data>
   <data name="TaskbarThemeWallpaperFluent.Content" xml:space="preserve">
-    <value>Wallpaper Fluent</value>
+    <value>Fons de pantalla fluent</value>
   </data>
   <data name="TextTileSizeLarge" xml:space="preserve">
     <value>Gran</value>
@@ -536,31 +536,31 @@ Si encara no funciona, tanca i inicia de nou o reinicia Windows.
     <value>Normal</value>
   </data>
   <data name="TextUnsupportedFile" xml:space="preserve">
-    <value>Format d'arxiu no suportat</value>
+    <value>Format de fitxer no compatible</value>
   </data>
   <data name="TextUpdateAvailable" xml:space="preserve">
     <value>Actualització disponible!</value>
   </data>
   <data name="TextUpdateCheck.Content" xml:space="preserve">
-    <value>Cercar per actualitzacions.</value>
+    <value>Cerca actualitzacions</value>
   </data>
   <data name="TextupdateCheckFail" xml:space="preserve">
-    <value>Error a l'verificar l'actualització de software.</value>
+    <value>No s'ha pogut comprovar si hi ha actualitzacions de programari</value>
   </data>
   <data name="TextUpdateChecking" xml:space="preserve">
-    <value>Comprovació de l'actualització</value>
+    <value>Comprovant les actualitzacions</value>
   </data>
   <data name="TextUpdateUptodate" xml:space="preserve">
-    <value>El software està actualitzat!</value>
+    <value>El programari està actualitzat!</value>
   </data>
   <data name="TextVideo" xml:space="preserve">
     <value>Vídeo</value>
   </data>
   <data name="TextWallpaperCommandlineArgs" xml:space="preserve">
-    <value>Opcions d'Inici</value>
+    <value>Opcions d'inici</value>
   </data>
   <data name="WallpaperFitFill.Content" xml:space="preserve">
-    <value>Omplir</value>
+    <value>Omple</value>
   </data>
   <data name="WallpaperFitNone.Content" xml:space="preserve">
     <value>Cap</value>
@@ -569,16 +569,16 @@ Si encara no funciona, tanca i inicia de nou o reinicia Windows.
     <value>Uniforme</value>
   </data>
   <data name="WallpaperFitUniformToFill.Content" xml:space="preserve">
-    <value>Omplir uniformement</value>
+    <value>Omple uniformement</value>
   </data>
   <data name="WallpaperLayoutDuplicate.Text" xml:space="preserve">
-    <value>Duplicar</value>
+    <value>Duplica</value>
   </data>
   <data name="WallpaperLayoutPerScreen.Text" xml:space="preserve">
     <value>Pantalla</value>
   </data>
   <data name="WallpaperLayoutSpan.Text" xml:space="preserve">
-    <value>Expandir</value>
+    <value>Expandeix</value>
   </data>
   <data name="WallpaperType.Text" xml:space="preserve">
     <value>Tipus</value>
@@ -587,10 +587,10 @@ Si encara no funciona, tanca i inicia de nou o reinicia Windows.
     <value>Lloc web</value>
   </data>
   <data name="TextWebStream" xml:space="preserve">
-    <value>Stream Web</value>
+    <value>Transmissió web</value>
   </data>
   <data name="TextWelcome" xml:space="preserve">
-    <value>Benvingut</value>
+    <value>Us donem la benvinguda</value>
   </data>
   <data name="TextYes" xml:space="preserve">
     <value>Sí</value>
@@ -599,73 +599,70 @@ Si encara no funciona, tanca i inicia de nou o reinicia Windows.
     <value>Reproductor de vídeo</value>
   </data>
   <data name="AddWallpaperFileBrowse.Description" xml:space="preserve">
-    <value>Configura tots els tipus d'arxius compatibles com a fons de pantalla.</value>
+    <value>Estableix tots els tipus de fitxer compatibles com a fons de pantalla</value>
   </data>
   <data name="EnterUrl.Description" xml:space="preserve">
-    <value>Estableix la pàgina web de la URL que ha ingressat com a fons de pantalla.</value>
+    <value>Estableix la pàgina web de l'URL que heu introduït com a fons de pantalla</value>
   </data>
   <data name="AppFocus.Description" xml:space="preserve">
-    <value>Estableix què fer quan una aplicació estigui enfocada.</value>
+    <value>Establiu què fer quan una aplicació estigui enfocada</value>
   </data>
   <data name="AppFullScreen.Description" xml:space="preserve">
-    <value>Establir què fer quan s'executen jocs / aplicacions a pantalla completa.</value>
+    <value>Establiu què fer quan s'executen jocs/aplicacions a pantalla completa</value>
   </data>
   <data name="AppRules.Description" xml:space="preserve">
-    <value>Establir diferents regles de reproducció de fons de pantalla en funció a quina aplicació està executant.</value>
+    <value>Pausa el fons de pantalla quan s'executen aquestes aplicacions</value>
   </data>
   <data name="TipAppTheme" xml:space="preserve">
     <value>Lively s'adapta a la configuració del tema de el sistema, per a canviar l'aparença, ves a</value>
   </data>
   <data name="BatteryPower.Description" xml:space="preserve">
-    <value>(Només per a sistemes que funcionen amb bateria) Canviar la reproducció quan es desconnecti la font d'alimentació.</value>
+    <value>Canvieu la reproducció quan es desconnecta la font l'alimentació</value>
   </data>
   <data name="BrowserDebuggingPort.Description" xml:space="preserve">
-    <value>Ingressa el port per depurar els fons de pantalla web, es requereix reiniciar el navegador perquè els canvis tinguin efecte.
-Quan estigui llest, navega a http: // localhost: número de port, per a accedir a la consola de desenvolupador.</value>
+    <value>Introduïu el port per depurar els fons de pantalla de les pàgines web; quan estigueu a punt, aneu a http://localhost:nombredelport per accedir a la consola de desenvolupadors</value>
   </data>
   <data name="Debug.Description" xml:space="preserve">
     <value>Mostra el menú per a desenvolupadors</value>
   </data>
   <data name="DesktopPicture.Description" xml:space="preserve">
-    <value>Set a picture of animated wallpaper as desktop wallpaper.</value>
+    <value>Estableix una imatge de fons de pantalla animat com a fons de pantalla d'escriptori</value>
   </data>
   <data name="DisplayPauseRule.Description" xml:space="preserve">
-    <value>Per: Pausa el fons només a la pantalla on l'aplicació està enfocada / pantalla completa.
-Totes: pausa el fons en la/les pantalla(es) si alguna aplicació està enfocada / pantalla completa.</value>
+    <value>Pauseu el fons de pantalla a totes les pantalles o només a la pantalla en què l'aplicació està enfocada</value>
   </data>
   <data name="ExportLogs.Description" xml:space="preserve">
-    <value>Create log report file.</value>
+    <value>Crea un fitxer d'informe de registre</value>
   </data>
   <data name="GifPlayer.Description" xml:space="preserve">
-    <value>Select the player used for gif wallpaper.</value>
+    <value>Seleccioneu el reproductor utilitzat per al fons de pantalla GIF</value>
   </data>
   <data name="TipLivelySetupOnClose" xml:space="preserve">
-    <value>Finalitzeu la configuració per continuar.</value>
+    <value>Finalitzeu la configuració per continuar</value>
   </data>
   <data name="LockscreenPicture.Description" xml:space="preserve">
-    <value>Set a picture of animated wallpaper as lockscreen wallpaper.</value>
+    <value>Estableix una imatge de fons de pantalla animat com a fons de pantalla de bloqueig</value>
   </data>
   <data name="PauseAlgorithm.Description" xml:space="preserve">
-    <value>Primer pla: Lleuger, només comprova l'únic procés que estigui en primer pla per determinar el comportament de reproducció de fons.
-Tots els processos: Pesat, analitza tots els processos oberts per determinar el comportament de reproducció de fons.</value>
+    <value>Algoritme de pausa del fons de pantalla</value>
   </data>
   <data name="PowerSavingModePower.Description" xml:space="preserve">
-    <value>Canviar la reproducció quan el mode Estalvi d'Energia estigui activat</value>
+    <value>Canvieu la reproducció quan el mode d'estalvi d'energia del Windows està activat</value>
   </data>
   <data name="RemoteDesktopPower.Description" xml:space="preserve">
-    <value>Canviar la reproducció quan s'estigui executant una sessió d'Escriptori Remot</value>
+    <value>Canvieu la reproducció en executar una sessió d'escriptori remot</value>
   </data>
   <data name="TipScreensaver" xml:space="preserve">
-    <value>After the selected inactivity period use the current wallpaper as your screensaver.</value>
+    <value>Després del període d'inactivitat, fes servir el fons de pantalla actual com a protector de pantalla</value>
   </data>
   <data name="StreamWallpaperDetect.Description" xml:space="preserve">
-    <value>Si es detecta un enllaç a un stream compatible, fer servir el reproductor de vídeo en lloc de carregar el lloc web.</value>
+    <value>Si es detecta un enllaç de transmissió de vídeo compatible, utilitza el reproductor de vídeo en comptes de carregar la pàgina web</value>
   </data>
   <data name="StreamWallpaperVideoQuality.Description" xml:space="preserve">
-    <value>Seleccioni la qualitat de vídeo desitjada per als streams</value>
+    <value>Seleccioneu la qualitat de vídeo desitjada per a les transmissions en línia</value>
   </data>
   <data name="TaskbarTheme.Description" xml:space="preserve">
-    <value>Change system taskbar appearance.</value>
+    <value>Canvieu l'aspecte de la barra de tasques del sistema</value>
   </data>
   <data name="TipTileSize" xml:space="preserve">
     <value>Mida dels mosaics de la Biblioteca.</value>
@@ -674,38 +671,37 @@ Tots els processos: Pesat, analitza tots els processos oberts per determinar el 
     <value>Per a sistemes de gamma baixa, selecciona el mode Lite.</value>
   </data>
   <data name="VideoHardwareDecode.Description" xml:space="preserve">
-    <value>Use hardware acceleration when possible.</value>
+    <value>Utilitza l'acceleració de maquinari sempre que sigui possible</value>
   </data>
   <data name="VideoPlayer.Description" xml:space="preserve">
-    <value>Selecciona el reproductor de vídeo que s'utilitzarà per al fons de pantalla.</value>
+    <value>Seleccioneu el reproductor que s'utilitzarà per al fons de pantalla de vídeo</value>
   </data>
   <data name="WallpaperDir.Description" xml:space="preserve">
-    <value>Ruta utilitzada per a emmagatzemar arxius del fons de pantalla.</value>
+    <value>Ruta utilitzada per emmagatzemar fitxers de fons de pantalla</value>
   </data>
   <data name="WallpaperFit.Description" xml:space="preserve">
-    <value>Algorisme d'escalat del fons de pantalla.</value>
+    <value>Algorisme d'escalat del fons de pantalla</value>
   </data>
   <data name="WallpaperInput.Description" xml:space="preserve">
-    <value>Seleccionar formes d'interactuar amb el fons de pantalla.</value>
+    <value>Seleccioneu maneres d'interactuar amb el fons de pantalla</value>
   </data>
   <data name="WallpaperLayout.Description" xml:space="preserve">
-    <value>Com s'aplica el fons a les pantalles connectades.</value>
+    <value>Com s'aplica el fons a les pantalles connectades</value>
   </data>
   <data name="TipWallpaperPlayback" xml:space="preserve">
-    <value>Pausa la reproducción del fondo de pantalla cuando el escritorio no está enfocado.</value>
+    <value>Pausa la reproducció del fons de pantalla quan l'escriptori no té el focus</value>
   </data>
   <data name="WebBrowserDiskCache.Description" xml:space="preserve">
-    <value>Emmagatzemar arxius temporals en el disc en lloc de la memòria, la configuració es restaurarà quan es reiniciï el navegador.</value>
+    <value>Emmagatzema els fitxers temporals al disc en comptes de a la memòria</value>
   </data>
   <data name="WebBrowser.Description" xml:space="preserve">
-    <value>CEF (Chromium Embedded Framework) és un motor de chromium lleuger.
-Edge és la vista web integrada amb Windows 10.</value>
+    <value>Seleccioneu el reproductor utilitzat per al fons de pantalla HTML</value>
   </data>
   <data name="About.Label" xml:space="preserve">
-    <value>Sobre</value>
+    <value>Quant a</value>
   </data>
   <data name="AddWallpaper.Label" xml:space="preserve">
-    <value>Afegir fons de pantalla</value>
+    <value>Afegeix un fons de pantalla</value>
   </data>
   <data name="AppFocus.Header" xml:space="preserve">
     <value>Aplicacions enfocades</value>
@@ -723,13 +719,13 @@ Edge és la vista web integrada amb Windows 10.</value>
     <value>Tema</value>
   </data>
   <data name="TitleAudioPlayOnScreen" xml:space="preserve">
-    <value>Reproduir àudio en pantalla</value>
+    <value>Reprodueix àudio a la pantalla</value>
   </data>
   <data name="BatteryPower.Header" xml:space="preserve">
-    <value>Al usar la bateria</value>
+    <value>En utilitzar la bateria</value>
   </data>
   <data name="TitleBrowseFile" xml:space="preserve">
-    <value>Explorar archius de vídeo, gifs, pàgines web... per a establir com a fons</value>
+    <value>Cerqueu vídeos, GIF i fitxers de pàgines web... per definir-los com a fons de pantalla</value>
   </data>
   <data name="BrowserDebuggingPort.Header" xml:space="preserve">
     <value>Port de depuració</value>
@@ -741,22 +737,22 @@ Edge és la vista web integrada amb Windows 10.</value>
     <value>Comunitat</value>
   </data>
   <data name="Debug.Header" xml:space="preserve">
-    <value>Depurar</value>
+    <value>Depuració</value>
   </data>
   <data name="TitleDeleteConfirmation" xml:space="preserve">
-    <value>Confirmar l'eliminació</value>
+    <value>Confirma l'eliminació</value>
   </data>
   <data name="DesktopPicture.Header" xml:space="preserve">
-    <value>Desktop Picture</value>
+    <value>Imatge d'escriptori</value>
   </data>
   <data name="DisplayPauseRule.Header" xml:space="preserve">
-    <value>Regla de Pausa de Pantalla</value>
+    <value>Regla de pausa de pantalla</value>
   </data>
   <data name="Documentation.Header" xml:space="preserve">
     <value>Documentació</value>
   </data>
   <data name="EnterUrl.Header" xml:space="preserve">
-    <value>Introdueix URL</value>
+    <value>Introduïu l'URL</value>
   </data>
   <data name="ExportLogs.Header" xml:space="preserve">
     <value>Fitxer de registre</value>
@@ -765,7 +761,7 @@ Edge és la vista web integrada amb Windows 10.</value>
     <value>General</value>
   </data>
   <data name="GifPlayer.Header" xml:space="preserve">
-    <value>Gif Player</value>
+    <value>Reproductor de GIF</value>
   </data>
   <data name="Help.Label" xml:space="preserve">
     <value>Ajuda</value>
@@ -774,22 +770,22 @@ Edge és la vista web integrada amb Windows 10.</value>
     <value>Interacció</value>
   </data>
   <data name="TitleLibrary" xml:space="preserve">
-    <value>Llibreria</value>
+    <value>Bilbioteca</value>
   </data>
   <data name="TitleLivelySetup" xml:space="preserve">
-    <value>Configuració de Lively</value>
+    <value>Configuració del Lively</value>
   </data>
   <data name="TitleLocation" xml:space="preserve">
     <value>Ubicació</value>
   </data>
   <data name="LockscreenPicture.Header" xml:space="preserve">
-    <value>Imatge de pantalla de bloqueig</value>
+    <value>Imatge de la pantalla de bloqueig</value>
   </data>
   <data name="TitleMisc" xml:space="preserve">
-    <value>Miscel·lani</value>
+    <value>Miscel·lània</value>
   </data>
   <data name="TitleMute" xml:space="preserve">
-    <value>Silenciar</value>
+    <value>Silencia</value>
   </data>
   <data name="PauseAlgorithm.Header" xml:space="preserve">
     <value>Algoritme de pausa</value>
@@ -801,19 +797,19 @@ Edge és la vista web integrada amb Windows 10.</value>
     <value>Llista de reproducció</value>
   </data>
   <data name="PleaseWait.Text" xml:space="preserve">
-    <value>Si us plau, espera</value>
+    <value>Espereu</value>
   </data>
   <data name="PowerSavingModePower.Header" xml:space="preserve">
-    <value>En Estalvi de Bateria</value>
+    <value>En utilitzar l'estalvi de bateria</value>
   </data>
   <data name="RemoteDesktopPower.Header" xml:space="preserve">
-    <value>En Escriptori Remot</value>
+    <value>En utilitzar l'escriptori remot</value>
   </data>
   <data name="ReportBug.Header" xml:space="preserve">
     <value>Informa d'un error</value>
   </data>
   <data name="TitleScalingFit" xml:space="preserve">
-    <value>Escalar/Ajustar</value>
+    <value>Escala/Ajusta</value>
   </data>
   <data name="ControlPanel.Title" xml:space="preserve">
     <value>Panell de control</value>
@@ -822,10 +818,10 @@ Edge és la vista web integrada amb Windows 10.</value>
     <value>Estalvi de pantalla</value>
   </data>
   <data name="TitleSelectFile" xml:space="preserve">
-    <value>Seleccionar Arxiu</value>
+    <value>Seleccioneu un fitxer</value>
   </data>
   <data name="TitleSettings" xml:space="preserve">
-    <value>Configuracions</value>
+    <value>Configuració</value>
   </data>
   <data name="TitleSkipConfirm" xml:space="preserve">
     <value>Ignorar Confirmació</value>
@@ -838,13 +834,13 @@ Edge és la vista web integrada amb Windows 10.</value>
     <comment>For different version of Lively, example: Microsoft Store</comment>
   </data>
   <data name="StreamWallpaperVideoQuality.Header" xml:space="preserve">
-    <value>Stream</value>
+    <value>Transmissió</value>
   </data>
   <data name="StreamWallpaperDetect.Header" xml:space="preserve">
-    <value>Detectar Streams</value>
+    <value>Detecta les transmissions</value>
   </data>
   <data name="TitleStreamWallpaperVideoQuality" xml:space="preserve">
-    <value>Qualitat dels Streams</value>
+    <value>Qualitat del vídeo</value>
   </data>
   <data name="System.Text" xml:space="preserve">
     <value>Sistema</value>
@@ -865,31 +861,31 @@ Edge és la vista web integrada amb Windows 10.</value>
     <value>Vídeo</value>
   </data>
   <data name="VideoHardwareDecode.Header" xml:space="preserve">
-    <value>Descodificació GPU</value>
+    <value>Descodificació de la GPU</value>
   </data>
   <data name="TitleWallpaper.Content" xml:space="preserve">
     <value>Fons de pantalla</value>
   </data>
   <data name="TitleCustomise.Content" xml:space="preserve">
-    <value>Personalitzar</value>
+    <value>Personalitza</value>
   </data>
   <data name="WallpaperDir.Header" xml:space="preserve">
     <value>Directori dels fons de pantalla</value>
   </data>
   <data name="WallpaperDirMoveExisting.Content" xml:space="preserve">
-    <value>Moure els fons de pantalla existents al nou directori</value>
+    <value>Mou els fons de pantalla existents a una carpeta nova</value>
   </data>
   <data name="WallpaperFit.Header" xml:space="preserve">
     <value>Trieu un ajust</value>
   </data>
   <data name="WallpaperInput.Header" xml:space="preserve">
-    <value>Entrada</value>
+    <value>Entrada de fons de pantalla</value>
   </data>
   <data name="WallpaperLayout.Header" xml:space="preserve">
-    <value>Mètode d'ubicació</value>
+    <value>Mètode de col·locació</value>
   </data>
   <data name="WallpaperPlaybackGroup.Text" xml:space="preserve">
-    <value>Reproducció de fons</value>
+    <value>Reproducció dels fons de pantalla</value>
   </data>
   <data name="TitleWarning" xml:space="preserve">
     <value>Advertència</value>
@@ -904,16 +900,16 @@ Edge és la vista web integrada amb Windows 10.</value>
     <value>Motor</value>
   </data>
   <data name="TitleWebpageLoad" xml:space="preserve">
-    <value>Carregar pàgina web</value>
+    <value>Carrega la pàgina web</value>
   </data>
   <data name="FastUI.Description" xml:space="preserve">
-    <value>Mantenir Interfícies d'Usuari executant-se per un inici més ràpid</value>
+    <value>Mantén la interfície d'usuari en execució per a un inici més ràpid</value>
   </data>
   <data name="FastUI.Header" xml:space="preserve">
     <value>Inici ràpid</value>
   </data>
   <data name="WallpaperDirGroup.Text" xml:space="preserve">
-    <value>Arxiu</value>
+    <value>Fitxer</value>
   </data>
   <data name="AppThemeDark.Content" xml:space="preserve">
     <value>Fosc</value>
@@ -925,7 +921,7 @@ Edge és la vista web integrada amb Windows 10.</value>
     <value>Sistema</value>
   </data>
   <data name="WindowsSettingsColor.Content" xml:space="preserve">
-    <value>Configuració del color de Windows</value>
+    <value>Configuració del color del Windows</value>
   </data>
   <data name="LaptopWallpaperPlaybackGroup.Text" xml:space="preserve">
     <value>Portàtils</value>
@@ -937,58 +933,58 @@ Edge és la vista web integrada amb Windows 10.</value>
     <value>Aparença i comportament</value>
   </data>
   <data name="ActiveWallpapers.Label" xml:space="preserve">
-    <value>Fons de pantalla actiu(s)</value>
+    <value>Fons de pantalla actiu/s</value>
   </data>
   <data name="TitleGallery" xml:space="preserve">
     <value>Galeria</value>
   </data>
   <data name="AboutMe.Text" xml:space="preserve">
-    <value>Hola, soc en Dani John també conegut com a rocksdanister. He desenvolupat Lively, una aplicació de fons de pantalla, gratuïta i de codi obert (FOSS). Gràcies per dedicar el temps a mirar el meu treball.</value>
+    <value>Hola, soc en Dani John també conegut com a rocksdanister. He desenvolupat el Lively, una aplicació de fons de pantalla, gratuïta i de codi obert (FOSS). Gràcies per prendre-us el temps de mirar la meva feina.</value>
   </data>
   <data name="LicenseLink.Content" xml:space="preserve">
-    <value>Llicència del software</value>
+    <value>Llicència de programari</value>
   </data>
   <data name="AttributionLink.Content" xml:space="preserve">
-    <value>Programari de tercers</value>
+    <value>Avís de programari de tercers</value>
   </data>
   <data name="PrivacyPolicyLink.Content" xml:space="preserve">
     <value>Política de recollida de dades</value>
   </data>
   <data name="AddWallpaperDrop.Text" xml:space="preserve">
-    <value>Afegir fons de pantalla</value>
+    <value>Afegeix un fons de pantalla</value>
   </data>
   <data name="ComingSoon.Text" xml:space="preserve">
     <value>Aviat</value>
   </data>
   <data name="AboutMenu.Text" xml:space="preserve">
-    <value>Sobre</value>
+    <value>Quant a</value>
   </data>
   <data name="SourceWebsite.Text" xml:space="preserve">
     <value>Lloc web</value>
   </data>
   <data name="TextOpen.Content" xml:space="preserve">
-    <value>Obrir</value>
+    <value>Obre</value>
   </data>
   <data name="TextSave.Content" xml:space="preserve">
-    <value>Guardar</value>
+    <value>Desa</value>
   </data>
   <data name="UIMode.Description" xml:space="preserve">
-    <value>Efectes i animacions d'interfície d'usuari</value>
+    <value>Efectes i animacions de la interfície d'usuari</value>
   </data>
   <data name="UIMode.Header" xml:space="preserve">
     <value>Interfície d'usuari</value>
   </data>
   <data name="UIModeLite.Content" xml:space="preserve">
-    <value>Lite</value>
+    <value>Reduïda</value>
   </data>
   <data name="UIModeNormal.Content" xml:space="preserve">
     <value>Normal</value>
   </data>
   <data name="Screensaver.Description" xml:space="preserve">
-    <value>Com s'aplica l'estalvi de pantalla als monitors connectats</value>
+    <value>Com s'aplica el protector de pantalla a les pantalles connectades</value>
   </data>
   <data name="Screensaver.Header" xml:space="preserve">
-    <value>Tipus d'estalvi de pantalla</value>
+    <value>Tipus de protector de pantalla</value>
   </data>
   <data name="ScreensaverModeDifferentWallpaper.Text" xml:space="preserve">
     <value>Personalitzat</value>
@@ -997,28 +993,28 @@ Edge és la vista web integrada amb Windows 10.</value>
     <value>Reflectir el Fons de Pantalla</value>
   </data>
   <data name="ScreensaverPlugin.Title" xml:space="preserve">
-    <value>Plugin requerit</value>
+    <value>Cal un complement</value>
   </data>
   <data name="ScreensaverPluginMessage.Text" xml:space="preserve">
-    <value>Es requereix una configuració inicial per executar un estalvi de pantalla</value>
+    <value>Cal una configuració única per executar el protector de pantalla</value>
   </data>
   <data name="WallpaperLayoutScreenPicker.Content" xml:space="preserve">
-    <value>Triar sempre monitor en escollir un fons de pantalla</value>
+    <value>Trieu sempre la pantalla quan trieu el fons de pantalla</value>
   </data>
   <data name="GalleryAccount.Text" xml:space="preserve">
     <value>Compte</value>
   </data>
   <data name="GalleryAccountDelete.Content" xml:space="preserve">
-    <value>Eliminar compte</value>
+    <value>Suprimeix el compte</value>
   </data>
   <data name="GalleryAccountExport.Content" xml:space="preserve">
-    <value>Exportar dades</value>
+    <value>Exporta les dades</value>
   </data>
   <data name="GalleryAccountLogin.Content" xml:space="preserve">
-    <value>Entra</value>
+    <value>Inicia la sessió</value>
   </data>
   <data name="GalleryAccountLogout.Content" xml:space="preserve">
-    <value>Tancar sessió</value>
+    <value>Tanca la sessió</value>
   </data>
   <data name="GalleryPageCollection.Content" xml:space="preserve">
     <value>Col·lecció</value>
@@ -1027,7 +1023,7 @@ Edge és la vista web integrada amb Windows 10.</value>
     <value>Inici</value>
   </data>
   <data name="GalleryPageManage.Content" xml:space="preserve">
-    <value>Administra</value>
+    <value>Gestiona</value>
   </data>
   <data name="GalleryPageProfile.Content" xml:space="preserve">
     <value>Perfil</value>
@@ -1039,22 +1035,22 @@ Edge és la vista web integrada amb Windows 10.</value>
     <value>Hola</value>
   </data>
   <data name="RestoreWallpaper.Text" xml:space="preserve">
-    <value>Hem trobat aquests fons de pantalla al teu compte</value>
+    <value>Hem trobat aquests fons de pantalla al vostre compte</value>
   </data>
   <data name="TextDownloadNow.Content" xml:space="preserve">
-    <value>Descarregar ara</value>
+    <value>Baixa'ls ara</value>
   </data>
   <data name="TextMaybeLater.Content" xml:space="preserve">
-    <value>Potser més endavant</value>
+    <value>Potser més tard</value>
   </data>
   <data name="TextSelectAll.Content" xml:space="preserve">
-    <value>Seleccionar tot</value>
+    <value>Selecciona'ls tots</value>
   </data>
   <data name="TextSelectNone.Content" xml:space="preserve">
-    <value>Desseleccionar tot</value>
+    <value>Anul·la la selecció</value>
   </data>
   <data name="TitleWelcomeback.Text" xml:space="preserve">
-    <value>Benvingut de nou!</value>
+    <value>Us donem la benvinguda de nou!</value>
   </data>
   <data name="ReportWallpaper.Header" xml:space="preserve">
     <value>Motiu</value>
@@ -1072,7 +1068,7 @@ Edge és la vista web integrada amb Windows 10.</value>
     <value>Contingut brossa</value>
   </data>
   <data name="ReportWallpaperViolence.Content" xml:space="preserve">
-    <value>Despullaments o violència</value>
+    <value>Nuesa o violència</value>
   </data>
   <data name="TextAdditionalNotes.Text" xml:space="preserve">
     <value>Notes addicionals</value>
@@ -1081,46 +1077,46 @@ Edge és la vista web integrada amb Windows 10.</value>
     <value>Denuncia</value>
   </data>
   <data name="TitleReportWallpaper.Text" xml:space="preserve">
-    <value>Denuncia fons de pantalla</value>
+    <value>Denuncieu el fons de pantalla</value>
   </data>
   <data name="Send.Content" xml:space="preserve">
     <value>Envia</value>
   </data>
   <data name="GalleryAccountDeleteConfirm.Text" xml:space="preserve">
-    <value>Si us plau, confirma aquesta acció, ja que no es pot revertir</value>
+    <value>Confirmeu aquesta acció, ja que NO es pot desfer</value>
   </data>
   <data name="GalleryAccountDeleteFail.Text" xml:space="preserve">
-    <value>No s'ha pogut eliminar el compte, torneu-ho a intentar més tard</value>
+    <value>No s'ha pogut eliminar el compte, torneu-ho a provar més tard</value>
   </data>
   <data name="TextConfirmCancel.Text" xml:space="preserve">
-    <value>Voleu cancel·lar?</value>
+    <value>Voleu cancel·lar-la?</value>
   </data>
   <data name="TextWait.Text" xml:space="preserve">
     <value>Espera</value>
   </data>
   <data name="TitleDownloadProgress.Text" xml:space="preserve">
-    <value>Descàrrega en curs</value>
+    <value>Baixada en curs</value>
   </data>
   <data name="TextContributors.Text" xml:space="preserve">
     <value>Contribuïdors</value>
   </data>
   <data name="TextShare.Text" xml:space="preserve">
-    <value>Compartir</value>
+    <value>Comparteix</value>
   </data>
   <data name="TitleShareWallpaper.Text" xml:space="preserve">
-    <value>Compartir fons de pantalla</value>
+    <value>Compartiu el fons de pantalla</value>
   </data>
   <data name="ExportWallpaperGallery.Text" xml:space="preserve">
-    <value>Pujar a galeria</value>
+    <value>Puja a la Galeria</value>
   </data>
   <data name="ExportWallpaperLink.Text" xml:space="preserve">
-    <value>Copiar enllaç</value>
+    <value>Copia l'enllaç</value>
   </data>
   <data name="TextCustomiseWallpaper" xml:space="preserve">
-    <value>Personalitzar el fons de pantalla</value>
+    <value>Personalitza el fons de pantalla</value>
   </data>
   <data name="TextCloseWallpapers" xml:space="preserve">
-    <value>Tancar fons de pantalla</value>
+    <value>Tanca els Wallpapers</value>
   </data>
   <data name="TitleChooseApplication.Text" xml:space="preserve">
     <value>Trieu una aplicació</value>
@@ -1129,28 +1125,28 @@ Edge és la vista web integrada amb Windows 10.</value>
     <value>Mida</value>
   </data>
   <data name="PluginNotFound.Message" xml:space="preserve">
-    <value>Si us plau, instal·leu l'extensió necessària</value>
+    <value>Instal·leu el complement necessari</value>
   </data>
   <data name="PluginNotFound.Title" xml:space="preserve">
-    <value>Extensió no trobada</value>
+    <value>No s'ha trobat el complement</value>
   </data>
   <data name="UpdateCompleted.Text" xml:space="preserve">
     <value>Actualització completada</value>
   </data>
   <data name="UpdateWhatsNew.Text" xml:space="preserve">
-    <value>Mira el que és nou</value>
+    <value>Consulteu les novetats</value>
   </data>
   <data name="AppThemeColor.Header" xml:space="preserve">
     <value>Color</value>
   </data>
   <data name="DescriptionDefault.Text" xml:space="preserve">
-    <value>Utilitza l'opció predeterminada del sistema</value>
+    <value>Utilitza l'opció per defecte del sistema</value>
   </data>
   <data name="DescriptionDynamicTheme.Text" xml:space="preserve">
-    <value>Adaptar al fons de pantalla</value>
+    <value>Adapta al fons de pantalla</value>
   </data>
   <data name="TextDefault.Text" xml:space="preserve">
-    <value>Predeterminat</value>
+    <value>Per defecte</value>
   </data>
   <data name="TextDynamicTheme.Text" xml:space="preserve">
     <value>Dinàmic</value>
@@ -1159,7 +1155,7 @@ Edge és la vista web integrada amb Windows 10.</value>
     <value>Tema</value>
   </data>
   <data name="IconsHidden.Message" xml:space="preserve">
-    <value>Per prevenir seleccions accidentals, les icones d'escriptori estan actualment amagades</value>
+    <value>Per evitar la selecció accidental, les icones de l'escriptori estan actualment ocultes</value>
   </data>
   <data name="IconsHidden.Title" xml:space="preserve">
     <value>Icones d'escriptori</value>
@@ -1168,10 +1164,10 @@ Edge és la vista web integrada amb Windows 10.</value>
     <value>Això és tot per ara...</value>
   </data>
   <data name="DevelopmentOnHold.Message" xml:space="preserve">
-    <value>El desenvolupament d'aquestes funcions està en espera</value>
+    <value>El desenvolupament d'aquestes funcions està suspesa</value>
   </data>
   <data name="WallpaperPluginGroup.Text" xml:space="preserve">
-    <value>Connectors</value>
+    <value>Complements</value>
   </data>
   <data name="AddWallpaperAdvanced.Description" xml:space="preserve">
     <value>Crea un fons de pantalla dinàmic</value>
@@ -1180,22 +1176,22 @@ Edge és la vista web integrada amb Windows 10.</value>
     <value>Avançat</value>
   </data>
   <data name="DescriptionDepthApprox.Content" xml:space="preserve">
-    <value>Aproximant profunditat..</value>
+    <value>Profunditat aproximada...</value>
   </data>
   <data name="DescriptionDepthWallpaperItem.Content" xml:space="preserve">
-    <value>Utilitzant IA transforma imàtgens a 3D</value>
+    <value>S'utilitza la IA per transformar imatges a 3D</value>
   </data>
   <data name="TextContinue.Content" xml:space="preserve">
-    <value>Continuar</value>
+    <value>Continua</value>
   </data>
   <data name="TitleCreateWallpaperOpenItem.Description" xml:space="preserve">
     <value>Crea un fons de pantalla simple</value>
   </data>
   <data name="TitleDepthWallpaper.Content" xml:space="preserve">
-    <value>Fons de pantalla amb profunditat de IA</value>
+    <value>Fons de pantalla amb profunditat d'IA</value>
   </data>
   <data name="TitleDepthWallpaperItem.Content" xml:space="preserve">
-    <value>Fons de pantalla de profunditat</value>
+    <value>Fons de pantalla amb profunditat</value>
   </data>
   <data name="DescriptionDepthWallpaperTemplate.Content" xml:space="preserve">
     <value>Fons de pantalla amb profunditat generada amb IA</value>
@@ -1204,102 +1200,102 @@ Edge és la vista web integrada amb Windows 10.</value>
     <value>Crea un fons de pantalla</value>
   </data>
   <data name="RunningAsAdminWarning.Message" xml:space="preserve">
-    <value>És possible que algunes funcions no estiguen disponibles al executar-se com a administrador</value>
+    <value>És possible que algunes funcions no estiguin disponibles en executar-se com a administrador</value>
   </data>
   <data name="DescriptionDownloadRequired.Text" xml:space="preserve">
-    <value>Cal descarregar arxius addicionals per a aquesta funció</value>
+    <value>Cal baixar fitxers addicionals per aquesta funció</value>
   </data>
   <data name="TitleDownloadRequired.Text" xml:space="preserve">
-    <value>Requereix descàrrega</value>
+    <value>Baixada necessària</value>
   </data>
   <data name="TitleDownload.Content" xml:space="preserve">
-    <value>Descarregar</value>
+    <value>Baixa</value>
   </data>
   <data name="TextBecomePatreonMember.Content" xml:space="preserve">
-    <value>Feu-vos partidari a Patreon</value>
+    <value>Feu-vos seguidor del Patreon</value>
   </data>
   <data name="TextPatreonMembersThankYou.Text" xml:space="preserve">
-    <value>Gràcies a tots els membres que suporten aquest projecte.</value>
+    <value>Gràcies a tots els membres que doneu suport a aquest projecte.</value>
   </data>
   <data name="TitlePatreon.Text" xml:space="preserve">
-    <value>Partidaris a Patreon</value>
+    <value>Seguidors del Patreon</value>
   </data>
   <data name="SelectScreensaverCustomMode.Text" xml:space="preserve">
-    <value>Seleccioni salvapantalles</value>
+    <value>Seleccioneu el protector de pantalla</value>
   </data>
   <data name="WebViewRequired.Message" xml:space="preserve">
-    <value>Necessites Microsoft WebView2 per a veure aquest contingut</value>
+    <value>Cal el Microsoft WebView2 per veure aquest contingut</value>
   </data>
   <data name="WebViewRequired.Title" xml:space="preserve">
-    <value>Plugin requerit</value>
+    <value>Cal un complement</value>
   </data>
   <data name="AppMusicExclusion.Description" xml:space="preserve">
-    <value>Selecciona les apps que voleu excloure de mostrar els detalls de la música</value>
+    <value>Seleccioneu les aplicacions per excloure-les de la visualització dels detalls de la música</value>
   </data>
   <data name="AppMusicExclusion.Header" xml:space="preserve">
-    <value>Exclusió d'app</value>
+    <value>Exclusió d'aplicacions</value>
   </data>
   <data name="RestartCommand.Content" xml:space="preserve">
-    <value>Reinici</value>
+    <value>Reinicia</value>
   </data>
   <data name="WallpaperMusicGroup.Text" xml:space="preserve">
     <value>Música</value>
   </data>
   <data name="WallpaperRestartRequiredNotify.Message" xml:space="preserve">
-    <value>És necessari reiniciar el Fons de Pantalla per aplicar els canvis</value>
+    <value>Cal reiniciar el fons de pantalla perquè la configuració tingui efecte</value>
   </data>
   <data name="LanguageSettingsItemSystemDefault.Content" xml:space="preserve">
-    <value>Same as System</value>
+    <value>Igual que el sistema</value>
   </data>
   <data name="InfoSettingsRestartRequest.Message" xml:space="preserve">
-    <value>Please restart application for settings to take effect.</value>
+    <value>Reinicieu l'aplicació perquè la configuració tingui efecte.</value>
   </data>
   <data name="ScreensaverLockOnResume.Header" xml:space="preserve">
     <value>En reprendre, mostra la pantalla d'inici de sessió</value>
   </data>
   <data name="ScreensaverFadeIn.Header" xml:space="preserve">
-    <value>Fade to black before start</value>
+    <value>Esvaeix a negre abans de començar</value>
   </data>
   <data name="VideoLetWindowsManageColor.Header" xml:space="preserve">
-    <value>Let Windows manage colors</value>
+    <value>Deixa que Windows gestioni els colors</value>
   </data>
   <data name="ScreensaverWindowsSettings.Header" xml:space="preserve">
-    <value>Windows Settings</value>
+    <value>Configuració del Windows</value>
   </data>
   <data name="DescriptionConfirmProjectDirectory.Text" xml:space="preserve">
-    <value>Confirm project structure?</value>
+    <value>Voleu confirmar l'estructura del projecte?</value>
   </data>
   <data name="DescriptionConfirmFileConvertion.Text" xml:space="preserve">
-    <value>This file format isn’t supported directly. It will be converted before use. Do you want to continue?</value>
+    <value>Aquest format de fitxer no és compatible directament. Es convertirà abans d'utilitzar-lo. Voleu continuar?</value>
   </data>
   <data name="ScreensaverDialogSettings.Header" xml:space="preserve">
-    <value>Configuracions</value>
+    <value>Configuració</value>
   </data>
   <data name="DisplayAudioPauseRule.Header" xml:space="preserve">
-    <value>Output</value>
+    <value>Sortida</value>
   </data>
   <data name="DisplayAudioPauseRule.Description" xml:space="preserve">
-    <value>Control how wallpaper audio plays across your screens</value>
+    <value>Controla com es reprodueix l'àudio del fons de pantalla a través de les pantalles</value>
   </data>
   <data name="VisualizerAudioDevice.Description" xml:space="preserve">
-    <value>Select the playback device used for visualizing sound</value>
+    <value>Seleccioneu el dispositiu de reproducció d'àudio utilitzat per visualitzar el so</value>
   </data>
   <data name="VisualizerAudioDevice.Header" xml:space="preserve">
-    <value>Audio device</value>
+    <value>Dispositiu d'àudio</value>
   </data>
   <data name="SwitchReleaseBranchBeta.Description" xml:space="preserve">
-    <value>Get early features and help test them before public release. These builds may be unstable.</value>
+    <value>Obtingueu accés anticipat a les funcions i ajudeu a provar-les abans del llançament públic. Aquestes compilacions poden ser inestables.</value>
   </data>
   <data name="SwitchReleaseBranchBeta.Header" xml:space="preserve">
-    <value>Join the Beta release</value>
+    <value>Uniu-vos a la versió beta</value>
   </data>
   <data name="SwitchReleaseBranchStable.Description" xml:space="preserve">
-    <value>Return to the regular public release for the most reliable updates.</value>
+    <value>Torneu a la versió pública habitual per obtenir les actualitzacions més fiables.</value>
   </data>
   <data name="SwitchReleaseBranchStable.Header" xml:space="preserve">
-    <value>Switch to Stable release</value>
+    <value>Canvia a la versió estable</value>
   </data>
   <data name="RestartWallpaperAfterLockscreen.Header" xml:space="preserve">
-    <value>Restart wallpaper when returning from lock screen</value>
+    <value>Reinicia el fons de pantalla en tornar de la pantalla de bloqueig</value>
   </data>
 </root>

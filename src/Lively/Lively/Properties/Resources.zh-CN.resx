@@ -365,7 +365,7 @@ Windows 7 系统只需设置“调整为最佳外观”&amp; 并应用。
     <value>动态 GIF</value>
   </data>
   <data name="SourceCode.Description" xml:space="preserve">
-    <value>Star 这个项目来表示喜爱</value>
+    <value>收藏这个项目来表示喜爱</value>
   </data>
   <data name="TextGo" xml:space="preserve">
     <value>GO</value>
@@ -717,7 +717,7 @@ Grid 网格：利用网格算法更精准地确定暂停时机</value>
     <value>Lively Wallpaper</value>
   </data>
   <data name="AppRules.Header" xml:space="preserve">
-    <value>应用黑名单</value>
+    <value>排除的应用程序</value>
   </data>
   <data name="AppTheme.Header" xml:space="preserve">
     <value>主题</value>
@@ -804,7 +804,7 @@ Grid 网格：利用网格算法更精准地确定暂停时机</value>
     <value>请稍候</value>
   </data>
   <data name="PowerSavingModePower.Header" xml:space="preserve">
-    <value>当处于省电模式时</value>
+    <value>当处于节能模式时</value>
   </data>
   <data name="RemoteDesktopPower.Header" xml:space="preserve">
     <value>当远程桌面会话时</value>
@@ -1246,7 +1246,7 @@ Grid 网格：利用网格算法更精准地确定暂停时机</value>
     <value>音乐</value>
   </data>
   <data name="WallpaperRestartRequiredNotify.Message" xml:space="preserve">
-    <value>重启壁纸使设置生效</value>
+    <value>重启壁纸以使设置生效</value>
   </data>
   <data name="LanguageSettingsItemSystemDefault.Content" xml:space="preserve">
     <value>系统语言</value>

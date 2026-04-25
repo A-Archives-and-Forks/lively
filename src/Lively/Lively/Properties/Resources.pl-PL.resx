@@ -1300,6 +1300,6 @@ Wszystkie procesy: Większe obciążenie procesora, skanuje wszystkie procesy ab
     <value>Przełącz na stabilną wersję</value>
   </data>
   <data name="RestartWallpaperAfterLockscreen.Header" xml:space="preserve">
-    <value>Restart wallpaper when returning from lock screen</value>
+    <value>Zrestartuj tapetę, kiedy odblokujesz ekran</value>
   </data>
 </root>

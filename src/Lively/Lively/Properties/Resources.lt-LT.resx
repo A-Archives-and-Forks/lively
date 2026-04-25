@@ -157,7 +157,7 @@ Pagrindinis Lively ekrano užsklandų tikslas yra pridėti dar vieną tinkinimo 
     <value>Pranešti apie programinės įrangos problemą</value>
   </data>
   <data name="AddWallpaperFileBrowse.Header" xml:space="preserve">
-    <value>Pasirinkiti failą</value>
+    <value>Pasirinkite failą</value>
   </data>
   <data name="DescriptionAppRules" xml:space="preserve">
     <value>Wallpaper playback behaviour based on running application</value>
@@ -1245,57 +1245,57 @@ Jei vis tiek neveikia, uždarykite ir iš naujo įjunkite Lively/perkraukite Win
     <value>Kad nustatymai įsigaliotų, reikia iš naujo paleisti ekrano užsklandą</value>
   </data>
   <data name="LanguageSettingsItemSystemDefault.Content" xml:space="preserve">
-    <value>Same as System</value>
+    <value>Ta pati, kaip sistemos</value>
   </data>
   <data name="InfoSettingsRestartRequest.Message" xml:space="preserve">
-    <value>Please restart application for settings to take effect.</value>
+    <value>Paleiskite programą iš naujo, kad nustatymai įsigaliotų.</value>
   </data>
   <data name="ScreensaverLockOnResume.Header" xml:space="preserve">
     <value>Tęsiant rodyti prisijungimo ekraną</value>
   </data>
   <data name="ScreensaverFadeIn.Header" xml:space="preserve">
-    <value>Fade to black before start</value>
+    <value>Prieš pradedant išnykti iki juodos spalvos</value>
   </data>
   <data name="VideoLetWindowsManageColor.Header" xml:space="preserve">
-    <value>Let Windows manage colors</value>
+    <value>Leisti „Windows“ valdyti spalvas</value>
   </data>
   <data name="ScreensaverWindowsSettings.Header" xml:space="preserve">
-    <value>Windows Settings</value>
+    <value>„Windows“ parametrai</value>
   </data>
   <data name="DescriptionConfirmProjectDirectory.Text" xml:space="preserve">
-    <value>Confirm project structure?</value>
+    <value>Patvirtinti projekto struktūrą?</value>
   </data>
   <data name="DescriptionConfirmFileConvertion.Text" xml:space="preserve">
-    <value>This file format isn’t supported directly. It will be converted before use. Do you want to continue?</value>
+    <value>Šis failo formatas nėra tiesiogiai palaikomas. Prieš naudojant, jis bus konvertuotas. Ar norite tęsti?</value>
   </data>
   <data name="ScreensaverDialogSettings.Header" xml:space="preserve">
     <value>Nustatymai</value>
   </data>
   <data name="DisplayAudioPauseRule.Header" xml:space="preserve">
-    <value>Output</value>
+    <value>Išvestis</value>
   </data>
   <data name="DisplayAudioPauseRule.Description" xml:space="preserve">
-    <value>Control how wallpaper audio plays across your screens</value>
+    <value>Valdykite, kaip fono paveikslėlių garsas grojamas visuose ekranuose</value>
   </data>
   <data name="VisualizerAudioDevice.Description" xml:space="preserve">
-    <value>Select the playback device used for visualizing sound</value>
+    <value>Pasirinkite garso išvesties įrenginį naudojamą garso vizualizavimui</value>
   </data>
   <data name="VisualizerAudioDevice.Header" xml:space="preserve">
-    <value>Audio device</value>
+    <value>Garso įrenginys</value>
   </data>
   <data name="SwitchReleaseBranchBeta.Description" xml:space="preserve">
-    <value>Get early features and help test them before public release. These builds may be unstable.</value>
+    <value>Gaukite ankstesnes funkcijas ir padėkite jas išbandyti prieš viešą išleidimą. Šios versijos gali būti nestabilios.</value>
   </data>
   <data name="SwitchReleaseBranchBeta.Header" xml:space="preserve">
-    <value>Join the Beta release</value>
+    <value>Prisijunkite prie beta versijos</value>
   </data>
   <data name="SwitchReleaseBranchStable.Description" xml:space="preserve">
-    <value>Return to the regular public release for the most reliable updates.</value>
+    <value>Norėdami gauti patikimiausius atnaujinimus, grįžkite prie įprasto viešo leidimo.</value>
   </data>
   <data name="SwitchReleaseBranchStable.Header" xml:space="preserve">
-    <value>Switch to Stable release</value>
+    <value>Perjungti į stabilų leidimą</value>
   </data>
   <data name="RestartWallpaperAfterLockscreen.Header" xml:space="preserve">
-    <value>Restart wallpaper when returning from lock screen</value>
+    <value>Iš naujo paleisti foną grįžus iš užrakinimo ekrano</value>
   </data>
 </root>

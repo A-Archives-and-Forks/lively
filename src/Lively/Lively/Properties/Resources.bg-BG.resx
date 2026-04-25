@@ -1256,13 +1256,13 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>Затъмняване до черно преди началото</value>
   </data>
   <data name="VideoLetWindowsManageColor.Header" xml:space="preserve">
-    <value>Let Windows manage colors</value>
+    <value>Нека Windows управлява цветовете</value>
   </data>
   <data name="ScreensaverWindowsSettings.Header" xml:space="preserve">
-    <value>Windows Settings</value>
+    <value>Настройки на Windows</value>
   </data>
   <data name="DescriptionConfirmProjectDirectory.Text" xml:space="preserve">
-    <value>Confirm project structure?</value>
+    <value>Потвърдете структурата на проекта?</value>
   </data>
   <data name="DescriptionConfirmFileConvertion.Text" xml:space="preserve">
     <value>Файловият формат не е поддържан директно. Преди да бъде използван, той ще бъде конвертиран. Желаете ли да продължите?</value>

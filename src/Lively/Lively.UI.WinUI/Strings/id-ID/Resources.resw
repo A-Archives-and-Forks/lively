@@ -1257,10 +1257,10 @@ Semua: Jeda wallpaper untuk semua layar jika ada aplikasi fullscreen/sedang difo
     <value>Saat dilanjutkan, tampilkan layar log in dahulu</value>
   </data>
   <data name="ScreensaverFadeIn.Header" xml:space="preserve">
-    <value>Fade to black before start</value>
+    <value>Fade to black sebelum memulai</value>
   </data>
   <data name="VideoLetWindowsManageColor.Header" xml:space="preserve">
-    <value>Let Windows manage colors</value>
+    <value>Kelola warna Windows</value>
   </data>
   <data name="ScreensaverWindowsSettings.Header" xml:space="preserve">
     <value>Pengaturan Windows</value>
@@ -1269,7 +1269,7 @@ Semua: Jeda wallpaper untuk semua layar jika ada aplikasi fullscreen/sedang difo
     <value>Konfirmasi struktur project?</value>
   </data>
   <data name="DescriptionConfirmFileConvertion.Text" xml:space="preserve">
-    <value>This file format isn’t supported directly. It will be converted before use. Do you want to continue?</value>
+    <value>Format file tidak didukung langsung. Ini akan di convert sebelum digunakan. Yakin ingin melanjutkan?</value>
   </data>
   <data name="ScreensaverDialogSettings.Header" xml:space="preserve">
     <value>Pengaturan</value>
@@ -1278,10 +1278,10 @@ Semua: Jeda wallpaper untuk semua layar jika ada aplikasi fullscreen/sedang difo
     <value>Luaran</value>
   </data>
   <data name="DisplayAudioPauseRule.Description" xml:space="preserve">
-    <value>Control how wallpaper audio plays across your screens</value>
+    <value>Kontrol bagaimana wallpaper audio memutar antar layar anda</value>
   </data>
   <data name="VisualizerAudioDevice.Description" xml:space="preserve">
-    <value>Select the playback device used for visualizing sound</value>
+    <value>Pilih perangkat pemutaran yang digunakan untuk memvisualisasikan suara</value>
   </data>
   <data name="VisualizerAudioDevice.Header" xml:space="preserve">
     <value>Perangkat audio</value>
@@ -1299,6 +1299,6 @@ Semua: Jeda wallpaper untuk semua layar jika ada aplikasi fullscreen/sedang difo
     <value>Pindah ke versi Stabil</value>
   </data>
   <data name="RestartWallpaperAfterLockscreen.Header" xml:space="preserve">
-    <value>Restart wallpaper when returning from lock screen</value>
+    <value>Mulai ulang wallpaper ketika kembali dari layar penguncian</value>
   </data>
 </root>

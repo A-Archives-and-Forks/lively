@@ -1179,7 +1179,7 @@ Hala çalışmıyorsa, Lively'yi kapatın ve yeniden başlatın / Windows'u yeni
     <value>Yaklaşan derinlik..</value>
   </data>
   <data name="DescriptionDepthWallpaperItem.Content" xml:space="preserve">
-    <value>Yapay am kullanarak fotoğrafları 3D'ye dönüştürün</value>
+    <value>Yapay zeka kullanarak fotoğrafları 3D'ye dönüştürün</value>
   </data>
   <data name="TextContinue.Content" xml:space="preserve">
     <value>Devam</value>

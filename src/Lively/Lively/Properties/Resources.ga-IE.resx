@@ -1281,7 +1281,7 @@ Mura bhfuil sé ag feidhmiú go fóill, déan Lively a dhúnadh agus a atosnú a
     <value>Select the playback device used for visualizing sound</value>
   </data>
   <data name="VisualizerAudioDevice.Header" xml:space="preserve">
-    <value>Audio device</value>
+    <value>Gléas fuaim</value>
   </data>
   <data name="SwitchReleaseBranchBeta.Description" xml:space="preserve">
     <value>Get early features and help test them before public release. These builds may be unstable.</value>

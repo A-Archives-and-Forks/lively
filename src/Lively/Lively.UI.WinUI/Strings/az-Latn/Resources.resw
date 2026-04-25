@@ -1245,22 +1245,22 @@ Windows 7 təzəlikcə qurulubsa - Ən yaxşı görünüş üçün ayarlar və T
     <value>Ayarların qüvvəyə minməsi üçün divar kağızı yenidən başladılmalıdır</value>
   </data>
   <data name="LanguageSettingsItemSystemDefault.Content" xml:space="preserve">
-    <value>Same as System</value>
+    <value>Sistemlə eyni</value>
   </data>
   <data name="InfoSettingsRestartRequest.Message" xml:space="preserve">
     <value>Please restart application for settings to take effect.</value>
   </data>
   <data name="ScreensaverLockOnResume.Header" xml:space="preserve">
-    <value>Davam edərkən giriş etmə ekranını göstər</value>
+    <value>Davam edərkən, giriş ekranını göstər</value>
   </data>
   <data name="ScreensaverFadeIn.Header" xml:space="preserve">
-    <value>Fade to black before start</value>
+    <value>Başlamazdan əvvəl, qaraya solur</value>
   </data>
   <data name="VideoLetWindowsManageColor.Header" xml:space="preserve">
-    <value>Let Windows manage colors</value>
+    <value>Rənglərin idarə edilməsini Windows-a həvalə et</value>
   </data>
   <data name="ScreensaverWindowsSettings.Header" xml:space="preserve">
-    <value>Windows Settings</value>
+    <value>Windows Parametrləri</value>
   </data>
   <data name="DescriptionConfirmProjectDirectory.Text" xml:space="preserve">
     <value>Confirm project structure?</value>
@@ -1272,7 +1272,7 @@ Windows 7 təzəlikcə qurulubsa - Ən yaxşı görünüş üçün ayarlar və T
     <value>Ayarlar</value>
   </data>
   <data name="DisplayAudioPauseRule.Header" xml:space="preserve">
-    <value>Output</value>
+    <value>Çıxış</value>
   </data>
   <data name="DisplayAudioPauseRule.Description" xml:space="preserve">
     <value>Control how wallpaper audio plays across your screens</value>
@@ -1281,21 +1281,21 @@ Windows 7 təzəlikcə qurulubsa - Ən yaxşı görünüş üçün ayarlar və T
     <value>Select the playback device used for visualizing sound</value>
   </data>
   <data name="VisualizerAudioDevice.Header" xml:space="preserve">
-    <value>Audio device</value>
+    <value>Səs qurğusu</value>
   </data>
   <data name="SwitchReleaseBranchBeta.Description" xml:space="preserve">
     <value>Get early features and help test them before public release. These builds may be unstable.</value>
   </data>
   <data name="SwitchReleaseBranchBeta.Header" xml:space="preserve">
-    <value>Join the Beta release</value>
+    <value>Beta buraxılışına qoşul</value>
   </data>
   <data name="SwitchReleaseBranchStable.Description" xml:space="preserve">
     <value>Return to the regular public release for the most reliable updates.</value>
   </data>
   <data name="SwitchReleaseBranchStable.Header" xml:space="preserve">
-    <value>Switch to Stable release</value>
+    <value>Sabit buraxılışa çevir</value>
   </data>
   <data name="RestartWallpaperAfterLockscreen.Header" xml:space="preserve">
-    <value>Restart wallpaper when returning from lock screen</value>
+    <value>Kilid ekranından qayıdarkən divar kağızını yenidən başlat</value>
   </data>
 </root>

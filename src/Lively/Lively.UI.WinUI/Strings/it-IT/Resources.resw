@@ -1259,7 +1259,7 @@ Quando sei pronto, vai a: http://localhost:portnumber per accedere al portale de
     <value>Dissolvenza al nero prima dell'avvio</value>
   </data>
   <data name="VideoLetWindowsManageColor.Header" xml:space="preserve">
-    <value>Let Windows manage colors</value>
+    <value>Lascia che Windows gestisca i colori</value>
   </data>
   <data name="ScreensaverWindowsSettings.Header" xml:space="preserve">
     <value>Impostazioni di Windows</value>
@@ -1268,7 +1268,7 @@ Quando sei pronto, vai a: http://localhost:portnumber per accedere al portale de
     <value>Confermare la struttura del progetto?</value>
   </data>
   <data name="DescriptionConfirmFileConvertion.Text" xml:space="preserve">
-    <value>This file format isn’t supported directly. It will be converted before use. Do you want to continue?</value>
+    <value>Questo formato non è supportato direttamente. Sarà convertito prima dell'uso. Vuoi continuare?</value>
   </data>
   <data name="ScreensaverDialogSettings.Header" xml:space="preserve">
     <value>Impostazioni</value>
@@ -1277,27 +1277,27 @@ Quando sei pronto, vai a: http://localhost:portnumber per accedere al portale de
     <value>Output</value>
   </data>
   <data name="DisplayAudioPauseRule.Description" xml:space="preserve">
-    <value>Control how wallpaper audio plays across your screens</value>
+    <value>Controlla come l'audio dello sfondo viene riprodotto attraverso gli schermi</value>
   </data>
   <data name="VisualizerAudioDevice.Description" xml:space="preserve">
-    <value>Select the playback device used for visualizing sound</value>
+    <value>Seleziona il dispositivo di riproduzione usato per visualizzare il suono</value>
   </data>
   <data name="VisualizerAudioDevice.Header" xml:space="preserve">
-    <value>Audio device</value>
+    <value>Dispositivi audio</value>
   </data>
   <data name="SwitchReleaseBranchBeta.Description" xml:space="preserve">
-    <value>Get early features and help test them before public release. These builds may be unstable.</value>
+    <value>Ottieni funzionalità in anteprima e aiuta a testarle prima del rilascio pubblico. Queste build potrebbero essere instabili.</value>
   </data>
   <data name="SwitchReleaseBranchBeta.Header" xml:space="preserve">
-    <value>Join the Beta release</value>
+    <value>Unisciti alla versione Beta</value>
   </data>
   <data name="SwitchReleaseBranchStable.Description" xml:space="preserve">
-    <value>Return to the regular public release for the most reliable updates.</value>
+    <value>Ritorna all'ultima versione pubblica ufficiale per ottenere gli aggiornamenti più stabili.</value>
   </data>
   <data name="SwitchReleaseBranchStable.Header" xml:space="preserve">
-    <value>Switch to Stable release</value>
+    <value>Ritorna all'ultima versione stabile</value>
   </data>
   <data name="RestartWallpaperAfterLockscreen.Header" xml:space="preserve">
-    <value>Restart wallpaper when returning from lock screen</value>
+    <value>Riavvia lo sfondo quando si ritorna dalla schermata di blocco</value>
   </data>
 </root>

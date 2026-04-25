@@ -169,7 +169,7 @@ OLED, प्लाज्मा या CRT डिस्प्ले के लि
     <value>क्या आप वाकई इस वॉलपेपर को डिस्क से स्थायी रूप से हटाना चाहते हैं?</value>
   </data>
   <data name="DescriptionDeleteConfirmationLibrary" xml:space="preserve">
-    <value>क्या आप वाकई इस वॉलपेपर को लाइब्रेरी से हटाना चाहते हैं?</value>
+    <value>Are you sure you want to delete this wallpaper from the Library?</value>
   </data>
   <data name="DragDropFile.Text" xml:space="preserve">
     <value>बस लाइब्रेरी में फ़ाइलों को खींचें और छोड़ें।</value>
@@ -1206,7 +1206,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>वालपेपर बनाए</value>
   </data>
   <data name="RunningAsAdminWarning.Message" xml:space="preserve">
-    <value>Some functionalities may not be available when run as administrator</value>
+    <value>व्यवस्थापक के रूप में चलाने पर कुछ कार्यक्षमताएँ उपलब्ध नहीं हो सकती हैं</value>
   </data>
   <data name="DescriptionDownloadRequired.Text" xml:space="preserve">
     <value>इस सुविधा के लिए अतिरिक्त फ़ाइलें डाउनलोड करनी होंगी</value>
@@ -1252,25 +1252,25 @@ Nkmnk t</value>
     <value>सेटिंग्स को प्रभावी करने के लिए वॉलपेपर रीस्टार्ट करना आवश्यक है</value>
   </data>
   <data name="LanguageSettingsItemSystemDefault.Content" xml:space="preserve">
-    <value>Same as System</value>
+    <value>सिस्टम सेटिंग्स के समान</value>
   </data>
   <data name="InfoSettingsRestartRequest.Message" xml:space="preserve">
-    <value>Please restart application for settings to take effect.</value>
+    <value>सेटिंग्स को प्रभावी बनाने के लिए कृपया एप्लिकेशन को पुनरारंभ करें</value>
   </data>
   <data name="ScreensaverLockOnResume.Header" xml:space="preserve">
     <value>फिर से शुरू करने पर, लॉगऑन (Logon) स्क्रीन प्रदर्शन किया जाए</value>
   </data>
   <data name="ScreensaverFadeIn.Header" xml:space="preserve">
-    <value>Fade to black before start</value>
+    <value>शुरू होने से पहले फीका पड़कर काला हो</value>
   </data>
   <data name="VideoLetWindowsManageColor.Header" xml:space="preserve">
-    <value>Let Windows manage colors</value>
+    <value>विंडोज़ को रंग प्रबंधित करने दें</value>
   </data>
   <data name="ScreensaverWindowsSettings.Header" xml:space="preserve">
-    <value>Windows Settings</value>
+    <value>विंडोज़ सेटिंग्स</value>
   </data>
   <data name="DescriptionConfirmProjectDirectory.Text" xml:space="preserve">
-    <value>Confirm project structure?</value>
+    <value>प्रोजेक्ट संरचना की पुष्टि करें?</value>
   </data>
   <data name="DescriptionConfirmFileConvertion.Text" xml:space="preserve">
     <value>This file format isn’t supported directly. It will be converted before use. Do you want to continue?</value>
@@ -1279,7 +1279,7 @@ Nkmnk t</value>
     <value>समायोजन</value>
   </data>
   <data name="DisplayAudioPauseRule.Header" xml:space="preserve">
-    <value>Output</value>
+    <value>परिणाम</value>
   </data>
   <data name="DisplayAudioPauseRule.Description" xml:space="preserve">
     <value>Control how wallpaper audio plays across your screens</value>

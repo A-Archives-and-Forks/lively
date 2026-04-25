@@ -147,14 +147,14 @@ Windows Explorer دو بار در 30 ثانیه گذشته راه‌اندازی
     <value>صفحه وب رسمی Lively Wallpaper</value>
   </data>
   <data name="DescOledScreensaverNotice" xml:space="preserve">
-    <value>اکثر نمایشگرهای LCD و LED مدرن مشکل سوختگی پیکسل ندارند و بنابراین می‎‌توان از هر تصویر زمینه به عنوان محافظ صفحه استفاده کرد.
+    <value>اکثر نمایشگرهای مدرن LCD و LED دچار مشکل سوختن صفحه (burn-in) نمی‌شوند، بنابراین می‌توان از هر تصویر پس‌زمینه‌ای به عنوان محافظ صفحه (screensaver) استفاده کرد.
 
-برای نمایشگرهای OLED، پلاسما یا CRT که مستعد سوختن هستند، توصیه می‌شود از تصاویر زمینه با حرکت منظم و تم کلی تیره استفاده کنید که سوختگی پیکسل را کاهش می‌دهد، اما این ویژگی آزمایش نشده است و نمی‌توان کارایی آن را تضمین کرد.
+برای نمایشگرهای OLED، پلاسما یا CRT که در برابر سوختن صفحه حساس هستند، توصیه می‌شود از تصاویر پس‌زمینه‌ای با حرکت منظم و طرحی که در مجموع تیره است استفاده کنید؛ این روش قرار است سوختن صفحه را کاهش دهد، اما این ویژگی آزمایش نشده است و تأثیر آن را نمی‌توان تضمین کرد.
 
-هدف اصلی محافظ‌های صفحه نمایش Lively اضافه کردن لایه دیگری از سفارشی‌سازی به رایانه شما است، از محافظ‌های صفحه نمایش به عنوان محافظت در برابر سوختگی پیکسل با مسئولیت خود استفاده کنید!</value>
+هدف اصلی محافظهای صفحه نرم‌افزار Lively، افزودن لایه‌ای دیگر از شخصی‌سازی به رایانه شماست؛ از محافظهای صفحه به عنوان محافظ در برابر سوختن صفحه تنها با مسئولیت خودتان استفاده کنید!</value>
   </data>
   <data name="ReportBug.Description" xml:space="preserve">
-    <value>مشکل نرم افزار را گزارش دهید</value>
+    <value>مشکل نرم‌افزار را گزارش دهید</value>
   </data>
   <data name="AddWallpaperFileBrowse.Header" xml:space="preserve">
     <value>یک فایل انتخاب کنید</value>
@@ -175,15 +175,15 @@ Windows Explorer دو بار در 30 ثانیه گذشته راه‌اندازی
     <value>به سادگی فایل ها را در اینجا بکشید و رها کنید</value>
   </data>
   <data name="DescriptionExternalAppWarning" xml:space="preserve">
-    <value>شما در حال باز کردن یک برنامه خارجی به عنوان تصویر زمینه هستید.
-برنامه های مخرب می توانند میزبان بدافزارها، ویروس ها.. باشند و به سیستم شما آسیب برسانند.
-فقط در صورتی ادامه دهید که این برنامه از منبع قابل اعتمادی تهیه شده باشد.</value>
+    <value>شما در حال باز کردن یک برنامهٔ خارجی به عنوان کاغذدیواری هستید.
+برنامه‌های مخرب ممکن است حاوی بدافزار، ویروس و... باشند و به سیستم شما آسیب برسانند.
+تنها در صورتی ادامه دهید که این برنامه از یک منبع مورد اعتماد باشد.</value>
   </data>
   <data name="MinimizedTray.Text" xml:space="preserve">
     <value>Lively کوچک شده و به سیستم ترِی (زیر نوار وظیفه) انتقال یافته، برای ادامه آیکون Lively را راست کلیک کنید.</value>
   </data>
   <data name="DescriptionPleaseRestartLively" xml:space="preserve">
-    <value>لطفاً Lively را مجدداً راه اندازی کنید تا تنظیمات اعمال شوند</value>
+    <value>لطفاً Lively را مجدداً راه‌اندازی کنید تا تنظیمات اعمال شوند</value>
   </data>
   <data name="DescriptionPleaseStop" xml:space="preserve">
     <value>لطفا قبل از ادامه دست نگه دارید.</value>
@@ -223,28 +223,27 @@ Windows Explorer دو بار در 30 ثانیه گذشته راه‌اندازی
     <value>آیکون System-tray</value>
   </data>
   <data name="Language.Description" xml:space="preserve">
-    <value>Lively برای اعمال زبان جدید راه اندازی مجدد می شود</value>
+    <value>Lively برای اعمال زبان جدید دوباره راه‌اندازی می‌شود.</value>
   </data>
   <data name="Language.Header" xml:space="preserve">
     <value>زبان</value>
   </data>
   <data name="LivelyExceptionAppUpdateFail" xml:space="preserve">
-    <value>بروز رسانی با مشکل مواجه شد، می توانید از لینک زیر برای دانلود نسخه جدید استفاده کنید
+    <value>به‌روزرسانی انجام نشد؛ لطفاً نصب‌کننده را از این آدرس دانلود کنید: 
 https://github.com/rocksdanister/lively/releases</value>
   </data>
   <data name="LivelyExceptionDamagedZipFile" xml:space="preserve">
-    <value>فايل پس زمینه آسيب ديده، لطفا دوباره دانلود کنيد.</value>
+    <value>فایل کاغذدیواری آسیب‌دیده است، دوباره بارگیری کنید</value>
   </data>
   <data name="LivelyExceptionGeneral" xml:space="preserve">
-    <value> 
-اوووه... ظاهرا به مشکل خوردیم :(
-برای بهبود نرم افزار و رفع مشکل به وجود آمده می توانید فایل خطا ها را با توسعه دهنده این نرم افزار به اشتراک بگذارید.
-نحوه اشتراک گذاری فایل خطا ها:
+    <value>اوه... به نظر می‌رسد چیزی اشتباه شده است! :(
+برای درک بهتر این خطا و رفع مشکل، لطفاً فایل لاگ را با توسعه‌دهنده به اشتراک بگذارید. 
+راهنمای ارسال فایل لاگ: 
 https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="LivelyExceptionHighContrastMode" xml:space="preserve">
     <value>لايولي تا زمانيکه گزینه کنتراست بالا فعال باشد نميتونه درست عمل کنه!
-لطفا آنرا غيرفعال کنيد سپس دوباره تلاش کنيد.</value>
+لطفا آنرا غيرفعال کنيد سپس دوباره تلاش کنيد</value>
   </data>
   <data name="LivelyExceptionMediaPlayback" xml:space="preserve">
     <value>اجراي رسانه با مشکل مواجه شد :(
@@ -255,11 +254,11 @@ https://github.com/rocksdanister/lively/wiki</value>
 https://github.com/rocksdanister/lively/wiki</value>
   </data>
   <data name="LivelyExceptionNotLivelyZip" xml:space="preserve">
-    <value>این فایل پس زمینه برای لایولی نیست</value>
+    <value>فایل کاغذدیواری Lively نیست</value>
   </data>
   <data name="LivelyExceptionSafeModeStart" xml:space="preserve">
-    <value>دفعه قبل لایولی به درستی بسته نشد، در تلاش برای اجرای آن در حالت امن.
-آيا ميخواهيد پس زمینه قبلي را بگردانيد؟</value>
+    <value>Lively به‌درستی بسته نشده است و در حال راه‌اندازی در حالت ایمن است. 
+آیا مایلید کاغذدیواری‌های در حال اجرا در جلسهٔ قبل بازیابی شوند؟</value>
   </data>
   <data name="LivelyExceptionWorkerWSetupFail" xml:space="preserve">
     <value>ظاهرا چند تنظيمات بايد تغيير کنند تا لايولي کار کند:
@@ -336,7 +335,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>توضیحات</value>
   </data>
   <data name="DisplayPauseRuleAllScreen.Content" xml:space="preserve">
-    <value>تمام صفحات</value>
+    <value>تمام صفحه(ها)</value>
   </data>
   <data name="DisplayPauseRulePerScreen.Content" xml:space="preserve">
     <value>برای هر صفحه</value>
@@ -372,10 +371,10 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>برو</value>
   </data>
   <data name="TextHelpTranslate.Title" xml:space="preserve">
-    <value>به ترجمه لايولي کمک کنيد.</value>
+    <value>کمک به ترجمه</value>
   </data>
   <data name="TextHours" xml:space="preserve">
-    <value>hours</value>
+    <value>ساعت(ها)</value>
   </data>
   <data name="TextInstall.Content" xml:space="preserve">
     <value>نصب</value>
@@ -393,7 +392,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>جواز</value>
   </data>
   <data name="TextMinutes" xml:space="preserve">
-    <value>minutes</value>
+    <value>دقیقه(ها)</value>
   </data>
   <data name="TextmoreInfo" xml:space="preserve">
     <value>اطلاعات</value>
@@ -441,7 +440,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>توقف پس زمینه ها</value>
   </data>
   <data name="TextPerformanceKill.Content" xml:space="preserve">
-    <value>توقف  اجباری</value>
+    <value>توقف اجباری</value>
   </data>
   <data name="TextPerformanceNone.Content" xml:space="preserve">
     <value>هیج</value>
@@ -471,7 +470,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>صفحه</value>
   </data>
   <data name="SearchBox.PlaceholderText" xml:space="preserve">
-    <value>جستوجو</value>
+    <value>جستجو</value>
   </data>
   <data name="SetWallpaper.Text" xml:space="preserve">
     <value>تنظیم به عنوان پس زمینه</value>
@@ -552,7 +551,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>در حال بررسی برای نسخه جدید</value>
   </data>
   <data name="TextUpdateUptodate" xml:space="preserve">
-    <value>برنامه مطابق آخرین نسخه است</value>
+    <value>برنامه مطابق آخرین نسخه است!</value>
   </data>
   <data name="TextVideo" xml:space="preserve">
     <value>ویدیو</value>
@@ -603,7 +602,7 @@ https://github.com/rocksdanister/lively/wiki</value>
     <value>همه انواع فایل های پشتیبانی شده را به عنوان تصویر زمینه تنظیم کنید</value>
   </data>
   <data name="EnterUrl.Description" xml:space="preserve">
-    <value>تنظيم صفحه وبِ آدرس وارد شده به عنوان کاغذ ديواري.</value>
+    <value>تنظيم صفحه وبِ آدرس وارد شده به عنوان کاغذ ديواري</value>
   </data>
   <data name="AppFocus.Description" xml:space="preserve">
     <value>تنظیم کنید وقتی هر برنامه ای در فوکوس است چه کاری انجام دهید</value>
@@ -1293,15 +1292,15 @@ Edge is the built in webview of windows 10.</value>
 توجه: این نسخه ممکن هست ناپایدار باشه.</value>
   </data>
   <data name="SwitchReleaseBranchBeta.Header" xml:space="preserve">
-    <value>Join the Beta release</value>
+    <value>به نسخه بتا بپیوندید</value>
   </data>
   <data name="SwitchReleaseBranchStable.Description" xml:space="preserve">
-    <value>Return to the regular public release for the most reliable updates.</value>
+    <value>برای مطمئن‌ترین بروزرسانی‌ها، به نسخه عمومی عادی برگردید.</value>
   </data>
   <data name="SwitchReleaseBranchStable.Header" xml:space="preserve">
-    <value>Switch to Stable release</value>
+    <value>تغییر به نسخه‌ی پایدار</value>
   </data>
   <data name="RestartWallpaperAfterLockscreen.Header" xml:space="preserve">
-    <value>Restart wallpaper when returning from lock screen</value>
+    <value>هنگام بازگشت از صفحه قفل، تصویر زمینه دوباره راه‌اندازی شود</value>
   </data>
 </root>
