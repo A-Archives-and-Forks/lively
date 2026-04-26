@@ -190,6 +190,13 @@ namespace Lively
                 userSettings.Save<SettingsModel>();
                 userSettings.Save<List<ApplicationRulesModel>>();
             }
+
+            if (fromVersion < new Version(2, 2, 1, 5))
+            {
+                // Reset this re-added setting which was previously available to the user.
+                userSettings.Settings.ScreensaverIdleDelay = ScreensaverIdleTime.none;
+                userSettings.Save<SettingsModel>();
+            }
         }
 
         private static void CreateWallpaperDir(string baseDirectory)
